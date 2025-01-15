@@ -451,7 +451,6 @@ header .navbar {
 }
 header .navbar li {
 	display: inline-block;
-	float: left;
 	margin: 0 5px;
 	position: relative;
 }
@@ -567,8 +566,7 @@ header .navbar li.active a:before {
 	padding: 25px 20px;
 	border-radius: 0px 0px 8px 8px;
 }
-.ownmenu .nav .dropdown-menu {
-}
+
 .ownmenu .dropdown.megamenu {
 	position: static !important;
 }
@@ -1183,10 +1181,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	position: absolute;
 	top: 90px;
 	left: 90px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 .simple-head .price {
@@ -1400,8 +1394,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
       NEW ARRIVAL LIST
 ========================================================*/
-.new-arrival-list {
-}
+
 .new-arrival-list li {
 	position: relative;
 	text-align: center;
@@ -1462,10 +1455,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	position: absolute;
 	top: 90px;
 	left: 90px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 /*=======================================================
@@ -1567,8 +1556,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	display: inline-block;
 	vertical-align: top;
 }
-.papular-block .overlay a:hover {
-}
+
 .papular-block .item img {
 	width: 100%;
 	margin-top: 0px;
@@ -1659,7 +1647,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	display: inline-block;
 	font-size: 26px;
 	margin-top: 5px;
-	float: right;
 	margin-left: 20px;
 }
 .shop-items .item {
@@ -1741,8 +1728,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
       SHOP DETAIL PAGES
 ========================================================*/
-.shop-detail {
-}
+
 .shop-detail .price {
 	font-size: 18px;
 	font-weight: bold;
@@ -1891,7 +1877,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	border-bottom: 2px solid #ffe115;
 }
 .item-decribe .nav-tabs li {
-	float: left;
 	margin-right: 40px !important;
 	display: inline-block;
 }
@@ -2080,8 +2065,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
       OUR TEAM
 ========================================================*/
-.our-team {
-}
+
 .our-team article {
 	position: relative;
 }
@@ -2115,8 +2099,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	left: 0px;
 	opacity: 1;
 }
-.our-team article:hover img {
-}
+
 .our-team .team-hover img {
 	border-radius: 50%;
 }
@@ -2186,8 +2169,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
       BLOG LIST
 ========================================================*/
-.blog-list {
-}
+
 .blog-list article {
 	text-align: center;
 	border-bottom: 1px solid #d1d5db;
@@ -2217,8 +2199,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	letter-spacing: 2px;
 	padding: 0px;
 }
-.blog-list .post-tittle {
-}
+
 .blog-list img {
 	margin-bottom: 30px;
 }
@@ -2382,8 +2363,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
 			PAPULAR POST
 ========================================================*/
-.papu-post {
-}
+
 .papu-post .media-left {
 	margin-right: 0px;
 }
@@ -2748,7 +2728,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	width: 60px;
 	font-family: 'Montserrat', sans-serif;
 	height: 44px;
-	float: left;
 	width: 100%;
 	display: inline-block;
 	text-align: center;
@@ -2826,7 +2805,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	border: 1px solid #2d3a4b;
 	width: 60px;
 	height: 44px;
-	float: left;
 	width: 100%;
 	font-size: 11px;
 	padding: 0 10px;
@@ -2877,8 +2855,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 .shopping-cart .grand-total .all-total {
 	border-bottom: none !important;
 }
-.shopping-cart .cart-ship-info .grand-total {
-}
+
 .shopping-cart .cart-ship-info .grand-total h4 {
 	font-size: 20px;
 	font-weight: bold;
@@ -3122,8 +3099,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	display: inline-block;
 	width: 100%;
 }
-.comments .media-body a {
-}
+
 .comments {
 	margin-top: 30px;
 }
@@ -3235,8 +3211,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 /*=======================================================
       Testimonial
 ========================================================*/
-.testimonial {
-}
+
 .testimonial .testi-in {
 	text-align: right;
 	position: relative;
@@ -3404,7 +3379,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	color: #fff;
 	font-weight: 500;
 	font-size: 16px;
-	float: left;
 	line-height: 58px;
 	margin: 0px;
 	letter-spacing: 1px;
@@ -3478,7 +3452,6 @@ footer li a:hover {
 	color: #949494;
 	height: 30px;
 	width: 30px;
-	float: right;
 	position: absolute;
 	right: 0px;
 	left: 0px;
@@ -4138,10 +4111,7 @@ main {
 .cd-nav .cd-primary-nav a.selected {
 	color: #ffffff;
 }
-.no-touch .cd-nav .cd-primary-nav a:hover {
-}
-.cd-nav .cd-contact-info {
-}
+
 .cd-nav .cd-contact-info li {
 	margin-bottom: 1.5em;
 	line-height: 1.2;
@@ -4179,8 +4149,7 @@ main {
 .cd-nav .cd-contact-info {
 	text-align: right;
 }
-.cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
-}
+
 .no-js main {
 	height: auto;
 	overflow: visible;
@@ -4235,7 +4204,6 @@ main {
 }
 .top-bar .login-info li {
 	display: inline-block;
-	float: left;
 	padding: 0 15px;
 }
 .top-bar .login-info a {
@@ -4367,8 +4335,7 @@ main {
 .login-with li a:hover {
 	background: #ffe115;
 }
-.cart-ship-info.register select {
-}
+
 .cart-ship-info.register .bootstrap-select .btn {
 	height: 44px;
 	border: 1px solid #2d3a4b;
@@ -4388,3 +4355,123 @@ main {
 	display: inline-block;
 	font-size: 13px;
 }
+
+
+  #testimonials{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width:100%;
+  }
+  .testimonial-heading{
+	letter-spacing: 1px;
+	margin: 30px 0px;
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .testimonial-heading span{
+	font-size: 1.3rem;
+	color: #252525;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+  }
+  .testimonial-box-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width:100%;
+  }
+  .testimonial-box{
+	width:500px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	background-color: #ffffff;
+	padding: 20px;
+	margin: 15px;
+	cursor: pointer;
+  }
+  .profile-img{
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 10px;
+  }
+  .profile-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+  }
+  .profile{
+	display: flex;
+	align-items: center;
+  }
+  .name-user{
+	display: flex;
+	flex-direction: column;
+  }
+  .name-user strong{
+	color: #3d3d3d;
+	font-size: 1.1rem;
+	letter-spacing: 0.5px;
+  }
+  .name-user span{
+	color: #979797;
+	font-size: 0.8rem;
+  }
+  .reviews{
+	color: #f9d71c;
+  }
+  .box-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  .client-comment p{
+	font-size: 1.1rem;
+	color: #4b4b4b;
+  }
+  .client-comment strong{
+	font-size: 1.5rem;
+	color: #4b4b4b;
+  }
+  .testimonial-box:hover{
+	transform: translateY(-10px);
+	transition: all ease 0.3s;
+  }
+  
+  @media(max-width:1060px){
+	.testimonial-box{
+		width:45%;
+		padding: 10px;
+	}
+  }
+  @media(max-width:790px){
+	.testimonial-box{
+		width:100%;
+	}
+	.testimonial-heading h1{
+		font-size: 1.4rem;
+	}
+  }
+  @media(max-width:340px){
+	.box-top{
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+	}
+	.reviews{
+		margin-top: 10px;
+	}
+  }
+  ::selection{
+	color: #ffffff;
+	background-color: #252525;
+  }
