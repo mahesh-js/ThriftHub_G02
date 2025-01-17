@@ -2573,14 +2573,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	border-radius: 50%;
 	margin-right: 5px;
 }
-.side-bnr {
-	position: relative;
-	text-align: center;
-}
-.side-bnr .position-center-center {
-	width: 100%;
-	padding-left: 30px;
-}
+
 .shop-sidebar .price {
 	font-size: 26px;
 	font-weight: bold;
@@ -2601,7 +2594,16 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	display: inline-block;
 	vertical-align: top;
 }
-.side-bnr .bnr-text {
+.side-bnr1 {
+	position: relative;
+	text-align: center;
+}
+.side-bnr1 .position-center-center {
+	width: 100%;
+	padding-left: 30px;
+}
+.side-bnr1 .bnr-text {
+	margin-top: -150px;
 	font-size: 42px;
 	color: #ffe115;
 	max-width: 100px;
@@ -2612,6 +2614,26 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	line-height: 35px;
 	position: relative;
 }
+.side-bnr3 {
+	position: relative;
+	text-align: center;
+}
+.side-bnr3 .position-center-center {
+	width: 100%;
+	padding-left: 30px;
+}
+.side-bnr3 .bnr-text {
+	font-size: 42px;
+	color: #ffe115;
+	max-width: 100px;
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	line-height: 35px;
+	position: relative;
+}
+
 .chart-page .payment_steps {
 	margin: 30px 0;
 	text-align: center;
@@ -3347,7 +3369,6 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 .sub-bnr h4 {
 	font-size: 25px;
-	color: #fff;
 	font-weight: bold;
 	letter-spacing: 6px;
 	margin-top: 0px;
@@ -4475,3 +4496,30 @@ main {
 	color: #ffffff;
 	background-color: #252525;
   }
+
+  .popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    text-align: justify;
+	width:400px;
+  }
+  .popup h2{
+	font-size: 14px;
+	font-weight: normal;
+	color: #252525;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+  }
+ 
+  
+.icon:hover + .popup {
+    display: block;
+}
+
+
