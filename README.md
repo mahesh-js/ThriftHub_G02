@@ -1,2 +1,0 @@
-# ThriftHub_G02
-
