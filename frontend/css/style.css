@@ -190,7 +190,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    font-smoothing: antialiased;
+    font-smooth: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     background: #fff;
@@ -7134,6 +7134,68 @@ abbr.required {
     .pb-xsm-140 {
         padding-bottom: 140px;
     }
+}
+#add-new-address-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#add-new-address-form input, #add-new-address-form select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: calc(50% - 10px);
+}
+
+
+
+#add-new-address-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.sidebar1 {
+    margin-left: 10%;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.sidebar1 h2 {
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.sidebar1 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar1 li {
+    margin-bottom: 10px;
+}
+
+.sidebar1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content1 {
+    flex: 1;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.content1 h1 {
+    margin-top: 0;
+}
+.container1 {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
