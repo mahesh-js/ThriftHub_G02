@@ -5128,7 +5128,9 @@ header+hr {
 .swatch-violet {
     background-color: #8da1cd;
 }
-
+.swatch-red {
+    background-color: red;
+}
 .swatch-black {
     background-color: #000;
 }
