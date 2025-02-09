@@ -1,0 +1,44 @@
+/* Template Name: 
+   File: Main Css File
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+// general
+@import "custom/general";
+// @import "custom/fonts";
+
+// components
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/tables";
+@import "components/modal";
+
+// Plugins
+@import "plugins/custom-scrollbar";
+@import "plugins/charts";
+@import "plugins/calendar";
+@import "plugins/tippy";
+@import "plugins/ui-slider";
+@import "plugins/sweet-alert";
+@import "plugins/carousel";
+@import "plugins/flatpickr";
+@import "plugins/prism";
+@import "plugins/gantt";
+@import "plugins/nice-select";
+@import "plugins/fontawesome";
+
+
+// structure
+@import "custom/structure/topnav";
+@import "custom/structure/left-sidebar";
+@import "custom/structure/footer";
+@import "custom/structure/sidebar";

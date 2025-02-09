@@ -1,0 +1,230 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Billing</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Email Template</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Billing</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Billing</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Billing-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;" bgcolor="transparent">
+                                        <tr>
+                                            <td valign="top"></td>
+                                            <td class="container" width="600" style="display: block !important; max-width: 600px !important; clear: both !important;" valign="top">
+                                                <div class="content" style="padding: 20px;">
+                                                    <table class="main" width="100%" cellpadding="0" cellspacing="0" style="border: 1px dashed #4d79f6;">
+                                                        <tr>
+                                                            <td class="content-wrap aligncenter" style="padding: 20px; background-color: transparent;" align="center" valign="top">
+                                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="#"><img src="assets/images/logo-sm.png" alt="" style="height: 40px; margin-left: auto; margin-right: auto; display:block;"></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="content-block" style="padding: 0 0 20px;" valign="top">
+                                                                            <h2 class="aligncenter" style="font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;font-size: 24px; color:#6a738d; line-height: 1.2em; font-weight: 600; text-align: center;" align="center">Thanks for using <span style="color: #4d79f6; font-weight: 700;">Robotech</span>.</h2>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="content-block aligncenter" style="padding: 0 0 20px;" align="center" valign="top">
+                                                                            <table class="invoice" style="width: 80%;">
+                                                                                <tr>
+                                                                                    <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; padding: 5px 0; color: #6a738d;" valign="top">Mannatthemes
+                                                                                        <br/>Invoice #12345
+                                                                                        <br/>01 Sep 2021
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="padding: 5px 0;" valign="top">
+                                                                                        <table class="invoice-items" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                                                                            <tr>
+                                                                                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;" valign="top">Apple iphone X</td>
+                                                                                                <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;" align="right" valign="top">$ 1499.99</td>
+                                                                                            </tr>
+                                                                                            <tr >
+                                                                                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;" valign="top">Data cable</td>
+                                                                                                <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;" align="right" valign="top">$ 20.00</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;" valign="top">Phone Cover</td>
+                                                                                                <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;" align="right" valign="top">$ 40.00</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td class="alignright" width="80%" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #50649c; border-top-style: solid; border-bottom-color: #50649c; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 10px 0; color:#7e7895;" align="right" valign="top">Total</td>
+                                                                                                <td class="alignright" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #50649c; border-top-style: solid; border-bottom-color: #50649c; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 10px 0; color:#7e7895;" align="right" valign="top">$ 1559.99</td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="content-block aligncenter" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top">
+                                                                            <a href="#" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; color: #4d79f6; text-decoration: underline; margin: 0;">View in browser</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="content-block aligncenter" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px; color: #6a738d;" align="center" valign="top">
+                                                                            Robotech Inc. 123 my street, And my Country
+                                                                        </td>
+                                                                    </tr>
+                                                                </table><!--end table-->   
+                                                            </td>
+                                                        </tr>
+                                                    </table><!--end table-->                                               
+                                                </div><!--end content-->   
+                                            </td>
+                                            <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
+                                        </tr>
+                                    </table><!--end table-->
+                                </div><!--end card-body-->
+                                
+                                <div id="Billing-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;body-wrap&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;&quot; bgcolor=&quot;transparent&quot;&gt;
+    &lt;tr&gt;
+        &lt;td valign=&quot;top&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;container&quot; width=&quot;600&quot; style=&quot;display: block !important; max-width: 600px !important; clear: both !important;&quot; valign=&quot;top&quot;&gt;
+            &lt;div class=&quot;content&quot; style=&quot;padding: 20px;&quot;&gt;
+                &lt;table class=&quot;main&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 1px dashed #4d79f6;&quot;&gt;
+                    &lt;tr&gt;
+                        &lt;td class=&quot;content-wrap aligncenter&quot; style=&quot;padding: 20px; background-color: transparent;&quot; align=&quot;center&quot; valign=&quot;top&quot;&gt;
+                            &lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;
+                                        &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;assets/images/logo-sm.png&quot; alt=&quot;&quot; style=&quot;height: 40px; margin-left: auto; margin-right: auto; display:block;&quot;&gt;&lt;/a&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td class=&quot;content-block&quot; style=&quot;padding: 0 0 20px;&quot; valign=&quot;top&quot;&gt;
+                                        &lt;h2 class=&quot;aligncenter&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;font-size: 24px; color:#6a738d; line-height: 1.2em; font-weight: 600; text-align: center;&quot; align=&quot;center&quot;&gt;Thanks for using &lt;span style=&quot;color: #4d79f6; font-weight: 700;&quot;&gt;Robotech&lt;/span&gt;.&lt;/h2&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td class=&quot;content-block aligncenter&quot; style=&quot;padding: 0 0 20px;&quot; align=&quot;center&quot; valign=&quot;top&quot;&gt;
+                                        &lt;table class=&quot;invoice&quot; style=&quot;width: 80%;&quot;&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; padding: 5px 0; color: #6a738d;&quot; valign=&quot;top&quot;&gt;Mannatthemes
+                                                    &lt;br/&gt;Invoice #12345
+                                                    &lt;br/&gt;01 Sep 2021
+                                                &lt;/td&gt;
+                                            &lt;/tr&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style=&quot;padding: 5px 0;&quot; valign=&quot;top&quot;&gt;
+                                                    &lt;table class=&quot;invoice-items&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width: 100%;&quot;&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;&quot; valign=&quot;top&quot;&gt;Apple iphone X&lt;/td&gt;
+                                                            &lt;td class=&quot;alignright&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;&quot; align=&quot;right&quot; valign=&quot;top&quot;&gt;$ 1499.99&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr &gt;
+                                                            &lt;td style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;&quot; valign=&quot;top&quot;&gt;Data cable&lt;/td&gt;
+                                                            &lt;td class=&quot;alignright&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;&quot; align=&quot;right&quot; valign=&quot;top&quot;&gt;$ 20.00&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;&quot; valign=&quot;top&quot;&gt;Phone Cover&lt;/td&gt;
+                                                            &lt;td class=&quot;alignright&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #9ba6bb4a; border-top-style: solid; margin: 0; padding: 10px 0; color: #6a738d;&quot; align=&quot;right&quot; valign=&quot;top&quot;&gt;$ 40.00&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td class=&quot;alignright&quot; width=&quot;80%&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #50649c; border-top-style: solid; border-bottom-color: #50649c; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 10px 0; color:#7e7895;&quot; align=&quot;right&quot; valign=&quot;top&quot;&gt;Total&lt;/td&gt;
+                                                            &lt;td class=&quot;alignright&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #50649c; border-top-style: solid; border-bottom-color: #50649c; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 10px 0; color:#7e7895;&quot; align=&quot;right&quot; valign=&quot;top&quot;&gt;$ 1559.99&lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/table&gt;
+                                                &lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/table&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td class=&quot;content-block aligncenter&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;&quot; align=&quot;center&quot; valign=&quot;top&quot;&gt;
+                                        &lt;a href=&quot;#&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; color: #4d79f6; text-decoration: underline; margin: 0;&quot;&gt;View in browser&lt;/a&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td class=&quot;content-block aligncenter&quot; style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px; color: #6a738d;&quot; align=&quot;center&quot; valign=&quot;top&quot;&gt;
+                                        Robotech Inc. 123 my street, And my Country
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;&lt;!--end table--&gt;   
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;&lt;!--end table--&gt;                                               
+            &lt;/div&gt;&lt;!--end content--&gt;   
+        &lt;/td&gt;
+        &lt;td style=&quot;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px; vertical-align: top; margin: 0;&quot; valign=&quot;top&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;&lt;!--end table--&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                                                       
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

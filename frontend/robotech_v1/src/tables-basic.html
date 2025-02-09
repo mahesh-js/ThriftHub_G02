@@ -1,0 +1,1850 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Baisc</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Tables</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Baisc</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Border Collapse Table</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full border-collapse border dark:border-slate-700">
+                                                <thead class="bg-slate-100 dark:bg-slate-700/20">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 border dark:border-slate-700">
+                                                            Channel
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700">
+                                                            Sessions
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700">
+                                                            Prev.Period
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700">
+                                                            % Change
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Organic search</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Direct</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Referal</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Email</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;w-full border-collapse border dark:border-slate-700&quot;&gt;
+    &lt;thead class=&quot;bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 border dark:border-slate-700&quot;&gt;
+                Channel
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                Sessions
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                Prev.Period
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                % Change
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Organic search&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Direct&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Referal&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Email&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Border Separate Table</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full border-separate border dark:border-slate-700">
+                                                <thead class="bg-slate-100 dark:bg-slate-700/20">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 border dark:border-slate-700">
+                                                            Channel
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700">
+                                                            Sessions
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700">
+                                                            Prev.Period
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700">
+                                                            % Change
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Organic search</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Direct</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Referal</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700">
+                                                            <a href="" class="text-blue-500">Email</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>     
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;w-full border-separate border dark:border-slate-700&quot;&gt;
+    &lt;thead class=&quot;bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 border dark:border-slate-700&quot;&gt;
+                Channel
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                Sessions
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                Prev.Period
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                % Change
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Organic search&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Direct&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Referal&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white  border dark:border-slate-700&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Email&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400  border dark:border-slate-700&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Striped rows</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">
+                                                <thead class="bg-slate-100 dark:bg-slate-700/20">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Channel
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Sessions
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Prev.Period
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            % Change
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <a href="" class="text-blue-500">Organic search</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-slate-50 border-b border-dashed dark:bg-gray-900/30 dark:border-gray-700">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <a href="" class="text-blue-500">Direct</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <a href="" class="text-blue-500">Referal</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-slate-50 border-b border-dashed dark:bg-gray-900/30 dark:border-gray-700">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <a href="" class="text-blue-500">Email</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 5 -->
+                                                    <tr class="bg-white dark:bg-gray-900">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <a href="" class="text-blue-500">Social</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;table class=&quot;w-full&quot;&gt;
+    &lt;thead class=&quot;bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Channel
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Sessions
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Prev.Period
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                % Change
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Organic search&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-slate-50 border-b border-dashed dark:bg-gray-900/30 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Direct&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Referal&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-slate-50 border-b border-dashed dark:bg-gray-900/30 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Email&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 5 --&gt;
+        &lt;tr class=&quot;bg-white dark:bg-gray-900&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Social&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Striped columns </h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">
+                                                <thead class="">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20">
+                                                            Channel
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Sessions
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20">
+                                                            Prev.Period
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            % Change
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20">
+                                                            <a href="" class="text-blue-500">Organic search</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20">
+                                                            <a href="" class="text-blue-500">Direct</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-500 bg-red-500/10 dark:bg-red-700/20">
+                                                            566<small class="text-red-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20">
+                                                            <a href="" class="text-blue-500">Referal</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20">
+                                                            <a href="" class="text-blue-500">Email</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-green-500 whitespace-nowrap dark:text-green-500 bg-green-500/10 dark:bg-green-700/20">
+                                                            566<small class="text-green-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-down text-red-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 5 -->
+                                                    <tr class="bg-white dark:bg-gray-900">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20">
+                                                            <a href="" class="text-blue-500">Social</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            10853<small class="text-gray-400">(52%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20">
+                                                            566<small class="text-gray-400">(92%)</small>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            52.80% <i class="icofont-caret-up text-green-500 text-base"></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;w-full&quot;&gt;
+    &lt;thead class=&quot;&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                Channel
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Sessions
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                Prev.Period
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                % Change
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Organic search&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Direct&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-500 bg-red-500/10 dark:bg-red-700/20&quot;&gt;
+                566&lt;small class=&quot;text-red-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Referal&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Email&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-green-500 whitespace-nowrap dark:text-green-500 bg-green-500/10 dark:bg-green-700/20&quot;&gt;
+                566&lt;small class=&quot;text-green-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-down text-red-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 5 --&gt;
+        &lt;tr class=&quot;bg-white dark:bg-gray-900&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;text-blue-500&quot;&gt;Social&lt;/a&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                10853&lt;small class=&quot;text-gray-400&quot;&gt;(52%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 bg-slate-100 dark:bg-slate-700/20&quot;&gt;
+                566&lt;small class=&quot;text-gray-400&quot;&gt;(92%)&lt;/small&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                52.80% &lt;i class=&quot;icofont-caret-up text-green-500 text-base&quot;&gt;&lt;/i&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Theme color Header</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">
+                                                <thead class="bg-primary-500 dark:bg-primary-500">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Lead
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Email
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Phone No
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Status
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-1.png" alt="" class="mr-2 h-8 rounded-full inline-block">Donald Gardner
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">New Lead</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-5.png" alt="" class="mr-2 h-8 rounded-full inline-block">Matt Rosales
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">New Lead</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-4.png" alt="" class="mr-2 h-8 rounded-full inline-block">Michael Hill
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Lost</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white dark:bg-gray-900">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-2.png" alt="" class="mr-2 h-8 rounded-full inline-block">Dorothy Key
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Converted</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;w-full&quot;&gt;
+    &lt;thead class=&quot;bg-primary-500 dark:bg-primary-500&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Lead
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Email
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Phone No
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Status
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Action
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-1.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Donald Gardner
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;New Lead&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-5.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Matt Rosales
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;New Lead&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-4.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Michael Hill
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Lost&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white dark:bg-gray-900&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Dorothy Key
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Converted&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Hover Table</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="min-w-full">
+                                                <thead class="bg-gray-50 dark:bg-gray-600/20">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Date
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Item Counts
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Tax
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                            Earning
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30">
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            03 March
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            50
+                                                        </td>
+                                                        <td class="p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-400">
+                                                        -$40
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400">
+                                                            $15,500.00
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30">
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            04 March
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            120
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                        -
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400">
+                                                            $20,900.00
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30">
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            05 March
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            90
+                                                        </td>
+                                                        <td class="p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-400">
+                                                        -$20
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400">
+                                                            $10,500.00
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30">
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            06 March
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            160
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                        -
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400">
+                                                            $35,000.00
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 5 -->
+                                                    <tr class="bg-white dark:bg-gray-800 hover:bg-slate-50 dark:hover:bg-slate-900/30">
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            07 March
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            80
+                                                        </td>
+                                                        <td class="p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-400">
+                                                        -$60
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400">
+                                                            $18,880.00
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>     
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;min-w-full&quot;&gt;
+    &lt;thead class=&quot;bg-gray-50 dark:bg-gray-600/20&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Date
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Item Counts
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Tax
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400&quot;&gt;
+                Earning
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                03 March
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                50
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-400&quot;&gt;
+            -$40
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                $15,500.00
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                04 March
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                120
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+            -
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                $20,900.00
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                05 March
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                90
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-400&quot;&gt;
+            -$20
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                $10,500.00
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40 hover:bg-slate-50 dark:hover:bg-slate-900/30&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                06 March
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                160
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+            -
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                $35,000.00
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 5 --&gt;
+        &lt;tr class=&quot;bg-white dark:bg-gray-800 hover:bg-slate-50 dark:hover:bg-slate-900/30&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                07 March
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                80
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-red-500 whitespace-nowrap dark:text-red-400&quot;&gt;
+            -$60
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                $18,880.00
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Dark Header</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">
+                                                <thead class="bg-slate-700 dark:bg-slate-900/30">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Lead
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Email
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Phone No
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Status
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase">
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-1.png" alt="" class="mr-2 h-8 rounded-full inline-block">Donald Gardner
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">New Lead</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-5.png" alt="" class="mr-2 h-8 rounded-full inline-block">Matt Rosales
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">New Lead</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-4.png" alt="" class="mr-2 h-8 rounded-full inline-block">Michael Hill
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Lost</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white dark:bg-gray-900">
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-2.png" alt="" class="mr-2 h-8 rounded-full inline-block">Dorothy Key
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Converted</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;w-full&quot;&gt;
+    &lt;thead class=&quot;bg-slate-700 dark:bg-slate-900/30&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Lead
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Email
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Phone No
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Status
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-slate-100 uppercase&quot;&gt;
+                Action
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-1.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Donald Gardner
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;New Lead&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-5.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Matt Rosales
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;New Lead&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-4.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Michael Hill
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Lost&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white dark:bg-gray-900&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Dorothy Key
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Converted&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Table with checkbox</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tables-8"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">
+                                                <thead class="bg-gray-50 dark:bg-gray-600/20">
+                                                    <tr>
+                                                        <th scope="col" class="p-3">
+                                                            <label class="custom-label">
+                                                                <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                                                  <input type="checkbox" class="hidden" >
+                                                                  <i class="fas fa-check hidden text-xs text-slate-700 dark:text-slate-200"></i>
+                                                                </div>
+                                                            </label>
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Lead
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Email
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Phone No
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Status
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="w-4 p-4">
+                                                            <label class="custom-label">
+                                                                <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                                                  <input type="checkbox" class="hidden" >
+                                                                  <i class="fas fa-check hidden text-xs text-slate-700 dark:text-slate-200"></i>
+                                                                </div>
+                                                            </label>
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-1.png" alt="" class="mr-2 h-8 rounded-full inline-block">Donald Gardner
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">New Lead</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="w-4 p-4">
+                                                            <label class="custom-label">
+                                                                <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                                                  <input type="checkbox" class="hidden" checked>
+                                                                  <i class="fas fa-check hidden text-xs text-slate-700 dark:text-slate-200"></i>
+                                                                </div>
+                                                            </label>
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-5.png" alt="" class="mr-2 h-8 rounded-full inline-block">Matt Rosales
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">New Lead</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        <td class="w-4 p-4">
+                                                            <label class="custom-label">
+                                                                <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                                                  <input type="checkbox" class="hidden" >
+                                                                  <i class="fas fa-check hidden text-xs text-slate-700 dark:text-slate-200"></i>
+                                                                </div>
+                                                            </label>
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-4.png" alt="" class="mr-2 h-8 rounded-full inline-block">Michael Hill
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Lost</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white dark:bg-gray-900">
+                                                        <td class="w-4 p-4">
+                                                            <label class="custom-label">
+                                                                <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                                                  <input type="checkbox" class="hidden" checked>
+                                                                  <i class="fas fa-check hidden text-xs text-slate-700 dark:text-slate-200"></i>
+                                                                </div>
+                                                            </label>
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <img src="assets/images/users/avatar-2.png" alt="" class="mr-2 h-8 rounded-full inline-block">Dorothy Key
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            xyx@gmail.com
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            +123456789
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Converted</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tables-8" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;table class=&quot;w-full&quot;&gt;
+    &lt;thead class=&quot;bg-gray-50 dark:bg-gray-600/20&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3&quot;&gt;
+                &lt;label class=&quot;custom-label&quot;&gt;
+                    &lt;div class=&quot;bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+                      &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; &gt;
+                      &lt;i class=&quot;fas fa-check hidden text-xs text-slate-700 dark:text-slate-200&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase&quot;&gt;
+                Lead
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase&quot;&gt;
+                Email
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase&quot;&gt;
+                Phone No
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase&quot;&gt;
+                Status
+            &lt;/th&gt;
+            &lt;th scope=&quot;col&quot; class=&quot;p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase&quot;&gt;
+                Action
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;w-4 p-4&quot;&gt;
+                &lt;label class=&quot;custom-label&quot;&gt;
+                    &lt;div class=&quot;bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+                      &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; &gt;
+                      &lt;i class=&quot;fas fa-check hidden text-xs text-slate-700 dark:text-slate-200&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-1.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Donald Gardner
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;New Lead&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;w-4 p-4&quot;&gt;
+                &lt;label class=&quot;custom-label&quot;&gt;
+                    &lt;div class=&quot;bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+                      &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+                      &lt;i class=&quot;fas fa-check hidden text-xs text-slate-700 dark:text-slate-200&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-5.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Matt Rosales
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-indigo-600/5 text-indigo-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;New Lead&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40&quot;&gt;
+            &lt;td class=&quot;w-4 p-4&quot;&gt;
+                &lt;label class=&quot;custom-label&quot;&gt;
+                    &lt;div class=&quot;bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+                      &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; &gt;
+                      &lt;i class=&quot;fas fa-check hidden text-xs text-slate-700 dark:text-slate-200&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-4.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Michael Hill
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Lost&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white dark:bg-gray-900&quot;&gt;
+            &lt;td class=&quot;w-4 p-4&quot;&gt;
+                &lt;label class=&quot;custom-label&quot;&gt;
+                    &lt;div class=&quot;bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+                      &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+                      &lt;i class=&quot;fas fa-check hidden text-xs text-slate-700 dark:text-slate-200&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium whitespace-nowrap dark:text-white&quot;&gt;
+                &lt;img src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot; class=&quot;mr-2 h-8 rounded-full inline-block&quot;&gt;Dorothy Key
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                xyx@gmail.com
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                +123456789
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;span class=&quot;bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Converted&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-edit text-lg text-gray-500 dark:text-gray-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icofont-ui-delete text-lg text-red-500 dark:text-red-400&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/pages/wizard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

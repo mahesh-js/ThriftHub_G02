@@ -1,0 +1,81 @@
+//
+// components.scss
+//
+//Buttons
+.btn {
+    padding: 12px 24px;
+    outline: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:focus{
+        box-shadow: none !important;
+    }
+    &.btn-sm{
+        padding: 7px 16px;
+        font-size: 10px;
+    }
+    &.btn-lg{
+        padding: 14px 30px;
+        font-size: 16px;
+    } 
+
+    &.btn-custom {
+        color: $white;
+        background: $custom;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $body-color !important;
+            color: $white !important;
+            box-shadow: $shadow !important;
+        }
+    }    
+    &.btn-custom-outline {
+        border: 1px solid $custom;
+        color: $custom;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $custom !important;
+            border-color: $custom !important;
+            color: $white !important;
+            box-shadow: $shadow !important;
+        }
+    }    
+    &.btn-outline-white {
+        border: 1px solid $white !important;
+        color: $white;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $custom !important;
+            border: 1px solid $custom !important;
+            color: $white !important;
+            box-shadow: $shadow !important;
+        }
+    }
+}
+
+//Nav
+.nav-pills {
+    .nav-link{
+        color: $body-color !important;
+        background: darken($gray-100, 3%);
+        border-radius: 0 !important;
+        &:hover {
+            background: $gray-300;
+        }
+        &.active {
+            background: $custom;
+            color: $white !important;
+        }
+    }
+}
+
+
+.alert-success {
+    color: $success;
+    border: 0;
+    background-color: rgba($success,.08);
+}

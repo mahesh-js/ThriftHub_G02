@@ -1,0 +1,157 @@
+
+
+.form-input{
+  @apply text-base;
+  line-height: 22px !important;
+}
+
+/*  Check box  */
+.custom-label input:checked + i {
+  display: block !important;
+}
+/*  Switch  */
+.custom-switch {
+  transition: .4s;
+}
+
+.custom-switch::before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 17px;
+  top: 1px;
+  transition: .4s;
+  background: theme('colors.slate.400');
+  border-radius: 50%;
+  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+
+input:checked + .custom-switch {
+  background: theme('colors.primary.500') !important;
+}
+input:checked + .custom-switch.switch-green {
+  background: theme('colors.green.500') !important;
+}
+
+input:checked + .custom-switch:before {
+  transform: translateX(-16px);
+  background: theme('colors.white');
+}
+
+
+/* selecter */
+.selectr-options-container,
+.selectr-selected{
+  @apply border-slate-200  dark:border-slate-700 py-1 dark:bg-slate-800 focus:outline-none;
+}
+.selectr-option.active{
+  @apply text-primary-500 bg-slate-50 dark:bg-slate-700;
+}
+.selectr-tag-input{
+  @apply bg-transparent p-0 dark:bg-transparent focus-visible:outline-none;
+}
+.selectr-option.selected{
+  @apply bg-slate-50 dark:bg-slate-800;
+}
+.selectr-option{
+  @apply text-slate-700 dark:text-slate-300;
+}
+.selectr-input{
+  @apply border-slate-200 dark:border-slate-700 focus:right-0 focus:outline-none dark:bg-slate-700 dark:focus-visible:outline-none py-1 dark:text-slate-300 dark:focus:border-blue-400;
+}
+
+.selectr-container.open .selectr-selected {
+  @apply border-t-slate-100 border-r-slate-100 dark:border-r-slate-700 dark:border-t-slate-700 border-l-slate-100 dark:border-l-slate-700 border-b-transparent rounded-tr rounded-tl
+}
+.selectr-tag{
+  @apply bg-primary-500 rounded text-sm;
+}
+.selectr-label{
+  @apply text-slate-700 dark:text-slate-300;
+}
+.selectr-tag-remove::after, 
+.selectr-tag-remove::before{
+  width: 1px;
+}
+
+.selectr-container.multiple.has-selected .selectr-selected{
+  @apply py-[8px];
+  border-radius: 6px;
+}
+
+.taggable .selectr-selected{
+  @apply hover:border-brand-500 focus:border-brand-500;
+  padding: 8px 28px 8px 14px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+
+/*  Datepicker */
+.datepicker.active{
+  @apply inline-block border border-slate-100 rounded dark:border-slate-600;
+}
+.datepicker-dropdown.datepicker-orient-top{
+  @apply pb-0;
+}
+.datepicker-header .datepicker-controls .button{
+  @apply font-medium dark:bg-slate-900/20 dark:text-slate-300;
+}
+.datepicker-controls .button{
+  @apply bg-slate-50 text-sm border border-slate-100 text-slate-700;
+}
+.datepicker-view .dow{
+  @apply font-medium text-xs dark:text-slate-300;
+}
+.datepicker-view .days .datepicker-cell{
+  @apply dark:text-slate-400;
+}
+.datepicker-cell.next:not(.disabled), 
+.datepicker-cell.prev:not(.disabled){
+  @apply dark:text-slate-600;
+}
+.datepicker-picker {
+  @apply bg-white dark:bg-slate-700;
+}
+.datepicker-picker  span{
+  @apply rounded-lg ;
+}
+.datepicker-cell.focused:not(.selected),
+.datepicker-cell:not(.disabled):hover{
+  @apply bg-slate-100 text-primary-500 dark:bg-slate-900/20 dark:text-slate-100;
+}
+
+
+
+/* Form Validation */
+
+#form-validation small{ 
+  @apply hidden text-red-500;
+}
+
+#form-validation small.error{ 
+  @apply block;
+}
+
+input.error{
+  border-color: theme('colors.red.500') !important;
+}
+input.success{
+  border-color: theme('colors.green.500') !important;
+}
+
+
+/* Form Upload */
+
+.uppy-Dashboard-inner{
+  @apply dark:bg-slate-900/20 dark:border-slate-700;
+}
+[data-uppy-drag-drop-supported=true] .uppy-Dashboard-AddFiles,
+.uppy-Dashboard-dropFilesHereHint{
+  @apply dark:border-slate-700;
+}
+
+.uppy-Dashboard-AddFiles-title{
+  @apply dark:text-slate-400;
+}

@@ -1,0 +1,1116 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/cropperjs/cropper.min.css">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Image Cropper</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Forms</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-brand-500 hover:text-brand-600 dark:text-brand-400">Cropper</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-brand-500/60 dark:border-brand-500/60 text-brand-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-brand-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default badge</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Image-Crop-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="docs-demo">
+                                        <div class="img-container mb-0">
+                                            <img id="image" src="assets/images/widgets/3.jpg" alt="Picture">
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="actions">
+                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative docs-buttons">
+                                            <div class="flex-auto p-4">
+                                                <!-- <h3>Toolbar:</h3> -->
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="setDragMode" data-option="move" title="Move">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setDragMode&quot;, &quot;move&quot;)">
+                                                        <span class="fas fa-expand-arrows-alt"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="setDragMode" data-option="crop" title="Crop">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setDragMode&quot;, &quot;crop&quot;)">
+                                                        <span class="fas fa-crop"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="zoom" data-option="0.1" title="Zoom In">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;zoom&quot;, 0.1)">
+                                                        <span class="fas fa-search-plus"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="zoom" data-option="-0.1" title="Zoom Out">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;zoom&quot;, -0.1)">
+                                                        <span class="fas fa-search-minus"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="move" data-option="-10" data-second-option="0" title="Move Left">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, -10, 0)">
+                                                        <span class="fas fa-arrow-left"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="move" data-option="10" data-second-option="0" title="Move Right">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, 10, 0)">
+                                                        <span class="fas fa-arrow-right"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="move" data-option="0" data-second-option="-10" title="Move Up">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, 0, -10)">
+                                                        <span class="fas fa-arrow-up"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="move" data-option="0" data-second-option="10" title="Move Down">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;move&quot;, 0, 10)">
+                                                        <span class="fa fa-arrow-down"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="rotate" data-option="-45" title="Rotate Left">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;rotate&quot;, -45)">
+                                                        <span class="fas fa-reply"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="rotate" data-option="45" title="Rotate Right">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;rotate&quot;, 45)">
+                                                        <span class="fas fa-share"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="scaleX" data-option="-1" title="Flip Horizontal">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;scaleX&quot;, -1)">
+                                                        <span class="fa fa-arrows-alt-h"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="scaleY" data-option="-1" title="Flip Vertical">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;scaleY&quot;, -1)">
+                                                        <span class="fas fa-arrows-alt-v"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="crop" title="Crop">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;crop&quot;)">
+                                                        <span class="fas fa-check"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="clear" title="Clear">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;clear&quot;)">
+                                                        <span class="fas fa-times"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="disable" title="Disable">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;disable&quot;)">
+                                                        <span class="fas fa-lock"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="enable" title="Enable">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;enable&quot;)">
+                                                        <span class="fas fa-unlock"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative mb-2 mr-1">
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="reset" title="Reset">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;reset&quot;)">
+                                                        <span class="fas fa-redo"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded btn-upload" title="Upload image file">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="Import image with Blob URLs">
+                                                        <span class="fas fa-upload"></span>
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn  hover:text-black  
+                                         text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+                                        font-medium py-2 px-4 rounded" data-method="destroy" title="Destroy">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;destroy&quot;)">
+                                                        <span class="fas fa-power-off"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                                <div class="inline-flex relative relative-crop mb-2 mr-1">
+                                                    
+                                                    <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 160, &quot;height&quot;: 90 }">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getCroppedCanvas&quot;, { width: 160, height: 90 })">
+                                                        160&times;90
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 320, &quot;height&quot;: 180 }">
+                                                        <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getCroppedCanvas&quot;, { width: 320, height: 180 })">
+                                                        320&times;180
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                        
+                                               
+                                        
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getData" data-option data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getData&quot;)">
+                                                        Get Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="setData" data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setData&quot;, data)">
+                                                        Set Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getContainerData" data-option data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getContainerData&quot;)">
+                                                        Get Container Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getImageData" data-option data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getImageData&quot;)">
+                                                        Get Image Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getCanvasData" data-option data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getCanvasData&quot;)">
+                                                        Get Canvas Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="setCanvasData" data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setCanvasData&quot;, data)">
+                                                        Set Canvas Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="getCropBoxData" data-option data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;getCropBoxData&quot;)">
+                                                        Get Crop Box Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="setCropBoxData" data-target="#putData">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="$().cropper(&quot;setCropBoxData&quot;, data)">
+                                                        Set Crop Box Data
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="moveTo" data-option="0">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.moveTo(0)">
+                                                        Move to [0,0]
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="zoomTo" data-option="1">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.zoomTo(1)">
+                                                        Zoom to 100%
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="rotateTo" data-option="180">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" data-animation="false" title="cropper.rotateTo(180)">
+                                                        Rotate 180°
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1" data-method="scale" data-option="-2" data-second-option="-1">
+                                                    <span class="docs-tooltip" data-bs-toggle="tooltip" title="cropper.scale(-2, -1)">
+                                                        Scale (-2, -1)
+                                                    </span>
+                                                </button>
+                                                <textarea class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700" id="putData" rows="3" placeholder="Get data to here or set data with this value"></textarea>
+                                            </div><!--end card-body-->
+                                        </div><!--end card-->
+                                    </div>
+
+                                    <div class="mt-5">
+                                        <div class="docs-preview clear-both">
+                                            <div class="img-preview preview-lg"></div>
+                                            <div class="img-preview preview-md"></div>
+                                            <div class="img-preview preview-sm"></div>
+                                            <div class="img-preview preview-xs"></div>
+                                        </div>                
+                                        <!-- <h3>Data:</h3> -->
+                                        <div class="docs-data">
+                                            <div class="flex mb-3">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                  X
+                                                </div>
+                                                <input type="text" id="dataX" placeholder="x" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-1 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    px
+                                                </div>
+                                            </div>
+                
+                                            <div class="flex mb-3">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                  Y
+                                                </div>
+                                                <input type="text" id="dataY" placeholder="y" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    px
+                                                </div>
+                                            </div>
+                
+                                            <div class="flex mb-3">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                  Width
+                                                </div>
+                                                <input type="text" id="dataWidth" placeholder="width" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    px
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="flex mb-3">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    Height
+                                                </div>
+                                                <input type="text" id="dataHeight" placeholder="height" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    px
+                                                </div>
+                                            </div>
+                
+                                            <div class="flex mb-3">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    Rotate
+                                                </div>
+                                                <input type="text" id="dataRotate" placeholder="rotate" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    deg
+                                                </div>
+                                            </div>
+                
+                                            <div class="flex mb-3">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    ScaleX
+                                                </div>
+                                                <input type="text" id="dataScaleX" placeholder="ScaleX" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">                                
+                                            </div>
+                
+                                            <div class="flex">
+                                                <div  class="inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                                    ScaleY
+                                                </div>
+                                                <input type="text" id="dataScaleY" placeholder="ScaleY" class="rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500">                                
+                                            </div>
+                                             
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5 docs-toggles">
+                                        <div class="btn-group flex flex-nowrap" data-toggle="buttons">
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1 active">
+                                                <input type="radio" class="sr-only" id="aspectRatio0" name="aspectRatio" value="1.7777777777777777">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 16 / 9">
+                                                16:9
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="aspectRatio1" name="aspectRatio" value="1.3333333333333333">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 4 / 3">
+                                                4:3
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="aspectRatio2" name="aspectRatio" value="1">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 1 / 1">
+                                                1:1
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="aspectRatio3" name="aspectRatio" value="0.6666666666666666">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: 2 / 3">
+                                                2:3
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="aspectRatio4" name="aspectRatio" value="NaN">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="aspectRatio: NaN">
+                                                Free
+                                                </span>
+                                            </label>
+                                        </div>
+                                
+                                        <div class="btn-group flex flex-nowrap" data-toggle="buttons">
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1 active">
+                                                <input type="radio" class="sr-only" id="viewMode0" name="viewMode" value="0" checked>
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="View Mode 0">
+                                                VM0
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="viewMode1" name="viewMode" value="1">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="View Mode 1">
+                                                VM1
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="viewMode2" name="viewMode" value="2">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="View Mode 2">
+                                                VM2
+                                                </span>
+                                            </label>
+                                            <label class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1">
+                                                <input type="radio" class="sr-only" id="viewMode3" name="viewMode" value="3">
+                                                <span class="docs-tooltip dark:text-slate-400" data-bs-toggle="tooltip" data-animation="false" title="View Mode 3">
+                                                VM3
+                                                </span>
+                                            </label>
+                                        </div>
+                                
+                                        <div class="dropdown dropup docs-options mt-3">
+                                            <button id="toggleOptions" data-fc-autoclose="both" data-fc-type="dropdown" data-fc-placement="top" class="dropdown-toggle text-white bg-brand-500 hover:bg-brand-600 focus:outline-none font-medium rounded text-sm px-3 py-2 text-center inline-flex items-center" type="button">
+                                                Toggle Options 
+                                                <i class="fas fa-chevron-down text-xs ml-2"></i>
+                                            </button>
+                
+                                            <div class="hidden z-10 w-56 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200 p-3" aria-labelledby="toggleOptions" role="menu">
+                                                    <li class="">
+                                                        <input class="" id="responsive" type="checkbox" name="responsive" checked>
+                                                        <label class="" for="responsive">responsive</label>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="restore" type="checkbox" name="restore" checked>
+                                                            <label class="" for="restore">restore</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="checkCrossOrigin" type="checkbox" name="checkCrossOrigin" checked>
+                                                            <label class="" for="checkCrossOrigin">checkCrossOrigin</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="checkOrientation" type="checkbox" name="checkOrientation" checked>
+                                                            <label class="" for="checkOrientation">checkOrientation</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="modal" type="checkbox" name="modal" checked>
+                                                            <label class="" for="modal">modal</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="guides" type="checkbox" name="guides" checked>
+                                                            <label class="" for="guides">guides</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="center" type="checkbox" name="center" checked>
+                                                            <label class="" for="center">center</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="highlight" type="checkbox" name="highlight" checked>
+                                                            <label class="" for="highlight">highlight</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="background" type="checkbox" name="background" checked>
+                                                            <label class="" for="background">background</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="autoCrop" type="checkbox" name="autoCrop" checked>
+                                                            <label class="" for="autoCrop">autoCrop</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="movable" type="checkbox" name="movable" checked>
+                                                            <label class="" for="movable">movable</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="rotatable" type="checkbox" name="rotatable" checked>
+                                                            <label class="" for="rotatable">rotatable</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="scalable" type="checkbox" name="scalable" checked>
+                                                            <label class="" for="scalable">scalable</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="zoomable" type="checkbox" name="zoomable" checked>
+                                                            <label class="" for="zoomable">zoomable</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="zoomOnTouch" type="checkbox" name="zoomOnTouch" checked>
+                                                            <label class="" for="zoomOnTouch">zoomOnTouch</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="zoomOnWheel" type="checkbox" name="zoomOnWheel" checked>
+                                                            <label class="" for="zoomOnWheel">zoomOnWheel</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="cropBoxMovable" type="checkbox" name="cropBoxMovable" checked>
+                                                            <label class="" for="cropBoxMovable">cropBoxMovable</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="cropBoxResizable" type="checkbox" name="cropBoxResizable" checked>
+                                                            <label class="" for="cropBoxResizable">cropBoxResizable</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="">
+                                                        <div class="form-check">
+                                                            <input class="" id="toggleDragModeOnDblclick" type="checkbox" name="toggleDragModeOnDblclick" checked>
+                                                            <label class="" for="toggleDragModeOnDblclick">toggleDragModeOnDblclick</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div><!-- /.dropdown -->
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Image-Crop-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/cropperjs/cropper.min.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/cropperjs/cropper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/crop.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;docs-demo&quot;&gt;
+    &lt;div class=&quot;img-container mb-0&quot;&gt;
+        &lt;img id=&quot;image&quot; src=&quot;assets/images/widgets/img-5.jpg&quot; alt=&quot;Picture&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;actions&quot;&gt;
+    &lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative docs-buttons&quot;&gt;
+        &lt;div class=&quot;flex-auto p-4&quot;&gt;
+            &lt;!-- &lt;h3&gt;Toolbar:&lt;/h3&gt; --&gt;
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;setDragMode&quot; data-option=&quot;move&quot; title=&quot;Move&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;setDragMode&amp;quot;, &amp;quot;move&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-expand-arrows-alt&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;setDragMode&quot; data-option=&quot;crop&quot; title=&quot;Crop&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;setDragMode&amp;quot;, &amp;quot;crop&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-crop&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;zoom&quot; data-option=&quot;0.1&quot; title=&quot;Zoom In&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;zoom&amp;quot;, 0.1)&quot;&gt;
+                    &lt;span class=&quot;fas fa-search-plus&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;zoom&quot; data-option=&quot;-0.1&quot; title=&quot;Zoom Out&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;zoom&amp;quot;, -0.1)&quot;&gt;
+                    &lt;span class=&quot;fas fa-search-minus&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;move&quot; data-option=&quot;-10&quot; data-second-option=&quot;0&quot; title=&quot;Move Left&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;move&amp;quot;, -10, 0)&quot;&gt;
+                    &lt;span class=&quot;fas fa-arrow-left&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;move&quot; data-option=&quot;10&quot; data-second-option=&quot;0&quot; title=&quot;Move Right&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;move&amp;quot;, 10, 0)&quot;&gt;
+                    &lt;span class=&quot;fas fa-arrow-right&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;move&quot; data-option=&quot;0&quot; data-second-option=&quot;-10&quot; title=&quot;Move Up&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;move&amp;quot;, 0, -10)&quot;&gt;
+                    &lt;span class=&quot;fas fa-arrow-up&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;move&quot; data-option=&quot;0&quot; data-second-option=&quot;10&quot; title=&quot;Move Down&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;move&amp;quot;, 0, 10)&quot;&gt;
+                    &lt;span class=&quot;fa fa-arrow-down&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;rotate&quot; data-option=&quot;-45&quot; title=&quot;Rotate Left&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;rotate&amp;quot;, -45)&quot;&gt;
+                    &lt;span class=&quot;fas fa-reply&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;rotate&quot; data-option=&quot;45&quot; title=&quot;Rotate Right&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;rotate&amp;quot;, 45)&quot;&gt;
+                    &lt;span class=&quot;fas fa-share&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;scaleX&quot; data-option=&quot;-1&quot; title=&quot;Flip Horizontal&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;scaleX&amp;quot;, -1)&quot;&gt;
+                    &lt;span class=&quot;fa fa-arrows-alt-h&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;scaleY&quot; data-option=&quot;-1&quot; title=&quot;Flip Vertical&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;scaleY&amp;quot;, -1)&quot;&gt;
+                    &lt;span class=&quot;fas fa-arrows-alt-v&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;crop&quot; title=&quot;Crop&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;crop&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-check&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;clear&quot; title=&quot;Clear&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;clear&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-times&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;disable&quot; title=&quot;Disable&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;disable&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-lock&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;enable&quot; title=&quot;Enable&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;enable&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-unlock&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative mb-2 mr-1&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;reset&quot; title=&quot;Reset&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;reset&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-redo&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded btn-upload&quot; title=&quot;Upload image file&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;Import image with Blob URLs&quot;&gt;
+                    &lt;span class=&quot;fas fa-upload&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn  hover:text-black  
+    text-indigo-700 hover:bg-opacity-50 bg-gray-100 dark:bg-slate-700 dark:text-slate-300 text-sm 
+    font-medium py-2 px-4 rounded&quot; data-method=&quot;destroy&quot; title=&quot;Destroy&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;destroy&amp;quot;)&quot;&gt;
+                    &lt;span class=&quot;fas fa-power-off&quot;&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            &lt;div class=&quot;inline-flex relative relative-crop mb-2 mr-1&quot;&gt;
+                
+                &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getCroppedCanvas&quot; data-option=&quot;{ &amp;quot;width&amp;quot;: 160, &amp;quot;height&amp;quot;: 90 }&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getCroppedCanvas&amp;quot;, { width: 160, height: 90 })&quot;&gt;
+                    160&amp;times;90
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getCroppedCanvas&quot; data-option=&quot;{ &amp;quot;width&amp;quot;: 320, &amp;quot;height&amp;quot;: 180 }&quot;&gt;
+                    &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getCroppedCanvas&amp;quot;, { width: 320, height: 180 })&quot;&gt;
+                    320&amp;times;180
+                    &lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+    
+            
+    
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getData&quot; data-option data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getData&amp;quot;)&quot;&gt;
+                    Get Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;setData&quot; data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;setData&amp;quot;, data)&quot;&gt;
+                    Set Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getContainerData&quot; data-option data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getContainerData&amp;quot;)&quot;&gt;
+                    Get Container Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getImageData&quot; data-option data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getImageData&amp;quot;)&quot;&gt;
+                    Get Image Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getCanvasData&quot; data-option data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getCanvasData&amp;quot;)&quot;&gt;
+                    Get Canvas Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;setCanvasData&quot; data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;setCanvasData&amp;quot;, data)&quot;&gt;
+                    Set Canvas Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;getCropBoxData&quot; data-option data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;getCropBoxData&amp;quot;)&quot;&gt;
+                    Get Crop Box Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;setCropBoxData&quot; data-target=&quot;#putData&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;$().cropper(&amp;quot;setCropBoxData&amp;quot;, data)&quot;&gt;
+                    Set Crop Box Data
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;moveTo&quot; data-option=&quot;0&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;cropper.moveTo(0)&quot;&gt;
+                    Move to [0,0]
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;zoomTo&quot; data-option=&quot;1&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;cropper.zoomTo(1)&quot;&gt;
+                    Zoom to 100%
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;rotateTo&quot; data-option=&quot;180&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;cropper.rotateTo(180)&quot;&gt;
+                    Rotate 180&deg;
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn px-3 py-2 lg:px-4 bg-brand-500 text-white text-sm font-semibold rounded hover:bg-brand-600 mb-2 mr-1&quot; data-method=&quot;scale&quot; data-option=&quot;-2&quot; data-second-option=&quot;-1&quot;&gt;
+                &lt;span class=&quot;docs-tooltip&quot; data-bs-toggle=&quot;tooltip&quot; title=&quot;cropper.scale(-2, -1)&quot;&gt;
+                    Scale (-2, -1)
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;textarea class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700&quot; id=&quot;putData&quot; rows=&quot;3&quot; placeholder=&quot;Get data to here or set data with this value&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;&lt;!--end card-body--&gt;
+    &lt;/div&gt;&lt;!--end card--&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;mt-5&quot;&gt;
+    &lt;div class=&quot;docs-preview clear-both&quot;&gt;
+        &lt;div class=&quot;img-preview preview-lg&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;img-preview preview-md&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;img-preview preview-sm&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;img-preview preview-xs&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;                
+    &lt;!-- &lt;h3&gt;Data:&lt;/h3&gt; --&gt;
+    &lt;div class=&quot;docs-data&quot;&gt;
+        &lt;div class=&quot;flex mb-3&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                X
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataX&quot; placeholder=&quot;x&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-1 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                px
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex mb-3&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                Y
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataY&quot; placeholder=&quot;y&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                px
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex mb-3&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                Width
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataWidth&quot; placeholder=&quot;width&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                px
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;flex mb-3&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                Height
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataHeight&quot; placeholder=&quot;height&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                px
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex mb-3&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                Rotate
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataRotate&quot; placeholder=&quot;rotate&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-r-md border border-l-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                deg
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex mb-3&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                ScaleX
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataScaleX&quot; placeholder=&quot;ScaleX&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;                                
+        &lt;/div&gt;
+
+        &lt;div class=&quot;flex&quot;&gt;
+            &lt;div  class=&quot;inline-flex items-center px-3 text-sm text-slate-100 bg-brand-500 rounded-l-md border border-r-0  dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+                ScaleY
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dataScaleY&quot; placeholder=&quot;ScaleY&quot; class=&quot;rounded-none focus-visible:outline-none bg-gray-50 border text-gray-900 focus:ring-brand-500 focus:border-brand-500 block flex-1 min-w-0 w-full text-sm border-gray-200 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-brand-500 dark:focus:border-brand-500&quot;&gt;                                
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;mt-5 docs-toggles&quot;&gt;
+    &lt;div class=&quot;btn-group flex flex-nowrap&quot; data-toggle=&quot;buttons&quot;&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1 active&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;aspectRatio0&quot; name=&quot;aspectRatio&quot; value=&quot;1.7777777777777777&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;aspectRatio: 16 / 9&quot;&gt;
+            16:9
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;aspectRatio1&quot; name=&quot;aspectRatio&quot; value=&quot;1.3333333333333333&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;aspectRatio: 4 / 3&quot;&gt;
+            4:3
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;aspectRatio2&quot; name=&quot;aspectRatio&quot; value=&quot;1&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;aspectRatio: 1 / 1&quot;&gt;
+            1:1
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;aspectRatio3&quot; name=&quot;aspectRatio&quot; value=&quot;0.6666666666666666&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;aspectRatio: 2 / 3&quot;&gt;
+            2:3
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;aspectRatio4&quot; name=&quot;aspectRatio&quot; value=&quot;NaN&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;aspectRatio: NaN&quot;&gt;
+            Free
+            &lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;btn-group flex flex-nowrap&quot; data-toggle=&quot;buttons&quot;&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1 active&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;viewMode0&quot; name=&quot;viewMode&quot; value=&quot;0&quot; checked&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;View Mode 0&quot;&gt;
+            VM0
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;viewMode1&quot; name=&quot;viewMode&quot; value=&quot;1&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;View Mode 1&quot;&gt;
+            VM1
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;viewMode2&quot; name=&quot;viewMode&quot; value=&quot;2&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;View Mode 2&quot;&gt;
+            VM2
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded mb-1 mr-1&quot;&gt;
+            &lt;input type=&quot;radio&quot; class=&quot;sr-only&quot; id=&quot;viewMode3&quot; name=&quot;viewMode&quot; value=&quot;3&quot;&gt;
+            &lt;span class=&quot;docs-tooltip dark:text-slate-400&quot; data-bs-toggle=&quot;tooltip&quot; data-animation=&quot;false&quot; title=&quot;View Mode 3&quot;&gt;
+            VM3
+            &lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;dropdown dropup docs-options mt-3&quot;&gt;
+        &lt;button id=&quot;toggleOptions&quot; data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; data-fc-placement=&quot;top&quot; class=&quot;dropdown-toggle text-white bg-brand-500 hover:bg-brand-600 focus:outline-none font-medium rounded text-sm px-3 py-2 text-center inline-flex items-center&quot; type=&quot;button&quot;&gt;
+            Toggle Options 
+            &lt;i class=&quot;fas fa-chevron-down text-xs ml-2&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+
+        &lt;div class=&quot;hidden z-10 w-56 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700&quot;&gt;
+            &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200 p-3&quot; aria-labelledby=&quot;toggleOptions&quot; role=&quot;menu&quot;&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;input class=&quot;&quot; id=&quot;responsive&quot; type=&quot;checkbox&quot; name=&quot;responsive&quot; checked&gt;
+                    &lt;label class=&quot;&quot; for=&quot;responsive&quot;&gt;responsive&lt;/label&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;restore&quot; type=&quot;checkbox&quot; name=&quot;restore&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;restore&quot;&gt;restore&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;checkCrossOrigin&quot; type=&quot;checkbox&quot; name=&quot;checkCrossOrigin&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;checkCrossOrigin&quot;&gt;checkCrossOrigin&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;checkOrientation&quot; type=&quot;checkbox&quot; name=&quot;checkOrientation&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;checkOrientation&quot;&gt;checkOrientation&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;modal&quot; type=&quot;checkbox&quot; name=&quot;modal&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;modal&quot;&gt;modal&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;guides&quot; type=&quot;checkbox&quot; name=&quot;guides&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;guides&quot;&gt;guides&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;center&quot; type=&quot;checkbox&quot; name=&quot;center&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;center&quot;&gt;center&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;highlight&quot; type=&quot;checkbox&quot; name=&quot;highlight&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;highlight&quot;&gt;highlight&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;background&quot; type=&quot;checkbox&quot; name=&quot;background&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;background&quot;&gt;background&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;autoCrop&quot; type=&quot;checkbox&quot; name=&quot;autoCrop&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;autoCrop&quot;&gt;autoCrop&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;movable&quot; type=&quot;checkbox&quot; name=&quot;movable&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;movable&quot;&gt;movable&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;rotatable&quot; type=&quot;checkbox&quot; name=&quot;rotatable&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;rotatable&quot;&gt;rotatable&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;scalable&quot; type=&quot;checkbox&quot; name=&quot;scalable&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;scalable&quot;&gt;scalable&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;zoomable&quot; type=&quot;checkbox&quot; name=&quot;zoomable&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;zoomable&quot;&gt;zoomable&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;zoomOnTouch&quot; type=&quot;checkbox&quot; name=&quot;zoomOnTouch&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;zoomOnTouch&quot;&gt;zoomOnTouch&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;zoomOnWheel&quot; type=&quot;checkbox&quot; name=&quot;zoomOnWheel&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;zoomOnWheel&quot;&gt;zoomOnWheel&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;cropBoxMovable&quot; type=&quot;checkbox&quot; name=&quot;cropBoxMovable&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;cropBoxMovable&quot;&gt;cropBoxMovable&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;cropBoxResizable&quot; type=&quot;checkbox&quot; name=&quot;cropBoxResizable&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;cropBoxResizable&quot;&gt;cropBoxResizable&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;&quot; id=&quot;toggleDragModeOnDblclick&quot; type=&quot;checkbox&quot; name=&quot;toggleDragModeOnDblclick&quot; checked&gt;
+                        &lt;label class=&quot;&quot; for=&quot;toggleDragModeOnDblclick&quot;&gt;toggleDragModeOnDblclick&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;&lt;!-- /.dropdown --&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                                                       
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/cropperjs/cropper.min.js"></script>
+        <script src="assets/js/pages/crop.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

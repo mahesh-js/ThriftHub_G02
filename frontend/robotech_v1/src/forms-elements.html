@@ -1,0 +1,766 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Form Elements</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Forms</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Form Elements</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Form example</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="mb-2">
+                                          <label for="email" class="font-medium text-sm text-slate-600 dark:text-slate-400">Your email</label>
+                                          <input type="email" id="email" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="name@t-wind.com" required>
+                                        </div>
+                                        <div class="mb-2">
+                                          <label for="password" class="font-medium text-sm text-slate-600 dark:text-slate-400">Your password</label>
+                                          <input type="password" id="password" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="Mobile_Number" class="font-medium text-sm text-slate-600 dark:text-slate-400">Your Mobile Number</label>
+                                            <input type="text" id="Mobile_Number" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" required>
+                                        </div>
+                                        
+                                        <div class="flex items-start mb-2">                              
+                                            <label class="flex">
+                                                <input type="checkbox" class="accent-primary-500"> 
+                                                <span for="default-checkbox" class="ml-1 text-sm font-medium text-slate-600 dark:text-gray-300"> Remember me</span>
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1">Submit</button>
+                                        <button type="text" class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mb-1">Cancel</button>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+      &lt;label for=&quot;email&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Your email&lt;/label&gt;
+      &lt;input type=&quot;email&quot; id=&quot;email&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;name@t-wind.com&quot; required&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+      &lt;label for=&quot;password&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Your password&lt;/label&gt;
+      &lt;input type=&quot;password&quot; id=&quot;password&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; required&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;label for=&quot;Mobile_Number&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Your Mobile Number&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;Mobile_Number&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; required&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;flex items-start mb-2&quot;&gt;                              
+        &lt;label class=&quot;flex&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;accent-primary-500&quot;&gt; 
+            &lt;span for=&quot;default-checkbox&quot; class=&quot;ml-1 text-sm font-medium text-slate-600 dark:text-gray-300&quot;&gt; Remember me&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Submit&lt;/button&gt;
+    &lt;button type=&quot;text&quot; class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Cancel&lt;/button&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Floating labels</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="relative z-0 mb-2 w-full group">
+                                            <input type="email" name="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                            <label for="floating_email" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                                        </div>
+                                        <div class="relative z-0 mb-2 w-full group">
+                                            <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                            <label for="floating_password" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+                                        </div>
+                                        <div class="relative z-0 mb-2 w-full group">
+                                            <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                            <label for="floating_repeat_password" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm password</label>
+                                        </div>
+                                        <div class="grid xl:grid-cols-2 xl:gap-6">
+                                          <div class="relative z-0 mb-2 w-full group">
+                                              <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                              <label for="floating_first_name" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+                                          </div>
+                                          <div class="relative z-0 mb-2 w-full group">
+                                              <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                              <label for="floating_last_name" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                                          </div>
+                                        </div>
+                                        <div class="grid xl:grid-cols-2 xl:gap-6">
+                                          <div class="relative z-0 mb-2 w-full group">
+                                              <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                              <label for="floating_phone" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
+                                          </div>
+                                          <div class="relative z-0 mb-2 w-full group">
+                                              <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer" placeholder=" " required />
+                                              <label for="floating_company" class="absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company (Ex. Google)</label>
+                                          </div>
+                                        </div>
+                                        <button type="submit" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1 lg:mb-0">Submit</button>
+                                        <button type="text" class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mb-1 lg:mb-0">Cancel</button>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+        &lt;input type=&quot;email&quot; name=&quot;floating_email&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+        &lt;label for=&quot;floating_email&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;Email address&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+        &lt;input type=&quot;password&quot; name=&quot;floating_password&quot; id=&quot;floating_password&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+        &lt;label for=&quot;floating_password&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;Password&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+        &lt;input type=&quot;password&quot; name=&quot;repeat_password&quot; id=&quot;floating_repeat_password&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+        &lt;label for=&quot;floating_repeat_password&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;Confirm password&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid xl:grid-cols-2 xl:gap-6&quot;&gt;
+      &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+          &lt;input type=&quot;text&quot; name=&quot;floating_first_name&quot; id=&quot;floating_first_name&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+          &lt;label for=&quot;floating_first_name&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;First name&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+          &lt;input type=&quot;text&quot; name=&quot;floating_last_name&quot; id=&quot;floating_last_name&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-slate-300/60 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+          &lt;label for=&quot;floating_last_name&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;Last name&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid xl:grid-cols-2 xl:gap-6&quot;&gt;
+      &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+          &lt;input type=&quot;tel&quot; pattern=&quot;[0-9]{3}-[0-9]{3}-[0-9]{4}&quot; name=&quot;floating_phone&quot; id=&quot;floating_phone&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+          &lt;label for=&quot;floating_phone&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;Phone number (123-456-7890)&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;relative z-0 mb-2 w-full group&quot;&gt;
+          &lt;input type=&quot;text&quot; name=&quot;floating_company&quot; id=&quot;floating_company&quot; class=&quot;block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-slate-300 dark:border-slate-700 dark:focus:border-primary-500 focus:outline-none focus:ring-0 focus:border-primary-500 peer&quot; placeholder=&quot; &quot; required /&gt;
+          &lt;label for=&quot;floating_company&quot; class=&quot;absolute text-sm text-gray-400 dark:text-slate-400/70 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6&quot;&gt;Company (Ex. Google)&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1 lg:mb-0&quot;&gt;Submit&lt;/button&gt;
+    &lt;button type=&quot;text&quot; class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mb-1 lg:mb-0&quot;&gt;Cancel&lt;/button&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Input Sizing</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="mb-2">
+                                        <label for="large-input" class="font-medium text-sm text-slate-600 dark:text-slate-400">Large input</label>
+                                        <input type="text" id="large-input" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-base text-lg hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="base-input" class="font-medium text-sm text-slate-600 dark:text-slate-400">Base input</label>
+                                        <input type="text" id="base-input" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                    </div>
+                                    <div>
+                                        <label for="small-input" class="font-medium text-sm text-slate-600 dark:text-slate-400">Small input</label>
+                                        <input type="text" id="small-input" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-xs text-xs hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;div class=&quot;mb-2&quot;&gt;
+    &lt;label for=&quot;large-input&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Large input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;large-input&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-base text-lg hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mb-2&quot;&gt;
+    &lt;label for=&quot;base-input&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Base input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;base-input&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;label for=&quot;small-input&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Small input&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;small-input&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-xs text-xs hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Disabled inputs </h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <input type="text" id="disabled-input" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 mb-4 cursor-not-allowed" value="Disabled input" disabled>
+                                        <input type="text" id="disabled-input-2" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 cursor-not-allowed" value="Disabled readonly input" disabled readonly>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;input type=&quot;text&quot; id=&quot;disabled-input&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 mb-4 cursor-not-allowed&quot; value=&quot;Disabled input&quot; disabled&gt;
+    &lt;input type=&quot;text&quot; id=&quot;disabled-input-2&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 cursor-not-allowed&quot; value=&quot;Disabled readonly input&quot; disabled readonly&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Helper text</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <label for="email" class="font-medium text-sm text-slate-600 dark:text-slate-400">Your email</label>
+                                        <input type="email" id="email" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="name@t-wind.com">
+                                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’ll never share your details. Read our <a href="#" class="font-medium text-primary-500 hover:underline dark:text-primary-500">Privacy Policy</a>.</p>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;label for=&quot;email&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Your email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;name@t-wind.com&quot;&gt;
+    &lt;p class=&quot;mt-2 text-sm text-gray-500 dark:text-gray-400&quot;&gt;We&rsquo;ll never share your details. Read our &lt;a href=&quot;#&quot; class=&quot;font-medium text-primary-500 hover:underline dark:text-primary-500&quot;&gt;Privacy Policy&lt;/a&gt;.&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Input element with icon</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <label for="email-adress-icon" class="font-medium text-sm text-slate-600 dark:text-slate-400">Your Email</label>
+                                        <div class="relative">
+                                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                                <i class="ti ti-mail z-[1] dark:text-slate-500"></i>
+                                            </div>
+                                            <input type="text" id="email-adress-icon" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 pl-10 p-2.5" placeholder="name@t-wind.com">
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;label for=&quot;email-adress-icon&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Your Email&lt;/label&gt;
+    &lt;div class=&quot;relative&quot;&gt;
+        &lt;div class=&quot;flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none&quot;&gt;
+            &lt;i class=&quot;ti ti-mail z-[1] dark:text-slate-500&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input type=&quot;text&quot; id=&quot;email-adress-icon&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 pl-10 p-2.5&quot; placeholder=&quot;name@t-wind.com&quot;&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Success and error validation</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="mb-2">
+                                            <label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Your name</label>
+                                            <input type="text" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700  rounded-md focus:outline-none focus:ring-0 block w-full px-3 py-1 dark:bg-green-100 dark:border-green-400" placeholder="Bonnie Green">
+                                            <p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span> Username available!</p>
+                                          </div>
+                                          <div>
+                                            <label for="username-error" class="block mb-2 text-sm font-medium text-red-700 dark:text-red-500">Your name</label>
+                                            <input type="text" id="username-error" class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700  rounded-md focus:outline-none focus:ring-0 block w-full px-3 py-1 dark:bg-red-100 dark:border-red-400" placeholder="Bonnie Green">
+                                            <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> Username already taken!</p>
+                                          </div>
+                                      </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;label for=&quot;username-success&quot; class=&quot;block mb-2 text-sm font-medium text-green-700 dark:text-green-500&quot;&gt;Your name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;username-success&quot; class=&quot;bg-green-50 border border-green-500 text-green-900 placeholder-green-700  rounded-md focus:outline-none focus:ring-0 block w-full px-3 py-1 dark:bg-green-100 dark:border-green-400&quot; placeholder=&quot;Bonnie Green&quot;&gt;
+        &lt;p class=&quot;mt-2 text-sm text-green-600 dark:text-green-500&quot;&gt;&lt;span class=&quot;font-medium&quot;&gt;Alright!&lt;/span&gt; Username available!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;label for=&quot;username-error&quot; class=&quot;block mb-2 text-sm font-medium text-red-700 dark:text-red-500&quot;&gt;Your name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;username-error&quot; class=&quot;bg-red-50 border border-red-500 text-red-900 placeholder-red-700  rounded-md focus:outline-none focus:ring-0 block w-full px-3 py-1 dark:bg-red-100 dark:border-red-400&quot; placeholder=&quot;Bonnie Green&quot;&gt;
+        &lt;p class=&quot;mt-2 text-sm text-red-600 dark:text-red-500&quot;&gt;&lt;span class=&quot;font-medium&quot;&gt;Oops!&lt;/span&gt; Username already taken!&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Textarea</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-8"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <label for="message" class="font-medium text-sm text-slate-600 dark:text-slate-400">Your message</label>
+                                        <textarea id="message" rows="4" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Leave a comment..."></textarea>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-8" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;label for=&quot;message&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Your message&lt;/label&gt;
+    &lt;textarea id=&quot;message&quot; rows=&quot;4&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;Leave a comment...&quot;&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Select input</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-9"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <label for="countries" class="font-medium text-sm text-slate-600 dark:text-slate-400">Select your country</label>
+                                        <select id="countries" class="w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[6.5px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <option>United States</option>
+                                            <option>Canada</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                        </select>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-9" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;label for=&quot;countries&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Select your country&lt;/label&gt;
+    &lt;select id=&quot;countries&quot; class=&quot;w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[6.5px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+        &lt;option&gt;United States&lt;/option&gt;
+        &lt;option&gt;Canada&lt;/option&gt;
+        &lt;option&gt;France&lt;/option&gt;
+        &lt;option&gt;Germany&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">File upload</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-10"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <label class="font-medium text-sm text-slate-600 dark:text-slate-400" for="user_avatar">Upload file</label>
+                                        <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[1px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                                        <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-10" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;label class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot; for=&quot;user_avatar&quot;&gt;Upload file&lt;/label&gt;
+    &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[1px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; aria-describedby=&quot;user_avatar_help&quot; id=&quot;user_avatar&quot; type=&quot;file&quot;&gt;
+    &lt;div class=&quot;mt-1 text-sm text-gray-500 dark:text-gray-300&quot; id=&quot;user_avatar_help&quot;&gt;A profile picture is useful to confirm your are logged into your account&lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Checkbox</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-11"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <label class="custom-label block dark:text-slate-300">
+                                            <div class="bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                              <input type="checkbox" class="hidden" checked>
+                                              <i class="fas fa-check hidden text-xs text-slate-700 dark:text-slate-200"></i>
+                                            </div>
+                                            Light
+                                        </label> 
+                                        <label class="custom-label block dark:text-slate-300">
+                                            <div class="bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                              <input type="checkbox" class="hidden" checked>
+                                              <i class="fas fa-check hidden text-xs text-green-500"></i>
+                                            </div>
+                                            Green
+                                        </label> 
+                                        <label class="custom-label block dark:text-slate-300">
+                                            <div class="bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                              <input type="checkbox" class="hidden" checked>
+                                              <i class="fas fa-check hidden text-xs text-blue-500"></i>
+                                            </div>
+                                            Blue
+                                        </label> 
+                                        <label class="custom-label block dark:text-slate-300">
+                                            <div class="bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                              <input type="checkbox" class="hidden" checked>
+                                              <i class="fas fa-check hidden text-xs text-red-500"></i>
+                                            </div>
+                                            Red
+                                        </label> 
+                                        <label class="custom-label block dark:text-slate-300">
+                                            <div class="bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                              <input type="checkbox" class="hidden" checked>
+                                              <i class="fas fa-check hidden text-xs text-purple-500"></i>
+                                            </div>
+                                            Purple
+                                        </label>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-11" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;label class=&quot;custom-label block dark:text-slate-300&quot;&gt;
+        &lt;div class=&quot;bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+          &lt;i class=&quot;fas fa-check hidden text-xs text-slate-700 dark:text-slate-200&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        Light
+    &lt;/label&gt; 
+    &lt;label class=&quot;custom-label block dark:text-slate-300&quot;&gt;
+        &lt;div class=&quot;bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+          &lt;i class=&quot;fas fa-check hidden text-xs text-green-500&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        Green
+    &lt;/label&gt; 
+    &lt;label class=&quot;custom-label block dark:text-slate-300&quot;&gt;
+        &lt;div class=&quot;bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+          &lt;i class=&quot;fas fa-check hidden text-xs text-blue-500&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        Blue
+    &lt;/label&gt; 
+    &lt;label class=&quot;custom-label block dark:text-slate-300&quot;&gt;
+        &lt;div class=&quot;bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+          &lt;i class=&quot;fas fa-check hidden text-xs text-red-500&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        Red
+    &lt;/label&gt; 
+    &lt;label class=&quot;custom-label block dark:text-slate-300&quot;&gt;
+        &lt;div class=&quot;bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked&gt;
+          &lt;i class=&quot;fas fa-check hidden text-xs text-purple-500&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        Purple
+    &lt;/label&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Radio</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-12"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <fieldset>
+                                        <legend class="sr-only">Countries</legend>
+                                      
+                                        <div class="flex items-center mb-3">
+                                          <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4 border-gray-300  dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-1" aria-describedby="country-option-1" checked>
+                                          <label for="country-option-1" class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                            United States
+                                          </label>
+                                        </div>
+                                      
+                                        <div class="flex items-center mb-3">
+                                          <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4 border-gray-300  dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-2" aria-describedby="country-option-2">
+                                          <label for="country-option-2" class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                            Germany
+                                          </label>
+                                        </div>
+                                      
+                                        <div class="flex items-center mb-3">
+                                          <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4 border-gray-300  dark:bg-gray-700 dark:border-gray-600" aria-labelledby="country-option-3" aria-describedby="country-option-3">
+                                          <label for="country-option-3" class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                            Spain
+                                          </label>
+                                        </div>
+                                      
+                                        <div class="flex items-center">
+                                          <input id="option-disabled" type="radio" name="countries" value="China" class="w-4 h-4 border-gray-200  dark:bg-gray-700 dark:border-gray-600" aria-labelledby="option-disabled" aria-describedby="option-disabled" disabled>
+                                          <label for="option-disabled" class="block ml-2 text-sm font-medium text-gray-300 dark:text-gray-600">
+                                            China (disabled)
+                                          </label>
+                                        </div>
+                                    </fieldset>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-12" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;fieldset&gt;
+    &lt;legend class=&quot;sr-only&quot;&gt;Countries&lt;/legend&gt;
+  
+    &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+      &lt;input id=&quot;country-option-1&quot; type=&quot;radio&quot; name=&quot;countries&quot; value=&quot;USA&quot; class=&quot;w-4 h-4 border-gray-300  dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600&quot; aria-labelledby=&quot;country-option-1&quot; aria-describedby=&quot;country-option-1&quot; checked&gt;
+      &lt;label for=&quot;country-option-1&quot; class=&quot;block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300&quot;&gt;
+        United States
+      &lt;/label&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+      &lt;input id=&quot;country-option-2&quot; type=&quot;radio&quot; name=&quot;countries&quot; value=&quot;Germany&quot; class=&quot;w-4 h-4 border-gray-300  dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600&quot; aria-labelledby=&quot;country-option-2&quot; aria-describedby=&quot;country-option-2&quot;&gt;
+      &lt;label for=&quot;country-option-2&quot; class=&quot;block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300&quot;&gt;
+        Germany
+      &lt;/label&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;flex items-center mb-3&quot;&gt;
+      &lt;input id=&quot;country-option-3&quot; type=&quot;radio&quot; name=&quot;countries&quot; value=&quot;Spain&quot; class=&quot;w-4 h-4 border-gray-300  dark:bg-gray-700 dark:border-gray-600&quot; aria-labelledby=&quot;country-option-3&quot; aria-describedby=&quot;country-option-3&quot;&gt;
+      &lt;label for=&quot;country-option-3&quot; class=&quot;block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300&quot;&gt;
+        Spain
+      &lt;/label&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;flex items-center&quot;&gt;
+      &lt;input id=&quot;option-disabled&quot; type=&quot;radio&quot; name=&quot;countries&quot; value=&quot;China&quot; class=&quot;w-4 h-4 border-gray-200  dark:bg-gray-700 dark:border-gray-600&quot; aria-labelledby=&quot;option-disabled&quot; aria-describedby=&quot;option-disabled&quot; disabled&gt;
+      &lt;label for=&quot;option-disabled&quot; class=&quot;block ml-2 text-sm font-medium text-gray-300 dark:text-gray-600&quot;&gt;
+        China (disabled)
+      &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/fieldset&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Switch</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Forms-13"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="switch-1" class="hidden">
+                                            <label for="switch-1" id="switch_1" class="custom-switch relative border border-slate-300 mr-2 w-8 h-4 rounded-full bg-slate-50 dark:bg-slate-700 dark:border-slate-600 cursor-pointer"></label>
+                                            <label for="switch-1"  class="dark:text-slate-400">Close</label>
+                                        </div>
+            
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="switch-2" class="hidden" checked>
+                                            <label for="switch-2" id="switch_2" class="custom-switch switch-green relative border  border-slate-300 mr-2 w-8 h-4 rounded-full bg-slate-50 dark:bg-slate-700 dark:border-slate-600 cursor-pointer"></label>
+                                            <label for="switch-2" class="dark:text-slate-400">Active</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Forms-13" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;form&gt;
+    &lt;div class=&quot;flex items-center&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;switch-1&quot; class=&quot;hidden&quot;&gt;
+        &lt;label for=&quot;switch-1&quot; id=&quot;switch_1&quot; class=&quot;custom-switch relative border border-slate-300 mr-2 w-8 h-4 rounded-full bg-slate-50 dark:bg-slate-700 dark:border-slate-600 cursor-pointer&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;switch-1&quot;  class=&quot;dark:text-slate-400&quot;&gt;Close&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;flex items-center&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;switch-2&quot; class=&quot;hidden&quot; checked&gt;
+        &lt;label for=&quot;switch-2&quot; id=&quot;switch_2&quot; class=&quot;custom-switch switch-green relative border  border-slate-300 mr-2 w-8 h-4 rounded-full bg-slate-50 dark:bg-slate-700 dark:border-slate-600 cursor-pointer&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;switch-2&quot; class=&quot;dark:text-slate-400&quot;&gt;Active&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                            
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

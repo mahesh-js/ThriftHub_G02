@@ -1,0 +1,127 @@
+
+
+.datatable-editor-input{
+  @apply 
+  form-input w-full rounded-md border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700;
+}
+
+.datatable-table{
+   tbody tr{
+        @apply bg-white border-b border-dashed border-slate-200 dark:bg-gray-800 dark:border-gray-700;        
+    }
+    tr:last-child{
+        @apply border-b-0;
+    }
+}
+
+.datatable-table{
+    thead {
+     @apply  bg-gray-50 dark:bg-slate-700/20;
+        th{
+            @apply p-3 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400 ; 
+            a{
+                th{
+                    @apply text-xs font-medium  text-gray-700  dark:text-gray-400 ;        
+                }
+            }       
+        }
+    }  
+ }
+  
+  .datatable-selector,
+  .datatable-input{
+    @apply  rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700;
+    border-radius: 0.25rem;
+    padding-right: 2.5rem;
+  } 
+
+
+  .datatable-info,
+  .datatable-dropdown label{
+    @apply dark:text-slate-400;
+  }
+
+
+  :is(.datatable-table) > :is(tbody, tfoot, thead) tr :is(td, th) {
+    color: theme('colors.gray.400');
+  }
+
+  
+  :is(.datatable-table) > :is(tbody, tfoot, thead) tr :is(td, th){
+    padding:  12px;
+    vertical-align: middle;
+    border-bottom: none;
+  }
+  :is(.dataTable-table)> :is(tbody, tfoot, thead)> tr :is(td, th){
+    vertical-align: middle;
+    border: none;
+  }
+
+  
+  .datatable-pagination .active a, 
+  .datatable-pagination .active a:focus, 
+  .datatable-pagination .active a:hover{
+    background-color: theme('colors.slate.100');
+  }
+
+  .datatable-table th a{
+    color: theme('colors.slate.700');
+  }
+
+  .dark .datatable-table th a{
+    color: theme('colors.slate.300');
+  }
+
+  .dark .dataTable-sorter::before{
+    content: "";
+    border-top: 4px solid theme('colors.slate.300');
+  }
+  .dark .dataTable-sorter::after{
+    content: "";
+    border-bottom: 4px solid theme('colors.slate.300');
+  }
+
+  .dataTable-wrapper.no-footer .dataTable-container{
+    border-bottom: 1px dashed theme('colors.slate.300') !important;
+  }
+
+  .dark .dataTable-wrapper.no-footer .dataTable-container{
+    border-bottom: 1px dashed theme('colors.slate.600') !important;
+  }
+  .dataTable-dropdown>label,
+  .dataTable-info{
+    @apply text-slate-600 dark:text-slate-300;
+  }
+
+  
+.dataTable-selector,
+.dataTable-input{
+  @apply text-slate-700 bg-white border border-solid border-slate-200 dark:text-slate-300 dark:border-slate-700 dark:bg-slate-700 focus-visible:outline-none;
+  border-radius: 0.25rem;
+  padding-right: 2.5rem;
+}  
+
+
+
+// Pagination
+  .dataTable-pagination {
+    @apply border border-slate-200 rounded-lg dark:border-slate-700/60;
+    li{
+      @apply border-l border-solid border-slate-200 dark:border-slate-700/60;
+    }
+    a {
+      @apply ml-0 text-slate-700 dark:text-slate-300;      
+      padding: 4px 12px;
+      &:focus,
+      &:hover{
+        @apply bg-primary-100 dark:bg-slate-700/60 text-primary-500 rounded-sm;
+      }
+    }
+    .active{
+      a,
+      a:focus,
+      a:hover{
+        @apply bg-primary-100 dark:bg-slate-700/60 text-primary-500 rounded-sm;
+      }
+    }
+  }

@@ -1,0 +1,386 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Wizard</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Forms</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Wizard</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Custom Steps Wizard</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Wizard-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <h3 class="text-center text-[30px] font-bold my-4 dark:text-slate-300">Multiple Steps with Wizard Form</h3>
+                                    <p class="text-center font-medium text-slate-400 text-[16px]">Enter a set of information to get started in an application.</p>
+                                    <form action="" class=" block mt-5">
+                                        <ul class="w-full list-none flex p-0 justify-center mb-10">
+                                            <li class="progress-bar-dot block w-3 h-3 rounded-full border-2 border-primary-500 cursor-pointer transition duration-150 ease-out bg-primary-500"></li>
+                                            <li class="progress-bar-connector block bg-primary-500 rounded-full w-20 h-[1px] mt-[5.5px]"></li>
+                                            <li class="progress-bar-dot block w-3 h-3 rounded-full border-2 border-primary-500 cursor-pointer transition duration-150 ease-out "></li>
+                                            <li class="progress-bar-connector block bg-primary-500 rounded-full w-20 h-[1px] mt-[5.5px]"></li>
+                                            <li class="progress-bar-dot block w-3 h-3 rounded-full border-2 border-primary-500 cursor-pointer transition duration-150 ease-out"></li>
+                                        </ul>
+                                      
+                                        <div class="step step1">
+                                            <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                                                <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                                    <div class="mb-2">
+                                                        <label for="txtFirstNameBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Contact Person</label>
+                                                        <input type="text" id="txtFirstNameBilling" name="txtFirstNameBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtCompanyBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Landline No.</label>
+                                                        <input type="text" id="txtCompanyBilling" name="txtCompanyBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtAddress1Billing" class="font-medium text-sm text-slate-600 dark:text-slate-400">Address 1</label>
+                                                        <textarea id="txtAddress1Billing"  name="txtAddress1Billing" rows="4" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Leave a comment..."></textarea>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtCityBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Company Type</label>
+                                                        <input type="text" id="txtCityBilling" name="txtCityBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtTelephoneBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Product Category</label>
+                                                        <input type="text" id="txtTelephoneBilling" name="txtTelephoneBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                </div><!--end col-->  
+                                                <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                                    <div class="mb-2">
+                                                        <label for="txtStateProvinceBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Mobile No.</label>
+                                                        <input type="text" id="txtStateProvinceBilling" name="txtStateProvinceBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtEmailAddressBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Email Address</label>
+                                                        <input type="text" id="txtEmailAddressBilling" name="txtEmailAddressBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtAddress2Billing" class="font-medium text-sm text-slate-600 dark:text-slate-400">Warehouse Address</label>
+                                                        <textarea id="txtAddress2Billing"  name="txtAddress2Billing" rows="4" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Leave a comment..."></textarea>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtStateProvinceBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Live Market A/C</label>
+                                                        <input type="text" id="txtStateProvinceBilling" name="txtStateProvinceBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtFaxBilling" class="font-medium text-sm text-slate-600 dark:text-slate-400">Product Sub Category</label>
+                                                        <input type="text" id="txtFaxBilling" name="txtFaxBilling" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                </div><!--end col-->            
+                                            </div><!--end inner-grid-->                                             
+                                        </div><!--end step1-->                                    
+                                        <div class="step step2 hidden">
+                                            <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                                                <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                                    <div class="mb-2">
+                                                        <label for="txtFirstNameShipping" class="font-medium text-sm text-slate-600 dark:text-slate-400">PAN Card</label>
+                                                        <input type="text" id="txtFirstNameShipping" name="txtFirstNameShipping" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtCompanyShipping" class="font-medium text-sm text-slate-600 dark:text-slate-400">CST No.</label>
+                                                        <input type="text" id="txtCompanyShipping" name="txtCompanyShipping" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2 md:mb-0">
+                                                        <label for="txtCityShipping" class="font-medium text-sm text-slate-600 dark:text-slate-400">Company UIN</label>
+                                                        <input type="text" id="txtCityShipping" name="txtCityShipping" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                </div><!--end col-->  
+                                                <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                                    <div class="mb-2">
+                                                        <label for="txtLastNameShipping" class="font-medium text-sm text-slate-600 dark:text-slate-400">VAT/TIN No.</label>
+                                                        <input type="text" id="txtLastNameShipping" name="txtLastNameShipping" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtEmailAddressShipping" class="font-medium text-sm text-slate-600 dark:text-slate-400">Service Tax No.</label>
+                                                        <input type="text" id="txtEmailAddressShipping" name="txtEmailAddressShipping" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2 md:mb-0">
+                                                        <label for="txtStateProvinceShipping" class="font-medium text-sm text-slate-600 dark:text-slate-400">Declaration</label>
+                                                        <input type="text" id="txtStateProvinceShipping" name="txtStateProvinceShipping" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                </div><!--end col-->            
+                                            </div><!--end inner-grid-->
+                                        </div><!--end step2-->
+                                    
+                                        <div class="step step3 hidden">
+                                            <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                                                <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                                    <div class="mb-2">
+                                                        <label for="txtNameCard" class="font-medium text-sm text-slate-600 dark:text-slate-400">Name on Card</label>
+                                                        <input type="text" id="txtNameCard" name="txtNameCard" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtCreditCardNumber" class="font-medium text-sm text-slate-600 dark:text-slate-400">Credit Card Number</label>
+                                                        <input type="text" id="txtCreditCardNumber" name="txtCreditCardNumber" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtExpirationDate" class="font-medium text-sm text-slate-600 dark:text-slate-400">Expiration Date</label>
+                                                        <input type="text" id="txtExpirationDate" name="txtExpirationDate" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                </div><!--end col-->  
+                                                <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                                    <div class="mb-2">
+                                                        <label for="countries" class="font-medium text-sm text-slate-600 dark:text-slate-400">Select your country</label>
+                                                        <select id="countries" class="w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[6.5px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="AE">American Express</option>
+                                                            <option value="VI">Visa</option>
+                                                            <option value="MC">MasterCard</option>
+                                                            <option value="DI">Discover</option> 
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for="txtCardVerificationNumber" class="font-medium text-sm text-slate-600 dark:text-slate-400">Verification Number</label>
+                                                        <input type="text" id="txtCardVerificationNumber" name="txtCardVerificationNumber" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                                    </div>
+                                                    <label class="custom-label block dark:text-slate-300">
+                                                        <div class="bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
+                                                          <input type="checkbox" class="hidden" checked="">
+                                                          <i class="fas fa-check hidden text-xs text-primary-500"></i>
+                                                        </div>
+                                                        I agree with the Terms and Conditions.
+                                                    </label>
+                                                </div><!--end col-->            
+                                            </div><!--end inner-grid-->
+                                        </div><!--end step3-->
+                                    
+                                        <div class="flex justify-between">
+                                            <button id="previous" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1 float-left opacity-50 cursor-not-allowed" disabled tabindex="-1">
+                                                previous
+                                            </button>
+                                            <div>
+                                                <button id="next" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1 float-right">
+                                                    next
+                                                </button>
+                                                <button id="validate" type="submit" class="hidden  focus:outline-none text-green-500 hover:bg-green-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-green-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-green-500  text-sm font-medium py-1 px-3 rounded mb-1 float-right">
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Wizard-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/js/pages/wizard.init.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;h3 class=&quot;text-center text-[30px] font-bold mb-4 dark:text-slate-300&quot;&gt;Multiple Steps with Wizard Form&lt;/h3&gt;
+    &lt;p class=&quot;text-center font-medium text-slate-400 text-[16px]&quot;&gt;Enter a set of information to get started in an application.&lt;/p&gt;
+    &lt;form action=&quot;&quot; class=&quot; block mt-5&quot;&gt;
+        &lt;ul class=&quot;w-full list-none flex p-0 justify-center mb-10&quot;&gt;
+            &lt;li class=&quot;progress-bar-dot block w-3 h-3 rounded-full border-2 border-primary-500 cursor-pointer transition duration-150 ease-out bg-primary-500&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;progress-bar-connector block bg-primary-500 rounded-full w-20 h-[1px] mt-[5.5px]&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;progress-bar-dot block w-3 h-3 rounded-full border-2 border-primary-500 cursor-pointer transition duration-150 ease-out &quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;progress-bar-connector block bg-primary-500 rounded-full w-20 h-[1px] mt-[5.5px]&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;progress-bar-dot block w-3 h-3 rounded-full border-2 border-primary-500 cursor-pointer transition duration-150 ease-out&quot;&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      
+        &lt;div class=&quot;step step1&quot;&gt;
+            &lt;div class=&quot;grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4&quot;&gt;
+                &lt;div class=&quot;sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 &quot;&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtFirstNameBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Contact Person&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtFirstNameBilling&quot; name=&quot;txtFirstNameBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtCompanyBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Landline No.&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtCompanyBilling&quot; name=&quot;txtCompanyBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtAddress1Billing&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Address 1&lt;/label&gt;
+                        &lt;textarea id=&quot;txtAddress1Billing&quot;  name=&quot;txtAddress1Billing&quot; rows=&quot;4&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;Leave a comment...&quot;&gt;&lt;/textarea&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtCityBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Company Type&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtCityBilling&quot; name=&quot;txtCityBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtTelephoneBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Product Category&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtTelephoneBilling&quot; name=&quot;txtTelephoneBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!--end col--&gt;  
+                &lt;div class=&quot;sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 &quot;&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtStateProvinceBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Mobile No.&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtStateProvinceBilling&quot; name=&quot;txtStateProvinceBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtEmailAddressBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Email Address&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtEmailAddressBilling&quot; name=&quot;txtEmailAddressBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtAddress2Billing&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Warehouse Address&lt;/label&gt;
+                        &lt;textarea id=&quot;txtAddress2Billing&quot;  name=&quot;txtAddress2Billing&quot; rows=&quot;4&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;Leave a comment...&quot;&gt;&lt;/textarea&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtStateProvinceBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Live Market A/C&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtStateProvinceBilling&quot; name=&quot;txtStateProvinceBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtFaxBilling&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Product Sub Category&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtFaxBilling&quot; name=&quot;txtFaxBilling&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!--end col--&gt;            
+            &lt;/div&gt;&lt;!--end inner-grid--&gt;                                             
+        &lt;/div&gt;&lt;!--end step1--&gt;                                    
+        &lt;div class=&quot;step step2 hidden&quot;&gt;
+            &lt;div class=&quot;grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4&quot;&gt;
+                &lt;div class=&quot;sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 &quot;&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtFirstNameShipping&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;PAN Card&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtFirstNameShipping&quot; name=&quot;txtFirstNameShipping&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtCompanyShipping&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;CST No.&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtCompanyShipping&quot; name=&quot;txtCompanyShipping&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2 md:mb-0&quot;&gt;
+                        &lt;label for=&quot;txtCityShipping&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Company UIN&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtCityShipping&quot; name=&quot;txtCityShipping&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!--end col--&gt;  
+                &lt;div class=&quot;sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 &quot;&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtLastNameShipping&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;VAT/TIN No.&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtLastNameShipping&quot; name=&quot;txtLastNameShipping&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtEmailAddressShipping&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Service Tax No.&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtEmailAddressShipping&quot; name=&quot;txtEmailAddressShipping&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2 md:mb-0&quot;&gt;
+                        &lt;label for=&quot;txtStateProvinceShipping&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Declaration&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtStateProvinceShipping&quot; name=&quot;txtStateProvinceShipping&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!--end col--&gt;            
+            &lt;/div&gt;&lt;!--end inner-grid--&gt;
+        &lt;/div&gt;&lt;!--end step2--&gt;
+    
+        &lt;div class=&quot;step step3 hidden&quot;&gt;
+            &lt;div class=&quot;grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4&quot;&gt;
+                &lt;div class=&quot;sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 &quot;&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtNameCard&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Name on Card&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtNameCard&quot; name=&quot;txtNameCard&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtCreditCardNumber&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Credit Card Number&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtCreditCardNumber&quot; name=&quot;txtCreditCardNumber&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtExpirationDate&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Expiration Date&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtExpirationDate&quot; name=&quot;txtExpirationDate&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!--end col--&gt;  
+                &lt;div class=&quot;sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 &quot;&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;countries&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Select your country&lt;/label&gt;
+                        &lt;select id=&quot;countries&quot; class=&quot;w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[6.5px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                            &lt;option value=&quot;&quot;&gt;--Please Select--&lt;/option&gt;
+                            &lt;option value=&quot;AE&quot;&gt;American Express&lt;/option&gt;
+                            &lt;option value=&quot;VI&quot;&gt;Visa&lt;/option&gt;
+                            &lt;option value=&quot;MC&quot;&gt;MasterCard&lt;/option&gt;
+                            &lt;option value=&quot;DI&quot;&gt;Discover&lt;/option&gt; 
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-2&quot;&gt;
+                        &lt;label for=&quot;txtCardVerificationNumber&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Verification Number&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;txtCardVerificationNumber&quot; name=&quot;txtCardVerificationNumber&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;label class=&quot;custom-label block dark:text-slate-300&quot;&gt;
+                        &lt;div class=&quot;bg-white dark:bg-slate-700  border border-slate-200 dark:border-slate-600 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]&quot;&gt;
+                          &lt;input type=&quot;checkbox&quot; class=&quot;hidden&quot; checked=&quot;&quot;&gt;
+                          &lt;i class=&quot;fas fa-check hidden text-xs text-primary-500&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        I agree with the Terms and Conditions.
+                    &lt;/label&gt;
+                &lt;/div&gt;&lt;!--end col--&gt;            
+            &lt;/div&gt;&lt;!--end inner-grid--&gt;
+        &lt;/div&gt;&lt;!--end step3--&gt;
+    
+        &lt;div class=&quot;flex justify-between&quot;&gt;
+            &lt;button id=&quot;previous&quot; class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1 float-left opacity-50 cursor-not-allowed&quot; disabled tabindex=&quot;-1&quot;&gt;
+                previous
+            &lt;/button&gt;
+            &lt;div&gt;
+                &lt;button id=&quot;next&quot; class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1 float-right&quot;&gt;
+                    next
+                &lt;/button&gt;
+                &lt;button id=&quot;validate&quot; type=&quot;submit&quot; class=&quot;hidden  focus:outline-none text-green-500 hover:bg-green-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-green-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-green-500  text-sm font-medium py-1 px-3 rounded mb-1 float-right&quot;&gt;
+                    Submit
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                                                       
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/pages/wizard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

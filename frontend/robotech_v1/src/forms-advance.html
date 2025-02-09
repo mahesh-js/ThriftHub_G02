@@ -1,0 +1,442 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/mobius1-selectr/selectr.min.css">
+        <link rel="stylesheet" href="assets/libs/huebee/huebee.min.css">
+        <link rel="stylesheet" href="assets/libs/vanillajs-datepicker/css/datepicker.min.css">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Form Advanced</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Forms</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Advanced</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default Select</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <select id="default" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                        <option>United States</option>
+                                        <option>Canada</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                    </select>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/mobius1-selectr/selectr.min.css&quot;&gt;
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/mobius1-selectr/selectr.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;select id=&quot;default&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+    &lt;option&gt;United States&lt;/option&gt;
+    &lt;option&gt;Canada&lt;/option&gt;
+    &lt;option&gt;France&lt;/option&gt;
+    &lt;option&gt;Germany&lt;/option&gt;
+&lt;/select&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Multi Select</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <select id="multiSelect" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                        <option>United States</option>
+                                        <option>Canada</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                    </select>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/mobius1-selectr/selectr.min.css&quot;&gt;
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/mobius1-selectr/selectr.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;select id=&quot;multiSelect&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+    &lt;option&gt;United States&lt;/option&gt;
+    &lt;option&gt;Canada&lt;/option&gt;
+    &lt;option&gt;France&lt;/option&gt;
+    &lt;option&gt;Germany&lt;/option&gt;
+&lt;/select&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Taggable Select</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <select id="taggableSelect" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                        <option>United States</option>
+                                        <option>Canada</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                    </select>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/mobius1-selectr/selectr.min.css&quot;&gt;
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/mobius1-selectr/selectr.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;select id=&quot;taggableSelect&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+    &lt;option&gt;United States&lt;/option&gt;
+    &lt;option&gt;Canada&lt;/option&gt;
+    &lt;option&gt;France&lt;/option&gt;
+    &lt;option&gt;Germany&lt;/option&gt;
+&lt;/select&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Huebee Color</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                        <div class="sm:col-span-12  md:col-span-4 lg:col-span-4 xl:col-span-4">
+                                            <input  class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300  px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 color-input" value="#228">
+                                        </div>
+                                        <div class="sm:col-span-12  md:col-span-4 lg:col-span-4 xl:col-span-4">
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300  px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 " value="#024" data-huebee /> 
+                                        </div>
+                                        <div class="sm:col-span-12  md:col-span-4 lg:col-span-4 xl:col-span-4">
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300  px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 " value="#f7f8f9" data-huebee='{ "setBGColor": true, "saturations": 2 }' />      
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/huebee/huebee.min.css&quot;&gt;
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/huebee/huebee.pkgd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;input  class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300  px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 color-input&quot; value=&quot;#228&quot;&gt;
+
+&lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300  px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 &quot; value=&quot;#024&quot; data-huebee /&gt; 
+
+&lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300  px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 &quot; value=&quot;#f7f8f9&quot; data-huebee='{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }' /&gt;      
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Custom Touch Spin</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="flex">
+                                        <button type="button" class="inline-flex items-center px-3 py-1 text-sm text-slate-100 bg-primary-500 rounded-l-md border border-r-0 border-primary-500 dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                          <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" id="website-admin" class="form-input w-full rounded-none border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" min="0" name="quantity" value="0">
+                                        <button type="button" class="inline-flex items-center px-3 py-1 text-sm text-slate-100 bg-primary-500 rounded-r-md border border-l-0 border-primary-500 dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;flex&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;inline-flex items-center px-3 py-1 text-sm text-slate-100 bg-primary-500 rounded-l-md border border-r-0 border-primary-500 dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot; onclick=&quot;this.parentNode.querySelector('input[type=number]').stepDown()&quot;&gt;
+      &lt;i class=&quot;fas fa-minus&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;input type=&quot;number&quot; id=&quot;website-admin&quot; class=&quot;form-input w-full rounded-none border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; min=&quot;0&quot; name=&quot;quantity&quot; value=&quot;0&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;inline-flex items-center px-3 py-1 text-sm text-slate-100 bg-primary-500 rounded-r-md border border-l-0 border-primary-500 dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot; onclick=&quot;this.parentNode.querySelector('input[type=number]').stepUp()&quot;&gt;
+        &lt;i class=&quot;fas fa-plus&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Vanilla JS Datepicker</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <label for="Default_Datepicker" class="font-medium text-sm text-slate-600 dark:text-slate-400">Default Datepicker</label>
+                                    <input type="text" id="Default_Datepicker" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" name="foo">
+                                    <label for="Default_Datepicker" class="font-medium text-sm text-slate-600 dark:text-slate-400 mt-2">Default Datepicker</label>
+                                    <div class="flex mt-2" id="DateRange">
+                                        <input type="text" id="start-date" class="form-input w-full rounded-none rounded-l-md  border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Start" aria-label="StartDate">
+                                        <span class="inline-flex items-center px-3 text-sm text-slate-900 bg-slate-200  border border-r-0 border-l-0 border-slate-300 dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+                                            to
+                                        </span>
+                                        <input type="text" id="end-date" class="form-input w-full rounded-none rounded-r-md  border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="End" aria-label="EndDate">
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/vanillajs-datepicker/css/datepicker.min.css&quot;&gt;
+&lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/vanillajs-datepicker/js/datepicker-full.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;assets/libs/moment/moment.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;label for=&quot;Default_Datepicker&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Default Datepicker&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;Default_Datepicker&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; name=&quot;foo&quot;&gt;
+&lt;label for=&quot;Default_Datepicker&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400 mt-2&quot;&gt;Default Datepicker&lt;/label&gt;
+&lt;div class=&quot;flex mt-2&quot; id=&quot;DateRange&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;start-date&quot; class=&quot;form-input w-full rounded-none rounded-l-md  border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;Start&quot; aria-label=&quot;StartDate&quot;&gt;
+    &lt;span class=&quot;inline-flex items-center px-3 text-sm text-slate-900 bg-slate-200  border border-r-0 border-l-0 border-slate-300 dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600&quot;&gt;
+        to
+    &lt;/span&gt;
+    &lt;input type=&quot;text&quot; id=&quot;end-date&quot; class=&quot;form-input w-full rounded-none rounded-r-md  border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;End&quot; aria-label=&quot;EndDate&quot;&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Vanilla JS Datepicker</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <label class="mb-3 font-medium text-sm text-slate-600 dark:text-slate-400">Inline Datepicker</label>
+                                    <div id="inline_calendar"></div>   
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/vanillajs-datepicker/css/datepicker.min.css&quot;&gt;
+&lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/vanillajs-datepicker/js/datepicker-full.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;assets/libs/moment/moment.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;label class=&quot;mb-3 font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Inline Datepicker&lt;/label&gt;
+&lt;div id=&quot;inline_calendar&quot;&gt;&lt;/div&gt; 
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Input Mask</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Advanced-8"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="mb-2">
+                                        <label class="font-medium text-sm text-slate-600 dark:text-slate-400">RegExp (Russian postal code) <span class="desc ml-2 text-xs text-slate-400">/^[1-6]\d{0,5}$/</span></label>
+                                        <input id="regexp-mask" type="text" value="" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Type here against mask <span class="desc ml-2 text-xs text-slate-400">+{7}(000)000-00-00</span></label>
+                                        <input id="start-phone-mask" type="text" value="" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                        <div class="desc text-xs text-slate-400">unmasked: <span id="start-phone-unmasked"></span><span id="start-phone-complete" class="example__complete"></span></div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Mask in overwrite and autofix modes</label>
+                                        <input id="date-overwrite-mask" type="text" value="" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Type to uppercase</label>
+                                        <input id="uppercase-mask" type="text" value="" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                    </div>
+                                    <div>
+                                        <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Date and time</label>
+                                        <input id="moment-mask" type="text" value="" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                        <div class="desc text-xs text-slate-400">date: <span id="moment-value"></span></div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Advanced-8" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/imask/imask.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/form-advanced.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;mb-2&quot;&gt;
+    &lt;label class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;RegExp (Russian postal code) &lt;span class=&quot;desc ml-2 text-xs text-slate-400&quot;&gt;/^[1-6]\d{0,5}$/&lt;/span&gt;&lt;/label&gt;
+    &lt;input id=&quot;regexp-mask&quot; type=&quot;text&quot; value=&quot;&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mb-2&quot;&gt;
+    &lt;label class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Type here against mask &lt;span class=&quot;desc ml-2 text-xs text-slate-400&quot;&gt;+{7}(000)000-00-00&lt;/span&gt;&lt;/label&gt;
+    &lt;input id=&quot;start-phone-mask&quot; type=&quot;text&quot; value=&quot;&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+    &lt;div class=&quot;desc text-xs text-slate-400&quot;&gt;unmasked: &lt;span id=&quot;start-phone-unmasked&quot;&gt;&lt;/span&gt;&lt;span id=&quot;start-phone-complete&quot; class=&quot;example__complete&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mb-2&quot;&gt;
+    &lt;label class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Mask in overwrite and autofix modes&lt;/label&gt;
+    &lt;input id=&quot;date-overwrite-mask&quot; type=&quot;text&quot; value=&quot;&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mb-2&quot;&gt;
+    &lt;label class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Type to uppercase&lt;/label&gt;
+    &lt;input id=&quot;uppercase-mask&quot; type=&quot;text&quot; value=&quot;&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;label class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Date and time&lt;/label&gt;
+    &lt;input id=&quot;moment-mask&quot; type=&quot;text&quot; value=&quot;&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot;&gt;
+    &lt;div class=&quot;desc text-xs text-slate-400&quot;&gt;date: &lt;span id=&quot;moment-value&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+        <script src="assets/libs/huebee/huebee.pkgd.min.js"></script>
+        <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+        <script src="assets/libs/moment/moment.js"></script>
+        <script src="assets/libs/imask/imask.min.js"></script>
+        <script src="assets/js/pages/form-advanced.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

@@ -1,0 +1,377 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Avatars</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Avatars</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default Avatar</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-default"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <img class="w-24 h-24 rounded-full inline-block mr-2" src="assets/images/users/avatar-7.png" alt="Rounded avatar">
+                                    <img class="w-20 h-20 rounded-full inline-block mr-2" src="assets/images/users/avatar-7.png" alt="Rounded avatar">
+                                    <img class="w-16 h-16 rounded-full inline-block mr-2" src="assets/images/users/avatar-7.png" alt="Rounded avatar">
+                                    <img class="w-12 h-12 rounded-full inline-block mr-2" src="assets/images/users/avatar-7.png" alt="Rounded avatar">
+                                    <img class="w-10 h-10 rounded-full inline-block mr-2" src="assets/images/users/avatar-7.png" alt="Rounded avatar">
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-default" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;img class=&quot;w-24 h-24 rounded-full inline-block mr-2&quot; src=&quot;assets/images/users/avatar-7.png&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-20 h-20 rounded-full inline-block mr-2&quot; src=&quot;assets/images/users/avatar-7.png&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-16 h-16 rounded-full inline-block mr-2&quot; src=&quot;assets/images/users/avatar-7.png&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-12 h-12 rounded-full inline-block mr-2&quot; src=&quot;assets/images/users/avatar-7.png&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-10 h-10 rounded-full inline-block mr-2&quot; src=&quot;assets/images/users/avatar-7.png&quot; alt=&quot;Rounded avatar&quot;&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Avatar square</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-square"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <img class="w-24 h-24 rounded-md inline-block mr-2" src="assets/images/users/avatar-11.jpg" alt="Rounded avatar">
+                                    <img class="w-20 h-20 rounded-md inline-block mr-2" src="assets/images/users/avatar-11.jpg" alt="Rounded avatar">
+                                    <img class="w-16 h-16 rounded-md inline-block mr-2" src="assets/images/users/avatar-11.jpg" alt="Rounded avatar">
+                                    <img class="w-12 h-12 rounded-md inline-block mr-2" src="assets/images/users/avatar-11.jpg" alt="Rounded avatar">
+                                    <img class="w-10 h-10 rounded-md inline-block mr-2" src="assets/images/users/avatar-11.jpg" alt="Rounded avatar">
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-square" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;img class=&quot;w-24 h-24 rounded-md inline-block mr-2&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-20 h-20 rounded-md inline-block mr-2&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-16 h-16 rounded-md inline-block mr-2&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-12 h-12 rounded-md inline-block mr-2&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;Rounded avatar&quot;&gt;
+&lt;img class=&quot;w-10 h-10 rounded-md inline-block mr-2&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;Rounded avatar&quot;&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Avatar with text</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-text"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="flex items-center">
+                                        <img class="w-10 h-10 rounded-full" src="assets/images/users/avatar-9.png" alt="">
+                                        <div class="font-medium dark:text-white ms-2">
+                                            <h6 class="text-lg text-gray-800 dark:text-gray-200 -mb-1">David Jackson</h6>
+                                            <p class="text-xs text-gray-500 dark:text-gray-400">Frontend Developer</p>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-text" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 rounded-full&quot; src=&quot;assets/images/users/avatar-9.png&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;font-medium dark:text-white ms-2&quot;&gt;
+        &lt;h6 class=&quot;text-lg text-gray-800 dark:text-gray-200 -mb-1&quot;&gt;David Jackson&lt;/h6&gt;
+        &lt;p class=&quot;text-xs text-gray-500 dark:text-gray-400&quot;&gt;Frontend Developer&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Avatar with badge</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-budge"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="flex flex-wrap">
+                                        <div class="relative mr-2">
+                                            <img class="w-10 h-10 rounded-full" src="assets/images/users/avatar-2.png" alt="">
+                                            <span class="top-0 left-7 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                        </div>
+                                        <div class="relative mr-2">
+                                            <img class="w-10 h-10 rounded" src="assets/images/users/avatar-11.jpg" alt="">
+                                            <span class="absolute top-0 left-8 transform -translate-y-1/2 w-2.5 h-2.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                        </div>
+                                        <div class="relative mr-2">
+                                            <img class="w-10 h-10 rounded-full" src="assets/images/users/avatar-2.png" alt="">
+                                            <span class="bottom-0 left-7 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                        </div>
+                                        <div class="relative">
+                                            <img class="w-10 h-10 rounded" src="assets/images/users/avatar-11.jpg" alt="">
+                                            <span class="absolute bottom-0 left-8 transform translate-y-1/4 w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-budge" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;relative mr-2&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 rounded-full&quot; src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot;&gt;
+    &lt;span class=&quot;top-0 left-7 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;relative mr-2&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 rounded&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;span class=&quot;absolute top-0 left-8 transform -translate-y-1/2 w-2.5 h-2.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;relative mr-2&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 rounded-full&quot; src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot;&gt;
+    &lt;span class=&quot;bottom-0 left-7 absolute  w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;relative&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 rounded&quot; src=&quot;assets/images/users/avatar-11.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;span class=&quot;absolute bottom-0 left-8 transform translate-y-1/4 w-2.5 h-2.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Avatar group</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-group"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="flex -space-x-4">
+                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-2.png" alt="">
+                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-8.png" alt="">
+                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-9.png" alt="">
+                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+99</a>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-group" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;flex -space-x-4&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-8.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-9.png&quot; alt=&quot;&quot;&gt;
+    &lt;a class=&quot;flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800&quot; href=&quot;#&quot;&gt;+99&lt;/a&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Avatar with alphabet</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-alphabet"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <span class="inline-flex  justify-center items-center h-24 w-24 rounded-full bg-green-500/10 ">
+                                        <span class="text-4xl text-green-500 font-semibold">MT</span>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-20 w-20 rounded-full bg-pink-500/10 ">
+                                        <span class="text-2xl text-pink-500 font-semibold">MT</span>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-16 w-16 rounded-full bg-indigo-500/10 ">
+                                        <span class="text-xl text-indigo-500 font-semibold">MT</span>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-12 w-12 rounded-full bg-orange-500/10 ">
+                                        <span class="text-base text-orange-400 font-semibold">MT</span>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-10 w-10 rounded-full bg-cyan-500/10 ">
+                                        <span class="text-base text-cyan-500 font-semibold">MT</span>
+                                    </span>
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-alphabet" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;span class=&quot;inline-flex  justify-center items-center h-24 w-24 rounded-full bg-green-500/10 &quot;&gt;
+    &lt;span class=&quot;text-4xl text-green-500 font-semibold&quot;&gt;MT&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-20 w-20 rounded-full bg-pink-500/10 &quot;&gt;
+    &lt;span class=&quot;text-2xl text-pink-500 font-semibold&quot;&gt;MT&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-16 w-16 rounded-full bg-indigo-500/10 &quot;&gt;
+    &lt;span class=&quot;text-xl text-indigo-500 font-semibold&quot;&gt;MT&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-12 w-12 rounded-full bg-orange-500/10 &quot;&gt;
+    &lt;span class=&quot;text-base text-orange-400 font-semibold&quot;&gt;MT&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-10 w-10 rounded-full bg-cyan-500/10 &quot;&gt;
+    &lt;span class=&quot;text-base text-cyan-500 font-semibold&quot;&gt;MT&lt;/span&gt;
+&lt;/span&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->    
+                            
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Avatar with icon</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="avatar-icon"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <span class="inline-flex  justify-center items-center h-24 w-24 rounded-full bg-green-500/10 ">
+                                        <i class="icofont-user text-green-500 text-5xl"></i>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-20 w-20 rounded-full bg-pink-500/10 ">
+                                        <i class="icofont-user text-pink-500 text-4xl"></i>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-16 w-16 rounded-full bg-indigo-500/10 ">
+                                        <i class="icofont-user text-indigo-500 text-3xl"></i>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-12 w-12 rounded-full bg-orange-500/10 ">
+                                        <i class="icofont-user text-orange-400 text-2xl"></i>
+                                    </span>
+                                    <span class="inline-flex  justify-center items-center h-10 w-10 rounded-full bg-cyan-500/10 ">
+                                        <i class="icofont-user text-cyan-500 text-2xl"></i>
+                                    </span>
+                                </div><!--end card-body-->
+                                
+                                <div id="avatar-icon" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;span class=&quot;inline-flex  justify-center items-center h-24 w-24 rounded-full bg-green-500/10 &quot;&gt;
+    &lt;i class=&quot;icofont-user text-green-500 text-5xl&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-20 w-20 rounded-full bg-pink-500/10 &quot;&gt;
+    &lt;i class=&quot;icofont-user text-pink-500 text-4xl&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-16 w-16 rounded-full bg-indigo-500/10 &quot;&gt;
+    &lt;i class=&quot;icofont-user text-indigo-500 text-3xl&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-12 w-12 rounded-full bg-orange-500/10 &quot;&gt;
+    &lt;i class=&quot;icofont-user text-orange-400 text-2xl&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;inline-flex  justify-center items-center h-10 w-10 rounded-full bg-cyan-500/10 &quot;&gt;
+    &lt;i class=&quot;icofont-user text-cyan-500 text-2xl&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->   
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <script>
+            var alert_del = document.querySelectorAll('.alert-hidden');
+           alert_del.forEach((x) =>
+             x.addEventListener('click', function () {
+               x.parentElement.classList.add('hidden');
+             })
+           );
+         </script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

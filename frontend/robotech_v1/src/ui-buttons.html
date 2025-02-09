@@ -1,0 +1,768 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Buttons</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Buttons</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-default"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button class="px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500 mb-2">Primary</button>
+                                        <button class="px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded hover:bg-red-600 border border-red-500 mb-2">Red</button>
+                                        <button class="px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded hover:bg-green-600 border border-green-500 mb-2">Green</button>
+                                        <button class="px-2 py-1 lg:px-4 bg-yellow  text-white text-sm  rounded hover:bg-yellow-600 border border-yellow-500 mb-2">Yellow</button>
+                                        <button class="px-2 py-1 lg:px-4 bg-pink  text-white text-sm  rounded hover:bg-pink-600 border border-pink-500 mb-2">Pink</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-blue  text-white text-sm  rounded transition hover:bg-blue-600 border border-blue font-medium mb-2">Blue</button>
+                                        <button class="px-2 py-1 lg:px-4 bg-slate-100  text-gray-600 text-sm  rounded hover:bg-slate-200 border border-slate-100 mb-2">Light</button>
+                                        <button class="px-2 py-1 lg:px-4 bg-slate-900  text-white text-sm  rounded hover:bg-slate-800 border border-slate-900 mb-2">Dark</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-default" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded hover:bg-red-600 border border-red-500&quot;&gt;Red&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded hover:bg-green-600 border border-green-500&quot;&gt;Green&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-yellow  text-white text-sm  rounded hover:bg-yellow-600 border border-yellow-500&quot;&gt;Yellow&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-pink  text-white text-sm  rounded hover:bg-pink-600 border border-pink-500&quot;type=&quot;button&quot; &gt;Pink&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-blue  text-white text-sm  rounded transition hover:bg-blue-600 border border-blue font-medium&quot;&gt;Blue&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-slate-100  text-gray-600 text-sm  rounded hover:bg-slate-200 border border-slate-100&quot;&gt;Light&lt;/button&gt;
+&lt;button class=&quot;px-2 py-1 lg:px-4 bg-slate-900  text-white text-sm  rounded hover:bg-slate-800 border border-slate-900&quot;&gt;Dark&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Rounded Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-default-rounded"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded-full transition hover:bg-primary-600 border border-primary font-medium mb-2">Primary</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-white text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded-full transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Alternative</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded-full transition hover:bg-red-600 border border-red font-medium mb-2">Red</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded-full transition hover:bg-green-600 border border-green font-medium mb-2">Green</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-yellow  text-slate-900 text-sm  rounded-full transition hover:bg-yellow-600 border border-yellow font-medium mb-2">Yellow</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-pink  text-white text-sm  rounded-full transition hover:bg-pink-600 border border-pink font-medium mb-2">Pink</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-blue  text-white text-sm  rounded-full transition hover:bg-blue-600 border border-blue font-medium mb-2">Blue</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-slate-100  text-gray-600 text-sm  rounded-full transition hover:bg-slate-200 border border-slate-100 font-medium mb-2">Light</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-slate-900  text-white text-sm  rounded-full transition hover:bg-slate-800 border border-slate-900 font-medium mb-2">Dark</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-default-rounded" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded-full transition hover:bg-primary-600 border border-primary font-medium&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-white text-gray-900 text-sm font-medium  focus:outline-none  rounded-full transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700&quot;&gt;Alternative&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded-full transition hover:bg-red-600 border border-red font-medium&quot;&gt;Red&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded-full transition hover:bg-green-600 border border-green font-medium&quot;&gt;Green&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-yellow  text-slate-900 text-sm  rounded-full transition hover:bg-yellow-600 border border-yellow font-medium&quot;&gt;Yellow&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-pink  text-white text-sm  rounded-full transition hover:bg-pink-600 border border-pink font-medium&quot;&gt;Pink&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-blue  text-white text-sm  rounded-full transition hover:bg-blue-600 border border-blue font-medium&quot;&gt;Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-slate-100  text-gray-600 text-sm  rounded-full transition hover:bg-slate-200 border border-slate-100 font-medium&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-slate-900  text-white text-sm  rounded-full transition hover:bg-slate-800 border border-slate-900 font-medium&quot;&gt;Dark&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Outline Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-outline"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2">Primary</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Alternative</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-red text-sm  rounded transition hover:bg-red-600 hover:text-white border border-red font-medium mb-2">Red</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-green text-sm  rounded transition hover:bg-green-600 hover:text-white border border-green font-medium mb-2">Green</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2">Yellow</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-pink text-sm  rounded transition hover:bg-pink-600 hover:text-white border border-pink font-medium mb-2">Pink</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-blue text-sm  rounded transition hover:bg-blue-600 hover:text-white border border-blue font-medium mb-2">Blue</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-gray-600 text-sm  rounded transition hover:bg-slate-200 hover:text-gray-900 border border-slate-100 font-medium mb-2">Light</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-slate-900 text-sm  rounded transition hover:bg-slate-800 hover:text-white border border-slate-900 font-medium mb-2">Dark</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-outline" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded transition hover:bg-primary-500 hover:text-white border border-primary font-medium&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium  focus:outline-none  rounded transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700&quot;&gt;Alternative&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-red text-sm  rounded transition hover:bg-red-600 hover:text-white border border-red font-medium&quot;&gt;Red&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-green text-sm  rounded transition hover:bg-green-600 hover:text-white border border-green font-medium&quot;&gt;Green&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium&quot;&gt;Yellow&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-pink text-sm  rounded transition hover:bg-pink-600 hover:text-white border border-pink font-medium&quot;&gt;Pink&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-blue text-sm  rounded transition hover:bg-blue-600 hover:text-white border border-blue font-medium&quot;&gt;Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-gray-600 text-sm  rounded transition hover:bg-slate-200 hover:text-gray-900 border border-slate-100 font-medium&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-slate-900 text-sm  rounded transition hover:bg-slate-800 hover:text-white border border-slate-900 font-medium&quot;&gt;Dark&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Outline Rounded Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-outline-rounded"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded-full transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2">Primary</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded-full transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Alternative</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-red text-sm  rounded-full transition hover:bg-red-600 hover:text-white border border-red font-medium mb-2">Red</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-green text-sm  rounded-full transition hover:bg-green-600 hover:text-white border border-green font-medium mb-2">Green</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded-full transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2">Yellow</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-pink text-sm  rounded-full transition hover:bg-pink-600 hover:text-white border border-pink font-medium mb-2">Pink</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-blue text-sm  rounded-full transition hover:bg-blue-600 hover:text-white border border-blue font-medium mb-2">Blue</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-gray-600 text-sm  rounded-full transition hover:bg-slate-200 hover:text-gray-900 border border-slate-100 font-medium mb-2">Light</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 bg-transparent  text-slate-900 text-sm  rounded-full transition hover:bg-slate-800 hover:text-white border border-slate-900 font-medium mb-2">Dark</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-outline-rounded" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded-full transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded-full transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700&quot;&gt;Alternative&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-red text-sm  rounded-full transition hover:bg-red-600 hover:text-white border border-red font-medium mb-2&quot;&gt;Red&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-green text-sm  rounded-full transition hover:bg-green-600 hover:text-white border border-green font-medium mb-2&quot;&gt;Green&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded-full transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2&quot;&gt;Yellow&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-pink text-sm  rounded-full transition hover:bg-pink-600 hover:text-white border border-pink font-medium mb-2&quot;&gt;Pink&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-blue text-sm  rounded-full transition hover:bg-blue-600 hover:text-white border border-blue font-medium mb-2&quot;&gt;Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-gray-600 text-sm  rounded-full transition hover:bg-slate-200 hover:text-gray-900 border border-slate-100 font-medium mb-2&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-slate-900 text-sm  rounded-full transition hover:bg-slate-800 hover:text-white border border-slate-900 font-medium mb-2&quot;&gt;Dark&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Gradient Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-gradient"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 hover:bg-gradient-to-br text-sm  rounded transition border border-primary-500 font-medium mb-2">Primary</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-red-600 border border-red font-medium mb-2">Red</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-green-600 border border-green font-medium mb-2">Green</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-gray-900 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-yellow-600 border border-yellow font-medium mb-2">Yellow</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-pink-600 border border-pink font-medium mb-2">Pink</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-blue-600 border border-blue font-medium mb-2">Blue</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-slate-700 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-300 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-slate-200 border border-slate-100 font-medium mb-2">Light</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-slate-800 border border-slate-500/10 font-medium mb-2">Dark</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-gradient" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 hover:bg-gradient-to-br text-sm  rounded transition border border-primary-500 font-medium mb-2&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-red-600 border border-red font-medium mb-2&quot;&gt;Red&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-green-600 border border-green font-medium mb-2&quot;&gt;Green&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-gray-900 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-yellow-600 border border-yellow font-medium mb-2&quot;&gt;Yellow&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-pink-600 border border-pink font-medium mb-2&quot;&gt;Pink&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-blue-600 border border-blue font-medium mb-2&quot;&gt;Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-slate-700 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-300 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-slate-200 border border-slate-100 font-medium mb-2&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-slate-800 border border-slate-500/10 font-medium mb-2&quot;&gt;Dark&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Gradient Rounded Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-gradient-rounded"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 hover:bg-gradient-to-br text-sm  rounded-full transition border border-primary-500 font-medium mb-2">Primary</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-red-600 border border-red font-medium mb-2">Red</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-green-600 border border-green font-medium mb-2">Green</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-gray-900 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-yellow-600 border border-yellow font-medium mb-2">Yellow</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-pink-600 border border-pink font-medium mb-2">Pink</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-blue-600 border border-blue font-medium mb-2">Blue</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-slate-700 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-300 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-slate-200 border border-slate-100 font-medium mb-2">Light</button>
+                                        <button type="button" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br text-sm  rounded-full transition hover:bg-slate-800 border border-slate-500/10 font-medium mb-2">Dark</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-gradient-rounded" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 hover:bg-gradient-to-br text-sm  rounded transition border border-primary-500 font-medium mb-2&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-red-600 border border-red font-medium mb-2&quot;&gt;Red&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-green-600 border border-green font-medium mb-2&quot;&gt;Green&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-gray-900 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-yellow-600 border border-yellow font-medium mb-2&quot;&gt;Yellow&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-pink-600 border border-pink font-medium mb-2&quot;&gt;Pink&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-blue-600 border border-blue font-medium mb-2&quot;&gt;Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-slate-700 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-300 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-slate-200 border border-slate-100 font-medium mb-2&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-slate-500 via-slate-600 to-slate-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-slate-800 border border-slate-500/10 font-medium mb-2&quot;&gt;Dark&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Gradient Tow Color Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-gradient-two"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Purple to Blue</button>
+                                        <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Cyan to Blue</button>
+                                        <button type="button" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Green to Blue</button>
+                                        <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:outline-none font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Purple to Pink</button>
+                                        <button type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:outline-none font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Pink to Orange</button>
+                                        <button type="button" class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Teal to Lime</button>
+                                        <button type="button" class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2">Red to Yellow</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-gradient-two" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Purple to Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Cyan to Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Green to Blue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:outline-none font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Purple to Pink&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:outline-none font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Pink to Orange&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Teal to Lime&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:outline-none  font-medium rounded text-sm px-2 py-1 lg:px-4 border dark:border-slate-800/10 text-center transition mb-2&quot;&gt;Red to Yellow&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Gradient outline Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-gradient-outline"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none ">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Purple to blue
+                                            </span>
+                                        </button>
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Cyan to blue
+                                            </span>
+                                        </button>
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:outline-none">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Green to blue
+                                            </span>
+                                        </button>
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:outline-none ">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Purple to pink
+                                            </span>
+                                        </button>
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:outline-none ">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Pink to orange
+                                            </span>
+                                        </button>
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:outline-none ">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Teal to Lime
+                                            </span>
+                                        </button>
+                                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:outline-none">
+                                            <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                            Red to Yellow
+                                            </span>
+                                        </button>
+                                    </div> 
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-gradient-outline" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none &quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Purple to blue
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none&quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Cyan to blue
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:outline-none&quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Green to blue
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:outline-none &quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Purple to pink
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:outline-none &quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Pink to orange
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:outline-none &quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Teal to Lime
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:outline-none&quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0&quot;&gt;
+    Red to Yellow
+    &lt;/span&gt;
+&lt;/button&gt; 
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Social Buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-Social"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="text-white bg-[#0165E1] hover:bg-[#0165E1]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#0165E1] lg:pe-3 text-center inline-flex items-center mb-2">
+                                            <span class="bg-white w-8 h-8 text-center me-2 rounded">
+                                                <i class="fab fa-facebook text-[#0165E1] text-2xl  "></i>
+                                            </span>
+                                            Sign in with Facebook
+                                        </button>
+    
+                                        <button type="button" class="text-white bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#1da1f2] lg:pe-3 text-center inline-flex items-center mb-2">
+                                            <span class="bg-white w-8 h-8 text-center me-2 rounded">
+                                                <i class="fab fa-twitter text-[#1da1f2] text-2xl  "></i>
+                                            </span>
+                                            Sign in with Twitter
+                                        </button>
+    
+                                        <button type="button" class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#24292F] lg:pe-3 text-center inline-flex items-center mb-2">
+                                            <span class="bg-white w-8 h-8 text-center me-2 rounded">
+                                                <i class="fab fa-github text-[#24292F] text-2xl  "></i>
+                                            </span>
+                                            Sign in with Github
+                                        </button>
+    
+                                        <button type="button" class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#4285F4] lg:pe-3 text-center inline-flex items-center mb-2">
+                                            <span class="bg-white w-8 h-8 text-center me-2 rounded">
+                                                <i class="fab fa-google text-[#4285F4] text-2xl  "></i>
+                                            </span>
+                                            Sign in with Google
+                                        </button>
+    
+                                        <button type="button" class="text-white bg-[#050708] hover:bg-[#050708]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#050708] lg:pe-3 text-center inline-flex items-center mb-2">
+                                            <span class="bg-white w-8 h-8 text-center me-2 rounded">
+                                                <i class="fab fa-apple text-[#050708] text-2xl  "></i>
+                                            </span>
+                                            Sign in with Apple
+                                        </button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-Social" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-[#0165E1] hover:bg-[#0165E1]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#0165E1] lg:pe-3 text-center inline-flex items-center mb-2&quot;&gt;
+    &lt;span class=&quot;bg-white w-8 h-8 text-center me-2 rounded&quot;&gt;
+        &lt;i class=&quot;fab fa-facebook text-[#0165E1] text-2xl  &quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    Sign in with Facebook
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#1da1f2] lg:pe-3 text-center inline-flex items-center mb-2&quot;&gt;
+    &lt;span class=&quot;bg-white w-8 h-8 text-center me-2 rounded&quot;&gt;
+        &lt;i class=&quot;fab fa-twitter text-[#1da1f2] text-2xl  &quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    Sign in with Twitter
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#24292F] lg:pe-3 text-center inline-flex items-center mb-2&quot;&gt;
+    &lt;span class=&quot;bg-white w-8 h-8 text-center me-2 rounded&quot;&gt;
+        &lt;i class=&quot;fab fa-github text-[#24292F] text-2xl  &quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    Sign in with Github
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#4285F4] lg:pe-3 text-center inline-flex items-center mb-2&quot;&gt;
+    &lt;span class=&quot;bg-white w-8 h-8 text-center me-2 rounded&quot;&gt;
+        &lt;i class=&quot;fab fa-google text-[#4285F4] text-2xl  &quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    Sign in with Google
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-[#050708] hover:bg-[#050708]/90 focus:outline-none font-medium rounded text-sm pe-2 py-0 border border-[#050708] lg:pe-3 text-center inline-flex items-center mb-2&quot;&gt;
+    &lt;span class=&quot;bg-white w-8 h-8 text-center me-2 rounded&quot;&gt;
+        &lt;i class=&quot;fab fa-apple text-[#050708] text-2xl  &quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    Sign in with Apple
+&lt;/button&gt; 
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Buttons with icon and label</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-icons"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-2 py-1 text-center inline-flex items-center dark:bg-primary-600 dark:hover:bg-primary-700 mb-2">
+                                        <i class="fas fa-cart-shopping mr-2"></i>
+                                        Buy now
+                                        </button>
+                                        <button type="button" class="text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-2 py-1 text-center inline-flex items-center  dark:bg-primary-600 dark:hover:bg-primary-700 mb-2">
+                                            Choose plan
+                                            <i class="fas fa-arrow-right ml-2"></i>
+                                        </button>
+                                        <button type="button" class="inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-600 dark:hover:bg-primary-700  mb-2">
+                                        Messages
+                                        <span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-primary-600 bg-primary-100 rounded-full">
+                                            2
+                                        </span>
+                                        </button>
+                                        <button type="button" class="text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded-lg text-sm p-2 text-center inline-flex items-center  dark:bg-primary-600 dark:hover:bg-primary-700 mb-2">
+                                        <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                        <button type="button" class="text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded-full text-sm p-2 text-center inline-flex items-center  dark:bg-primary-600 dark:hover:bg-primary-700 mb-2">
+                                        <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                        <button type="button" class="text-primary-700 border border-5lue-700 hover:bg-primary-600 hover:text-white  focus:outline-none font-medium rounded-lg text-sm p-2 text-center inline-flex items-center  dark:border-primary-500 dark:text-primary-500 dark:hover:text-white mb-2">
+                                        <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                        <button type="button" class="text-primary-700 border border-5lue-700 hover:bg-primary-600 hover:text-white  focus:outline-none font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-primary-500 dark:text-primary-500 dark:hover:text-white mb-2">
+                                        <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-icons" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-2 py-1 text-center inline-flex items-center dark:bg-primary-600 dark:hover:bg-primary-700 mb-2&quot;&gt;
+    &lt;i class=&quot;fas fa-cart-shopping mr-2&quot;&gt;&lt;/i&gt;
+    Buy now
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-2 py-1 text-center inline-flex items-center  dark:bg-primary-600 dark:hover:bg-primary-700 mb-2&quot;&gt;
+    Choose plan
+    &lt;i class=&quot;fas fa-arrow-right ml-2&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-600 dark:hover:bg-primary-700  mb-2&quot;&gt;
+    Messages
+    &lt;span class=&quot;inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-primary-600 bg-primary-100 rounded-full&quot;&gt;
+    2
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded-lg text-sm p-2 text-center inline-flex items-center  dark:bg-primary-600 dark:hover:bg-primary-700 mb-2&quot;&gt;
+    &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded-full text-sm p-2 text-center inline-flex items-center  dark:bg-primary-600 dark:hover:bg-primary-700 mb-2&quot;&gt;
+    &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-primary-700 border border-5lue-700 hover:bg-primary-600 hover:text-white  focus:outline-none font-medium rounded-lg text-sm p-2 text-center inline-flex items-center  dark:border-primary-500 dark:text-primary-500 dark:hover:text-white mb-2&quot;&gt;
+    &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-primary-700 border border-5lue-700 hover:bg-primary-600 hover:text-white  focus:outline-none font-medium rounded-full text-sm p-2 text-center inline-flex items-center dark:border-primary-500 dark:text-primary-500 dark:hover:text-white mb-2&quot;&gt;
+    &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Button sizes</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-size"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="-mb-2">
+                                        <button type="button" class="px-2 py-1 mb-2 text-xs font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 ">Extra small</button>
+                                        <button type="button" class="px-2 py-1 mb-2 text-sm font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 ">Small</button>
+                                        <button type="button" class="text-white mb-2 bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-3 py-2 text-center dark:bg-primary-500 dark:hover:bg-primary-600 ">Base</button>
+                                        <button type="button" class="px-3 py-2 mb-2 text-base font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 ">Large</button>
+                                        <button type="button" class="text-white mb-2 bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-base px-5 py-3 text-center dark:bg-primary-500 dark:hover:bg-primary-600 ">Extra large</button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-size" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 text-xs font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Extra small&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-2 py-1 text-sm font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Small&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-3 py-2 text-center dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Base&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;px-3 py-2 text-base font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Large&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-base px-5 py-3 text-center dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Extra large&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Loader</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-Loader"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button disabled type="button" class="text-white bg-primary-500 hover:bg-primary-600  focus:outline-none  font-medium rounded text-sm px-2 py-1 text-center mr-2 dark:bg-primary-600 dark:hover:bg-primary-700  inline-flex items-center">
+                                        <i class="fas fa-spinner animate-spin mr-2"></i>
+                                        Loading...
+                                    </button>
+                                    <button disabled type="button" class="py-1 px-2 text-sm font-medium text-gray-900 bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10  focus:outline-none  focus:text-primary-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
+                                        <i class="fas fa-spinner animate-spin mr-2"></i>
+                                        Loading...
+                                    </button>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-Loader" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button disabled type=&quot;button&quot; class=&quot;text-white bg-primary-500 hover:bg-primary-600  focus:outline-none  font-medium rounded text-sm px-2 py-1 text-center mr-2 dark:bg-primary-600 dark:hover:bg-primary-700  inline-flex items-center&quot;&gt;
+    &lt;i class=&quot;fas fa-spinner animate-spin mr-2&quot;&gt;&lt;/i&gt;
+    Loading...
+&lt;/button&gt;
+&lt;button disabled type=&quot;button&quot; class=&quot;py-1 px-2 text-sm font-medium text-gray-900 bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10  focus:outline-none  focus:text-primary-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center&quot;&gt;
+    &lt;i class=&quot;fas fa-spinner animate-spin mr-2&quot;&gt;&lt;/i&gt;
+    Loading...
+&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Disabled</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-Disabled"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="text-white bg-primary-400 dark:bg-primary-500 cursor-not-allowed font-medium rounded text-sm px-2 py-1 text-center" disabled>Disabled button</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-Disabled" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;text-white bg-primary-400 dark:bg-primary-500 cursor-not-allowed font-medium rounded text-sm px-3 py-2 text-center&quot; disabled&gt;Disabled button&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Group buttons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="btn-Group"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="py-1 px-3 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+                                        Profile
+                                    </button>
+                                    <button type="button" class="py-1 px-3 -mx-1 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+                                        Settings
+                                    </button>
+                                    <button type="button" class="py-1 px-3 text-sm font-medium text-gray-900 bg-white rounded-r-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+                                        Messages
+                                    </button>
+                                </div><!--end card-body-->
+                                
+                                <div id="btn-Group" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;py-1 px-3 text-sm font-medium text-gray-900 bg-white rounded-l-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white&quot;&gt;
+    Profile
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;py-1 px-3 -mx-1 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white&quot;&gt;
+    Settings
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;py-1 px-3 text-sm font-medium text-gray-900 bg-white rounded-r-md border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white&quot;&gt;
+    Messages
+&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

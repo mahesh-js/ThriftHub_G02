@@ -1,0 +1,461 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Navbars</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Navbars</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Navbars Style-1</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navbars-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+                                        <div class="container flex flex-wrap justify-between items-center mx-auto p-0">
+                                            <a href="inbox.html" class="flex items-center">
+                                                <img src="assets/images/logo-sm.png" class="me-2 h-5 sm:h-6" alt="Robotech Logo" />
+                                                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Robotech</span>
+                                            </a>
+                                            <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+                                                <i class="fas fa-bars"></i>
+                                            </button>
+                                            <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                                                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                                                    <li>
+                                                        <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navbars-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;nav class=&quot;bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800&quot;&gt;
+    &lt;div class=&quot;container flex flex-wrap justify-between items-center mx-auto p-0&quot;&gt;
+        &lt;a href=&quot;inbox.html&quot; class=&quot;flex items-center&quot;&gt;
+            &lt;img src=&quot;assets/images/logo-sm.png&quot; class=&quot;me-2 h-5 sm:h-6&quot; alt=&quot;Robotech Logo&quot; /&gt;
+            &lt;span class=&quot;self-center text-xl font-semibold whitespace-nowrap dark:text-white&quot;&gt;Robotech&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;button data-collapse-toggle=&quot;mobile-menu&quot; type=&quot;button&quot; class=&quot;inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600&quot; aria-controls=&quot;mobile-menu&quot; aria-expanded=&quot;false&quot;&gt;
+            &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;hidden w-full md:block md:w-auto&quot; id=&quot;mobile-menu&quot;&gt;
+            &lt;ul class=&quot;flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white&quot; aria-current=&quot;page&quot;&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Services&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Pricing&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent&quot;&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Navbars Style-2</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navbars-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+                                        <div class="container flex flex-wrap justify-between items-center mx-auto p-0">
+                                            <a href="inbox.html" class="flex items-center">
+                                                <img src="assets/images/logo-sm.png" class="me-2 h-5 sm:h-6" alt="Robotech Logo" />
+                                                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Robotech</span>
+                                            </a>
+                                            <div class="flex items-center md:order-2">
+                                                <div class="dropdown">
+                                                    <button type="button" class="dropdown-toggle flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 " id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
+                                                        <span class="sr-only">Open user menu</span>
+                                                        <img class="w-8 h-8 rounded-full" src="assets/images/users/avatar-9.png" alt="user photo">
+                                                    </button>
+                                                    <!-- Dropdown menu -->
+                                                    <div class="dropdown-menu dropdown-menu-right hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
+                                                        <div class="py-3 px-4">
+                                                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                                                        <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                                        </div>
+                                                        <ul class="py-1" aria-labelledby="dropdown">
+                                                        <li>
+                                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                                                    <i class="fas fa-bars"></i>
+                                                </button>
+                                            </div>
+                                            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+                                                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navbars-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;nav class=&quot;bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800&quot;&gt;
+    &lt;div class=&quot;container flex flex-wrap justify-between items-center mx-auto p-0&quot;&gt;
+        &lt;a href=&quot;inbox.html&quot; class=&quot;flex items-center&quot;&gt;
+            &lt;img src=&quot;assets/images/logo-sm.png&quot; class=&quot;me-2 h-5 sm:h-6&quot; alt=&quot;Robotech Logo&quot; /&gt;
+            &lt;span class=&quot;self-center text-xl font-semibold whitespace-nowrap dark:text-white&quot;&gt;Robotech&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;flex items-center md:order-2&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;dropdown-toggle flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 &quot; id=&quot;user-menu-button&quot; aria-expanded=&quot;false&quot; type=&quot;button&quot; data-dropdown-toggle=&quot;dropdown&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;Open user menu&lt;/span&gt;
+                    &lt;img class=&quot;w-8 h-8 rounded-full&quot; src=&quot;assets/images/users/avatar-9.png&quot; alt=&quot;user photo&quot;&gt;
+                &lt;/button&gt;
+                &lt;!-- Dropdown menu --&gt;
+                &lt;div class=&quot;dropdown-menu dropdown-menu-right hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600&quot; id=&quot;dropdown&quot;&gt;
+                    &lt;div class=&quot;py-3 px-4&quot;&gt;
+                    &lt;span class=&quot;block text-sm text-gray-900 dark:text-white&quot;&gt;Bonnie Green&lt;/span&gt;
+                    &lt;span class=&quot;block text-sm font-medium text-gray-500 truncate dark:text-gray-400&quot;&gt;name@flowbite.com&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;py-1&quot; aria-labelledby=&quot;dropdown&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white&quot;&gt;Earnings&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;button data-collapse-toggle=&quot;mobile-menu-2&quot; type=&quot;button&quot; class=&quot;inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600&quot; aria-controls=&quot;mobile-menu-2&quot; aria-expanded=&quot;false&quot;&gt;
+                &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;hidden justify-between items-center w-full md:flex md:w-auto md:order-1&quot; id=&quot;mobile-menu-2&quot;&gt;
+            &lt;ul class=&quot;flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium&quot;&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white&quot; aria-current=&quot;page&quot;&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Services&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Pricing&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Navbars Style-3</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navbars-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+                                        <div class="container flex flex-wrap justify-between items-center mx-auto p-0">
+                                            <a href="inbox.html" class="flex items-center">
+                                                <img src="assets/images/logo-sm.png" class="me-2 h-5 sm:h-6" alt="Robotech Logo" />
+                                                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Robotech</span>
+                                            </a>
+                                            <div class="flex md:order-2">
+                                                <div class="hidden relative mr-3 md:mr-0 md:block">
+                                                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                                    <i class="ti ti-search z-10"></i>
+                                                </div>
+                                                <input type="text" id="email-adress-icon" class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+                                                </div>
+                                                <button data-collapse-toggle="mobile-menu-3" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-3" aria-expanded="false">
+                                                <span class="sr-only">Open main menu</span>
+                                                <i class="fas fa-bars"></i>
+                                                </button>
+                                            </div>
+                                            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-3">
+                                                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navbars-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;nav class=&quot;bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800&quot;&gt;
+    &lt;div class=&quot;container flex flex-wrap justify-between items-center mx-auto p-0&quot;&gt;
+        &lt;a href=&quot;inbox.html&quot; class=&quot;flex items-center&quot;&gt;
+            &lt;img src=&quot;assets/images/logo-sm.png&quot; class=&quot;me-2 h-5 sm:h-6&quot; alt=&quot;Robotech Logo&quot; /&gt;
+            &lt;span class=&quot;self-center text-xl font-semibold whitespace-nowrap dark:text-white&quot;&gt;Robotech&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;flex md:order-2&quot;&gt;
+            &lt;div class=&quot;hidden relative mr-3 md:mr-0 md:block&quot;&gt;
+            &lt;div class=&quot;flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none&quot;&gt;
+                &lt;i class=&quot;ti ti-search z-10&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;input type=&quot;text&quot; id=&quot;email-adress-icon&quot; class=&quot;block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500&quot; placeholder=&quot;Search...&quot;&gt;
+            &lt;/div&gt;
+            &lt;button data-collapse-toggle=&quot;mobile-menu-3&quot; type=&quot;button&quot; class=&quot;inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600&quot; aria-controls=&quot;mobile-menu-3&quot; aria-expanded=&quot;false&quot;&gt;
+            &lt;span class=&quot;sr-only&quot;&gt;Open main menu&lt;/span&gt;
+            &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;hidden justify-between items-center w-full md:flex md:w-auto md:order-1&quot; id=&quot;mobile-menu-3&quot;&gt;
+            &lt;ul class=&quot;flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium&quot;&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white&quot; aria-current=&quot;page&quot;&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Services&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Navbars Style-4</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navbars-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+                                        <div class="container flex flex-wrap justify-between items-center mx-auto p-0">
+                                            <a href="inbox.html" class="flex items-center">
+                                                <img src="assets/images/logo-sm.png" class="me-2 h-5 sm:h-6" alt="Robotech Logo" />
+                                                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Robotech</span>
+                                            </a>
+                                            <div class="flex md:order-2">
+                                                <button class="px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500 mb-2">Get Started</button>
+                                                <button data-collapse-toggle="mobile-menu-4" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-4" aria-expanded="false">
+                                                    <i class="fas fa-bars"></i>
+                                                </button>
+                                            </div>
+                                            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
+                                                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navbars-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;nav class=&quot;bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800&quot;&gt;
+    &lt;div class=&quot;container flex flex-wrap justify-between items-center mx-auto p-0&quot;&gt;
+        &lt;a href=&quot;inbox.html&quot; class=&quot;flex items-center&quot;&gt;
+            &lt;img src=&quot;assets/images/logo-sm.png&quot; class=&quot;me-2 h-5 sm:h-6&quot; alt=&quot;Robotech Logo&quot; /&gt;
+            &lt;span class=&quot;self-center text-xl font-semibold whitespace-nowrap dark:text-white&quot;&gt;Robotech&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;flex md:order-2&quot;&gt;
+            &lt;button class=&quot;px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500 mb-2&quot;&gt;Get Started&lt;/button&gt;
+            &lt;button data-collapse-toggle=&quot;mobile-menu-4&quot; type=&quot;button&quot; class=&quot;inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600&quot; aria-controls=&quot;mobile-menu-4&quot; aria-expanded=&quot;false&quot;&gt;
+                &lt;i class=&quot;fas fa-bars&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;hidden justify-between items-center w-full md:flex md:w-auto md:order-1&quot; id=&quot;mobile-menu-4&quot;&gt;
+            &lt;ul class=&quot;flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium&quot;&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white&quot; aria-current=&quot;page&quot;&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Services&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700&quot;&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                                                       
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

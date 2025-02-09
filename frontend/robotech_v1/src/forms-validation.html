@@ -1,0 +1,209 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Validation</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Forms</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Validation</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Validation Default</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Validation-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form id="form-validation" class="form">
+                                        <div class="mb-2">
+                                            <label for="username" class="font-medium text-sm text-slate-600 dark:text-slate-400">Username</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="text" id="username" placeholder="Enter Username">
+                                            <small>Error Message</small>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="email" class="font-medium text-sm text-slate-600 dark:text-slate-400">Email</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="text" id="email" placeholder="Enter email">
+                                            <small>Error Message</small>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="password" class="font-medium text-sm text-slate-600 dark:text-slate-400">Password</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="password" id="password" placeholder="Enter password">
+                                            <small>Error Message</small>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="password2" class="font-medium text-sm text-slate-600 dark:text-slate-400">Confirm Password</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="password" id="password2" placeholder="Enter password again">
+                                            <small>Error Message</small>
+                                        </div>
+                                        <button type="submit" class="mt-2 inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded">Submit form</button>
+                                    </form><!--end form-->
+                                </div><!--end card-body-->
+                                
+                                <div id="Validation-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/js/pages/validation.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;form id=&quot;form-validation&quot; class=&quot;form&quot;&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;label for=&quot;username&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Username&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;Enter Username&quot;&gt;
+        &lt;small&gt;Error Message&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;label for=&quot;email&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Email&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;text&quot; id=&quot;email&quot; placeholder=&quot;Enter email&quot;&gt;
+        &lt;small&gt;Error Message&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;label for=&quot;password&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Password&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;password&quot; id=&quot;password&quot; placeholder=&quot;Enter password&quot;&gt;
+        &lt;small&gt;Error Message&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;label for=&quot;password2&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Confirm Password&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;password&quot; id=&quot;password2&quot; placeholder=&quot;Enter password again&quot;&gt;
+        &lt;small&gt;Error Message&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;mt-2 inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Submit form&lt;/button&gt;
+&lt;/form&gt;&lt;!--end form--&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Validation Alert</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Validation-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="error_message" class="bg-red-400 text-white mb-3 rounded ease-out duration-500"></div>
+                                    <form action="" id="myform" method="get" onsubmit = "return validate();">
+                                        <div class="mb-2 input_field">
+                                            <label for="name" class="font-medium text-sm text-slate-600 dark:text-slate-400">Username</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="text" id="name" placeholder="Username">
+                                        </div>
+                                        <div class="mb-2 input_field">
+                                            <label for="subject" class="font-medium text-sm text-slate-600 dark:text-slate-400">Subject</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="text" id="subject" placeholder="Subject">
+                                        </div>
+                                        <div class="mb-2 input_field">
+                                            <label for="phone" class="font-medium text-sm text-slate-600 dark:text-slate-400">Phone No</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="text" id="phone" placeholder="Phone">
+                                        </div>
+                                        <div class="mb-2 input_field">
+                                            <label for="email" class="font-medium text-sm text-slate-600 dark:text-slate-400">Email</label>
+                                            <input class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" type="email" id="email" placeholder="Email">
+                                        </div>
+                                      <div class="input_field mb-2">
+                                        <label for="massage" class="font-medium text-sm text-slate-600 dark:text-slate-400">Massage</label>
+                                        <textarea id="message" rows="4" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Leave a comment..."></textarea>
+                                      </div>
+                                      <button type="submit" class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded">Submit form</button>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Validation-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/js/pages/validation.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;error_message&quot; class=&quot;bg-red-400 text-white mb-3 rounded ease-out duration-500&quot;&gt;&lt;/div&gt;
+&lt;form action=&quot;&quot; id=&quot;myform&quot; method=&quot;get&quot; onsubmit = &quot;return validate();&quot;&gt;
+    &lt;div class=&quot;mb-2 input_field&quot;&gt;
+        &lt;label for=&quot;name&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Username&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Username&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2 input_field&quot;&gt;
+        &lt;label for=&quot;subject&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Subject&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;text&quot; id=&quot;subject&quot; placeholder=&quot;Subject&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2 input_field&quot;&gt;
+        &lt;label for=&quot;phone&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Phone No&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;text&quot; id=&quot;phone&quot; placeholder=&quot;Phone&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mb-2 input_field&quot;&gt;
+        &lt;label for=&quot;email&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Email&lt;/label&gt;
+        &lt;input class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input_field mb-2&quot;&gt;
+    &lt;label for=&quot;massage&quot; class=&quot;font-medium text-sm text-slate-600 dark:text-slate-400&quot;&gt;Massage&lt;/label&gt;
+    &lt;textarea id=&quot;message&quot; rows=&quot;4&quot; class=&quot;form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700&quot; placeholder=&quot;Leave a comment...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Submit form&lt;/button&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                                                      
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/pages/validation.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

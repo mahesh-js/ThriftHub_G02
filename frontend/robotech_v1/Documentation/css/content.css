@@ -1,0 +1,11 @@
+.about-list {
+  line-height: 32px;
+}
+
+.about-list .listing {
+  max-width: 110px;
+  width: 100%;
+  display: inline-block;
+  font-weight: 600;
+}
+/*# sourceMappingURL=content.css.map */

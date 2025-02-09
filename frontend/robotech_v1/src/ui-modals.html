@@ -1,0 +1,1237 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Modals</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Modals</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Modal Sizing</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Modals-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" data-fc-type="modal" data-fc-target="modalstandard" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Standerd
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="smallmodal" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Small
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="largemodal" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Large
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="extralargemodal" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Extra Large
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="fullwidthmodal" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Full Width
+                                    </button>
+                                     <!-- Standard Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="modalstandard">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>
+                                                    <p class="font-semibold text-base mt-3">Subtitle Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                                                        nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                                                    </p>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Small Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="smallmodal">
+                                        <div class="relative w-auto pointer-events-none  sm:my-7 sm:mx-auto z-[99] sm:max-w-xs">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close"  data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>                    
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Large Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="largemodal">
+                                        <div class="relative w-auto pointer-events-none  sm:my-7 sm:mx-auto z-[99] lg:max-w-4xl">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>                    
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Extra Large Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="extralargemodal">
+                                        <div class="relative w-auto pointer-events-none  sm:my-7 sm:mx-auto z-[99] xl:max-w-6xl">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>                    
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Full Width Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="fullwidthmodal">
+                                        <div class="relative pointer-events-none  sm:mx-auto z-[99] max-w-none w-[100%]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded h-screen">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>                    
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Modals-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modalstandard&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Standerd
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;smallmodal&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Small
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;largemodal&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Large
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;extralargemodal&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Extra Large
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;fullwidthmodal&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Full Width
+&lt;/button&gt;
+ &lt;!-- Standard Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modalstandard&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;
+                &lt;p class=&quot;font-semibold text-base mt-3&quot;&gt;Subtitle Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                    nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Small Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;smallmodal&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none  sm:my-7 sm:mx-auto z-[99] sm:max-w-xs&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot;  data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;                    
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Large Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;largemodal&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none  sm:my-7 sm:mx-auto z-[99] lg:max-w-4xl&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;                    
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Extra Large Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;extralargemodal&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none  sm:my-7 sm:mx-auto z-[99] xl:max-w-6xl&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;                    
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Full Width Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;fullwidthmodal&quot;&gt;
+    &lt;div class=&quot;relative pointer-events-none  sm:mx-auto z-[99] max-w-none w-[100%]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded h-screen&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;                    
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Modal Position</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Modals-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" data-fc-type="modal" data-fc-target="modalcenter" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Center Modal
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="modaltop" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Top Modal
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="modalbottom" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Bottom Modal
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="modalright" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Rightbar Modal
+                                    </button>
+
+                                    <button type="button" data-fc-type="modal" data-fc-target="modalstatic" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Static Modal
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modalscrollable" class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded ">
+                                        Scrollable Modal
+                                    </button>
+
+                                    <!-- Right Modal -->
+                                    <div class="modal hidden" id="modalright">
+                                        <div class="pointer-events-none sm:max-w-lg sm:mx-auto z-[99] fixed top-0 right-0 flex flex-nowrap justify-center h-full w-72 m-0  bg-white dark:bg-gray-600 items-center animate-none transition-all delay-0 duration-500 ease-in">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded border-0 text-center shadow-none h-full my-auto">
+                                                <div class="flex shrink-0 mx-auto w-full items-center justify-between py-2 px-4  border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>                    
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- bottom Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="modalbottom">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-0 sm:mx-auto z-[99] flex h-full my-0 mx-auto content-center justify-end flex-nowrap flex-col">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>
+                                                    <p class="font-semibold text-base mt-3">Subtitle Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                                                        nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                                                    </p>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- top Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="modaltop">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-0 sm:mx-auto z-[99] my-0 mx-auto">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>
+                                                    <p class="font-semibold text-base mt-3">Subtitle Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                                                        nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                                                    </p>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Center Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="modalcenter">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-0 sm:mx-auto z-[99] flex items-center h-[calc(100%-3.5rem)]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>
+                                                    <p class="font-semibold text-base mt-3">Subtitle Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                                                        nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                                                    </p>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Static Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="modalstatic" data-backdrop="static">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>
+                                                    <p class="font-semibold text-base mt-3">Subtitle Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                                                        nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                                                    </p>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- scrollable Modal -->
+                                    <div class="modal animate-ModalSlide hidden" id="modalscrollable">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]  h-96 max-h-full overflow-y-auto">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded overflow-hidden max-h-full">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-slate-300 mt-0" id="staticBackdropLabel1">Modal Heading</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed overflow-y-auto">
+                                                    <p class="font-semibold text-base">Title Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.</p>
+                                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                                    <p class="font-semibold text-base mt-3">Subtitle Text</p>
+                                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                                                        nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                                                    </p>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Modals-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modalcenter&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Center Modal
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modaltop&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Top Modal
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modalbottom&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Bottom Modal
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modalright&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Rightbar Modal
+&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modalstatic&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Static Modal
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modalscrollable&quot; class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded &quot;&gt;
+    Scrollable Modal
+&lt;/button&gt;
+
+&lt;!-- Right Modal --&gt;
+&lt;div class=&quot;modal hidden&quot; id=&quot;modalright&quot;&gt;
+    &lt;div class=&quot;pointer-events-none sm:max-w-lg sm:mx-auto z-[99] fixed top-0 right-0 flex flex-nowrap justify-center h-full w-72 m-0  bg-white dark:bg-gray-600 items-center animate-none transition-all delay-0 duration-500 ease-in&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded border-0 text-center shadow-none h-full my-auto&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 mx-auto w-full items-center justify-between py-2 px-4  border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;                    
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- bottom Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modalbottom&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-0 sm:mx-auto z-[99] flex h-full my-0 mx-auto content-center justify-end flex-nowrap flex-col&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;
+                &lt;p class=&quot;font-semibold text-base mt-3&quot;&gt;Subtitle Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                    nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- top Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modaltop&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-0 sm:mx-auto z-[99] my-0 mx-auto&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;
+                &lt;p class=&quot;font-semibold text-base mt-3&quot;&gt;Subtitle Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                    nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Center Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modalcenter&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-0 sm:mx-auto z-[99] flex items-center h-[calc(100%-3.5rem)]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;
+                &lt;p class=&quot;font-semibold text-base mt-3&quot;&gt;Subtitle Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                    nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Static Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modalstatic&quot; data-backdrop=&quot;static&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;
+                &lt;p class=&quot;font-semibold text-base mt-3&quot;&gt;Subtitle Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                    nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- scrollable Modal --&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modalscrollable&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]  h-96 max-h-full overflow-y-auto&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded overflow-hidden max-h-full&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-slate-300 mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Modal Heading&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed overflow-y-auto&quot;&gt;
+                &lt;p class=&quot;font-semibold text-base&quot;&gt;Title Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur.&lt;/p&gt;
+                &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+                &lt;p class=&quot;font-semibold text-base mt-3&quot;&gt;Subtitle Text&lt;/p&gt;
+                &lt;p class=&quot;text-sm&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos voluptas saepe officia! Aperiam deleniti laboriosam quo neque non quia, facere, dignissimos impedit fuga hic at culpa iusto similique ad laudantium
+                    nesciunt, error consectetur voluptatem ipsa vitae accusamus eaque nihil!
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Themes Modal</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Modals-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-brand" class="px-2 py-1 lg:px-4 bg-transparent  text-brand text-sm  rounded transition hover:bg-brand-500 hover:text-white border border-brand font-medium">
+                                        Brand
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-slate" class="px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium  focus:outline-none  rounded transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                        Alternative
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-red" class="px-2 py-1 lg:px-4 bg-transparent  text-red text-sm  rounded transition hover:bg-red-600 hover:text-white border border-red font-medium">
+                                        Red
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-green" class="px-2 py-1 lg:px-4 bg-transparent  text-green text-sm  rounded transition hover:bg-green-600 hover:text-white border border-green font-medium">
+                                        Green
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-yellow" class="px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium">
+                                        Yellow
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-pink" class="px-2 py-1 lg:px-4 bg-transparent  text-pink text-sm  rounded transition hover:bg-pink-600 hover:text-white border border-pink font-medium">
+                                        Pink
+                                    </button>
+                                    <button type="button" data-fc-type="modal" data-fc-target="modal-dark" class="px-2 py-1 lg:px-4 bg-transparent  text-slate-900 dark:text-slate-500 text-sm  rounded transition hover:bg-slate-800 dark:hover:bg-slate-700/40 hover:text-white border border-slate-900 dark:border-slate-700 font-medium">
+                                        Dark
+                                    </button>
+                                    <!--Theme color modal-->
+
+                                    <!--Brand Modal-->
+                                    <div class="modal animate-ModalSlide hidden" id="modal-brand">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-brand-500">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Brand Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-brand-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Slate Modal-->
+                                    <div class="modal animate-ModalSlide hidden" id="modal-slate">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-500">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Slate Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Green Modal-->
+                                    <div class="modal animate-ModalSlide hidden" id="modal-green">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-green-500">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Green Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-green-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-green-500 hover:bg-green-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-green-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-green-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Yellow Modal-->
+                                    <div class="modal animate-ModalSlide  hidden" id="modal-yellow">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-yellow-500">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Yellow Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-yellow-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-yellow-500 hover:bg-yellow-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-yellow-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-yellow-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Pink Modal-->
+                                    <div class="modal animate-ModalSlide hidden" id="modal-pink">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-pink-500">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Pink Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-pink-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-pink-500 hover:bg-pink-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-pink-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-pink-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Red Modal-->
+                                    <div class="modal animate-ModalSlide hidden" id="modal-red">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-red-500">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Red Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-red-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Dark Modal-->
+                                    <div class="modal animate-ModalSlide hidden" id="modal-dark">
+                                        <div class="relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]">
+                                            <div class="relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded">
+                                                <div class="flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800">
+                                                    <h6 class="mb-0 leading-4 text-base font-semibold text-white mt-0" id="staticBackdropLabel1">Dark Modal</h6>
+                                                    <button type="button" class="box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close" aria-label="Close" data-fc-dismiss>&times;</button>
+                                                </div>
+                                                <div class="relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed">
+                                                    <div class="grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
+                                                            <img src="assets/images/widgets/wallet.png" alt="" class="h-32 w-32">
+                                                        </div>
+                                                        <div class="col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
+                                                            <h5 class="text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium">Crypto Market Services</h5>
+                                                            <p class="truncate text-gray-500 dark:text-slate-500 text-sm font-normal">
+                                                                <span class="bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Disable Services</span>
+                                                                07 Oct 2023
+                                                            </p>
+                                                            <ul class="list-disc list-inside mt-3">
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Lorem Ipsum is dummy text.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">It is a long established reader.</li>
+                                                                <li class="mb-1 text-slate-700 dark:text-slate-400 text-sm">Contrary to popular belief, Lorem simply.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700">
+                                                    <button class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close" data-fc-dismiss>Close</button>
+                                                    <button class="inline-block focus:outline-none text-slate-800 hover:bg-slate-800 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-800  text-sm font-medium py-1 px-3 rounded">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Modals-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-primary&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded transition hover:bg-primary-500 hover:text-white border border-primary font-medium&quot;&gt;
+    Primary
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-slate&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium  focus:outline-none  rounded transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700&quot;&gt;
+    Alternative
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-red&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-red text-sm  rounded transition hover:bg-red-600 hover:text-white border border-red font-medium&quot;&gt;
+    Red
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-green&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-green text-sm  rounded transition hover:bg-green-600 hover:text-white border border-green font-medium&quot;&gt;
+    Green
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-yellow&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium&quot;&gt;
+    Yellow
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-pink&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-pink text-sm  rounded transition hover:bg-pink-600 hover:text-white border border-pink font-medium&quot;&gt;
+    Pink
+&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-fc-type=&quot;modal&quot; data-fc-target=&quot;modal-dark&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-slate-900 dark:text-slate-500 text-sm  rounded transition hover:bg-slate-800 dark:hover:bg-slate-700/40 hover:text-white border border-slate-900 dark:border-slate-700 font-medium&quot;&gt;
+    Dark
+&lt;/button&gt;
+&lt;!--Theme color modal--&gt;
+
+&lt;!--Primary Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modal-primary&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-primary-500&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Primary Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-primary-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Slate Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modal-slate&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-500&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Slate Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Green Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modal-green&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-green-500&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Green Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-green-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-green-500 hover:bg-green-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-green-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-green-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Yellow Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide  hidden&quot; id=&quot;modal-yellow&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-yellow-500&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Green Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-yellow-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-yellow-500 hover:bg-yellow-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-yellow-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-yellow-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Pink Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modal-pink&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-pink-500&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Pink Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-pink-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-pink-500 hover:bg-pink-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-pink-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-pink-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Red Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modal-red&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-red-500&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Green Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-red-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Dark Modal--&gt;
+&lt;div class=&quot;modal animate-ModalSlide hidden&quot; id=&quot;modal-dark&quot;&gt;
+    &lt;div class=&quot;relative w-auto pointer-events-none sm:max-w-lg sm:my-7 sm:mx-auto z-[99]&quot;&gt;
+        &lt;div class=&quot;relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-800 bg-clip-padding rounded&quot;&gt;
+            &lt;div class=&quot;flex shrink-0 items-center justify-between py-2 px-4 rounded-t border-b border-solid dark:border-gray-700 bg-slate-800&quot;&gt;
+                &lt;h6 class=&quot;mb-0 leading-4 text-base font-semibold text-white mt-0&quot; id=&quot;staticBackdropLabel1&quot;&gt;Dark Modal&lt;/h6&gt;
+                &lt;button type=&quot;button&quot; class=&quot;box-content w-4 h-4 p-1 bg-slate-700/60 rounded-full text-slate-300 leading-4 text-xl close&quot; aria-label=&quot;Close&quot; data-fc-dismiss&gt;&amp;times;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex-auto p-4 text-slate-600 dark:text-gray-300 leading-relaxed&quot;&gt;
+                &lt;div class=&quot;grid grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4&quot;&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4&quot;&gt;
+                        &lt;img src=&quot;assets/images/widgets/wallet.png&quot; alt=&quot;&quot; class=&quot;h-32 w-32&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8&quot;&gt;
+                        &lt;h5 class=&quot;text-gray-700 mr-3 dark:text-slate-200 text-lg font-medium&quot;&gt;Crypto Market Services&lt;/h5&gt;
+                        &lt;p class=&quot;truncate text-gray-500 dark:text-slate-500 text-sm font-normal&quot;&gt;
+                            &lt;span class=&quot;bg-slate-600/5 text-slate-500 text-[11px] font-medium px-2.5 py-0.5 rounded h-5&quot;&gt;Disable Services&lt;/span&gt;
+                            07 Oct 2023
+                        &lt;/p&gt;
+                        &lt;ul class=&quot;list-disc list-inside mt-3&quot;&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Lorem Ipsum is dummy text.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;It is a long established reader.&lt;/li&gt;
+                            &lt;li class=&quot;mb-1 text-slate-700 dark:text-slate-400 text-sm&quot;&gt;Contrary to popular belief, Lorem simply.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex flex-wrap shrink-0 justify-end p-3  rounded-b border-t border-dashed dark:border-gray-700&quot;&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mr-1 close&quot; data-fc-dismiss&gt;Close&lt;/button&gt;
+                &lt;button class=&quot;inline-block focus:outline-none text-slate-800 hover:bg-slate-800 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-800  text-sm font-medium py-1 px-3 rounded&quot;&gt;Save&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                                                       
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

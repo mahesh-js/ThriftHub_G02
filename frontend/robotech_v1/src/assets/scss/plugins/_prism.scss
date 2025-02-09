@@ -1,0 +1,59 @@
+//
+// Prism
+// 
+
+
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+
+
+:not(pre)>code[class*=language-], 
+pre[class*=language-]{
+  @apply bg-slate-800 dark:bg-primary-300/[0.05];
+}
+code[class*=language-], 
+pre[class*=language-]{
+  text-shadow: none;
+  font-size: 0.844rem;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  line-height: 1.8;
+}
+
+
+.token.boolean, .token.constant, .token.deleted, .token.number,
+.token.property, .token.symbol, .token.tag {
+  color: #47abfd;
+}
+.token.cdata, .token.comment, .token.doctype, .token.prolog {
+  color: rgba(255, 255, 255, 0.4);
+}
+.token.attr-name, .token.builtin, .token.char,
+.token.inserted, .token.selector {
+  color: #f97587;
+}
+.token.atrule, .token.attr-value,
+.token.keyword, .token.string {
+  color: #f0c93e;
+}
+.language-css .token.string, .style .token.string,
+.token.entity, .token.operator, .token.url,
+.token.class-name, .token.function {
+  color: #000;
+  background: none;
+}
+.token.punctuation {
+  color: #999;
+}
+
+// Keybord
+
+kbd {
+  border-radius:0.5rem;
+}

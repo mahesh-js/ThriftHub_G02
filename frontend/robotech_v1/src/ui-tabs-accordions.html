@@ -1,0 +1,651 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Tabs & Accordions</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Tabs & Accordions</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default tabs</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
+                                        <li class="me-2">
+                                            <a href="#" aria-current="page" class="inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">Profile</a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Dashboard</a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Settings</a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Contacts</a>
+                                        </li>
+                                        <li>
+                                            <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400&quot;&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; aria-current=&quot;page&quot; class=&quot;inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500&quot;&gt;Profile&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300&quot;&gt;Dashboard&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300&quot;&gt;Settings&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300&quot;&gt;Contacts&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a class=&quot;inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500&quot;&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Tabs with underline</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+                                        <ul class="flex flex-wrap -mb-px">
+                                            <li class="me-2">
+                                                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Profile</a>
+                                            </li>
+                                            <li class="me-2">
+                                                <a href="#" class="inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500" aria-current="page">Dashboard</a>
+                                            </li>
+                                            <li class="me-2">
+                                                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Settings</a>
+                                            </li>
+                                            <li class="me-2">
+                                                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Contacts</a>
+                                            </li>
+                                            <li>
+                                                <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex flex-wrap -mb-px&quot;&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300&quot;&gt;Profile&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500&quot; aria-current=&quot;page&quot;&gt;Dashboard&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300&quot;&gt;Settings&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300&quot;&gt;Contacts&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a class=&quot;inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500&quot;&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Tabs with icons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+                                        <li class="me-2">
+                                            <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
+                                                <i class="far fa-circle-user self-center me-2"></i>Profile
+                                            </a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-flex p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group" aria-current="page">
+                                                <i class="fas fa-border-all self-center me-2"></i>Dashboard
+                                            </a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
+                                                <i class="fas fa-gear self-center me-2"></i>Settings
+                                            </a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
+                                                <i class="fas fa-phone self-center me-2"></i>Contacts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;ul class=&quot;flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400&quot;&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group&quot;&gt;
+            &lt;i class=&quot;far fa-circle-user self-center me-2&quot;&gt;&lt;/i&gt;Profile
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-flex p-4 text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 dark:border-blue-500 group&quot; aria-current=&quot;page&quot;&gt;
+            &lt;i class=&quot;fas fa-border-all self-center me-2&quot;&gt;&lt;/i&gt;Dashboard
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group&quot;&gt;
+            &lt;i class=&quot;fas fa-gear self-center me-2&quot;&gt;&lt;/i&gt;Settings
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group&quot;&gt;
+            &lt;i class=&quot;fas fa-phone self-center me-2&quot;&gt;&lt;/i&gt;Contacts
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a class=&quot;inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500&quot;&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Pills tabs</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+                                        <li class="me-2">
+                                            <a href="#" class="inline-block py-3 px-4 text-white bg-blue-600 rounded-lg active" aria-current="page">Tab 1</a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#"  class="inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab 2</a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab 3</a>
+                                        </li>
+                                        <li class="me-2">
+                                            <a href="#" class="inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white">Tab 4</a>
+                                        </li>
+                                        <li>
+                                            <a class="inline-block py-3 px-4 text-gray-400 cursor-not-allowed dark:text-gray-500">Tab 5</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400&quot;&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block py-3 px-4 text-white bg-blue-600 rounded-lg active&quot; aria-current=&quot;page&quot;&gt;Tab 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot;  class=&quot;inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white&quot;&gt;Tab 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white&quot;&gt;Tab 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;me-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block py-3 px-4 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white&quot;&gt;Tab 4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a class=&quot;inline-block py-3 px-4 text-gray-400 cursor-not-allowed dark:text-gray-500&quot;&gt;Tab 5&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Full width tabs</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="sm:hidden">
+                                        <label for="tabs" class="sr-only">Select your country</label>
+                                        <select id="tabs" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option>Profile</option>
+                                            <option>Canada</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                        </select>
+                                    </div>
+                                    <ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+                                        <li class="w-full">
+                                            <a href="#" class="inline-block p-4 w-full text-gray-900 bg-gray-100 rounded-l-lg  active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Profile</a>
+                                        </li>
+                                        <li class="w-full">
+                                            <a href="#" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50  focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Dashboard</a>
+                                        </li>
+                                        <li class="w-full">
+                                            <a href="#" class="inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50  focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Settings</a>
+                                        </li>
+                                        <li class="w-full">
+                                            <a href="#" class="inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50  focus:outline-none  dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Invoice</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;sm:hidden&quot;&gt;
+    &lt;label for=&quot;tabs&quot; class=&quot;sr-only&quot;&gt;Select your country&lt;/label&gt;
+    &lt;select id=&quot;tabs&quot; class=&quot;bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500&quot;&gt;
+        &lt;option&gt;Profile&lt;/option&gt;
+        &lt;option&gt;Canada&lt;/option&gt;
+        &lt;option&gt;France&lt;/option&gt;
+        &lt;option&gt;Germany&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400&quot;&gt;
+    &lt;li class=&quot;w-full&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 w-full text-gray-900 bg-gray-100 rounded-l-lg  active focus:outline-none dark:bg-gray-700 dark:text-white&quot; aria-current=&quot;page&quot;&gt;Profile&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;w-full&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50  focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700&quot;&gt;Dashboard&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;w-full&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 w-full bg-white hover:text-gray-700 hover:bg-gray-50  focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700&quot;&gt;Settings&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;w-full&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;inline-block p-4 w-full bg-white rounded-r-lg hover:text-gray-700 hover:bg-gray-50  focus:outline-none  dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700&quot;&gt;Invoice&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Interactive tabs</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="mb-4 border-b border-gray-200 dark:border-slate-700" data-fc-type="tab">
+                                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" aria-label="Tabs">
+                                            <li class="me-2" role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 active " id="profile-tab" data-fc-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                                            </li>
+                                            <li class="me-2" role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-fc-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
+                                            </li>
+                                            <li class="me-2" role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-fc-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                                            </li>
+                                            <li role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-fc-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="myTabContent">
+                                        <div class="active  p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                        </div>
+                                        <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                                        </div>
+                                        <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.</p>
+                                        </div>
+                                        <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;mb-4 border-b border-gray-200 dark:border-slate-700&quot; data-fc-type=&quot;tab&quot;&gt;
+    &lt;ul class=&quot;flex flex-wrap -mb-px text-sm font-medium text-center&quot; aria-label=&quot;Tabs&quot;&gt;
+        &lt;li class=&quot;me-2&quot; role=&quot;presentation&quot;&gt;
+            &lt;button class=&quot;inline-block p-4 rounded-t-lg border-b-2 active &quot; id=&quot;profile-tab&quot; data-fc-target=&quot;#profile&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;profile&quot; aria-selected=&quot;false&quot;&gt;Profile&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;me-2&quot; role=&quot;presentation&quot;&gt;
+            &lt;button class=&quot;inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300&quot; id=&quot;dashboard-tab&quot; data-fc-target=&quot;#dashboard&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;dashboard&quot; aria-selected=&quot;false&quot;&gt;Dashboard&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;me-2&quot; role=&quot;presentation&quot;&gt;
+            &lt;button class=&quot;inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300&quot; id=&quot;settings-tab&quot; data-fc-target=&quot;#settings&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;settings&quot; aria-selected=&quot;false&quot;&gt;Settings&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li role=&quot;presentation&quot;&gt;
+            &lt;button class=&quot;inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300&quot; id=&quot;contacts-tab&quot; data-fc-target=&quot;#contacts&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;contacts&quot; aria-selected=&quot;false&quot;&gt;Contacts&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&quot;myTabContent&quot;&gt;
+    &lt;div class=&quot;active  p-4 bg-gray-50 rounded-lg dark:bg-gray-800&quot; id=&quot;profile&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;profile-tab&quot;&gt;
+        &lt;p class=&quot;text-sm text-gray-500 dark:text-gray-400&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800&quot; id=&quot;dashboard&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;dashboard-tab&quot;&gt;
+        &lt;p class=&quot;text-sm text-gray-500 dark:text-gray-400&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800&quot; id=&quot;settings&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;settings-tab&quot;&gt;
+        &lt;p class=&quot;text-sm text-gray-500 dark:text-gray-400&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800&quot; id=&quot;contacts&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;contacts-tab&quot;&gt;
+        &lt;p class=&quot;text-sm text-gray-500 dark:text-gray-400&quot;&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->  
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default accordion</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div data-fc-type="accordion">
+                                        <h2 id="accordion-collapse-heading-1" class="bg-white"  data-fc-type="collapse">
+                                          <button type="button" class="fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 rounded-t-xl border border-b-0 border-gray-200  dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                            <span>What is Robotech?</span>
+                                            <i class="fas fa-angle-down  fc-collapse-open:rotate-180 transition-transform duration-300" data-accordion-icon></i>
+                                          </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-1" class="hidden overflow-hidden transition-[height] duration-300" aria-labelledby="accordion-collapse-heading-1">
+                                          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                          </div>
+                                        </div>
+                                        <h2 id="accordion-collapse-heading-2" class="bg-white"  data-fc-type="collapse">
+                                          <button type="button" class="fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200  dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                            <span>Is there a Figma file available?</span>
+                                            <i class="fas fa-angle-down  fc-collapse-open:rotate-180 transition-transform duration-300" data-accordion-icon></i>
+                                          </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-2" class="hidden overflow-hidden transition-[height] duration-300" aria-labelledby="accordion-collapse-heading-2">
+                                          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from.</p>
+                                          </div>
+                                        </div>
+                                        <h2 id="accordion-collapse-heading-3" class="bg-white"  data-fc-type="collapse">
+                                          <button type="button" class="fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200  dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                            <span>What are the differences between Robotech and Tailwind UI?</span>
+                                            <i class="fas fa-angle-down fc-collapse-open:rotate-180 transition-transform duration-300" data-accordion-icon></i>
+                                          </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-3" class="hidden overflow-hidden transition-[height] duration-300" aria-labelledby="accordion-collapse-heading-3">
+                                          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div data-fc-type=&quot;accordion&quot;&gt;
+    &lt;h2 id=&quot;accordion-collapse-heading-1&quot; class=&quot;bg-white&quot;  data-fc-type=&quot;collapse&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 rounded-t-xl border border-b-0 border-gray-200  dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800&quot; data-accordion-target=&quot;#accordion-collapse-body-1&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;accordion-collapse-body-1&quot;&gt;
+        &lt;span&gt;What is Robotech?&lt;/span&gt;
+        &lt;i class=&quot;fas fa-angle-down  fc-collapse-open:rotate-180 transition-transform duration-300&quot; data-accordion-icon&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id=&quot;accordion-collapse-body-1&quot; class=&quot;hidden overflow-hidden transition-[height] duration-300&quot; aria-labelledby=&quot;accordion-collapse-heading-1&quot;&gt;
+      &lt;div class=&quot;p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900&quot;&gt;
+        &lt;p class=&quot;mb-2 text-gray-500 dark:text-gray-400&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2 id=&quot;accordion-collapse-heading-2&quot; class=&quot;bg-white&quot;  data-fc-type=&quot;collapse&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border border-b-0 border-gray-200  dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800&quot; data-accordion-target=&quot;#accordion-collapse-body-2&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;accordion-collapse-body-2&quot;&gt;
+        &lt;span&gt;Is there a Figma file available?&lt;/span&gt;
+        &lt;i class=&quot;fas fa-angle-down  fc-collapse-open:rotate-180 transition-transform duration-300&quot; data-accordion-icon&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id=&quot;accordion-collapse-body-2&quot; class=&quot;hidden overflow-hidden transition-[height] duration-300&quot; aria-labelledby=&quot;accordion-collapse-heading-2&quot;&gt;
+      &lt;div class=&quot;p-5 border border-b-0 border-gray-200 dark:border-gray-700&quot;&gt;
+        &lt;p class=&quot;mb-2 text-gray-500 dark:text-gray-400&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2 id=&quot;accordion-collapse-heading-3&quot; class=&quot;bg-white&quot;  data-fc-type=&quot;collapse&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200  dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800&quot; data-accordion-target=&quot;#accordion-collapse-body-3&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;accordion-collapse-body-3&quot;&gt;
+        &lt;span&gt;What are the differences between Robotech and Tailwind UI?&lt;/span&gt;
+        &lt;i class=&quot;fas fa-angle-down fc-collapse-open:rotate-180 transition-transform duration-300&quot; data-accordion-icon&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id=&quot;accordion-collapse-body-3&quot; class=&quot;hidden overflow-hidden transition-[height] duration-300&quot; aria-labelledby=&quot;accordion-collapse-heading-3&quot;&gt;
+      &lt;div class=&quot;p-5 border border-t-0 border-gray-200 dark:border-gray-700&quot;&gt;
+        &lt;p class=&quot;mb-2 text-gray-500 dark:text-gray-400&quot;&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Flush accordion</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tabs-8"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                                        <h2 id="accordion-flush-heading-1"  data-fc-type="collapse">
+                                          <button type="button" class="fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border-b border-dashed border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                                            <span>What is Robotech?</span>
+                                            <i class="fas fa-angle-down  fc-collapse-open:rotate-180 transition-transform duration-300" data-accordion-icon></i>
+                                          </button>
+                                        </h2>
+                                        <div id="accordion-flush-body-1" class="hidden overflow-hidden transition-[height] duration-300" aria-labelledby="accordion-flush-heading-1">
+                                          <div class="p-5 border-b border-dashed border-gray-200 dark:border-gray-700">
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                          </div>
+                                        </div>
+                                        <h2 id="accordion-flush-heading-2" data-fc-type="collapse">
+                                          <button type="button" class="fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border-b border-dashed border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                                            <span>Is there a Figma file available?</span>
+                                            <i class="fas fa-angle-down fc-collapse-open:rotate-180 transition-transform duration-300" data-accordion-icon></i>
+                                          </button>
+                                        </h2>
+                                        <div id="accordion-flush-body-2" class="hidden overflow-hidden transition-[height] duration-300" aria-labelledby="accordion-flush-heading-2">
+                                            <div class="p-5 border-b border-dashed border-gray-200 dark:border-gray-700">
+                                                <p class="mb-2 text-gray-500 dark:text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>             
+                                            </div>
+                                        </div>
+                                        <h2 id="accordion-flush-heading-3" data-fc-type="collapse">
+                                          <button type="button" class="fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border-b border-dashed border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                                            <span>What are the differences between Robotech and Tailwind UI?</span>
+                                            <i class="fas fa-angle-down fc-collapse-open:rotate-180 transition-transform duration-300" data-accordion-icon></i>
+                                          </button>
+                                        </h2>
+                                        <div id="accordion-flush-body-3" class="hidden overflow-hidden transition-[height] duration-300" aria-labelledby="accordion-flush-heading-3">
+                                          <div class="p-5 border-b border-dashed border-gray-200 dark:border-gray-700">
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>    
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tabs-8" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div id=&quot;accordion-flush&quot; data-accordion=&quot;collapse&quot; data-active-classes=&quot;bg-white dark:bg-gray-900 text-gray-900 dark:text-white&quot; data-inactive-classes=&quot;text-gray-500 dark:text-gray-400&quot;&gt;
+    &lt;h2 id=&quot;accordion-flush-heading-1&quot;  data-fc-type=&quot;collapse&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border-b border-dashed border-gray-200 dark:border-gray-700 dark:text-gray-400&quot; data-accordion-target=&quot;#accordion-flush-body-1&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;accordion-flush-body-1&quot;&gt;
+        &lt;span&gt;What is Robotech?&lt;/span&gt;
+        &lt;i class=&quot;fas fa-angle-down  fc-collapse-open:rotate-180 transition-transform duration-300&quot; data-accordion-icon&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id=&quot;accordion-flush-body-1&quot; class=&quot;hidden overflow-hidden transition-[height] duration-300&quot; aria-labelledby=&quot;accordion-flush-heading-1&quot;&gt;
+      &lt;div class=&quot;p-5 border-b border-dashed border-gray-200 dark:border-gray-700&quot;&gt;
+        &lt;p class=&quot;mb-2 text-gray-500 dark:text-gray-400&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2 id=&quot;accordion-flush-heading-2&quot; data-fc-type=&quot;collapse&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border-b border-dashed border-gray-200 dark:border-gray-700 dark:text-gray-400&quot; data-accordion-target=&quot;#accordion-flush-body-2&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;accordion-flush-body-2&quot;&gt;
+        &lt;span&gt;Is there a Figma file available?&lt;/span&gt;
+        &lt;i class=&quot;fas fa-angle-down fc-collapse-open:rotate-180 transition-transform duration-300&quot; data-accordion-icon&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id=&quot;accordion-flush-body-2&quot; class=&quot;hidden overflow-hidden transition-[height] duration-300&quot; aria-labelledby=&quot;accordion-flush-heading-2&quot;&gt;
+        &lt;div class=&quot;p-5 border-b border-dashed border-gray-200 dark:border-gray-700&quot;&gt;
+            &lt;p class=&quot;mb-2 text-gray-500 dark:text-gray-400&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&lt;/p&gt;             
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h2 id=&quot;accordion-flush-heading-3&quot; data-fc-type=&quot;collapse&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;fc-collapse-open:text-primary flex justify-between items-center p-5 w-full font-medium text-left text-gray-500 border-b border-dashed border-gray-200 dark:border-gray-700 dark:text-gray-400&quot; data-accordion-target=&quot;#accordion-flush-body-3&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;accordion-flush-body-3&quot;&gt;
+        &lt;span&gt;What are the differences between Robotech and Tailwind UI?&lt;/span&gt;
+        &lt;i class=&quot;fas fa-angle-down fc-collapse-open:rotate-180 transition-transform duration-300&quot; data-accordion-icon&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id=&quot;accordion-flush-body-3&quot; class=&quot;hidden overflow-hidden transition-[height] duration-300&quot; aria-labelledby=&quot;accordion-flush-heading-3&quot;&gt;
+      &lt;div class=&quot;p-5 border-b border-dashed border-gray-200 dark:border-gray-700&quot;&gt;
+        &lt;p class=&quot;mb-2 text-gray-500 dark:text-gray-400&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&lt;/p&gt;    
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                          
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

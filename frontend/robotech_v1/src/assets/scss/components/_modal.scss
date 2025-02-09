@@ -1,0 +1,25 @@
+// Modal
+
+
+/* Modal */
+.modal {
+  @apply fixed top-0 left-0 h-full w-full overflow-x-hidden overflow-y-auto;
+  z-index: 115 !important;
+}
+
+.modal-overlay {
+    @apply bg-gray-900 dark:bg-gray-900 opacity-70 fixed left-0 right-0 bottom-0 top-0 hidden  transition-all duration-1000 ease-out;
+    z-index: 110;
+}
+
+.modal-enabled .modal-overlay {
+    @apply block;
+}
+
+[data-fc-overlay-backdrop]{
+  z-index: 100 !important;
+  background-color: theme('colors.slate.800');
+  position: fixed;
+  inset: 0;
+  opacity: 0.5;
+}

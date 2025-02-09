@@ -1,0 +1,137 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Clipboard</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Advanced UI</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Clipboard</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Clipboard Examples</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="ClipBoard-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="flex">                            
+                                        <input type="text" id="clipboardInput" value="Welcome to Tailfox!" aria-describedby="button-addon2" class="rounded-none rounded-l-md bg-gray-50/5 border border-gray-200 text-gray-900 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  dark:bg-slate-800 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-400 focus-visible:outline-none" placeholder="">
+                                        <button type="button" id="button-addon2" data-clipboard-action="copy" data-clipboard-target="#clipboardInput" class="copy_cut inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-r-0 border border-l-0 border-gray-300 dark:bg-slate-700 dark:text-gray-400 dark:border-slate-600">
+                                            <i class="icofont-ui-copy"></i>
+                                        </button>
+                                        <button type="button" id="button-addon2" data-clipboard-action="cut" data-clipboard-target="#clipboardInput" class="copy_cut inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-r border border-l-0 border-gray-300 dark:bg-slate-700 dark:text-gray-400 dark:border-slate-600">
+                                            <i class="icofont-cut"></i>
+                                        </button>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="ClipBoard-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;flex&quot;&gt;                            
+    &lt;input type=&quot;text&quot; id=&quot;clipboardInput&quot; value=&quot;Welcome to Tailfox!&quot; aria-describedby=&quot;button-addon2&quot; class=&quot;rounded-none rounded-l-md bg-gray-50/5 border border-gray-200 text-gray-900 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  dark:bg-slate-800 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-400 focus-visible:outline-none&quot; placeholder=&quot;&quot;&gt;
+    &lt;button type=&quot;button&quot; id=&quot;button-addon2&quot; data-clipboard-action=&quot;copy&quot; data-clipboard-target=&quot;#clipboardInput&quot; class=&quot;copy_cut inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-r-0 border border-l-0 border-gray-300 dark:bg-slate-700 dark:text-gray-400 dark:border-slate-600&quot;&gt;
+       &lt;i class=&quot;ti ti-copy&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; id=&quot;button-addon2&quot; data-clipboard-action=&quot;cut&quot; data-clipboard-target=&quot;#clipboardInput&quot; class=&quot;copy_cut inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-r border border-l-0 border-gray-300 dark:bg-slate-700 dark:text-gray-400 dark:border-slate-600&quot;&gt;
+        &lt;i class=&quot;ti ti-cut&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Clipboard Examples Of Textarea</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="ClipBoard-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4">
+                                    <textarea id="message" rows="4" class="mb-2 block p-3 text-left w-full text-sm text-gray-900 bg-gray-50/5 rounded border border-gray-200  focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white focus-visible:outline-none dark:focus:border-blue-400" placeholder="Leave a comment...">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</textarea>
+                                    <button type="button"  data-clipboard-action="copy" data-clipboard-target="#message" class="copy_cut inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Copy</button>
+                                    <button type="button"  data-clipboard-action="cut" data-clipboard-target="#message" class="copy_cut inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Cut</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="ClipBoard-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;textarea id=&quot;message&quot; rows=&quot;4&quot; class=&quot;mb-2 block p-3 text-left w-full text-sm text-gray-900 bg-gray-50/5 rounded border border-gray-200  focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white focus-visible:outline-none dark:focus:border-blue-400&quot; placeholder=&quot;Leave a comment...&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.&lt;/textarea&gt;
+&lt;button type=&quot;button&quot;  data-clipboard-action=&quot;copy&quot; data-clipboard-target=&quot;#message&quot; class=&quot;copy_cut inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Copy&lt;/button&gt;
+&lt;button type=&quot;button&quot;  data-clipboard-action=&quot;cut&quot; data-clipboard-target=&quot;#message&quot; class=&quot;copy_cut inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Cut&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                                                       
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/clipboard/clipboard.min.js"></script>
+        <script src="assets/js/pages/clipboard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

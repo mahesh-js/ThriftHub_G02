@@ -1,0 +1,443 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Typography</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Typography</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Text Size</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <p class="text-xs dark:text-white">Robotech - Text XS</p>
+                                    <p class="text-sm dark:text-white">Robotech - Text SM</p>
+                                    <p class="text-base dark:text-white">Robotech - Text Base</p>
+                                    <p class="text-lg dark:text-white">Robotech - Text LG</p>
+                                    <p class="text-xl dark:text-white">Robotech - Text XL</p>
+                                    <p class="text-2xl dark:text-white">Robotech - Text 2XL</p>
+                                    <p class="text-3xl dark:text-white">Robotech - Text 3XL</p>
+                                    <p class="text-4xl dark:text-white">Robotech - Text 4XL</p>
+                                    <p class="text-5xl dark:text-white">Robotech - Text 5XL</p>
+                                    <p class="text-6xl dark:text-white">Robotech - Text 6XL</p>
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;p class=&quot;text-xs dark:text-white&quot;&gt;Robotech - Text XS&lt;/p&gt;
+&lt;p class=&quot;text-sm dark:text-white&quot;&gt;Robotech - Text SM&lt;/p&gt;
+&lt;p class=&quot;text-base dark:text-white&quot;&gt;Robotech - Text Base&lt;/p&gt;
+&lt;p class=&quot;text-lg dark:text-white&quot;&gt;Robotech - Text LG&lt;/p&gt;
+&lt;p class=&quot;text-xl dark:text-white&quot;&gt;Robotech - Text XL&lt;/p&gt;
+&lt;p class=&quot;text-2xl dark:text-white&quot;&gt;Robotech - Text 2XL&lt;/p&gt;
+&lt;p class=&quot;text-3xl dark:text-white&quot;&gt;Robotech - Text 3XL&lt;/p&gt;
+&lt;p class=&quot;text-4xl dark:text-white&quot;&gt;Robotech - Text 4XL&lt;/p&gt;
+&lt;p class=&quot;text-5xl dark:text-white&quot;&gt;Robotech - Text 5XL&lt;/p&gt;
+&lt;p class=&quot;text-6xl dark:text-white&quot;&gt;Robotech - Text 6XL&lt;/p&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Font Weight</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 text-3xl">
+                                    <p class="font-thin dark:text-white">Robotech - Font thin</p>
+                                    <p class="font-extralight dark:text-white">Robotech - Font Extralight</p>
+                                    <p class="font-light dark:text-white">Robotech - Font Light</p>
+                                    <p class="font-normal dark:text-white">Robotech - Font Normal</p>
+                                    <p class="font-medium dark:text-white">Robotech - Font Medium</p>
+                                    <p class="font-semibold dark:text-white">Robotech - Font Semibold</p>
+                                    <p class="font-bold dark:text-white">Robotech - Font Bold</p>
+                                    <p class="font-extrabold dark:text-white">Robotech - Font Extrabold</p>
+                                    <p class="font-black dark:text-white">Robotech - Font Black</p>
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;p class=&quot;font-thin dark:text-white&quot;&gt;Robotech - Font thin&lt;/p&gt;
+&lt;p class=&quot;font-extralight dark:text-white&quot;&gt;Robotech - Font Extralight&lt;/p&gt;
+&lt;p class=&quot;font-light dark:text-white&quot;&gt;Robotech - Font Light&lt;/p&gt;
+&lt;p class=&quot;font-normal dark:text-white&quot;&gt;Robotech - Font Normal&lt;/p&gt;
+&lt;p class=&quot;font-medium dark:text-white&quot;&gt;Robotech - Font Medium&lt;/p&gt;
+&lt;p class=&quot;font-semibold dark:text-white&quot;&gt;Robotech - Font Semibold&lt;/p&gt;
+&lt;p class=&quot;font-bold dark:text-white&quot;&gt;Robotech - Font Bold&lt;/p&gt;
+&lt;p class=&quot;font-extrabold dark:text-white&quot;&gt;Robotech - Font Extrabold&lt;/p&gt;
+&lt;p class=&quot;font-black dark:text-white&quot;&gt;Robotech - Font Black&lt;/p&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Text Alignment</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative h-full mb-4">
+                                        <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                            <h4 class="font-medium">Text Left</h4>
+                                        </div><!--end header-title-->
+                                        <div class="flex-auto p-4">
+                                            <p class="text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block text-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                        </div><!--end card-body-->
+                                    </div> <!--end card-->
+                                    <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative mb-4">
+                                        <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                            <h4 class="font-medium">Text Center</h4>
+                                        </div><!--end header-title-->
+                                        <div class="flex-auto p-4">
+                                            <p class="text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                        </div><!--end card-body-->
+                                    </div> <!--end card-->
+                                    <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative">
+                                        <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                            <h4 class="font-medium">Text Right</h4>
+                                        </div><!--end header-title-->
+                                        <div class="flex-auto p-4">
+                                            <p class="text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block text-right">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                        </div><!--end card-body-->
+                                    </div> <!--end card-->
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative h-full mb-4&quot;&gt;
+    &lt;div class=&quot;border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70&quot;&gt;
+        &lt;h4 class=&quot;font-medium&quot;&gt;Text Left&lt;/h4&gt;
+    &lt;/div&gt;&lt;!--end header-title--&gt;
+    &lt;div class=&quot;flex-auto p-4&quot;&gt;
+        &lt;p class=&quot;text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block text-left&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&lt;/p&gt;
+    &lt;/div&gt;&lt;!--end card-body--&gt;
+&lt;/div&gt; &lt;!--end card--&gt;
+&lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative mb-4&quot;&gt;
+    &lt;div class=&quot;border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70&quot;&gt;
+        &lt;h4 class=&quot;font-medium&quot;&gt;Text Center&lt;/h4&gt;
+    &lt;/div&gt;&lt;!--end header-title--&gt;
+    &lt;div class=&quot;flex-auto p-4&quot;&gt;
+        &lt;p class=&quot;text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block text-center&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&lt;/p&gt;
+    &lt;/div&gt;&lt;!--end card-body--&gt;
+&lt;/div&gt; &lt;!--end card--&gt;
+&lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative&quot;&gt;
+    &lt;div class=&quot;border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70&quot;&gt;
+        &lt;h4 class=&quot;font-medium&quot;&gt;Text Right&lt;/h4&gt;
+    &lt;/div&gt;&lt;!--end header-title--&gt;
+    &lt;div class=&quot;flex-auto p-4&quot;&gt;
+        &lt;p class=&quot;text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block text-right&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&lt;/p&gt;
+    &lt;/div&gt;&lt;!--end card-body--&gt;
+&lt;/div&gt; &lt;!--end card--&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Word Options</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative h-full mb-4">
+                                        <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                            <h4 class="font-medium">Text decoration color</h4>
+                                        </div><!--end header-title-->
+                                        <div class="flex-auto p-4">
+                                            <p class="dark:text-slate-400">
+                                                I’m Derek, an astro-engineer based in Tattooine. I like to build X-Wings at
+                                                <a class="underline decoration-sky-500">My Company, Inc</a>.
+                                                Outside of work, I like to <a class="underline decoration-pink-500">watch
+                                                pod-racing</a> and have <a class="underline decoration-indigo-500">light-saber</a> fights.
+                                              </p>
+                                        </div><!--end card-body-->
+                                    </div> <!--end card-->
+                                    <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative mb-4">
+                                        <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                            <h4 class="font-medium">Text Indent</h4>
+                                        </div><!--end header-title-->
+                                        <div class="flex-auto p-4">
+                                            <p class="text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block indent-8">It is a long established fact that a reader will be distracted by the readable content of   distracted by the readable content a page when looking at its layout.</p>
+                                        </div><!--end card-body-->
+                                    </div> <!--end card-->
+                                    <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative">
+                                        <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                            <h4 class="font-medium">Referencing an attribute value</h4>
+                                        </div><!--end header-title-->
+                                        <div class="flex-auto p-4">
+                                            <p before="Hello World" class="before:content-[attr(before)] text-xl text-slate-700 dark:text-slate-400 font-medium inline-block text-right"></p>
+                                        </div><!--end card-body-->
+                                    </div> <!--end card-->
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative h-full mb-4&quot;&gt;
+    &lt;div class=&quot;border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70&quot;&gt;
+        &lt;h4 class=&quot;font-medium&quot;&gt;Text decoration color&lt;/h4&gt;
+    &lt;/div&gt;&lt;!--end header-title--&gt;
+    &lt;div class=&quot;flex-auto p-4&quot;&gt;
+        &lt;p class=&quot;dark:text-slate-400&quot;&gt;
+            I&rsquo;m Derek, an astro-engineer based in Tattooine. I like to build X-Wings at
+            &lt;a class=&quot;underline decoration-sky-500&quot;&gt;My Company, Inc&lt;/a&gt;.
+            Outside of work, I like to &lt;a class=&quot;underline decoration-pink-500&quot;&gt;watch
+            pod-racing&lt;/a&gt; and have &lt;a class=&quot;underline decoration-indigo-500&quot;&gt;light-saber&lt;/a&gt; fights.
+          &lt;/p&gt;
+    &lt;/div&gt;&lt;!--end card-body--&gt;
+&lt;/div&gt; &lt;!--end card--&gt;
+&lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative mb-4&quot;&gt;
+    &lt;div class=&quot;border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70&quot;&gt;
+        &lt;h4 class=&quot;font-medium&quot;&gt;Text Indent&lt;/h4&gt;
+    &lt;/div&gt;&lt;!--end header-title--&gt;
+    &lt;div class=&quot;flex-auto p-4&quot;&gt;
+        &lt;p class=&quot;text-base text-slate-500 dark:text-slate-400 mb-2 font-normal inline-block indent-8&quot;&gt;It is a long established fact that a reader will be distracted by the readable content of   distracted by the readable content a page when looking at its layout.&lt;/p&gt;
+    &lt;/div&gt;&lt;!--end card-body--&gt;
+&lt;/div&gt; &lt;!--end card--&gt;
+&lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md w-full relative&quot;&gt;
+    &lt;div class=&quot;border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70&quot;&gt;
+        &lt;h4 class=&quot;font-medium&quot;&gt;Referencing an attribute value&lt;/h4&gt;
+    &lt;/div&gt;&lt;!--end header-title--&gt;
+    &lt;div class=&quot;flex-auto p-4&quot;&gt;
+        &lt;p before=&quot;Hello World&quot; class=&quot;before:content-[attr(before)] text-xl text-slate-700 dark:text-slate-400 font-medium inline-block text-right&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;&lt;!--end card-body--&gt;
+&lt;/div&gt; &lt;!--end card--&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Line Height</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4">
+                                    <p class="leading-none dark:text-gray-400 border-b border-dashed border-slate-200 dark:border-slate-700 py-3">
+                                        <span class="font-normal text-blue-700 dark:text-blue-500 block mb-2">.leading-none</span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .</p>
+                                    <p class="leading-tight dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3">
+                                        <span class="font-normal text-blue-700 dark:text-blue-500 block mb-2">.leading-tight</span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .</p>
+                                    <p class="leading-snug dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3">
+                                        <span class="font-normal text-blue-700 dark:text-blue-500 block mb-2">.leading-snug</span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .</p>
+                                    <p class="leading-normal dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3">
+                                        <span class="font-normal text-blue-700 dark:text-blue-500 block mb-2">.leading-normal</span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .</p>
+                                    <p class="leading-relaxed dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3">
+                                        <span class="font-normal text-blue-700 dark:text-blue-500 block mb-2">.leading-relaxed</span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .</p>
+                                    <p class="leading-loose dark:text-gray-400 py-3">
+                                        <span class="font-normal text-blue-700 dark:text-blue-500 block mb-2">.leading-loose</span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .</p>
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;p class=&quot;leading-none dark:text-gray-400 border-b border-dashed border-slate-200 dark:border-slate-700 py-3&quot;&gt;
+    &lt;span class=&quot;font-normal text-blue-700 dark:text-blue-500 block mb-2&quot;&gt;.leading-none&lt;/span&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .&lt;/p&gt;
+&lt;p class=&quot;leading-tight dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3&quot;&gt;
+    &lt;span class=&quot;font-normal text-blue-700 dark:text-blue-500 block mb-2&quot;&gt;.leading-tight&lt;/span&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .&lt;/p&gt;
+&lt;p class=&quot;leading-snug dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3&quot;&gt;
+    &lt;span class=&quot;font-normal text-blue-700 dark:text-blue-500 block mb-2&quot;&gt;.leading-snug&lt;/span&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .&lt;/p&gt;
+&lt;p class=&quot;leading-normal dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3&quot;&gt;
+    &lt;span class=&quot;font-normal text-blue-700 dark:text-blue-500 block mb-2&quot;&gt;.leading-normal&lt;/span&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .&lt;/p&gt;
+&lt;p class=&quot;leading-relaxed dark:text-gray-400  border-b border-dashed border-slate-200 dark:border-slate-700 py-3&quot;&gt;
+    &lt;span class=&quot;font-normal text-blue-700 dark:text-blue-500 block mb-2&quot;&gt;.leading-relaxed&lt;/span&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .&lt;/p&gt;
+&lt;p class=&quot;leading-loose dark:text-gray-400 py-3&quot;&gt;
+    &lt;span class=&quot;font-normal text-blue-700 dark:text-blue-500 block mb-2&quot;&gt;.leading-loose&lt;/span&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal .&lt;/p&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Text Decoration</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <p class="underline dark:text-gray-400">please read our terms and services</p>
+                                    <p class="underline dark:text-gray-400 decoration-4">please read our terms and services</p>
+                                    <p class="underline underline-offset-2 dark:text-gray-400 decoration-wavy">please read our terms and services</p>
+                                    <p class="line-through dark:text-gray-400">please read our terms and services</p>
+                                    <p class="overline  dark:text-gray-400">please read our terms and services</p>  
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;p class=&quot;underline dark:text-gray-400&quot;&gt;please read our terms and services&lt;/p&gt;
+    &lt;p class=&quot;underline dark:text-gray-400 decoration-4&quot;&gt;please read our terms and services&lt;/p&gt;
+    &lt;p class=&quot;underline underline-offset-2 dark:text-gray-400 decoration-wavy&quot;&gt;please read our terms and services&lt;/p&gt;
+    &lt;p class=&quot;line-through dark:text-gray-400&quot;&gt;please read our terms and services&lt;/p&gt;
+    &lt;p class=&quot;overline  dark:text-gray-400&quot;&gt;please read our terms and services&lt;/p&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Theme Colors</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Typography-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <p class="text-primary-500">Text primary 500</p>
+                                    <p class="text-red-500">Text red 500</p>
+                                    <p class="text-orange-500">Text orange 500</p>
+                                    <p class="text-amber-500">Text amber 500</p>
+                                    <p class="text-yellow-500">Text yellow 500</p>
+                                    <p class="text-lime-500">Text lime 500</p>
+                                    <p class="text-green-500">Text green 500</p>
+                                    <p class="text-emerald-500">Text emerald 500</p>
+                                    <p class="text-teal-500">Text teal 500</p>
+                                    <p class="text-cyan-500">Text cyan 500</p>
+                                    <p class="text-sky-500">Text sky 500</p>
+                                    <p class="text-blue-500">Text blue 500</p>
+                                    <p class="text-indigo-500">Text indigo 500</p>
+                                    <p class="text-violet-500">Text violet 500</p>
+                                    <p class="text-purple-500">Text purple 500</p>
+                                    <p class="text-fuchsia-500">Text fuchsia 500</p>
+                                    <p class="text-pink-500">Text pink 500</p>
+                                    <p class="text-rose-500">Text rose 500</p>
+                                </div><!--end card-body-->
+                                
+                                <div id="Typography-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;p class=&quot;text-primary-500&quot;&gt;Text primary 500&lt;/p&gt;
+&lt;p class=&quot;text-red-500&quot;&gt;Text red 500&lt;/p&gt;
+&lt;p class=&quot;text-orange-500&quot;&gt;Text orange 500&lt;/p&gt;
+&lt;p class=&quot;text-amber-500&quot;&gt;Text amber 500&lt;/p&gt;
+&lt;p class=&quot;text-yellow-500&quot;&gt;Text yellow 500&lt;/p&gt;
+&lt;p class=&quot;text-lime-500&quot;&gt;Text lime 500&lt;/p&gt;
+&lt;p class=&quot;text-green-500&quot;&gt;Text green 500&lt;/p&gt;
+&lt;p class=&quot;text-emerald-500&quot;&gt;Text emerald 500&lt;/p&gt;
+&lt;p class=&quot;text-teal-500&quot;&gt;Text teal 500&lt;/p&gt;
+&lt;p class=&quot;text-cyan-500&quot;&gt;Text cyan 500&lt;/p&gt;
+&lt;p class=&quot;text-sky-500&quot;&gt;Text sky 500&lt;/p&gt;
+&lt;p class=&quot;text-blue-500&quot;&gt;Text blue 500&lt;/p&gt;
+&lt;p class=&quot;text-indigo-500&quot;&gt;Text indigo 500&lt;/p&gt;
+&lt;p class=&quot;text-violet-500&quot;&gt;Text violet 500&lt;/p&gt;
+&lt;p class=&quot;text-purple-500&quot;&gt;Text purple 500&lt;/p&gt;
+&lt;p class=&quot;text-fuchsia-500&quot;&gt;Text fuchsia 500&lt;/p&gt;
+&lt;p class=&quot;text-pink-500&quot;&gt;Text pink 500&lt;/p&gt;
+&lt;p class=&quot;text-rose-500&quot;&gt;Text rose 500&lt;/p&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

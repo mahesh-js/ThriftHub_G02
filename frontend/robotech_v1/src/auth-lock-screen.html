@@ -1,0 +1,42 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+    <div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
+        <div class="w-full  m-auto bg-white dark:bg-slate-800/60 rounded shadow-lg ring-2 ring-slate-300/50 dark:ring-slate-700/50 lg:max-w-md">
+            <div class="text-center p-6 bg-slate-900 rounded-t">
+                <a href="index.html"><img src="assets/images/logo-sm.png" alt="" class="w-14 h-14 mx-auto mb-2"></a>
+                <h3 class="font-semibold text-white text-xl mb-1">Enter Password And Use  Tailwind</h3>
+                <p class="text-xs text-slate-400">Hello Mark, enter your password to unlock the screen !</p>
+            </div>
+
+            <form class="p-6">
+                <div>
+                    <label for="Password" class="font-medium text-sm text-slate-600 dark:text-slate-400">Password</label>
+                    <input type="password" id="Password" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700 dark:bg-slate-800/60 dark:border-slate-700/50" placeholder="Password" required>
+                </div>        
+                <div class="mt-4">
+                    <button
+                        class="w-full px-2 py-2 tracking-wide text-white transition-colors duration-200 transform bg-brand-500 rounded hover:bg-brand-600 focus:outline-none focus:bg-brand-600">
+                        Unlock
+                    </button>
+                </div>
+            </form>
+            <p class="mb-5 text-sm font-medium text-center text-slate-500"> Not you ? return <a href="auth-login.html"
+                class="font-medium text-brand-600 hover:underline">Sign in here</a>
+            </p>
+        </div>
+    </div>
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

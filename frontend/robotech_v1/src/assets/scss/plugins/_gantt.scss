@@ -1,0 +1,157 @@
+.gantt .grid-background {
+    fill: none
+}
+
+.gantt .grid-header {
+    stroke-width: 0.5;
+    @apply fill-white dark:fill-gray-900 stroke-none ;
+}
+
+.gantt .grid-row {
+    @apply fill-white dark:fill-gray-900;
+}
+
+.gantt .grid-row:nth-child(even) {
+    @apply fill-slate-50 dark:fill-gray-800/40;
+}
+
+.gantt .row-line {
+    @apply stroke-slate-200/50 dark:stroke-gray-700/40;
+}
+
+.gantt .tick {
+    @apply stroke-slate-500/50;
+    stroke-width: .1;
+}
+
+.gantt .tick.thick {
+    stroke-width: .4;
+}
+
+.gantt .today-highlight {
+    @apply fill-yellow-300;
+    opacity: .5;
+}
+
+.gantt .arrow {
+    @apply stroke-slate-400  fill-none;
+    stroke-width: 1.4;
+}
+
+.gantt .bar {
+    @apply stroke-slate-300 fill-slate-500/20;
+    stroke-width: 0;
+    transition: stroke-width .3s ease;
+    user-select: none;
+}
+
+.gantt .bar-progress {
+    @apply fill-primary-400;
+}
+
+.gantt .bar-invalid {
+    @apply stroke-slate-300 fill-white/5;
+    stroke-width: 1;
+    stroke-dasharray: 5;
+}
+
+.gantt .bar-invalid~.bar-label {
+    @apply fill-slate-500;
+}
+
+.gantt .bar-label {
+    @apply fill-white;
+    dominant-baseline: central;
+    text-anchor: middle;
+    font-size: 11px;
+    font-weight: lighter;
+}
+
+.gantt .bar-label.big {
+    @apply fill-slate-500 dark:fill-slate-400 font-medium;
+    text-anchor: start;
+}
+
+.gantt .handle {
+    @apply fill-slate-400;
+    cursor: ew-resize;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease;
+}
+
+.gantt .bar-wrapper {
+    cursor: pointer;
+    outline: none;
+}
+
+.gantt .bar-wrapper:hover .bar {
+    @apply fill-slate-300;
+}
+
+.gantt .bar-wrapper:hover .bar-progress {
+    @apply fill-primary-400;
+}
+
+.gantt .bar-wrapper:hover .handle {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gantt .bar-wrapper.active .bar {
+    @apply fill-slate-300;
+}
+
+.gantt .bar-wrapper.active .bar-progress {
+    @apply fill-primary-400;
+}
+
+.gantt .lower-text,.gantt .upper-text {
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.gantt .upper-text {
+    @apply fill-slate-500 dark:fill-slate-300;
+}
+
+.gantt .lower-text {
+    @apply fill-slate-600 dark:fill-slate-300;
+}
+
+.gantt .hide {
+    display: none;
+}
+
+.gantt-container {
+    position: relative;
+    overflow: auto;
+    font-size: 12px;
+}
+
+.gantt-container .popup-wrapper {
+    @apply absolute bg-gray-100 text-slate-600 dark:bg-gray-800 dark:text-slate-300;
+    top: 0;
+    left: 0;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.gantt-container .popup-wrapper .title {
+    @apply border-b border-gray-700/20;
+    padding: 10px;
+}
+
+.gantt-container .popup-wrapper .subtitle {
+    @apply text-slate-600 dark:text-slate-300;
+    padding: 10px;
+}
+
+.gantt-container .popup-wrapper .pointer {
+    position: absolute;
+    height: 5px;
+    margin: 0 0 0 -5px;
+    border: 5px solid rgba(0,0,0,0);
+    border-top-color: rgb(100,116,139);
+    left: -5px !important;
+}

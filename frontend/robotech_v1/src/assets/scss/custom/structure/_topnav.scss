@@ -1,0 +1,221 @@
+
+
+
+
+.topbar{
+    @apply bg-transparent h-[64px] px-2 py-2 backdrop-blur-md  left-[260px];
+	margin-left: 260px !important;    
+}
+
+
+
+@media (max-width: 991.98px) {
+	.topbar{
+		margin-left: 0 !important;
+	}
+	.brand-logo{
+		display: none !important;
+	}
+}
+
+
+body[data-sidebar-size=collapsed] .topbar{
+	margin-left: 0 !important;
+	left: 0;
+}
+.navbar li button{
+    @apply text-gray-400 hover:text-gray-200;
+  }
+  
+  .navbar li.active button{
+    @apply text-white;
+  }
+  .navbar li .dropdown-menu ul li .nav-link{
+    @apply text-slate-400 dark:text-slate-300 md:text-slate-700;
+  }
+  .navbar li.active .dropdown-menu ul li .nav-link.active{
+    @apply text-blue-500 bg-slate-900/30 md:bg-slate-50 dark:bg-slate-800/70;
+  }
+
+  .divide-gray-100 > :not([hidden]) ~ :not([hidden]){
+    border-color: transparent !important;
+  }
+  .divide-y > :not([hidden]) ~ :not([hidden]){
+    border-top-width: 0px !important ;
+    border-bottom-width: 0px !important ;
+  }
+  #mobile-menu-2 {
+	@apply block;
+  }
+  #toggle-menu{
+	@apply hidden;
+  }
+
+  .navbar-menu{
+	@apply fixed;
+  }
+
+@media (max-width: 991px){
+	#mobile-menu-2 {
+  	@apply bg-white dark:bg-slate-800 absolute inset-x-0 hidden top-[60px] h-auto max-h-[500px] p-2 overflow-auto z-[1000] shadow-md;
+  }
+  #toggle-menu{
+	@apply block;
+  }
+  .navbar-menu{
+	@apply relative;
+  }
+}
+
+
+.NavMenu {
+	li {			
+		a {
+      @apply py-2 px-4 block text-sm font-medium  text-slate-600 relative;
+	  &.active {
+		label{
+			@apply text-primary-500;
+		  }
+	  }
+      
+			label {
+        		@apply cursor-pointer appearance-none block relative w-full;
+				&::after {
+					content: '\ea5f';
+					font-family: "tabler-icons" !important;
+					line-height: 1;
+					position: absolute;
+					right: 0;
+					top: 3px;
+					font-size: 14px;
+				}
+			}
+		}
+		ul {
+      @apply absolute flex flex-col bg-white min-w-[200px] top-full ;
+			transition: all 0.2s;
+			transform: translateY(10px);
+			visibility: hidden;
+			opacity: 0;
+			li {
+				@apply relative;       
+				a {
+          			@apply text-slate-600 py-2 px-3 block ;
+					transition: all 0.5s;
+					&.active{
+						color: theme('colors.primary.500') !important;
+						background-color: theme('colors.primary.500/0.04');
+					}
+					label{
+						&::after{
+						transform: rotate(-90deg);
+						}
+					}
+				}
+				ul {
+          			@apply absolute left-full top-0;
+				}
+			}
+		}
+	}
+
+	>li {
+		>a {
+			label {
+				&::after {
+					right: -18px;
+					top: 10px;
+				}
+			}
+		}
+	}
+}
+@media(min-width:992px) {
+	.NavMenu {
+		li {
+			ul {
+				li {
+					a {
+						&:hover {
+							@apply bg-slate-50;
+						}
+					}
+					&:hover {
+						>ul {
+							visibility: visible;
+							opacity: 1;
+							transform: translateY(0);
+						}
+					}
+				}
+			}
+			&:hover {
+				>ul {
+					visibility: visible;
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}
+@media (max-width:991.98px) {
+	.NavMenu {
+    @apply w-[100%] flex-1 fixed flex-col bg-white left-0   px-0 justify-start overflow-y-scroll;
+		li {	
+			@apply border-b border-slate-200 dark:border-slate-700;		
+			&:last-child{
+				border: none;
+			}		
+			ul {
+        @apply  left-0 top-0;
+				position: initial;
+				visibility: visible;
+				opacity: 1;
+				display: none;
+				li {
+					ul {
+            @apply  left-0 top-0 bg-slate-100 -mt-2;
+						position: initial;
+						visibility: visible;
+						opacity: 1;
+						display: none;
+						position: inherit;
+						li {
+							a {
+                @apply text-sm text-slate-600 font-medium py-2 pl-8 pr-4;
+								text-transform: initial;
+							}
+						}
+					}
+					input {
+						&:checked+ul {
+              @apply flex flex-col mb-4;
+						}
+					}
+				}
+			}
+			a {
+				padding: 8px 15px;
+				border-bottom: 1px solid #fff;
+				label {
+					&::after {
+						right: 10px;
+					}
+				}
+			}
+			input {
+				&:checked+ul {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+@media (max-width:768px) {
+	.NavMenu {
+		width: 100%;
+	}
+}

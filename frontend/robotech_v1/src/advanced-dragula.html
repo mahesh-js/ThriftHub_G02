@@ -1,0 +1,566 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/dragula/dragula.min.css">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Dragula</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Advanced UI</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Dragula</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Clipboard Examples</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dragula-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                            <div class="bg-slate-50 dark:bg-slate-800 shadow  rounded-md w-full relative">
+                                                <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                                    <h4 class="font-medium">Project Active</h4>
+                                                </div><!--end header-title-->
+                                                <div class="flex-auto p-4">
+                                                    <div id="dragula-left" class="pb-1 grid gap-4">
+                                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md relative">
+                                                            <div class="flex-auto p-4">
+                                                                <div class="absolute -top-2 -left-1"><i class="fas fa-circle text-green-500 text-xs"></i></div>
+                                                                <p class="text-slate-400 text-sm float-right">
+                                                                    <span class="text-slate-400">01:33</span> / 
+                                                                    <span class="text-slate-400">9:30</span> 
+                                                                    <span class="mx-1">·</span> 
+                                                                    <span><i class="far fa-fw fa-clock"></i> June 06</span>
+                                                                </p>
+                                                                <h5 class="font-medium mt-0 dark:text-slate-200">Organic Farming</h5>
+                                                                <p class="text-slate-400 mb-1">There are many variations of passages of Lorem Ipsum available.
+                                                                </p>
+                                                                <div class="my-3">
+                                                                    <div class="flex justify-between mb-1">
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">Robotech</span>
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">45% Complete</span>
+                                                                    </div>
+                                                                    <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                                                                        <div class="bg-blue-500 h-1 rounded-full" style="width: 45%"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex -space-x-4">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-3.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-5.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-7.png" alt="">
+                                                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+9</a>
+                                                                    </div> 
+                                                                    <ul class="mb-0 self-center">                                                                    
+                                                                        <li class="inline-block mr-2">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-format-list-bulleted text-green-500 text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">15/100</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-comment-outline dark:text-blue-400 text-primary text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">3</span>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="ml-2" href="#">
+                                                                                <i class="mdi mdi-pencil-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-trash-can-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> 
+                                                            </div><!--end card-body-->
+                                                        </div> <!--end card-->
+                                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md relative">
+                                                            <div class="flex-auto p-4">
+                                                                <div class="absolute -top-2 -left-1"><i class="fas fa-circle text-slate-400 text-xs"></i></div>
+                                                                <p class="text-slate-400 text-sm float-right">
+                                                                    <span class="text-slate-400">01:33</span> / 
+                                                                    <span class="text-slate-400">9:30</span> 
+                                                                    <span class="mx-1">·</span> 
+                                                                    <span><i class="far fa-fw fa-clock"></i> June 06</span>
+                                                                </p>
+                                                                <h5 class="font-medium mt-0 dark:text-slate-200">Transfer Money</h5>
+                                                                <p class="text-slate-400 mb-1">There are many variations of passages of Lorem Ipsum available.
+                                                                </p>
+                                                                <div class="my-3">
+                                                                    <div class="flex justify-between mb-1">
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">Robotech</span>
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">45% Complete</span>
+                                                                    </div>
+                                                                    <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                                                                        <div class="bg-blue-500 h-1 rounded-full" style="width: 45%"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex -space-x-4">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-6.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-1.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-4.png" alt="">
+                                                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+9</a>
+                                                                    </div> 
+                                                                    <ul class="mb-0 self-center">                                                                    
+                                                                        <li class="inline-block mr-2">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-format-list-bulleted text-green-500 text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">15/100</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-comment-outline dark:text-blue-400 text-primary text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">3</span>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="ml-2" href="#">
+                                                                                <i class="mdi mdi-pencil-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-trash-can-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> 
+                                                            </div><!--end card-body-->
+                                                        </div> <!--end card-->
+                                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md relative">
+                                                            <div class="flex-auto p-4">
+                                                                <div class="absolute -top-2 -left-1"><i class="fas fa-circle text-green-500 text-xs"></i></div>
+                                                                <p class="text-slate-400 text-sm float-right">
+                                                                    <span class="text-slate-400">01:33</span> / 
+                                                                    <span class="text-slate-400">9:30</span> 
+                                                                    <span class="mx-1">·</span> 
+                                                                    <span><i class="far fa-fw fa-clock"></i> June 06</span>
+                                                                </p>
+                                                                <h5 class="font-medium mt-0 dark:text-slate-200">Mobile Account Setting</h5>
+                                                                <p class="text-slate-400 mb-1">There are many variations of passages of Lorem Ipsum available.
+                                                                </p>
+                                                                <div class="my-3">
+                                                                    <div class="flex justify-between mb-1">
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">Robotech</span>
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">45% Complete</span>
+                                                                    </div>
+                                                                    <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                                                                        <div class="bg-blue-500 h-1 rounded-full" style="width: 45%"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex -space-x-4">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-3.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-9.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-2.png" alt="">
+                                                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+9</a>
+                                                                    </div> 
+                                                                    <ul class="mb-0 self-center">                                                                    
+                                                                        <li class="inline-block mr-2">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-format-list-bulleted text-green-500 text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">15/100</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-comment-outline dark:text-blue-400 text-primary text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">3</span>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="ml-2" href="#">
+                                                                                <i class="mdi mdi-pencil-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-trash-can-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> 
+                                                            </div><!--end card-body-->
+                                                        </div> <!--end card-->
+                                                    </div>
+                                                </div><!--end card-body-->
+                                            </div> <!--end card-->
+                                        </div><!--end col-->
+                                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6 ">
+                                            <div class="bg-slate-50 dark:bg-slate-800 shadow  rounded-md w-full relative">
+                                                <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                                    <h4 class="font-medium">Project Complete</h4>
+                                                </div><!--end header-title-->
+                                                <div class="flex-auto p-4">
+                                                    <div id="dragula-right" class="pb-1 grid gap-4">
+                                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md relative">
+                                                            <div class="flex-auto p-4">
+                                                                <div class="absolute -top-2 -left-1"><i class="fas fa-circle text-red-500 text-xs"></i></div>
+                                                                <p class="text-slate-400 text-sm float-right">
+                                                                    <span class="text-slate-400">01:33</span> / 
+                                                                    <span class="text-slate-400">9:30</span> 
+                                                                    <span class="mx-1">·</span> 
+                                                                    <span><i class="far fa-fw fa-clock"></i> June 06</span>
+                                                                </p>
+                                                                <h5 class="font-medium mt-0 dark:text-slate-200">Book My World</h5>
+                                                                <p class="text-slate-400 mb-1">There are many variations of passages of Lorem Ipsum available.
+                                                                </p>
+                                                                <div class="my-3">
+                                                                    <div class="flex justify-between mb-1">
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">Robotech</span>
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">45% Complete</span>
+                                                                    </div>
+                                                                    <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                                                                        <div class="bg-blue-500 h-1 rounded-full" style="width: 45%"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex -space-x-4">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-2.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-8.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-9.png" alt="">
+                                                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+9</a>
+                                                                    </div> 
+                                                                    <ul class="mb-0 self-center">                                                                    
+                                                                        <li class="inline-block mr-2">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-format-list-bulleted text-green-500 text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">15/100</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-comment-outline dark:text-blue-400 text-primary text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">3</span>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="ml-2" href="#">
+                                                                                <i class="mdi mdi-pencil-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-trash-can-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div><!--end card-body-->
+                                                        </div> <!--end card-->
+                                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md relative">
+                                                            <div class="flex-auto p-4">
+                                                                <div class="absolute -top-2 -left-1"><i class="fas fa-circle text-cyan-500 text-xs"></i></div>
+                                                                <p class="text-slate-400 text-sm float-right">
+                                                                    <span class="text-slate-400">01:33</span> / 
+                                                                    <span class="text-slate-400">9:30</span> 
+                                                                    <span class="mx-1">·</span> 
+                                                                    <span><i class="far fa-fw fa-clock"></i> June 06</span>
+                                                                </p>
+                                                                <h5 class="font-medium mt-0 dark:text-slate-200">Body Care</h5>
+                                                                <p class="text-slate-400 mb-1">There are many variations of passages of Lorem Ipsum available.
+                                                                </p>
+                                                                <div class="my-3">
+                                                                    <div class="flex justify-between mb-1">
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">Robotech</span>
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">45% Complete</span>
+                                                                    </div>
+                                                                    <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                                                                        <div class="bg-blue-500 h-1 rounded-full" style="width: 45%"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex -space-x-4">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-1.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-4.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-6.png" alt="">
+                                                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+9</a>
+                                                                    </div> 
+                                                                    <ul class="mb-0 self-center">                                                                    
+                                                                        <li class="inline-block mr-2">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-format-list-bulleted text-green-500 text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">15/100</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-comment-outline dark:text-blue-400 text-primary text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">3</span>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="ml-2" href="#">
+                                                                                <i class="mdi mdi-pencil-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-trash-can-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> 
+                                                            </div><!--end card-body-->
+                                                        </div> <!--end card-->
+                                                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md relative">
+                                                            <div class="flex-auto p-4">
+                                                                <div class="absolute -top-2 -left-1"><i class="fas fa-circle text-cyan-500 text-xs"></i></div>
+                                                                <p class="text-slate-400 text-sm float-right">
+                                                                    <span class="text-slate-400">01:33</span> / 
+                                                                    <span class="text-slate-400">9:30</span> 
+                                                                    <span class="mx-1">·</span> 
+                                                                    <span><i class="far fa-fw fa-clock"></i> June 06</span>
+                                                                </p>
+                                                                <h5 class="font-medium mt-0 dark:text-slate-200">New GPS System</h5>
+                                                                <p class="text-slate-400 mb-1">There are many variations of passages of Lorem Ipsum available.
+                                                                </p>
+                                                                <div class="my-3">
+                                                                    <div class="flex justify-between mb-1">
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">Robotech</span>
+                                                                        <span class="text-sm font-medium text-slate-700 dark:text-white">10% Complete</span>
+                                                                    </div>
+                                                                    <div class="w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700">
+                                                                        <div class="bg-blue-500 h-1 rounded-full" style="width: 10%"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex -space-x-4">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-3.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-5.png" alt="">
+                                                                        <img class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800" src="assets/images/users/avatar-6.png" alt="">
+                                                                        <a class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+9</a>
+                                                                    </div> 
+                                                                    <ul class="mb-0 self-center">                                                                    
+                                                                        <li class="inline-block mr-2">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-format-list-bulleted text-green-500 text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">15/100</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-comment-outline dark:text-blue-400 text-primary text-base"></i>
+                                                                                <span class="text-slate-400 font-medium">3</span>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="ml-2" href="#">
+                                                                                <i class="mdi mdi-pencil-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                        <li class="inline-block">
+                                                                            <a class="" href="#">
+                                                                                <i class="mdi mdi-trash-can-outline text-slate-400 font-18"></i>
+                                                                            </a>                                                                               
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> 
+                                                            </div><!--end card-body-->
+                                                        </div> <!--end card-->
+                                                    </div>
+                                                </div><!--end card-body-->
+                                            </div> <!--end card-->
+                                        </div><!--end col-->            
+                                    </div><!--end inner-grid-->  
+                                </div><!--end card-body-->
+                                
+                                <div id="Dragula-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/dragula/dragula.min.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/dragula/dragula.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/pages/dragula.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+
+&lt;div id=&quot;dragula-left&quot; class=&quot;pb-1 grid gap-4&quot;&gt;
+    &lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md relative&quot;&gt;
+        &lt;div class=&quot;flex-auto p-4&quot;&gt;
+            &lt;div class=&quot;absolute -top-2 -left-1&quot;&gt;&lt;i class=&quot;fas fa-circle text-green-500 text-xs&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;p class=&quot;text-slate-400 text-sm float-right&quot;&gt;
+                &lt;span class=&quot;text-slate-400&quot;&gt;01:33&lt;/span&gt; / 
+                &lt;span class=&quot;text-slate-400&quot;&gt;9:30&lt;/span&gt; 
+                &lt;span class=&quot;mx-1&quot;&gt;&middot;&lt;/span&gt; 
+                &lt;span&gt;&lt;i class=&quot;far fa-fw fa-clock&quot;&gt;&lt;/i&gt; June 06&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;h5 class=&quot;font-medium mt-0 dark:text-slate-200&quot;&gt;Organic Farming&lt;/h5&gt;
+            &lt;p class=&quot;text-slate-400 mb-1&quot;&gt;There are many variations of passages of Lorem Ipsum available.
+            &lt;/p&gt;
+            &lt;div class=&quot;my-3&quot;&gt;
+                &lt;div class=&quot;flex justify-between mb-1&quot;&gt;
+                    &lt;span class=&quot;text-sm font-medium text-slate-700 dark:text-white&quot;&gt;Robotech&lt;/span&gt;
+                    &lt;span class=&quot;text-sm font-medium text-slate-700 dark:text-white&quot;&gt;45% Complete&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700&quot;&gt;
+                    &lt;div class=&quot;bg-blue-500 h-1 rounded-full&quot; style=&quot;width: 45%&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex justify-between&quot;&gt;
+                &lt;div class=&quot;flex -space-x-4&quot;&gt;
+                    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-3.png&quot; alt=&quot;&quot;&gt;
+                    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-5.png&quot; alt=&quot;&quot;&gt;
+                    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-7.png&quot; alt=&quot;&quot;&gt;
+                    &lt;a class=&quot;flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800&quot; href=&quot;#&quot;&gt;+9&lt;/a&gt;
+                &lt;/div&gt; 
+                &lt;ul class=&quot;mb-0 self-center&quot;&gt;                                                                    
+                    &lt;li class=&quot;inline-block mr-2&quot;&gt;
+                        &lt;a class=&quot;&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-format-list-bulleted text-green-500 text-base&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-slate-400 font-medium&quot;&gt;15/100&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;inline-block&quot;&gt;
+                        &lt;a class=&quot;&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-comment-outline dark:text-blue-400 text-primary text-base&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-slate-400 font-medium&quot;&gt;3&lt;/span&gt;
+                        &lt;/a&gt;                                                                               
+                    &lt;/li&gt;
+                    &lt;li class=&quot;inline-block&quot;&gt;
+                        &lt;a class=&quot;ml-2&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-pencil-outline text-slate-400 font-18&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;                                                                               
+                    &lt;/li&gt;
+                    &lt;li class=&quot;inline-block&quot;&gt;
+                        &lt;a class=&quot;&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-trash-can-outline text-slate-400 font-18&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;                                                                               
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt; 
+        &lt;/div&gt;&lt;!--end card-body--&gt;
+    &lt;/div&gt; &lt;!--end card--&gt;                                                        
+&lt;/div&gt;
+&lt;div id=&quot;dragula-right&quot; class=&quot;pb-1 grid gap-4&quot;&gt;
+    &lt;div class=&quot;bg-white dark:bg-slate-800 shadow  rounded-md relative&quot;&gt;
+        &lt;div class=&quot;flex-auto p-4&quot;&gt;
+            &lt;div class=&quot;absolute -top-2 -left-1&quot;&gt;&lt;i class=&quot;fas fa-circle text-red-500 text-xs&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;p class=&quot;text-slate-400 text-sm float-right&quot;&gt;
+                &lt;span class=&quot;text-slate-400&quot;&gt;01:33&lt;/span&gt; / 
+                &lt;span class=&quot;text-slate-400&quot;&gt;9:30&lt;/span&gt; 
+                &lt;span class=&quot;mx-1&quot;&gt;&middot;&lt;/span&gt; 
+                &lt;span&gt;&lt;i class=&quot;far fa-fw fa-clock&quot;&gt;&lt;/i&gt; June 06&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;h5 class=&quot;font-medium mt-0 dark:text-slate-200&quot;&gt;Book My World&lt;/h5&gt;
+            &lt;p class=&quot;text-slate-400 mb-1&quot;&gt;There are many variations of passages of Lorem Ipsum available.
+            &lt;/p&gt;
+            &lt;div class=&quot;my-3&quot;&gt;
+                &lt;div class=&quot;flex justify-between mb-1&quot;&gt;
+                    &lt;span class=&quot;text-sm font-medium text-slate-700 dark:text-white&quot;&gt;Robotech&lt;/span&gt;
+                    &lt;span class=&quot;text-sm font-medium text-slate-700 dark:text-white&quot;&gt;45% Complete&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;w-full bg-gray-200 rounded-full h-1 dark:bg-gray-700&quot;&gt;
+                    &lt;div class=&quot;bg-blue-500 h-1 rounded-full&quot; style=&quot;width: 45%&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex justify-between&quot;&gt;
+                &lt;div class=&quot;flex -space-x-4&quot;&gt;
+                    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-2.png&quot; alt=&quot;&quot;&gt;
+                    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-8.png&quot; alt=&quot;&quot;&gt;
+                    &lt;img class=&quot;w-10 h-10 border-2 border-white rounded-full dark:border-gray-800&quot; src=&quot;assets/images/users/avatar-9.png&quot; alt=&quot;&quot;&gt;
+                    &lt;a class=&quot;flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800&quot; href=&quot;#&quot;&gt;+9&lt;/a&gt;
+                &lt;/div&gt; 
+                &lt;ul class=&quot;mb-0 self-center&quot;&gt;                                                                    
+                    &lt;li class=&quot;inline-block mr-2&quot;&gt;
+                        &lt;a class=&quot;&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-format-list-bulleted text-green-500 text-base&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-slate-400 font-medium&quot;&gt;15/100&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;inline-block&quot;&gt;
+                        &lt;a class=&quot;&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-comment-outline dark:text-blue-400 text-primary text-base&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;text-slate-400 font-medium&quot;&gt;3&lt;/span&gt;
+                        &lt;/a&gt;                                                                               
+                    &lt;/li&gt;
+                    &lt;li class=&quot;inline-block&quot;&gt;
+                        &lt;a class=&quot;ml-2&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-pencil-outline text-slate-400 font-18&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;                                                                               
+                    &lt;/li&gt;
+                    &lt;li class=&quot;inline-block&quot;&gt;
+                        &lt;a class=&quot;&quot; href=&quot;#&quot;&gt;
+                            &lt;i class=&quot;mdi mdi-trash-can-outline text-slate-400 font-18&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;                                                                               
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!--end card-body--&gt;
+    &lt;/div&gt; &lt;!--end card--&gt;                                                        
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                                          
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/dragula/dragula.min.js"></script>
+        <script src="assets/js/pages/dragula.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

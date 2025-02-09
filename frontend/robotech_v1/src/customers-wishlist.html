@@ -1,0 +1,339 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link rel="stylesheet" href="assets/libs/nice-select2/css/nice-select2.css">
+        <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/landing-header.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative  duration-300 pt-0 w-full">
+                <div class="xl:w-full  min-h-[calc(100vh-56px)] relative pb-0"> 
+                    <div class="container my-4">
+                        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">  
+                            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12">
+                                <div class="grid grid-cols-1">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">
+                                                <thead class="bg-gray-50 dark:bg-gray-600/20">
+                                                    <tr>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Product & Title
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Categories
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Stock status
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Attributes
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Price
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img src="assets/images/products/02.png" alt="" class="me-2 h-8 inline-block">
+                                                                <div class="self-center">                                                                        
+                                                                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">New Colorfull Shoes </h5>
+                                                                    <span class="block  font-medium text-slate-500">Size-04-15 (Model 2023)</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#" class="text-brand-500 underline">Footwear</a>,
+                                                            <a href="#" class="text-brand-500 underline">Lifestayle</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">In stock</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <div>color : 
+                                                                <span class="ms-2">
+                                                                    <i class="icofont-brand-mts text-pink-500"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div>Size : 
+                                                                <span class="mx-1">L</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                                                            $99 <del class="text-slate-500 font-normal">$130</del>
+                                                        </td>
+                                                        
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-shopping-cart text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img src="assets/images/products/03.png" alt="" class="me-2 h-8 inline-block">
+                                                                <div class="self-center">                                                                        
+                                                                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">Imported VR Box </h5>
+                                                                    <span class="block  font-medium text-slate-500">35px 5D (Model 2023)</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#" class="text-brand-500 underline">Entertainment</a>,
+                                                            <a href="#" class="text-brand-500 underline">Electronics</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">In stock</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <div>color : 
+                                                                <span class="ms-2">
+                                                                    <i class="icofont-brand-mts text-black"></i> 
+                                                                </span>
+                                                            </div>
+                                                            <div>Size : 
+                                                                <span class="mx-1">M</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                                                            $129 <del class="text-slate-500 font-normal">$200</del>
+                                                        </td>
+                                                        
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-shopping-cart text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img src="assets/images/products/pro-3.png" alt="" class="me-2 h-8 inline-block">
+                                                                <div class="self-center">                                                                        
+                                                                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">Mannat HD, Smart LED Fire TV </h5>
+                                                                    <span class="block  font-medium text-slate-500">32 inc (Model 2023)</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#" class="text-brand-500 underline">Electronics</a>,
+                                                            <a href="#" class="text-brand-500 underline">Entertainment</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Soldout</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <div>color : 
+                                                                <span class="ms-2">
+                                                                    <i class="icofont-brand-mts text-black"></i> 
+                                                                </span>
+                                                            </div>
+                                                            <div>Size : 
+                                                                <span class="mx-1">51 inc</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                                                            $399 <del class="text-slate-500 font-normal">$499</del>
+                                                        </td>
+                                                        
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-shopping-cart text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img src="assets/images/products/pro-4.png" alt="" class="me-2 h-8 inline-block">
+                                                                <div class="self-center">                                                                        
+                                                                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">Mannat 530 Bluetooth Wireless </h5>
+                                                                    <span class="block  font-medium text-slate-500">Size-M (Model 2023)</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#" class="text-brand-500 underline">Footwear</a>,
+                                                            <a href="#" class="text-brand-500 underline">Lifestayle</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">In stock</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <div>color : 
+                                                                <span class="ms-2">
+                                                                    <i class="icofont-brand-mts text-red-500"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div>Size : 
+                                                                <span class="mx-1">L</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                                                            $79 <del class="text-slate-500 font-normal">$99</del>
+                                                        </td>
+                                                        
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-shopping-cart text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--5-->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img src="assets/images/products/pro-5.png" alt="" class="me-2 h-8 inline-block">
+                                                                <div class="self-center">                                                                        
+                                                                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">Mannat Watch 3 Active </h5>
+                                                                    <span class="block  font-medium text-slate-500">Latest Model 2023</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#" class="text-brand-500 underline">Fashion</a>,
+                                                            <a href="#" class="text-brand-500 underline">Lifestayle</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">In stock</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <div>color : 
+                                                                <span class="ms-2">
+                                                                    <i class="icofont-brand-mts text-orange-500"></i> 
+                                                                </span>
+                                                            </div>
+                                                            <div>Size : 
+                                                                <span class="mx-1">XL</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                                                            $219 <del class="text-slate-500 font-normal">$299</del>
+                                                        </td>
+                                                        
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-shopping-cart text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--6-->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                                                        
+                                                        <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img src="assets/images/products/pro-6.png" alt="" class="me-2 h-8 inline-block">
+                                                                <div class="self-center">                                                                        
+                                                                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">Mannat Watch 3 Active </h5>
+                                                                    <span class="block  font-medium text-slate-500">Latest Model 2023</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#" class="text-brand-500 underline">Fashion</a>,
+                                                            <a href="#" class="text-brand-500 underline">Lifestayle</a>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">In stock</span>
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <div>color : 
+                                                                <span class="ms-2">
+                                                                    <i class="icofont-brand-mts text-purple-500"></i>
+                                                                </span>
+                                                            </div>
+                                                            <div>Size : 
+                                                                <span class="mx-1">XXL</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                                                            $219 <del class="text-slate-500 font-normal">$299</del>
+                                                        </td>
+                                                        
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            <a href="#"><i class="icofont-shopping-cart text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                            <a href="#"><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                        </td>
+                                                    </tr>                                                    
+                                                </tbody>
+                                            </table>
+                                        </div><!--end div-->
+                                    </div><!--end div-->
+                                </div><!--end grid-->
+                                <div class="flex justify-between mt-4">
+                                    <div class="self-center">
+                                        <p class="dark:text-slate-400">Showing 1 - 20 of 30</p>
+                                    </div>
+                                    <div class="self-center">
+                                        <ul class="inline-flex items-center -space-x-px">
+                                            <li>
+                                                <a href="#" class=" py-2 px-3 ms-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                                    <i class="icofont-simple-left"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" aria-current="page" class="z-10 py-2 px-3 leading-tight text-brand-600 bg-brand-50 border border-brand-300 hover:bg-brand-100 hover:text-brand-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" class=" py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                                <i class="icofont-simple-right"></i>
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!--end col-->                    
+                        </div> <!--end grid-->
+                    </div><!--end container--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer-landing.html")
+                </div><!--end main-->
+            </div><!--end page-wrapper-->
+        </div><!--end div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/nice-select2/js/nice-select2.js"></script>
+        <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script>
+            NiceSelect.bind(document.querySelector(".nice-select"));
+            var swiper = new Swiper(".defaultSwiper", {
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });    
+        </script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

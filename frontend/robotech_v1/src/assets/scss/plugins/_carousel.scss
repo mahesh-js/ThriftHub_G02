@@ -1,0 +1,74 @@
+
+ /* Carousel */
+
+
+// Carousel
+
+@keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + (1*400px)));
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .carousel-items {
+    animation: carouselAnim 6s infinite alternate linear;
+  }
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (1*400px)));
+    }
+  }
+}
+
+.carousel-focus:hover {
+  transition: all 0.8s;
+  transform: scale(1.1);
+}
+[role="tab"][aria-selected="false"]{
+  border-color: theme('colors.transparent') !important; 
+}
+[role="tab"][aria-selected="true"]{
+  color: theme('colors.blue.600') !important;
+  border-color: theme('colors.blue.600') !important; 
+}
+[role="tab"][aria-selected="true"]:hover{
+  color: theme('colors.blue.600') !important;
+  border-color: theme('colors.blue.600') !important; 
+}
+
+
+.custom-checkbox .checked, 
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.custom-checkbox input[type=checkbox]:checked~.unchecked {
+  display: none;
+}
+.custom-checkbox input[type=checkbox]:checked~.checked {
+  display: inline-block;
+}
+
+.swiper-button-next, 
+.swiper-button-prev{
+  width: 48px !important;
+  &:after{
+    font-size: 16px !important;
+    color: theme('colors.white');
+    background-color: theme('colors.slate.500/0.40');
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px !important;
+  }
+}
+
