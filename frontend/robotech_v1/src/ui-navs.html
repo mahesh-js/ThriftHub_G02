@@ -1,0 +1,303 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Navs</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Navs</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Base Nav</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navs-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex">
+                                        <li class="mr-6">
+                                          <a class="text-primary-500 hover:text-primary-600" href="#">Active</a>
+                                        </li>
+                                        <li class="mr-6">
+                                          <a class="text-primary-500 hover:text-primary-600" href="#">Link</a>
+                                        </li>
+                                        <li class="mr-6">
+                                          <a class="text-primary-500 hover:text-primary-600" href="#">Link</a>
+                                        </li>
+                                        <li class="mr-6">
+                                          <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navs-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex&quot;&gt;
+    &lt;li class=&quot;mr-6&quot;&gt;
+      &lt;a class=&quot;text-primary-500 hover:text-primary-600&quot; href=&quot;#&quot;&gt;Active&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-6&quot;&gt;
+      &lt;a class=&quot;text-primary-500 hover:text-primary-600&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-6&quot;&gt;
+      &lt;a class=&quot;text-primary-500 hover:text-primary-600&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-6&quot;&gt;
+      &lt;a class=&quot;text-gray-400 cursor-not-allowed&quot; href=&quot;#&quot;&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Nav Tabs</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navs-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex border-b dark:border-b-slate-700">
+                                        <li class="-mb-px mr-1">
+                                          <a class="bg-white dark:bg-slate-600/20 inline-block border-b border-primary-500  py-2 px-4 text-primary-600 font-medium" href="#">Active</a>
+                                        </li>
+                                        <li class="mr-1">
+                                          <a class="bg-white dark:bg-slate-600/20 inline-block py-2 px-4 text-slate-500 dark:text-slate-400 hover:text-primary-600 font-medium" href="#">Tab</a>
+                                        </li>
+                                        <li class="mr-1">
+                                          <a class="bg-white dark:bg-slate-600/20 inline-block py-2 px-4 text-slate-500 dark:text-slate-400 hover:text-primary-600 font-medium" href="#">Tab</a>
+                                        </li>
+                                        <li class="mr-1">
+                                          <a class="bg-white dark:bg-slate-600/20 inline-block py-2 px-4 text-slate-500 dark:text-slate-400 font-medium" href="#">Tab</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navs-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex border-b dark:border-b-slate-700&quot;&gt;
+    &lt;li class=&quot;-mb-px mr-1&quot;&gt;
+      &lt;a class=&quot;bg-white dark:bg-slate-600/20 inline-block border-b border-primary-500  py-2 px-4 text-primary-600 font-medium&quot; href=&quot;#&quot;&gt;Active&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-1&quot;&gt;
+      &lt;a class=&quot;bg-white dark:bg-slate-600/20 inline-block py-2 px-4 text-slate-500 dark:text-slate-400 hover:text-primary-600 font-medium&quot; href=&quot;#&quot;&gt;Tab&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-1&quot;&gt;
+      &lt;a class=&quot;bg-white dark:bg-slate-600/20 inline-block py-2 px-4 text-slate-500 dark:text-slate-400 hover:text-primary-600 font-medium&quot; href=&quot;#&quot;&gt;Tab&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-1&quot;&gt;
+      &lt;a class=&quot;bg-white dark:bg-slate-600/20 inline-block py-2 px-4 text-slate-500 dark:text-slate-400 font-medium&quot; href=&quot;#&quot;&gt;Tab&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Nav Pills</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navs-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex">
+                                        <li class="mr-3">
+                                          <a class="inline-block border border-primary-500 rounded py-1 px-3 bg-primary-500 text-white" href="#">Active Pill</a>
+                                        </li>
+                                        <li class="mr-3">
+                                          <a class="inline-block border border-white dark:border-transparent rounded hover:border-gray-200 text-primary-500 hover:bg-gray-200 py-1 px-3" href="#">Pill</a>
+                                        </li>
+                                        <li class="mr-3">
+                                          <a class="inline-block py-1 px-3 text-gray-400 cursor-not-allowed" href="#">Disabled Pill</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navs-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                  <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;ul class=&quot;flex&quot;&gt;
+    &lt;li class=&quot;mr-3&quot;&gt;
+      &lt;a class=&quot;inline-block border border-primary-500 rounded py-1 px-3 bg-primary-500 text-white&quot; href=&quot;#&quot;&gt;Active Pill&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-3&quot;&gt;
+      &lt;a class=&quot;inline-block border border-white dark:border-transparent rounded hover:border-gray-200 text-primary-500 hover:bg-gray-200 py-1 px-3&quot; href=&quot;#&quot;&gt;Pill&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-3&quot;&gt;
+      &lt;a class=&quot;inline-block py-1 px-3 text-gray-400 cursor-not-allowed&quot; href=&quot;#&quot;&gt;Disabled Pill&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                  </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Nav Stretched </h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navs-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex">
+                                        <li class="flex-1 mr-2">
+                                          <a class="text-center block border border-primary-500 rounded py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white" href="#">Active Item</a>
+                                        </li>
+                                        <li class="flex-1 mr-2">
+                                          <a class="text-center block border border-white dark:border-transparent rounded hover:border-gray-200 text-primary-500 hover:bg-gray-200 py-2 px-4" href="#">Nav Item</a>
+                                        </li>
+                                        <li class="text-center flex-1">
+                                          <a class="block py-2 px-4 text-gray-400 cursor-not-allowed" href="#">Disabled Item</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navs-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                  <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex&quot;&gt;
+    &lt;li class=&quot;flex-1 mr-2&quot;&gt;
+      &lt;a class=&quot;text-center block border border-primary-500 rounded py-2 px-4 bg-primary-500 hover:bg-primary-600 text-white&quot; href=&quot;#&quot;&gt;Active Item&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;flex-1 mr-2&quot;&gt;
+      &lt;a class=&quot;text-center block border border-white dark:border-transparent rounded hover:border-gray-200 text-primary-500 hover:bg-gray-200 py-2 px-4&quot; href=&quot;#&quot;&gt;Nav Item&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;text-center flex-1&quot;&gt;
+      &lt;a class=&quot;block py-2 px-4 text-gray-400 cursor-not-allowed&quot; href=&quot;#&quot;&gt;Disabled Item&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                  </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Nav Justified</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Navs-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <ul class="flex justify-between">
+                                        <li class="mr-3">
+                                          <a class="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" href="#">Active Pill</a>
+                                        </li>
+                                        <li class="mr-3">
+                                          <a class="inline-block border border-white dark:border-transparent rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="#">Pill</a>
+                                        </li>
+                                        <li class="mr-3">
+                                          <a class="inline-block py-2 px-4 text-gray-400 cursor-not-allowed" href="#">Disabled Pill</a>
+                                        </li>
+                                    </ul>
+                                </div><!--end card-body-->
+                                
+                                <div id="Navs-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                  <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;ul class=&quot;flex justify-between&quot;&gt;
+    &lt;li class=&quot;mr-3&quot;&gt;
+      &lt;a class=&quot;inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white&quot; href=&quot;#&quot;&gt;Active Pill&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-3&quot;&gt;
+      &lt;a class=&quot;inline-block border border-white dark:border-transparent rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4&quot; href=&quot;#&quot;&gt;Pill&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;mr-3&quot;&gt;
+      &lt;a class=&quot;inline-block py-2 px-4 text-gray-400 cursor-not-allowed&quot; href=&quot;#&quot;&gt;Disabled Pill&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+                                  </div>
+                                </div>                              
+                            </div> <!--end card-->                                                      
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

@@ -1,0 +1,126 @@
+//
+// Calendar
+// 
+
+.fc-event {
+  @apply bg-primary-500/10 rounded-sm border-none text-sm m-1 text-center text-primary-500 py-[2px] px-1 cursor-move;
+}
+.fc .fc-button-primary{
+  // @apply bg-primary-500/50 bg-opacity-[0.08] border border-solid border-primary-100 dark:border-slate-700 text-primary-500 capitalize shadow-none;
+  text-shadow: none;
+  background-color: theme('colors.primary.500/0.20') !important;
+  border: 1px solid theme('colors.primary.500/0.20') !important;
+  color: theme('colors.primary.500') !important;
+  &:hover{
+    background-color: theme('colors.primary.500/0.30') !important;
+  }
+  &:focus,
+  &:active,
+  &.active{
+    box-shadow: none !important;
+  }
+}
+.fc {
+  .fc-header-toolbar{
+    &.fc-toolbar {
+      .fc-toolbar-chunk{
+        h2{
+          @apply text-lg uppercase text-slate-600 font-semibold dark:text-slate-300;
+        }
+      }
+    }
+  }
+  .fc-daygrid-more-link.fc-more-link,
+  .fc-col-header-cell-cushion,
+  .fc-daygrid-day-number{
+    @apply text-slate-700 dark:text-slate-400 ; 
+  }
+ 
+
+
+}
+
+.fc-license-message{
+  display: none;
+}
+
+.fc-theme-standard {
+  .fc-scrollgrid,
+  td, 
+  th{
+    @apply border border-solid border-slate-200 dark:border-slate-700;
+  }
+}
+
+
+.fc-day-other{
+  background-image: linear-gradient(-45deg, theme('colors.white') 25%, transparent 25%, transparent 50%, theme('colors.white') 50%, theme('colors.slate.100') 75%, transparent 75%, transparent);
+  background-size: 10px 10px;
+}
+.dark .fc-day-other{
+  background-image: linear-gradient(-45deg, theme('colors.slate.700') 25%, transparent 25%, transparent 50%, theme('colors.slate.800') 50%, theme('colors.slate.800') 75%, transparent 75%, transparent);
+  background-size: 10px 10px;
+}
+
+
+.fc-h-event {
+  .fc-event-main{
+    @apply text-slate-400;
+  }
+}
+
+
+
+// Lightpick
+
+.litepicker{
+  @apply shadow-none bg-white dark:bg-slate-800 border rounded border-solid border-slate-700/10 dark:border-slate-700 z-1 w-full text-sm;
+  .container__main{
+    width: 100% !important;
+    box-shadow: none !important;
+    .month-item{
+      width: 100% !important;
+    }
+  }
+  .container__months{
+    width: 100% !important;
+    box-shadow: none !important;
+    @apply  bg-white dark:bg-slate-800;
+    .month-item-weekdays-row {
+      > div{
+        font-size: 13px !important;
+        @apply font-medium text-slate-500 dark:text-slate-400;
+      }
+    }
+    .month-item-header {
+      div{
+        > .month-item-name,
+        > .month-item-year{
+          @apply text-slate-500 text-lg;
+        }
+      }
+    }
+  }
+ .container__days {
+  >div,
+  >a{
+    width: calc(100% / 7) !important;
+    padding: 8px !important;
+    }
+    .day-item{
+      color: theme('colors.slate.500') !important;
+      @apply text-sm transition-none;
+      &.is-today{
+        color: theme('colors.primary.500') !important;
+        font-weight: 500 !important;
+        @apply bg-primary-500/10;
+      }
+      &:hover{
+        color: theme('colors.primary.500') !important;
+        border: none !important;
+        box-shadow: none !important;
+        @apply bg-primary-500/10;
+      }
+    }
+  }
+} 

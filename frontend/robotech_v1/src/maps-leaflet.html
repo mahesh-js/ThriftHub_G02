@@ -1,0 +1,496 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/leaflet/leaflet.css">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Leaflet</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Maps</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Leaflet</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Leaflet Quick Start Guide</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Leaflet-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="Leaf_default" class="h-96 z-[5]"></div> 
+                                </div><!--end card-body-->
+                                
+                                <div id="Leaflet-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/leaflet/leaflet.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/leaflet/leaflet.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;div id=&quot;Leaf_default&quot; class=&quot;h-96 z-[5]&quot;&gt;&lt;/div&gt; 
+
+&lt;!-- Init js --&gt;
+var mymap = L.map('Leaf_default').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        attribution: 'Map data &amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/&quot;&gt;OpenStreetMap&lt;/a&gt; contributors, ' +
+            '&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC-BY-SA&lt;/a&gt;, ' +
+            'Imagery &copy; &lt;a href=&quot;https://www.mapbox.com/&quot;&gt;Mapbox&lt;/a&gt;',
+        id: 'mapbox/streets-v11'
+    }).addTo(mymap);
+
+    L.marker([51.5, -0.09]).addTo(mymap)
+        .bindPopup(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&lt;br /&gt;I am a popup.&quot;).openPopup();
+
+    L.circle([51.508, -0.11], 500, {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup(&quot;I am a circle.&quot;);
+
+    L.polygon([
+        [51.509, -0.08],
+        [51.503, -0.06],
+        [51.51, -0.047]
+    ]).addTo(mymap).bindPopup(&quot;I am a polygon.&quot;);
+
+
+    var popup = L.popup();
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent(&quot;You clicked the map at &quot; + e.latlng.toString())
+            .openOn(mymap);
+    }
+
+    mymap.on('click', onMapClick);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Bounds Extend</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Leaflet-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="Bounds_Extend" class="h-96 z-[5]"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Leaflet-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/leaflet/leaflet.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/leaflet/leaflet.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;div id=&quot;Bounds_Extend&quot; class=&quot;h-96 z-[5]&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Init js --&gt;
+var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    osm = new L.TileLayer(osmUrl, {maxZoom: 18});
+
+    var latLng = new L.LatLng(54.18815548107151, -7.657470703124999);
+
+    var bounds1 = new L.LatLngBounds(new L.LatLng(54.559322, -5.767822), new L.LatLng(56.1210604, -3.021240));
+    var bounds2 = new L.LatLngBounds(new L.LatLng(56.56023925701561, -2.076416015625), new L.LatLng(57.01158038001565, -0.9777832031250001));
+    var bounds3;
+
+    var map = new L.Map('Bounds_Extend', {
+        layers: [osm],
+        center: bounds1.getCenter(),
+        zoom: 7
+    });
+
+    var rectangle1 = new L.Rectangle(bounds1);
+    var rectangle2 = new L.Rectangle(bounds2);
+    var rectangle3;
+
+    var marker = new L.Marker(latLng);
+
+    map.addLayer(rectangle1).addLayer(rectangle2).addLayer(marker);
+
+
+
+
+
+    function boundsExtendBounds() {
+        if  (rectangle3) {
+            map.removeLayer(rectangle3);
+            rectangle3 = null;
+        }
+        if (bounds3) {
+            bounds3 = null;
+        }
+        bounds3 = new L.LatLngBounds(bounds1.getSouthWest(), bounds1.getNorthEast());
+        bounds3.extend(bounds2);
+        rectangle3 = new L.Rectangle(bounds3, {
+            color: &quot;#ff0000&quot;,
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0
+        });
+
+        map.addLayer(rectangle3);
+    }
+
+    function boundsExtendLatLng() {
+        if  (rectangle3) {
+            map.removeLayer(rectangle3);
+            rectangle3 = null;
+        }
+        if (bounds3) {
+            bounds3 = null;
+        }
+        bounds3 = new L.LatLngBounds(bounds1.getSouthWest(), bounds1.getNorthEast());
+        bounds3.extend(marker.getLatLng());
+        rectangle3 = new L.Rectangle(bounds3, {
+            color: &quot;#ff0000&quot;,
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0
+        });
+
+        map.addLayer(rectangle3);
+    }
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Vector Bounds</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Leaflet-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="Vector_bounds" class="h-96 z-[5]"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Leaflet-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/leaflet/leaflet.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/leaflet/leaflet.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;div id=&quot;Vector_bounds&quot; class=&quot;h-96 z-[5]&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Init js --&gt;
+var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            osmAttrib = '&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors',
+            osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+
+    var poly_points = [
+        [39.70348880963439, -104.98603820800781],
+        [39.69926245589766, -104.95582580566406],
+        [39.67918374111695, -104.94483947753906],
+        [39.663856582926165, -104.95307922363281],
+        [39.66279941218785, -104.98672485351562],
+        [39.70348880963439, -104.98603820800781]
+    ];
+
+    var path_points = [
+        [39.72567292003209, -104.98672485351562],
+        [39.717222671644635, -104.96612548828124],
+        [39.71405356154611, -104.95513916015625],
+        [39.70982785491674, -104.94758605957031],
+        [39.70454535762547, -104.93247985839844],
+        [39.696092520737224, -104.91874694824217],
+        [39.687638648548635, -104.90432739257812],
+        [39.67759833072648, -104.89471435546875]
+    ];
+
+    for (var i = 0, latlngs = [], len = path_points.length; i &lt; len; i++) {
+        latlngs.push(new L.LatLng(path_points[i][0], path_points[i][1]));
+    }
+    var path = new L.Polyline(latlngs);
+
+    for (var i = 0, latlngs2 = [], len = poly_points.length; i &lt; len; i++) {
+        latlngs2.push(new L.LatLng(poly_points[i][0], poly_points[i][1]));
+    }
+    var poly = new L.Polygon(latlngs2);
+
+    var map = new L.Map('Vector_bounds', {
+        layers: [osm],
+        center: new L.LatLng(39.69596043694606, -104.95084762573242),
+        zoom: 12
+    });
+
+    //map.fitBounds(new L.LatLngBounds(latlngs));
+
+    //map.addLayer(new L.Marker(latlngs[0]));
+    //map.addLayer(new L.Marker(latlngs[len - 1]));
+
+    map.addLayer(path);
+    map.addLayer(poly);
+
+    path.bindPopup(&quot;Hello world&quot;);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Moov Canvas</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Leaflet-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="Moov_Canvas" class="h-96 z-[5]"></div> 
+                                </div><!--end card-body-->
+                                
+                                <div id="Leaflet-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/leaflet/leaflet.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/leaflet/leaflet.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;div id=&quot;Moov_Canvas&quot; class=&quot;h-96 z-[5]&quot;&gt;&lt;/div&gt; 
+
+&lt;!-- Init js --&gt;
+var osmUrl = 'https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+            osmAttrib = '&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors',
+            osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+
+    var map = L.map('Moov_Canvas', {preferCanvas: true})
+            .setView([50.5, 30.51], 15)
+            .addLayer(osm);
+
+    var markers = [];
+    var colors = ['red', 'green', 'blue', 'purple', 'cyan', 'yellow'];
+    for (var i = 0; i &lt; 20; i++) {
+        markers.push(L.circleMarker([50.5, 30.51], {color: colors[i % colors.length]}).addTo(map));
+    }
+
+    function update() {
+        var t = new Date().getTime() / 1000;
+        markers.forEach(function(marker, i) {
+            var v = t * (1 + i / 10) + (12.5 * i) / 180 * Math.PI;
+            marker.setLatLng([
+                50.5 + (i % 2 ? 1 : -1) * Math.sin(v) * 0.005,
+                30.51 + (i % 3 ? 1 : -1) * Math.cos(v) * 0.005,
+                ]);
+        });
+
+        L.Util.requestAnimFrame(update);
+    }
+
+    update();
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Array Map</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Leaflet-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="Array_Map" class="h-96 z-[5]"></div>  
+                                </div><!--end card-body-->
+                                
+                                <div id="Leaflet-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/leaflet/leaflet.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/leaflet/leaflet.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;div id=&quot;Array_Map&quot; class=&quot;h-96 z-[5]&quot;&gt;&lt;/div&gt; 
+
+&lt;!-- Init js --&gt;
+var map = L.map('Array_Map', {
+        center: [20, 20],
+        zoom: 3,
+        preferCanvas: true
+    });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        minZoom: 1,
+        maxZoom: 17,
+        label: 'open street map'
+    }).addTo(map);
+    var points = [
+                    [0, 0],
+                    [0, 42],
+                    [42, 42],
+                    [0, 0]
+            ];
+            L.polygon([points, []], {dashArray: '5, 5'}).addTo(map);
+            L.circleMarker([42, 0], {color: 'red'}).addTo(map);
+
+
+            // Map-6
+
+
+            var map = L.map('V_Simple');
+    
+    map.setView([51.505, -0.09], 13);
+
+    var marker = L.marker([51.5, -0.09])
+        .bindPopup(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&lt;br /&gt;I am a popup.&quot;)
+        .addTo(map);
+
+    var circle = L.circle([51.508, -0.11], 500, {color: '#f03', opacity: 0.7})
+        .bindPopup(&quot;I am a circle.&quot;)
+        .addTo(map);
+
+    var polygon = L.polygon([
+        [51.509, -0.08],
+        [51.503, -0.06],
+        [51.51,  -0.047]])
+        .bindPopup(&quot;I am a polygon.&quot;)
+        .addTo(map);
+
+    var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        osmAttrib = '&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors',
+        osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib}).addTo(map);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Simple Vector Map</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Leaflet-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="V_Simple" class="h-96 z-[5]"></div> 
+                                </div><!--end card-body-->
+                                
+                                <div id="Leaflet-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;span class=&quot;bg-transparent border border-primary-500 text-primary-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-gray-500 text-gray-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Dark&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-red-500 text-red-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Red&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-green-500 text-green-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Green&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-yellow-500 text-yellow-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Yellow&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-indigo-500 text-indigo-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Indigo&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-purple-500 text-purple-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Purple&lt;/span&gt;
+&lt;span class=&quot;bg-transparent border border-pink-500 text-pink-500 text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded-full &quot;&gt;Pink&lt;/span&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                            
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/leaflet/leaflet.js"></script>
+        <script src="assets/js/pages/leaflet-map.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

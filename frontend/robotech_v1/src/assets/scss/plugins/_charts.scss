@@ -1,0 +1,216 @@
+
+ /* Charts */
+
+
+.chart-demo {
+  height: 370px;
+  margin: 20px auto;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.chart.chart-widget-pie {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.percent {
+  display: inline-block;
+  line-height: 110px;
+  z-index: 2;
+}
+.percent:after {
+  content: "%";
+  margin-left: 0.1em;
+  font-size: 0.8em;
+}
+
+ /*== Apex Chart ==*/
+.apexcharts-ycrosshairs,
+.apexcharts-gridline,
+.apexcharts-gridlines-horizontal,
+.apexcharts-gridlines-vertical,
+.apexcharts-grid,
+.apexcharts-gridline,
+.apexcharts-xaxis-tick,
+.apexcharts-xaxis line,
+.apexcharts-gridline line {
+  @apply stroke-slate-200 pointer-events-none dark:stroke-slate-700 ;
+}
+.apexcharts-radar-series line,
+.apexcharts-area-series
+  .apexcharts-series-markers
+  .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series
+  .apexcharts-series-markers
+  .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  @apply stroke-slate-100 pointer-events-none dark:stroke-slate-700 ;
+}
+
+.apexcharts-legend-series .apexcharts-legend-text {
+  @apply text-slate-400;
+}
+.apexcharts-pie-label {
+  @apply fill-white ;
+}
+.apexcharts-datalabels text,
+.apexcharts-data-labels,
+.apexcharts-xaxis text,
+.apexcharts-yaxis text {
+  @apply fill-slate-400 ;
+}
+.apexcharts-yaxis-annotation-label {
+  color: theme("colors.slate.400") !important;
+  @apply text-slate-400 ;
+}
+.apexcharts-bar-series.apexcharts-plot-series
+  .apexcharts-datalabels
+  .apexcharts-data-labels
+  text,
+.apexcharts-series .apexcharts-datalabels .apexcharts-data-labels text {
+  @apply fill-white text-[10px] ;
+}
+.apexcharts-point-annotations text,
+.apexcharts-xaxis-annotations text,
+.apexcharts-yaxis-annotations text {
+  @apply fill-white ;
+}
+
+.britechart,
+.tick text {
+  font-size: 0.75rem;
+}
+.extended-x-line,
+.extended-y-line,
+.horizontal-grid-line,
+.vertical-grid-line {
+  @apply stroke-slate-400 ;
+}
+
+.bar-chart .percentage-label,
+.donut-text,
+.legend-entry-name,
+.legend-entry-value,
+.tick text {
+  @apply fill-slate-400 ;
+}
+
+.apex-charts {
+  min-height: 10px !important;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light{
+  @apply border-[1px] border-solid border-slate-100 dark:border-slate-700 dark:bg-slate-700;
+}
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title{
+  @apply bg-white text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-100 dark:border-slate-800;
+}
+.apexcharts-tooltip-series-group.apexcharts-active, 
+.apexcharts-tooltip-series-group:last-child{
+  @apply dark:text-slate-200;
+}
+.dash-apex-chart .apexcharts-toolbar {
+  display: none !important;
+}
+
+.apexcharts-tooltip {
+  @apply bg-white dark:bg-slate-700 border-slate-100 dark:border-slate-800 shadow-none whitespace-normal ;
+}
+
+.apexcharts-xaxistooltip {
+  @apply bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border-slate-100 dark:border-slate-800 ;
+}
+
+.apexcharts-xaxistooltip-top:before,
+.apexcharts-xaxistooltip-top:after {
+  @apply border-t-gray-100 dark:border-t-slate-800;
+}
+
+.apexcharts-xaxistooltip-bottom:before,
+.apexcharts-xaxistooltip-bottom:after {
+  @apply border-b-gray-100 dark:border-b-slate-800;
+}
+.apexcharts-xaxistooltip:before,
+.apexcharts-xaxistooltip:after {
+  @apply border-gray-100 dark:border-slate-800;
+}
+.apexcharts-title-text,
+.apexcharts-datalabel-label {
+  @apply text-slate-700 dark:text-slate-100;
+}
+.apexcharts-datalabel-value {
+  @apply text-slate-100 dark:text-slate-800;
+}
+.apexcharts-legend-marker {
+  margin-right: 6px;
+  height: 5px !important;
+  vertical-align: middle;
+}
+
+.apexcharts-yaxis > line,
+.apexcharts-yaxis > line{
+  stroke-width: 0;
+}
+.apexcharts-text.apexcharts-xaxis-label,
+.apexcharts-xaxistooltip.apexcharts-xaxistooltip-bottom.apexcharts-theme-light,
+.apexcharts-xaxis .apexcharts-yaxis-texts-g .apexcharts-text.apexcharts-yaxis-label,
+.apexcharts-xaxis .apexcharts-yaxis-texts-g .apexcharts-text.apexcharts-xaxis-label,
+.apexcharts-xaxis .apexcharts-xaxis-texts-g .apexcharts-text.apexcharts-yaxis-label,
+.apexcharts-xaxis .apexcharts-xaxis-texts-g .apexcharts-text.apexcharts-xaxis-label{
+    font-weight: 400 !important;
+    @apply fill-slate-400 ;
+  }
+.apexcharts-text.apexcharts-yaxis-label,
+.apexcharts-yaxis .apexcharts-yaxis-texts-g .apexcharts-text.apexcharts-yaxis-label,
+.apexcharts-yaxis .apexcharts-yaxis-texts-g .apexcharts-text.apexcharts-xaxis-label,
+.apexcharts-yaxis .apexcharts-xaxis-texts-g .apexcharts-text.apexcharts-yaxis-label,
+.apexcharts-yaxis .apexcharts-xaxis-texts-g .apexcharts-text.apexcharts-xaxis-label{
+    font-weight: 400 !important;
+    @apply fill-slate-400 ;
+  }
+
+.apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-value,
+.apexcharts-datalabels-group .apexcharts-text.apexcharts-datalabel-label {
+  @apply fill-slate-400 text-slate-400  ;
+}
+
+.apexcharts-grid-borders{
+  stroke: theme('colors.slate.200');
+}
+.dark .apexcharts-grid-borders line{
+  stroke: theme('colors.slate.700/50');
+}
+
+
+.apexcharts-legend-text{
+  color:  theme('colors.slate.400') !important;
+}
+
+
+// Justgage
+
+.dark .gauge{
+  svg{
+    text{
+      fill: theme('colors.slate.200') !important;
+    }
+  }
+}
+.dark #log{
+  color: theme('colors.slate.400') !important;
+}
+

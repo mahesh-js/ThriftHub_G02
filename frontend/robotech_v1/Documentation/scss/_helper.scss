@@ -1,0 +1,118 @@
+//
+// helper.scss
+//
+
+.font-weight-semibold{
+    font-weight: 600;
+}
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.section-sm {
+    padding: 30px 0 0 0;
+    position: relative;
+}
+.bg-overlay {
+    background-color: $overlay;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
+}
+
+.bg-over-image {
+    background-color: rgba(35, 37, 47, 0.5) !important;
+    background-image: url('../images/overlay.png');
+    background-repeat: repeat;
+}
+.text-custom {
+    color: $custom;
+}
+.bg-custom {
+    background-color: $custom;
+}
+//Titles
+.title-heading {
+    .subtitle {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .title {
+        font-weight: 600;
+        font-size: 48px;
+        letter-spacing: 1px;
+    }
+    .para-desc {
+        font-size: 17px;
+    }
+    img {
+        height: 140px;
+        border: 4px solid $gray-300;
+    }
+}
+
+.para-desc {
+    max-width: 700px;
+}
+//Social icons
+.social-icon {
+    li {
+        a {
+            color: $body-color;
+            border: 1px solid $body-color;
+            display: inline-block;
+            height: 32px;
+            text-align: center;
+            font-size: 15px;
+            width: 32px;
+            line-height: 30px;
+            transition: all 0.4s ease;
+            border-radius: 4px;
+            &:hover {
+                background-color: $custom;
+                border-color: $custom !important;
+                color: $white !important;
+            }
+        }
+    }
+
+    &.social {
+        li {
+            a {
+                color: $gray-500;
+                border-color: $gray-500;
+            }
+        }
+    }
+}
+
+
+hr.hr-dashed {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px dashed rgba(0,0,0,.1);
+}
+
+
+
+@media (max-width: 767px) {
+    .section {
+        padding: 60px 0;
+    }
+    .title-heading {
+        .heading {
+            font-size: 40px !important;
+        }
+    }
+    .section-title {
+        .title {
+            font-size: 24px;
+        }
+    }
+}

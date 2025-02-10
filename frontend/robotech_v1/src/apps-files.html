@@ -1,0 +1,326 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ms-auto rtl:me-auto rtl:ms-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Files</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Apps</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Files</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">
+                                <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium flex-1 self-center mb-2 md:mb-0">Files Workspace</h4>
+                                        <div class="inline-block relative">
+                                            <button type="button"  data-fc-autoclose="both" data-fc-placement="bottom" data-fc-type="dropdown" class="px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><i class="icofont-rounded-down"></i></button>
+                                            <div id="dropdown-target-1" class=" hidden right-0 left-auto z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800">
+                                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                                    <li>
+                                                        <a href="#" class="block py-2 px-4 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white">Add</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block py-2 px-4 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white">Rename</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block py-2 px-4 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </div>                                                    
+                                        </div>
+                                    </div>                                    
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4">
+                                    <div class="p-4 bg-gray-50 rounded dark:bg-slate-900/20 mb-4">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <h5 class="m-0 font-medium -mb-1 dark:text-slate-300">Plan Files</h5>
+                                                <small class="text-xs text-slate-400">80GB/200GB Used</small>
+                                            </div>
+                                            <div class="focus:outline-none text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded font-medium py-[2px] px-2 self-center">23</div>
+                                        </div>                            
+                                    </div>
+                                    
+                                    <div class="p-4 bg-gray-50 rounded dark:bg-gray-800 dark:bg-slate-900/20 mb-4">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <h5 class="m-0 font-medium -mb-1 dark:text-slate-300">Project Files</h5>
+                                                <small class="text-xs text-slate-400">155GB/200GB Used</small>
+                                            </div>
+                                            <div class="focus:outline-none text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded font-medium py-[2px] px-2 self-center">36</div>
+                                        </div>                            
+                                    </div>
+                                    <div class="p-4 bg-gray-50 rounded dark:bg-gray-800 dark:bg-slate-900/20 mb-4">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <h5 class="m-0 font-medium -mb-1 dark:text-slate-300">PDF Files</h5>
+                                                <small class="text-xs text-slate-400">05GB/200GB Used</small>
+                                            </div>
+                                            <div class="focus:outline-none text-[11px] bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 rounded font-medium py-[2px] px-2 self-center">51</div>
+                                        </div>                            
+                                    </div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-slate-700 dark:text-white">620GB / 1TB Used</span>
+                                        <span class="text-sm font-medium text-slate-700 dark:text-white">45%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 45%"></div>
+                                    </div>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-9">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">
+                                <div class="flex-auto p-4">
+                                    <div class="mb-4 border-b border-gray-200 dark:border-slate-700" data-fc-type="tab">
+                                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" aria-label="Tabs">
+                                            <li class="me-2" role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 active " id="profile-tab" data-fc-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Plan Files</button>
+                                            </li>
+                                            <li class="me-2" role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-fc-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Projects</button>
+                                            </li>
+                                            <li class="me-2" role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-fc-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">PDF Files</button>
+                                            </li>
+                                            <li role="presentation">
+                                                <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-fc-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">File Lock</button>
+                                            </li>
+                                            <li class="ms-auto self-center">
+                                                <div class="flex w-full items-center justify-center">
+                                                    <label class="px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500">                                                       
+                                                        <span class="mt-2 text-base leading-normal">Upload File</span>
+                                                        <input type='file' class="hidden" />
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="myTabContent">
+                                        <div class="active  p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                            <h4 class="card-title dark:text-slate-300 mb-4">Design Plan files</h4>
+                                            <div class="gap-3 flex flex-wrap">
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-pdf text-cyan-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">Adharcard_update</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-code text-red-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">Pancard</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-zip text-orange-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">ICICI_statment</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-alt text-slate-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">March_Invoice</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div>
+                                            </div>
+                                            <h4 class="card-title dark:text-slate-300 my-4">Realestate Plan files</h4>
+                                            <div class="gap-3 flex flex-wrap">                                    
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-code text-red-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">Pancard</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-zip text-orange-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">ICICI_statment</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-alt text-slate-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">March_Invoice</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div>
+                                            </div>
+                                            <h4 class="card-title dark:text-slate-300 my-4">Garden Plan files</h4>
+                                            <div class="gap-3 flex flex-wrap">
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-code text-red-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">Pancard</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-zip text-orange-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">ICICI_statment</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                                            <h4 class="card-title dark:text-slate-300 mb-4">Projects</h4>
+                                            <div class="gap-3 flex flex-wrap">                                    
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-code text-purple-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">Pancard</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-zip text-orange-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">ICICI_statment</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-alt text-slate-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">March_Invoice</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                            <h4 class="card-title dark:text-slate-300 mb-4">PDF Files</h4>
+                                            <div class="gap-3 flex flex-wrap">   
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-code text-pink-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">Pancard</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                                <div class="border border-slate-200 dark:border-slate-700 rounded p-5 h-40 w-40 inline-block cursor-pointer">
+                                                    <a href="#" class="relative text-xs -top-3 left-28">
+                                                        <i class="icofont-download text-slate-400 text-sm"></i>
+                                                    </a>
+                                                    <div class="text-center">
+                                                        <i class="icofont-file-zip text-slate-500 text-4xl"></i>
+                                                        <h6 class="truncate font-medium dark:text-slate-300 text-sm">ICICI_statment</h6>
+                                                        <small class="text-slate-400">06 March 2022 / 5MB</small>
+                                                    </div>                                                        
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800 w-full sm:w-full md:w-1/2 lg:w-1/2  mx-auto text-center" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                                            <div class="mx-auto text-center">
+                                                <span class="inline-flex justify-center items-center w-16 h-16  my-8 bg-pink-100 rounded-full ring-8 ring-white dark:ring-slate-800 dark:bg-pink-500/10">
+                                                    <i class="icofont-lock text-3xl text-pink-500"></i>
+                                                </span>
+                                                <div class="flex mt-5">
+                                                    <input type="password" id="file-Lock" aria-describedby="button-addon2" class="rounded-none rounded-l bg-gray-50/5 border border-gray-300 text-gray-900 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  dark:bg-slate-800 dark:border-slate-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-blue-500 focus-visible:outline-none" placeholder="Password">
+                                                    <button type="button" id="button-addon2" data-clipboard-action="cut" data-clipboard-target="#file-Lock" class="copy_cut inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 rounded-r border border-l-0 border-gray-300 dark:bg-slate-600 dark:text-gray-400 dark:border-slate-600">
+                                                        <i class="icofont-key"></i>
+                                                    </button>
+                                                </div>
+                                                <a href="#" class="mt-2 ms-auto block text-right text-xs text-blue-500">Forget Password?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->            
+                    </div><!--end inner-grid-->  
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

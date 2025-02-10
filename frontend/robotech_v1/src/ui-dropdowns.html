@@ -1,0 +1,909 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Dropdowns</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Dropdowns</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500 mb-2">Primary <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-1" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded hover:bg-red-600 border border-red-500 mb-2">Red <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-2" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button  type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded hover:bg-green-600 border border-green-500 mb-2">Green <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-3" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded hover:bg-primary-600 border border-primary-500 mb-2&quot;&gt;Primary &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-1&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded hover:bg-red-600 border border-red-500 mb-2&quot;&gt;Red &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-2&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;button  type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded hover:bg-green-600 border border-green-500 mb-2&quot;&gt;Green &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-3&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Rounded</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded-full hover:bg-primary-600 border border-primary-500 mb-2">Primary <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-4" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded-full hover:bg-red-600 border border-red-500 mb-2">Red <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-5" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button  type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded-full hover:bg-green-600 border border-green-500 mb-2">Green <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-6" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-primary  text-white text-sm  rounded-full hover:bg-primary-600 border border-primary-500 mb-2&quot;&gt;Primary &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-4&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-red  text-white text-sm  rounded-full hover:bg-red-600 border border-red-500 mb-2&quot;&gt;Red &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-5&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;button  type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-green  text-white text-sm  rounded-full hover:bg-green-600 border border-green-500 mb-2&quot;&gt;Green &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-6&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Outline </h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2">Primary <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-7" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Alternative <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-8" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2">Yellow <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-9" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2&quot;&gt;Primary &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-7&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700&quot;&gt;Alternative &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-8&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2&quot;&gt;Yellow &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-9&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Outline Rounded</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded-full transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2">Primary <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-10" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded-full transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Alternative <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-11" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded-full transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2">Yellow <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-12" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-primary text-sm  rounded-full transition hover:bg-primary-500 hover:text-white border border-primary font-medium mb-2&quot;&gt;Primary &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-10&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent text-gray-900 text-sm font-medium mb-2  focus:outline-none  rounded-full transition border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700&quot;&gt;Alternative &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-11&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 bg-transparent  text-yellow text-sm  rounded-full transition hover:bg-yellow-600 hover:text-white border border-yellow font-medium mb-2&quot;&gt;Yellow &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-12&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Gradient</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-green-600 border border-green font-medium mb-2">Green <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-13" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 text-gray-900 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-yellow-600 border border-yellow font-medium mb-2">Yellow <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-14" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-pink-600 border border-pink font-medium mb-2">Pink <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-15" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-green-600 border border-green font-medium mb-2&quot;&gt;Green &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-13&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 text-gray-900 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-yellow-600 border border-yellow font-medium mb-2&quot;&gt;Yellow &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-14&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 lg:px-4 text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br text-sm  rounded transition hover:bg-pink-600 border border-pink font-medium mb-2&quot;&gt;Pink &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-15&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Gradient outline</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none ">
+                                        <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                        Purple to blue <i class="fas fa-chevron-down ms-1 text-xs self-center"></i>
+                                        </span>
+                                    </button>
+                                    <div id="dropdown-target-16" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none">
+                                        <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                        Cyan to blue <i class="fas fa-chevron-down ms-1 text-xs self-center"></i>
+                                        </span>
+                                    </button>
+                                    <div id="dropdown-target-17" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group gob bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:outline-none">
+                                        <span class="relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-[.gob]:group-hover:bg-opacity-0">
+                                        Green to blue <i class="fas fa-chevron-down ms-1 text-xs self-center"></i>
+                                        </span>
+                                    </button>
+                                    <div id="dropdown-target-18" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none &quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0&quot;&gt;
+    Purple to blue &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-16&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:outline-none&quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0&quot;&gt;
+    Cyan to blue &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-17&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:outline-none&quot;&gt;
+    &lt;span class=&quot;relative px-2 py-1 lg:px-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0&quot;&gt;
+    Green to blue &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+&lt;div id=&quot;dropdown-target-18&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+    &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Sizes Dropdowns</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Dropdowns-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 mb-2 text-xs font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 ">Extra small <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-19" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-2 py-1 mb-2 text-sm font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 ">Small <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-20" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="text-white mb-2 bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-3 py-2 text-center dark:bg-primary-500 dark:hover:bg-primary-600 ">Base <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-21" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="px-3 py-2 mb-2 text-base font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 ">Large <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-22" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button"  data-fc-autoclose="both" data-fc-type="dropdown" class="text-white mb-2 bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-base px-5 py-3 text-center dark:bg-primary-500 dark:hover:bg-primary-600 ">Extra large <i class="fas fa-chevron-down ms-1 text-xs self-center"></i></button>
+                                    <div id="dropdown-target-23" class=" hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white">Sign out</a>  
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Dropdowns-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 mb-2 text-xs font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Extra small &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div id=&quot;dropdown-target-19&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+        &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-2 py-1 mb-2 text-sm font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Small &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div id=&quot;dropdown-target-20&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+        &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;text-white mb-2 bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-sm px-3 py-2 text-center dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Base &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div id=&quot;dropdown-target-21&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+        &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;px-3 py-2 mb-2 text-base font-medium text-center text-white bg-primary-500 rounded hover:bg-primary-600  focus:outline-none dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Large &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div id=&quot;dropdown-target-22&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+        &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot;  data-fc-autoclose=&quot;both&quot; data-fc-type=&quot;dropdown&quot; class=&quot;text-white mb-2 bg-primary-500 hover:bg-primary-600  focus:outline-none font-medium rounded text-base px-5 py-3 text-center dark:bg-primary-500 dark:hover:bg-primary-600 &quot;&gt;Extra large &lt;i class=&quot;fas fa-chevron-down ms-1 text-xs self-center&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div id=&quot;dropdown-target-23&quot; class=&quot; hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-800 border border-slate-700/10&quot;&gt;
+        &lt;ul class=&quot;py-1 text-sm text-gray-700 dark:text-gray-200&quot; aria-labelledby=&quot;dropdownDefault&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Dashboard&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Settings&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;block py-2 px-4 text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/40 dark:hover:text-white&quot;&gt;Sign out&lt;/a&gt;  
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

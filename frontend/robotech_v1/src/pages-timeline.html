@@ -1,0 +1,177 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:me-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Timeline</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Pages</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Timeline</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <h4 class="font-medium">Horizontal Timeline</h4>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4">                                   
+                                    <ol class="items-center sm:flex">
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                                <div class="z-10 flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full ring-0 ring-white dark:bg-primary-900 sm:ring-8 dark:ring-slate-800 shrink-0">
+                                                    <i class="icofont-brand-china-mobile dark:text-slate-400 text-primary-500"></i>
+                                                </div>
+                                                <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                                            </div>
+                                            <div class="mt-3 sm:pr-8">
+                                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Metrica Bootstrap Admin </h3>
+                                                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2, 2021</time>
+                                                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                                            </div>
+                                        </li>
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                                <div class="z-10 flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full ring-0 ring-white dark:bg-primary-900 sm:ring-8 dark:ring-slate-800 shrink-0">
+                                                    <i class="icofont-wall-clock dark:text-slate-400 text-primary-500"></i>
+                                                </div>
+                                                <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                                            </div>
+                                            <div class="mt-3 sm:pr-8">
+                                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Robotech Admin Dashboard</h3>
+                                                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 23, 2021</time>
+                                                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                                            </div>
+                                        </li>
+                                        <li class="relative mb-6 sm:mb-0">
+                                            <div class="flex items-center">
+                                                <div class="z-10 flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full ring-0 ring-white dark:bg-primary-900 sm:ring-8 dark:ring-slate-800 shrink-0">
+                                                    <i class="icofont-calendar dark:text-slate-400 text-primary-500"></i>
+                                                </div>
+                                                <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                                            </div>
+                                            <div class="mt-3 sm:pr-8">
+                                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Robotech Admin</h3>
+                                                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 5, 2022</time>
+                                                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col--> 
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-6 xl:col-span-6">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <h4 class="font-medium">Timeline</h4>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4">                                   
+                                    <ol class="relative border-l border-dashed border-gray-200 dark:border-gray-700 ml-3">                  
+                                        <li class="mb-10 ml-8">            
+                                            <span data-tooltip-target="tooltip-light" data-tooltip-style="light" class="flex absolute -left-4 justify-center items-center w-9 h-9 bg-green-100 rounded-full dark:bg-green-900">
+                                                <i class="icofont-wall-clock text-green-500"></i>
+                                                <span id="tooltip-light" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-[12px] font-medium text-gray-900 bg-white rounded-lg border border-slate-200 shadow-sm opacity-0 tooltip">
+                                                    Tooltip content
+                                                    <span class="tooltip-arrow" data-popper-arrow></span>
+                                                </span>
+                                            </span>
+                                            <div class="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-slate-800 dark:border-slate-700">
+                                                <span class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">just now</span>
+                                                <div class="text-sm font-normal text-gray-500 dark:text-gray-300 w-full md:w-[80%]">
+                                                    <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">Jack </a>
+                                                     updated the status of Refund #1234 to awaiting customer response
+                                                    <span class="bg-gray-100 text-gray-800 text-xs font-normal me-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300">USA Group</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-10 ml-8">
+                                            <span class="flex absolute -left-4 justify-center items-center w-9 h-9 bg-pink-100 rounded-full dark:bg-pink-900/50">
+                                                <i class="icofont-brand-china-mobile text-pink-500"></i>
+                                            </span>
+                                            <div class="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-slate-800 dark:border-slate-700">
+                                                <span class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">just now</span>
+                                                <div class="text-sm font-normal text-gray-500 dark:text-gray-300 w-full md:w-[80%]">
+                                                    <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">Donald</a>
+                                                     updated the status of Refund #1234 to awaiting customer response
+                                                    <span class="bg-gray-100 text-gray-800 text-xs font-normal me-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300">USA Group</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-10 ml-8">
+                                            <span class="flex absolute -left-4 justify-center items-center w-9 h-9 bg-blue-200 rounded-full dark:bg-slate-900">
+                                                <img class="rounded-full shadow-lg" src="assets/images/users/avatar-1.png" alt="Thomas Lean image"/>
+                                            </span>
+                                            <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-slate-800 dark:border-slate-700">
+                                                <div class="justify-between items-center mb-3 sm:flex">
+                                                    <span class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">2 hours ago</span>
+                                                    <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">Aword winner this year <a href="#" class="font-semibold text-gray-900 dark:text-white hover:underline">Bette Elam</a></div>
+                                                </div>
+                                                <div class="p-3 text-xs italic font-normal text-gray-500 bg-gray-50 rounded-lg border border-gray-200 dark:bg-slate-800 dark:border-slate-700 dark:text-gray-300">
+                                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-10 ml-8">
+                                            <span class="flex absolute -left-4 justify-center items-center w-9 h-9 bg-purple-100 rounded-full dark:bg-purple-900/50">
+                                                <i class="icofont-briefcase-1 text-purple-500"></i>
+                                            </span>
+                                            <div class="justify-between items-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm sm:flex dark:bg-slate-800 dark:border-slate-700">
+                                                <span class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">just now</span>
+                                                <div class="text-sm font-normal text-gray-500 dark:text-gray-300 w-full md:w-[80%]">
+                                                    <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">William  </a>
+                                                     updated the status of Refund #1234 to awaiting customer response
+                                                    <span class="bg-gray-100 text-gray-800 text-xs font-normal me-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300">USA Group</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->             
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

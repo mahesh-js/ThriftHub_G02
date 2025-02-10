@@ -1,0 +1,500 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/libs/sweetalert2/sweetalert2.min.css">
+        <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Sweet Alerts</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Advanced UI</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Sweet Alerts</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Trigger modal And Trigger toast</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Sweet_alerts-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" data-swal-template="#my-template" onclick="executeExample('TriggerModalToast')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                    <button type="button" data-swal-toast-template="#my-template" onclick="executeExample('TriggerModalToast')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                    <template id="my-template">
+                                        <swal-title>
+                                        Save changes to "Untitled 1" before closing?
+                                        </swal-title>
+                                        <swal-icon type="warning" color="red"></swal-icon>
+                                        <swal-button type="confirm">
+                                        Save As
+                                        </swal-button>
+                                        <swal-button type="cancel">
+                                        Cancel
+                                        </swal-button>
+                                        <swal-button type="deny">
+                                        Close without Saving
+                                        </swal-button>
+                                        <swal-param name="allowEscapeKey" value="false" />
+                                        <swal-param
+                                        name="customClass"
+                                        value='{ "popup": "my-popup" }' />
+                                    </template>
+                                </div><!--end card-body-->
+                                
+                                <div id="Sweet_alerts-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/sweetalert2/sweetalert2.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/animate.css/animate.min.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/sweetalert2/sweetalert2.all.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script src=&quot;assets/js/pages/sweetalert.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;button type=&quot;button&quot; data-swal-template=&quot;#my-template&quot; onclick=&quot;executeExample('TriggerModalToast')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+&lt;button type=&quot;button&quot; data-swal-toast-template=&quot;#my-template&quot; onclick=&quot;executeExample('TriggerModalToast')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+&lt;template id=&quot;my-template&quot;&gt;
+    &lt;swal-title&gt;
+    Save changes to &quot;Untitled 1&quot; before closing?
+    &lt;/swal-title&gt;
+    &lt;swal-icon type=&quot;warning&quot; color=&quot;red&quot;&gt;&lt;/swal-icon&gt;
+    &lt;swal-button type=&quot;confirm&quot;&gt;
+    Save As
+    &lt;/swal-button&gt;
+    &lt;swal-button type=&quot;cancel&quot;&gt;
+    Cancel
+    &lt;/swal-button&gt;
+    &lt;swal-button type=&quot;deny&quot;&gt;
+    Close without Saving
+    &lt;/swal-button&gt;
+    &lt;swal-param name=&quot;allowEscapeKey&quot; value=&quot;false&quot; /&gt;
+    &lt;swal-param
+    name=&quot;customClass&quot;
+    value='{ &quot;popup&quot;: &quot;my-popup&quot; }' /&gt;
+&lt;/template&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Alert with Icons</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Sweet_alerts-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" onclick="executeExample('success')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Success</button>
+                                    <button type="button" onclick="executeExample('error')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Error</button>
+                                    <button type="button" onclick="executeExample('warning')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Warning</button>
+                                    <button type="button" onclick="executeExample('info')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Info</button>
+                                    <button type="button" onclick="executeExample('question')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Question</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Sweet_alerts-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/sweetalert2/sweetalert2.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/animate.css/animate.min.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/sweetalert2/sweetalert2.all.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script src=&quot;assets/js/pages/sweetalert.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;executeExample('success')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;executeExample('error')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Error&lt;/button&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;executeExample('warning')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;executeExample('info')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;executeExample('question')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Question&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Examples</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Sweet_alerts-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="grid grid-cols-1 p-4">
+                                    <div class="sm:-mx-6 lg:-mx-8">
+                                        <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
+                                            <table class="w-full">                                    
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A basic message
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('basicMessage')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr> 
+                                                    <!-- 2 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A title with a text under
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('titleText')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 3 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A modal with a title, an error icon, a text, and a footer
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('errorType')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 4 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            Custom HTML description and buttons with ARIA labels
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('customHtml')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 5 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A dialog with three buttons
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('threeButtons')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 6 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A custom positioned dialog
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('customPosition')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 7 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            Custom animation with Animation
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('customAnimation')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 8 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A confirm dialog, with a function attached to the "Confirm"-button...
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('warningConfirm')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 9 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            ... and by passing a parameter, you can execute something else for "Cancel".
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('handleDismiss')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 10 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A message with a custom image
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('customImage')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 11 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A message with custom width, padding, background and animated Nyan Cat
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('customWidth')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 12 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            A message with auto close timer
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('timer')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 13 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            Right-to-left support for Arabic, Persian, Hebrew, and other RTL languages
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('rtl')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 14 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            Mixin example
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('mixin')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 15 -->
+                                                    <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
+                                                        <td class="p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400">
+                                                            Declarative template example
+                                                        </td>
+                                                        <td class="p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right">
+                                                            <button type="button" onclick="executeExample('declarativeTemplate')" class=" inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1">Click me</button>
+                                                        </td>
+                                                    </tr>                                       
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Sweet_alerts-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;!-- Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/sweetalert2/sweetalert2.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/libs/animate.css/animate.min.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/sweetalert2/sweetalert2.all.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script src=&quot;assets/js/pages/sweetalert.init.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;table class=&quot;w-full&quot;&gt;                                    
+    &lt;tbody&gt;
+        &lt;!-- 1 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A basic message
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('basicMessage')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt; 
+        &lt;!-- 2 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A title with a text under
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('titleText')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 3 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A modal with a title, an error icon, a text, and a footer
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('errorType')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 4 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                Custom HTML description and buttons with ARIA labels
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('customHtml')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 5 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A dialog with three buttons
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('threeButtons')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 6 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A custom positioned dialog
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('customPosition')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 7 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                Custom animation with Animation
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('customAnimation')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 8 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A confirm dialog, with a function attached to the &quot;Confirm&quot;-button...
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('warningConfirm')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 9 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                ... and by passing a parameter, you can execute something else for &quot;Cancel&quot;.
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('handleDismiss')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 10 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A message with a custom image
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('customImage')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 11 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A message with custom width, padding, background and animated Nyan Cat
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('customWidth')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 12 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                A message with auto close timer
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('timer')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 13 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                Right-to-left support for Arabic, Persian, Hebrew, and other RTL languages
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('rtl')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 14 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                Mixin example
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('mixin')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- 15 --&gt;
+        &lt;tr class=&quot;bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700&quot;&gt;
+            &lt;td class=&quot;p-3 text-sm text-gray-700 whitespace-nowrap dark:text-gray-400&quot;&gt;
+                Declarative template example
+            &lt;/td&gt;
+            &lt;td class=&quot;p-3 text-sm font-medium text-gray-600 whitespace-nowrap dark:text-gray-400 text-right&quot;&gt;
+                &lt;button type=&quot;button&quot; onclick=&quot;executeExample('declarativeTemplate')&quot; class=&quot; inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot;&gt;Click me&lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;                                       
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                                                      
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script> 
+        <script src="assets/js/pages/sweetalert.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

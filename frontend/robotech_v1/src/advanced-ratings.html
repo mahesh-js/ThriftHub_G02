@@ -1,0 +1,446 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link href="assets/libs/starability/starability-css/starability-all.css" rel="stylesheet" type="text/css" />
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Ratings</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Advanced UI</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Ratings</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Default Star Rating</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Ratings-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="starability-basic min-h-[30px]">
+                                            <input type="radio" id="rate5" name="rating" value="5" />
+                                            <label for="rate5" title="Amazing">5 stars</label>
+                                    
+                                            <input type="radio" id="rate4" name="rating" value="4" />
+                                            <label for="rate4" title="Very good">4 stars</label>
+                                    
+                                            <input type="radio" id="rate3" name="rating" value="3" />
+                                            <label for="rate3" title="Average">3 stars</label>
+                                    
+                                            <input type="radio" id="rate2" name="rating" value="2" />
+                                            <label for="rate2" title="Not good">2 stars</label>
+                                    
+                                            <input type="radio" id="rate1" name="rating" value="1" />
+                                            <label for="rate1" title="Terrible">1 star</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Ratings-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;assets/libs/starability/starability-css/starability-all.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- HTML --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;starability-basic min-h-[30px]&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;rate5&quot; name=&quot;rating&quot; value=&quot;5&quot; /&gt;
+        &lt;label for=&quot;rate5&quot; title=&quot;Amazing&quot;&gt;5 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;rate4&quot; name=&quot;rating&quot; value=&quot;4&quot; /&gt;
+        &lt;label for=&quot;rate4&quot; title=&quot;Very good&quot;&gt;4 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;rate3&quot; name=&quot;rating&quot; value=&quot;3&quot; /&gt;
+        &lt;label for=&quot;rate3&quot; title=&quot;Average&quot;&gt;3 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;rate2&quot; name=&quot;rating&quot; value=&quot;2&quot; /&gt;
+        &lt;label for=&quot;rate2&quot; title=&quot;Not good&quot;&gt;2 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;rate1&quot; name=&quot;rating&quot; value=&quot;1&quot; /&gt;
+        &lt;label for=&quot;rate1&quot; title=&quot;Terrible&quot;&gt;1 star&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Slot Machine Rating</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Ratings-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="starability-slot min-h-[30px]">
+                                            <input type="radio" id="slot-rate5" name="rating" value="5" />
+                                          <label for="slot-rate5" title="Amazing">5 stars</label>
+                                  
+                                          <input type="radio" id="slot-rate4" name="rating" value="4" />
+                                          <label for="slot-rate4" title="Very good">4 stars</label>
+                                  
+                                          <input type="radio" id="slot-rate3" name="rating" value="3" />
+                                          <label for="slot-rate3" title="Average">3 stars</label>
+                                  
+                                          <input type="radio" id="slot-rate2" name="rating" value="2" />
+                                          <label for="slot-rate2" title="Not good">2 stars</label>
+                                  
+                                          <input type="radio" id="slot-rate1" name="rating" value="1" />
+                                          <label for="slot-rate1" title="Terrible">1 star</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Ratings-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;assets/libs/starability/starability-css/starability-all.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- HTML --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;starability-slot min-h-[30px]&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;slot-rate5&quot; name=&quot;rating&quot; value=&quot;5&quot; /&gt;
+        &lt;label for=&quot;slot-rate5&quot; title=&quot;Amazing&quot;&gt;5 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;slot-rate4&quot; name=&quot;rating&quot; value=&quot;4&quot; /&gt;
+        &lt;label for=&quot;slot-rate4&quot; title=&quot;Very good&quot;&gt;4 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;slot-rate3&quot; name=&quot;rating&quot; value=&quot;3&quot; /&gt;
+        &lt;label for=&quot;slot-rate3&quot; title=&quot;Average&quot;&gt;3 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;slot-rate2&quot; name=&quot;rating&quot; value=&quot;2&quot; /&gt;
+        &lt;label for=&quot;slot-rate2&quot; title=&quot;Not good&quot;&gt;2 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;slot-rate1&quot; name=&quot;rating&quot; value=&quot;1&quot; /&gt;
+        &lt;label for=&quot;slot-rate1&quot; title=&quot;Terrible&quot;&gt;1 star&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Growing Star Rating</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Ratings-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="starability-grow  min-h-[30px]">
+                                          <input type="radio" id="growing-rate5" name="rating" value="5" />
+                                          <label for="growing-rate5" title="Amazing">5 stars</label>
+                                  
+                                          <input type="radio" id="growing-rate4" name="rating" value="4" />
+                                          <label for="growing-rate4" title="Very good">4 stars</label>
+                                  
+                                          <input type="radio" id="growing-rate3" name="rating" value="3" />
+                                          <label for="growing-rate3" title="Average">3 stars</label>
+                                  
+                                          <input type="radio" id="growing-rate2" name="rating" value="2" />
+                                          <label for="growing-rate2" title="Not good">2 stars</label>
+                                  
+                                          <input type="radio" id="growing-rate1" name="rating" value="1" />
+                                          <label for="growing-rate1" title="Terrible">1 star</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Ratings-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;assets/libs/starability/starability-css/starability-all.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- HTML --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;starability-grow  min-h-[30px]&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rate5&quot; name=&quot;rating&quot; value=&quot;5&quot; /&gt;
+        &lt;label for=&quot;growing-rate5&quot; title=&quot;Amazing&quot;&gt;5 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rate4&quot; name=&quot;rating&quot; value=&quot;4&quot; /&gt;
+        &lt;label for=&quot;growing-rate4&quot; title=&quot;Very good&quot;&gt;4 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rate3&quot; name=&quot;rating&quot; value=&quot;3&quot; /&gt;
+        &lt;label for=&quot;growing-rate3&quot; title=&quot;Average&quot;&gt;3 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rate2&quot; name=&quot;rating&quot; value=&quot;2&quot; /&gt;
+        &lt;label for=&quot;growing-rate2&quot; title=&quot;Not good&quot;&gt;2 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rate1&quot; name=&quot;rating&quot; value=&quot;1&quot; /&gt;
+        &lt;label for=&quot;growing-rate1&quot; title=&quot;Terrible&quot;&gt;1 star&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Growing & Rotating Star Rating </h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Ratings-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="starability-growRotate  min-h-[30px]">
+                                            <input type="radio" id="growing-rotating-rate5" name="rating" value="5" />
+                                            <label for="growing-rotating-rate5" title="Amazing">5 stars</label>
+                                    
+                                            <input type="radio" id="growing-rotating-rate4" name="rating" value="4" />
+                                            <label for="growing-rotating-rate4" title="Very good">4 stars</label>
+                                    
+                                            <input type="radio" id="growing-rotating-rate3" name="rating" value="3" />
+                                            <label for="growing-rotating-rate3" title="Average">3 stars</label>
+                                    
+                                            <input type="radio" id="growing-rotating-rate2" name="rating" value="2" />
+                                            <label for="growing-rotating-rate2" title="Not good">2 stars</label>
+                                    
+                                            <input type="radio" id="growing-rotating-rate1" name="rating" value="1" />
+                                            <label for="growing-rotating-rate1" title="Terrible">1 star</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Ratings-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;assets/libs/starability/starability-css/starability-all.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- HTML --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;starability-growRotate  min-h-[30px]&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rotating-rate5&quot; name=&quot;rating&quot; value=&quot;5&quot; /&gt;
+        &lt;label for=&quot;growing-rotating-rate5&quot; title=&quot;Amazing&quot;&gt;5 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rotating-rate4&quot; name=&quot;rating&quot; value=&quot;4&quot; /&gt;
+        &lt;label for=&quot;growing-rotating-rate4&quot; title=&quot;Very good&quot;&gt;4 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rotating-rate3&quot; name=&quot;rating&quot; value=&quot;3&quot; /&gt;
+        &lt;label for=&quot;growing-rotating-rate3&quot; title=&quot;Average&quot;&gt;3 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rotating-rate2&quot; name=&quot;rating&quot; value=&quot;2&quot; /&gt;
+        &lt;label for=&quot;growing-rotating-rate2&quot; title=&quot;Not good&quot;&gt;2 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;growing-rotating-rate1&quot; name=&quot;rating&quot; value=&quot;1&quot; /&gt;
+        &lt;label for=&quot;growing-rotating-rate1&quot; title=&quot;Terrible&quot;&gt;1 star&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Fading Star Rating</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Ratings-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="starability-fade min-h-[30px]">
+                                            <input type="radio" id="fading-rate5" name="rating" value="5" />
+                                            <label for="fading-rate5" title="Amazing">5 stars</label>
+                                    
+                                            <input type="radio" id="fading-rate4" name="rating" value="4" />
+                                            <label for="fading-rate4" title="Very good">4 stars</label>
+                                    
+                                            <input type="radio" id="fading-rate3" name="rating" value="3" />
+                                            <label for="fading-rate3" title="Average">3 stars</label>
+                                    
+                                            <input type="radio" id="fading-rate2" name="rating" value="2" />
+                                            <label for="fading-rate2" title="Not good">2 stars</label>
+                                    
+                                            <input type="radio" id="fading-rate1" name="rating" value="1" />
+                                            <label for="fading-rate1" title="Terrible">1 star</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Ratings-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;assets/libs/starability/starability-css/starability-all.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- HTML --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;starability-fade min-h-[30px]&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;fading-rate5&quot; name=&quot;rating&quot; value=&quot;5&quot; /&gt;
+        &lt;label for=&quot;fading-rate5&quot; title=&quot;Amazing&quot;&gt;5 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;fading-rate4&quot; name=&quot;rating&quot; value=&quot;4&quot; /&gt;
+        &lt;label for=&quot;fading-rate4&quot; title=&quot;Very good&quot;&gt;4 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;fading-rate3&quot; name=&quot;rating&quot; value=&quot;3&quot; /&gt;
+        &lt;label for=&quot;fading-rate3&quot; title=&quot;Average&quot;&gt;3 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;fading-rate2&quot; name=&quot;rating&quot; value=&quot;2&quot; /&gt;
+        &lt;label for=&quot;fading-rate2&quot; title=&quot;Not good&quot;&gt;2 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;fading-rate1&quot; name=&quot;rating&quot; value=&quot;1&quot; /&gt;
+        &lt;label for=&quot;fading-rate1&quot; title=&quot;Terrible&quot;&gt;1 star&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Checkmark Rating</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Ratings-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <form>
+                                        <div class="starability-checkmark min-h-[30px]">
+                                            <input type="radio" id="checkmark-rate5" name="rating" value="5" />
+                                          <label for="checkmark-rate5" title="Amazing">5 stars</label>
+                                  
+                                          <input type="radio" id="checkmark-rate4" name="rating" value="4" />
+                                          <label for="checkmark-rate4" title="Very good">4 stars</label>
+                                  
+                                          <input type="radio" id="checkmark-rate3" name="rating" value="3" />
+                                          <label for="checkmark-rate3" title="Average">3 stars</label>
+                                  
+                                          <input type="radio" id="checkmark-rate2" name="rating" value="2" />
+                                          <label for="checkmark-rate2" title="Not good">2 stars</label>
+                                  
+                                          <input type="radio" id="checkmark-rate1" name="rating" value="1" />
+                                          <label for="checkmark-rate1" title="Terrible">1 star</label>
+                                        </div>
+                                    </form>
+                                </div><!--end card-body-->
+                                
+                                <div id="Ratings-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;assets/libs/starability/starability-css/starability-all.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;!-- HTML --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;starability-checkmark min-h-[30px]&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;checkmark-rate5&quot; name=&quot;rating&quot; value=&quot;5&quot; /&gt;
+        &lt;label for=&quot;checkmark-rate5&quot; title=&quot;Amazing&quot;&gt;5 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;checkmark-rate4&quot; name=&quot;rating&quot; value=&quot;4&quot; /&gt;
+        &lt;label for=&quot;checkmark-rate4&quot; title=&quot;Very good&quot;&gt;4 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;checkmark-rate3&quot; name=&quot;rating&quot; value=&quot;3&quot; /&gt;
+        &lt;label for=&quot;checkmark-rate3&quot; title=&quot;Average&quot;&gt;3 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;checkmark-rate2&quot; name=&quot;rating&quot; value=&quot;2&quot; /&gt;
+        &lt;label for=&quot;checkmark-rate2&quot; title=&quot;Not good&quot;&gt;2 stars&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; id=&quot;checkmark-rate1&quot; name=&quot;rating&quot; value=&quot;1&quot; /&gt;
+        &lt;label for=&quot;checkmark-rate1&quot; title=&quot;Terrible&quot;&gt;1 star&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                            
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

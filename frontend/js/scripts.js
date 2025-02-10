@@ -471,6 +471,27 @@
   $('#accordion').on('hide.bs.collapse', toggleChevron);
   $('#accordion').on('show.bs.collapse', toggleChevron);
 
+/* Accordion1
+  -------------------------------------------------------*/
+  function toggleChevron(e) {
+    $(e.target)
+    .prev('.panel-heading')
+    .find("a")
+    .toggleClass('plus minus');
+  }
+  $('#accordion1').on('hide.bs.collapse', toggleChevron);
+  $('#accordion1').on('show.bs.collapse', toggleChevron);
+
+  /* Accordion2
+  -------------------------------------------------------*/
+  function toggleChevron(e) {
+    $(e.target)
+    .prev('.panel-heading')
+    .find("a")
+    .toggleClass('plus minus');
+  }
+  $('#accordion2').on('hide.bs.collapse', toggleChevron);
+  $('#accordion2').on('show.bs.collapse', toggleChevron);
 
   /* Toggle
   -------------------------------------------------------*/

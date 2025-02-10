@@ -1,0 +1,891 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Echarts</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Charts</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Echarts</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Line Chart-1</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="line_1" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+     &lt;div id=&quot;line_1&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('line_1');
+     var myChart = echarts.init(chartDom);
+     var option;
+     
+     const colors = ['#5470C6', '#EE6666'];
+     option = {
+       color: colors,
+       tooltip: {
+         trigger: 'none',
+         axisPointer: {
+           type: 'cross'
+         }
+       },
+       legend: {},
+       grid: {
+         top: 70,
+         bottom: 50
+       },
+       xAxis: [
+         {
+           type: 'category',
+           axisTick: {
+             alignWithLabel: true
+           },
+           axisLine: {
+             onZero: false,
+             lineStyle: {
+               color: colors[1]
+             }
+           },
+           axisPointer: {
+             label: {
+               formatter: function (params) {
+                 return (
+                   'Precipitation  ' +
+                   params.value +
+                   (params.seriesData.length ? '&Atilde;&macr;&Acirc;&frac14;&Aring;&iexcl;' + params.seriesData[0].data : '')
+                 );
+               }
+             }
+           },
+           // prettier-ignore
+           data: ['2016-1', '2016-2', '2016-3', '2016-4', '2016-5', '2016-6', '2016-7', '2016-8', '2016-9', '2016-10', '2016-11', '2016-12']
+         },
+         {
+           type: 'category',
+           axisTick: {
+             alignWithLabel: true
+           },
+           axisLine: {
+             onZero: false,
+             lineStyle: {
+               color: colors[0]
+             }
+           },
+           axisPointer: {
+             label: {
+               formatter: function (params) {
+                 return (
+                   'Precipitation  ' +
+                   params.value +
+                   (params.seriesData.length ? '&Atilde;&macr;&Acirc;&frac14;&Aring;&iexcl;' + params.seriesData[0].data : '')
+                 );
+               }
+             }
+           },
+           // prettier-ignore
+           data: ['2015-1', '2015-2', '2015-3', '2015-4', '2015-5', '2015-6', '2015-7', '2015-8', '2015-9', '2015-10', '2015-11', '2015-12']
+         }
+       ],
+       yAxis: [
+         {
+           type: 'value'
+         }
+       ],
+       series: [
+         {
+           name: 'Precipitation(2015)',
+           type: 'line',
+           xAxisIndex: 1,
+           smooth: true,
+           emphasis: {
+             focus: 'series'
+           },
+           data: [
+             2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
+           ]
+         },
+         {
+           name: 'Precipitation(2016)',
+           type: 'line',
+           smooth: true,
+           emphasis: {
+             focus: 'series'
+           },
+           data: [
+             3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 231.6, 46.6, 55.4, 18.4, 10.3, 0.7
+           ]
+         }
+       ]
+     };
+     
+     option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Line Chart-2</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="line_2" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+ &lt;div id=&quot;line_2&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Init js --&gt;
+var chartDom = document.getElementById('line_2');
+var myChart = echarts.init(chartDom);
+var option;
+
+let base = +new Date(1968, 9, 3);
+let oneDay = 24 * 3600 * 1000;
+let date = [];
+let data = [Math.random() * 300];
+for (let i = 1; i &lt; 20000; i++) {
+  var now = new Date((base += oneDay));
+  date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
+  data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]));
+}
+option = {
+  tooltip: {
+    trigger: 'axis',
+    position: function (pt) {
+      return [pt[0], '10%'];
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: date
+  },
+  yAxis: {
+    type: 'value',
+    boundaryGap: [0, '100%']
+  },
+  dataZoom: [
+    {
+      type: 'inside',
+      start: 0,
+      end: 10
+    },
+    {
+      start: 0,
+      end: 10
+    }
+  ],
+  series: [
+    {
+      name: 'Fake Data',
+      type: 'line',
+      symbol: 'none',
+      sampling: 'lttb',
+      itemStyle: {
+        color: 'rgb(255, 70, 131)'
+      },
+      areaStyle: {
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(255, 158, 68)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(255, 70, 131)'
+          }
+        ])
+      },
+      data: data
+    }
+  ]
+};
+
+option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Bar Chart-1</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="bar_1" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+     &lt;div id=&quot;bar_1&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    // Bar
+    var chartDom = document.getElementById('bar_1');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: 'bar',
+          showBackground: true,
+          backgroundStyle: {
+            color: 'rgba(180, 180, 180, 0.2)'
+          }
+        }
+      ]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Bar Chart-2</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="bar_2" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+     &lt;div id=&quot;bar_2&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('bar_2');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          crossStyle: {
+            color: '#999'
+          }
+        }
+      },
+      toolbox: {
+        feature: {
+          dataView: { show: true, readOnly: false },
+          magicType: { show: true, type: ['line', 'bar'] },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      legend: {
+        data: ['Evaporation', 'Precipitation', 'Temperature']
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          axisPointer: {
+            type: 'shadow'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Precipitation',
+          min: 0,
+          max: 250,
+          interval: 50,
+          axisLabel: {
+            formatter: '{value} ml'
+          }
+        },
+        {
+          type: 'value',
+          name: 'Temperature',
+          min: 0,
+          max: 25,
+          interval: 5,
+          axisLabel: {
+            formatter: '{value} &Atilde;&sbquo;&Acirc;&deg;C'
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'Evaporation',
+          type: 'bar',
+          tooltip: {
+            valueFormatter: function (value) {
+              return value + ' ml';
+            }
+          },
+          data: [
+            2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3
+          ]
+        },
+        {
+          name: 'Precipitation',
+          type: 'bar',
+          tooltip: {
+            valueFormatter: function (value) {
+              return value + ' ml';
+            }
+          },
+          data: [
+            2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
+          ]
+        },
+        {
+          name: 'Temperature',
+          type: 'line',
+          yAxisIndex: 1,
+          tooltip: {
+            valueFormatter: function (value) {
+              return value + ' &Atilde;&sbquo;&Acirc;&deg;C';
+            }
+          },
+          data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+        }
+      ]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Bar Chart-3</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="bar_3" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+     &lt;div id=&quot;bar_3&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('bar_3');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      legend: {},
+      tooltip: {},
+      dataset: {
+        source: [
+          ['product', '2015', '2016', '2017'],
+          ['Matcha Latte', 43.3, 85.8, 93.7],
+          ['Milk Tea', 83.1, 73.4, 55.1],
+          ['Cheese Cocoa', 86.4, 65.2, 82.5],
+          ['Walnut Brownie', 72.4, 53.9, 39.1]
+        ]
+      },
+      xAxis: { type: 'category' },
+      yAxis: {},
+      // Declare several bar series, each will be mapped
+      // to a column of dataset.source by default.
+      series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Bar Chart-4</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="bar_4" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+     &lt;div id=&quot;bar_4&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('bar_4');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {
+        data: ['Profit', 'Expenses', 'Income']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'value'
+        }
+      ],
+      yAxis: [
+        {
+          type: 'category',
+          axisTick: {
+            show: false
+          },
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        }
+      ],
+      series: [
+        {
+          name: 'Profit',
+          type: 'bar',
+          label: {
+            show: true,
+            position: 'inside'
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [200, 170, 240, 244, 200, 220, 210]
+        },
+        {
+          name: 'Income',
+          type: 'bar',
+          stack: 'Total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [320, 302, 341, 374, 390, 450, 420]
+        },
+        {
+          name: 'Expenses',
+          type: 'bar',
+          stack: 'Total',
+          label: {
+            show: true,
+            position: 'left'
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [-120, -132, -101, -134, -190, -230, -210]
+        }
+      ]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Pie Chart-1</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="pie_1" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+    &lt;div id=&quot;pie_1&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('pie_1');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      title: {
+        text: 'Referer of a Website',
+        subtext: 'Fake Data',
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        orient: 'vertical',
+        left: 'left'
+      },
+      series: [
+        {
+          name: 'Access From',
+          type: 'pie',
+          radius: '50%',
+          data: [
+            { value: 1048, name: 'Search Engine' },
+            { value: 735, name: 'Direct' },
+            { value: 580, name: 'Email' },
+            { value: 484, name: 'Union Ads' },
+            { value: 300, name: 'Video Ads' }
+          ],
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+          }
+        }
+      ]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Pie Chart-2</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-8"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="pie_2" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-8" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+    &lt;div id=&quot;pie_2&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('pie_2');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        top: '5%',
+        left: 'center'
+      },
+      series: [
+        {
+          name: 'Access From',
+          type: 'pie',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          itemStyle: {
+            borderRadius: 10,
+            borderColor: '#fff',
+            borderWidth: 2
+          },
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: '40',
+              fontWeight: 'bold'
+            }
+          },
+          labelLine: {
+            show: false
+          },
+          data: [
+            { value: 1048, name: 'Search Engine' },
+            { value: 735, name: 'Direct' },
+            { value: 580, name: 'Email' },
+            { value: 484, name: 'Union Ads' },
+            { value: 300, name: 'Video Ads' }
+          ]
+        }
+      ]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Pie Chart-3</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Echarts-9"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div id="pie_3" class="h-80"></div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Echarts-9" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/echarts/echarts.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+    &lt;div id=&quot;pie_3&quot; class=&quot;h-80&quot;&gt;&lt;/div&gt;
+    
+    &lt;!-- Init js --&gt;
+    
+    var chartDom = document.getElementById('pie_3');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      legend: {
+        top: 'bottom'
+      },
+      toolbox: {
+        show: true,
+        feature: {
+          mark: { show: true },
+          dataView: { show: true, readOnly: false },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      series: [
+        {
+          name: 'Nightingale Chart',
+          type: 'pie',
+          radius: [50, 120],
+          center: ['50%', '50%'],
+          roseType: 'area',
+          itemStyle: {
+            borderRadius: 8
+          },
+          data: [
+            { value: 40, name: 'rose 1' },
+            { value: 38, name: 'rose 2' },
+            { value: 32, name: 'rose 3' },
+            { value: 30, name: 'rose 4' },
+            { value: 28, name: 'rose 5' },
+            { value: 26, name: 'rose 6' },
+            { value: 22, name: 'rose 7' },
+            { value: 18, name: 'rose 8' }
+          ]
+        }
+      ]
+    };
+    
+    option &amp;&amp; myChart.setOption(option);
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                
+                                <div class="flex-auto p-4 ">
+                                    <h3 class="text-slate-800 dark:text-slate-400 text-center text-2xl md:text-2xl lg:text-lg xl:text-2xl font-bold leading-8 py-2 md:py-2 lg:py-1 xl:py-2">
+                                        You can use more echarts.
+                                    </h3>
+                                    <div class="my-4 text-center">
+                                        <a href="https://echarts.apache.org/examples/en/index.html" target="_blank" class="px-3 py-2 lg:px-4 bg-primary-500 text-white text-sm font-semibold rounded hover:bg-primary-600">More Charts</a>
+                                    </div>
+                                </div><!--end card-body-->        
+                            </div> <!--end card--> 
+                        </div><!--end col-->
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/echarts/echarts.min.js"></script>
+        <script src="assets/js/pages/echarts.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

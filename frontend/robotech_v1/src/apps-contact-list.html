@@ -1,0 +1,185 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Contact List</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Apps</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Contact List</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-1.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-2.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-3.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-4.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-5.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-6.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-7.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->   
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4 text-center">
+                                    <img src="assets/images/users/avatar-8.png" alt="" class="h-20 inline-block rounded-full mb-4">
+                                    <h5 class="text-2xl font-semibold text-slate-700 dark:text-gray-400 leading-5">Merri Diamond </h5>
+                                    <span class="text-slate-500 text-sm">New York USA</span>
+                                    <div class="mt-3">
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-phone text-lg text-slate-500"></i> Phone  :</span>  +1 23456 78910</p>
+                                        <p class="text-sm text-slate-500 font-medium block"><span class="text-slate-700 dark:text-slate-400"><i class="ti ti-mail text-lg text-slate-500"></i> Email  :</span> support@mannatthemes.com</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 font-medium block mb-3 mt-2"><span class="text-slate-700 dark:text-slate-400">Project  :</span> Bank data management</p>
+                                    <button class="inline-block focus:outline-none text-white hover:bg-brand-600 hover:text-white bg-brand-500 border border-brand-500   text-sm font-medium py-2 px-3">Records</button>
+                                    <button class="inline-block focus:outline-none text-brand-500 hover:bg-brand-500 hover:text-white bg-transparent border border-brand-500 dark:bg-transparent dark:text-brand-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-brand-500  text-sm font-medium py-2 px-3">Message</button>
+                                </div><!--end card-body-->
+                            </div> <!--end card-->
+                        </div><!--end col-->           
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

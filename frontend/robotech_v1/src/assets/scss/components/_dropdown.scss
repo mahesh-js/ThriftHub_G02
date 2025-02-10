@@ -1,0 +1,7 @@
+.dropdown-menu{
+    @apply absolute z-50 m-0 shadow;
+  }
+  
+  .dropdown-menu.dropdown-menu-right{
+    @apply absolute ltr:right-0 rtl:right-auto rtl:left-0;
+  }

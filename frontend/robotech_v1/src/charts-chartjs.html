@@ -1,0 +1,601 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Chartjs</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Charts</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Chartjs</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Line Chart</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Chartjs-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <canvas id="lineChart" width="300" height="300"></canvas> 
+                                </div><!--end card-body-->
+                                
+                                <div id="Chartjs-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;canvas id=&quot;lineChart&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt; 
+
+&lt;!-- Init js --&gt;
+var ctx1 = document.getElementById('lineChart').getContext('2d');
+    var myChart = new Chart(ctx1, {
+        type: 'line',
+        data: {
+        labels: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Monthly Report',
+                data: [12, 19, 13, 9, 12, 11, 12, 19, 13, 9, 12, 11],
+                backgroundColor: [
+                'rgba(11, 81, 183, 0.1)',
+                ],
+                borderColor: [
+                    'rgba(11, 81, 183, 1)',
+                ],
+                borderWidth: 2,
+                borderDash :[3],
+                borderJoinStyle: &quot;round&quot;,
+                borderCapStyle: &quot;round&quot;,
+                pointBorderColor: 'rgba(11, 81, 183, 1)',
+                pointRadius: 3,
+                pointBorderWidth: 1,
+                tension: 0.3,
+            },
+            {
+            label: 'Monthly Report',
+            data: [8, 12, 15, 11, 8, 14, 16, 13, 10, 7, 19, 16],
+            backgroundColor: [
+                'rgba(28, 202, 184, 0.1)',
+            ],
+            borderColor: [
+                'rgba(28, 202, 184, 1)',
+            ],
+            borderWidth: 2,
+            borderDash  :[0],
+            borderJoinStyle: &quot;round&quot;,
+            borderCapStyle: &quot;round&quot;,
+            pointBorderColor: 'rgba(28, 202, 184, 1)',
+            pointRadius: 3,
+            pointBorderWidth: 1,
+            tension: 0.3,
+        }]
+        },
+        options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: {                   
+                    color: '#7c8ea7',
+                }
+            }
+        }  ,
+        scales: {            
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, values) {
+                        return '$' + value;
+                    },
+                    color: '#7c8ea7',
+                },               
+                grid: {
+                    drawBorder: 'border',
+                    color: 'rgba(132, 145, 183, 0.15)',
+                    borderDash: [3],
+                    borderColor: 'rgba(132, 145, 183, 0.15)',
+                } ,
+                beginAtZero: true,
+            },
+            x: {   
+                ticks: {
+                color: '#7c8ea7',
+                },            
+                grid: {
+                    display: false,
+                    color: 'rgba(132, 145, 183, 0.09)',
+                    borderDash: [3],
+                    borderColor: 'rgba(132, 145, 183, 0.09)',
+                }    
+            }            
+            },
+            
+        }
+    });
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Bar Chart</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Chartjs-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <canvas id="bar" height="300"></canvas>
+                                </div><!--end card-body-->
+                                
+                                <div id="Chartjs-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+    &lt;!-- JS --&gt;
+    &lt;script src=&quot;assets/libs/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- HTML --&gt;
+    &lt;canvas id=&quot;bar&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+    
+    &lt;!-- Init js --&gt;
+    var ctx2 = document.getElementById('bar').getContext('2d');
+     var myChart = new Chart(ctx2, {
+         type: 'bar',
+         data: {
+             labels: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+             datasets: [{
+                 label: 'Monthly Report',
+                 data: [12, 19, 13, 9, 12, 11, 12, 19, 13, 9, 12, 11],
+                 borderRadius: 100,
+                 borderSkipped: false,
+                 backgroundColor: '#367de4',
+                 borderColor: '#367de4',
+                 borderWidth: 1,
+                 indexAxis: 'x',
+                 barThickness: 15,
+                 grouped: true,
+                 maxBarThickness: 9,  
+                 barPercentage: 50
+             },
+             {
+                label: 'Monthly Report',
+                data: [8, 12, 15, 11, 8, 14, 16, 13, 10, 7, 19, 16],
+                borderRadius: 100,
+                borderSkipped: false,
+                backgroundColor: '#1ccab8',
+                borderColor: '#1ccab8',
+                borderWidth: 1,
+                indexAxis: 'x',
+                barThickness: 15,
+                grouped: true,
+                maxBarThickness: 9,            
+            }]
+         },
+        
+         options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: {                   
+                    color: '#7c8ea7',
+                }
+              },
+              title: {
+                display: false,
+                text: 'Chart.js Bar Chart'
+              }
+            },
+            scales: {            
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, values) {
+                            return '$' + value;
+                        },
+                        color: '#7c8ea7',
+                    },               
+                    grid: {
+                        drawBorder: 'border',
+                        color: 'rgba(132, 145, 183, 0.15)',
+                        borderDash: [3],
+                        borderColor: 'rgba(132, 145, 183, 0.15)',
+                    } ,
+                    beginAtZero: true,
+                },
+                x: {   
+                  ticks: {
+                    color: '#7c8ea7',
+                  },            
+                    grid: {
+                        display: false,
+                        color: 'rgba(132, 145, 183, 0.09)',
+                        borderDash: [3],
+                        borderColor: 'rgba(132, 145, 183, 0.09)',
+                    }    
+                }            
+             },
+        },
+     });
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Donut Chart</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Chartjs-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <canvas id="doughnut" height="300"></canvas>
+                                </div><!--end card-body-->
+                                
+                                <div id="Chartjs-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;canvas id=&quot;doughnut&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+
+&lt;!-- Init js --&gt;
+var ctx3 = document.getElementById('doughnut').getContext('2d');
+    var myChart = new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+        labels: [            
+            &quot;Desktops&quot;,
+            &quot;Laptop&quot;,
+            &quot;Tablets&quot;,        
+            &quot;Mobiles&quot;,],
+            datasets: [{
+                data: [80, 50, 100, 121],
+                backgroundColor: [
+                &quot;#4d79f6&quot;,
+                &quot;#ff5da0&quot;,
+                &quot;#e0e7fd&quot;,
+                &quot;#4ac7ec&quot;,
+            ],
+            cutout: 100,
+            radius: 100,
+            borderColor: &quot;transparent&quot;,
+            borderRadius: 0,
+            hoverBackgroundColor: [
+                &quot;#4d79f6&quot;,
+                &quot;#ff5da0&quot;,
+                &quot;#e0e7fd&quot;,
+                &quot;#4ac7ec&quot;,
+            ],             
+            },]
+        },
+        options: {
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: {                   
+                    color: '#7c8ea7',
+                }
+            }
+        }         
+        }
+    });
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Polar Chart</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Chartjs-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <canvas id="polarArea" height="300"> </canvas>
+                                </div><!--end card-body-->
+                                
+                                <div id="Chartjs-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+&lt;canvas id=&quot;polarArea&quot; height=&quot;300&quot;&gt; &lt;/canvas&gt;
+
+&lt;!-- Init js --&gt;
+var ctx4 = document.getElementById('polarArea').getContext('2d');
+    var myChart = new Chart(ctx4, {
+        type: 'polarArea',
+        data: {
+        labels: [            
+        &quot;Desktops&quot;,
+        &quot;Laptop&quot;,
+        &quot;Tablets&quot;,        
+        &quot;Mobiles&quot;,],
+            datasets: [{
+                data: [80, 50, 100, 121],
+                backgroundColor: [
+                &quot;#4d79f6&quot;,
+                &quot;#ff5da0&quot;,
+                &quot;#e0e7fd&quot;,
+                &quot;#4ac7ec&quot;,
+            ],
+            borderColor: &quot;transparent&quot;,
+            hoverBackgroundColor: [
+                &quot;#4d79f6&quot;,
+                &quot;#ff5da0&quot;,
+                &quot;#e0e7fd&quot;,
+                &quot;#4ac7ec&quot;,
+            ],             
+            },]
+        },
+        options: {
+        maintainAspectRatio: false,  
+        plugins: {
+            legend: {
+                labels: {                   
+                    color: '#7c8ea7',
+                }
+            }
+        }       
+        }
+    });
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Pie Chart</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Chartjs-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <canvas id="pie" height="300"></canvas>
+                                </div><!--end card-body-->
+                                
+                                <div id="Chartjs-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+    &lt;canvas id=&quot;pie&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+
+&lt;!-- Init js --&gt;
+var ctx5 = document.getElementById('pie').getContext('2d');
+    var myChart = new Chart(ctx5, {
+        type: 'pie',
+        data: {
+        labels: [            
+            &quot;Desktops&quot;,
+            &quot;Laptop&quot;,
+            &quot;Tablets&quot;,        
+            &quot;Mobiles&quot;,],
+            datasets: [{
+                data: [80, 50, 100, 121],
+                backgroundColor: [
+                &quot;#4d79f6&quot;,
+                &quot;#ff5da0&quot;,
+                &quot;#e0e7fd&quot;,
+                &quot;#4ac7ec&quot;,
+            ],
+            cutout: 0,
+            radius: 100,
+            borderColor: &quot;transparent&quot;,
+            borderRadius: 0,
+            hoverBackgroundColor: [
+                &quot;#4d79f6&quot;,
+                &quot;#ff5da0&quot;,
+                &quot;#e0e7fd&quot;,
+                &quot;#4ac7ec&quot;,
+            ],             
+            },]
+        },
+        options: {
+        maintainAspectRatio: false,         
+        plugins: {
+            legend: {
+                labels: {                   
+                    color: '#7c8ea7',
+                }
+            }
+        }
+        }
+    });
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Radar Chart</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Chartjs-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <canvas id="radar" height="300"></canvas> 
+                                </div><!--end card-body-->
+                                
+                                <div id="Chartjs-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;!-- JS --&gt;
+&lt;script src=&quot;assets/libs/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- HTML --&gt;
+    &lt;canvas id=&quot;radar&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt; 
+    
+&lt;!-- Init js --&gt;
+var ctx6 = document.getElementById('radar').getContext('2d');
+    var myChart = new Chart(ctx6, {
+        type: 'radar',
+        data: {
+        labels: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Monthly Report',
+                data: [12, 19, 13, 9, 12, 11, 12, 19, 13, 9, 12, 11],
+                backgroundColor: [
+                'rgba(11, 81, 183, 0.1)',
+                ],
+                borderColor: [
+                    'rgba(11, 81, 183, 1)',
+                ],
+                borderWidth: 2,
+                borderDash :[3],
+                borderJoinStyle: &quot;round&quot;,
+                borderCapStyle: &quot;round&quot;,
+                pointBorderColor: 'rgba(11, 81, 183, 1)',
+                pointRadius: 3,
+                pointBorderWidth: 1,
+                tension: 0.3,
+                fill: true,
+                hitRadius: 5,
+            },
+            {
+            label: 'Monthly Report',
+            data: [8, 12, 15, 11, 8, 14, 16, 13, 10, 7, 19, 16],
+            backgroundColor: [
+                'rgba(28, 202, 184, 0.1)',
+            ],
+            borderColor: [
+                'rgba(28, 202, 184, 1)',
+            ],
+            borderWidth: 2,
+            borderDash  :[0],
+            borderJoinStyle: &quot;round&quot;,
+            borderCapStyle: &quot;round&quot;,
+            pointBorderColor: 'rgba(28, 202, 184, 1)',
+            pointRadius: 3,
+            pointBorderWidth: 1,
+            tension: 0.3,
+        }]
+        },
+        options: {
+        maintainAspectRatio: false, 
+        scales: { 
+            r: {
+                angleLines: {
+                    display: true,
+                    color: 'rgba(132, 145, 183, 0.15)',
+                    borderDash: [2]
+                },
+            } ,     
+            }, 
+        plugins: {
+            legend: {
+                labels: {                   
+                    color: '#7c8ea7',
+                }
+            }
+        }
+        }
+    });
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                            
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="assets/libs/chart.js/chart.min.js"></script>
+        <script src="assets/js/pages/chartjs.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

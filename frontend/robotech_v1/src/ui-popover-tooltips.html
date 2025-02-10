@@ -1,0 +1,427 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Robotech"})        
+        <!-- Css -->
+        <link href="assets/libs/prismjs/themes/prism-twilight.min.css" type="text/css" rel="stylesheet">
+        <link href="assets/libs/tippy.js/tippy.css" type="text/css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+    
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/sidebar.html')
+        @@include('./partials/topbar.html')
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Popover & Tooltips</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">UI Kit</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Popover & Tooltips</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-4 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Placement</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tooltip-1"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-placement="top">Top</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-placement="right">Right</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-placement="bottom">Bottom</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-placement="left">Left</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tooltip-1" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-placement=&quot;top&quot;&gt;Top&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-placement=&quot;right&quot;&gt;Right&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-placement=&quot;bottom&quot;&gt;Bottom&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-placement=&quot;left&quot;&gt;Left&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Arrows</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tooltip-2"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="fade">Default</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-arrowType="round" data-tippy-animation="fade" >Round</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-arrowTransform="scaleX(1.5)" data-tippy-animation="fade">Wide</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-arrowTransform="scaleX(0.75)" data-tippy-animation="fade">Skinny</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-arrowTransform="scale(0.75)" data-tippy-animation="fade">Small</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-arrowTransform="scale(1.35)" data-tippy-animation="fade">Large</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tooltip-2" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;fade&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-arrowType=&quot;round&quot; data-tippy-animation=&quot;fade&quot; &gt;Round&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-arrowTransform=&quot;scaleX(1.5)&quot; data-tippy-animation=&quot;fade&quot;&gt;Wide&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-arrowTransform=&quot;scaleX(0.75)&quot; data-tippy-animation=&quot;fade&quot;&gt;Skinny&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-arrowTransform=&quot;scale(0.75)&quot; data-tippy-animation=&quot;fade&quot;&gt;Small&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-arrowTransform=&quot;scale(1.35)&quot; data-tippy-animation=&quot;fade&quot;&gt;Large&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+                            
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Placement Hover & Click</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tooltip-3"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="false" data-tippy-interactive="true">Interactive (hover)</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-interactive="true" data-tippy-trigger="click">Interactive (click)</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tooltip-3" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">                                       
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;false&quot; data-tippy-interactive=&quot;true&quot;&gt;Interactive (hover)&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-interactive=&quot;true&quot; data-tippy-trigger=&quot;click&quot;&gt;Interactive (click)&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Arrows with Animation </h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tooltip-4"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="shift-away">Default</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="shift-toward" >Round</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="fade">Wide</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="scale">Skinny</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="perspective">Small</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="shift-away" data-tippy-inertia="true" data-tippy-duration="[600, 300]">Large</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-inertia="true" data-tippy-duration="[600, 300]">Default</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="scale" data-tippy-inertia="true" data-tippy-duration="[600, 300]">Default</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-animation="perspective" data-tippy-inertia="true" data-tippy-duration="[600, 300]">Default</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tooltip-4" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class=" max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;shift-away&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;shift-toward&quot; &gt;Round&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;fade&quot;&gt;Wide&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;scale&quot;&gt;Skinny&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;perspective&quot;&gt;Small&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;shift-away&quot; data-tippy-inertia=&quot;true&quot; data-tippy-duration=&quot;[600, 300]&quot;&gt;Large&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;shift-toward&quot; data-tippy-inertia=&quot;true&quot; data-tippy-duration=&quot;[600, 300]&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;scale&quot; data-tippy-inertia=&quot;true&quot; data-tippy-duration=&quot;[600, 300]&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-animation=&quot;perspective&quot; data-tippy-inertia=&quot;true&quot; data-tippy-duration=&quot;[600, 300]&quot;&gt;Default&lt;/button&gt;
+</code>
+</pre>
+
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Duration</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tooltip-5"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-duration="0">0ms</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-duration="200">200ms</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-duration="1000">1000ms</button>
+                                    <button type="button" class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="My Tooltip!" data-tippy-arrow="true" data-tippy-duration="[500, 200]">[500ms, 200ms]</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tooltip-5" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-duration=&quot;0&quot;&gt;0ms&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-duration=&quot;200&quot;&gt;200ms&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-duration=&quot;1000&quot;&gt;1000ms&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;My Tooltip!&quot; data-tippy-arrow=&quot;true&quot; data-tippy-duration=&quot;[500, 200]&quot;&gt;[500ms, 200ms]&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->
+
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Themes</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Tooltip-6"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <button class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="See-through!" data-tippy-theme="translucent">Translucent</button>
+                                    <button class="tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1" data-tippy-content="Nice n&#39; light" data-tippy-theme="light" data-tippy-arrow="true">Light</button>
+                                </div><!--end card-body-->
+                                
+                                <div id="Tooltip-6" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;button class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;See-through!&quot; data-tippy-theme=&quot;translucent&quot;&gt;Translucent&lt;/button&gt;
+&lt;button class=&quot;tippy-btn inline-block focus:outline-none text-slate-500 hover:bg-slate-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-slate-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-slate-500  text-sm font-medium py-1 px-3 rounded mb-1&quot; data-tippy-content=&quot;Nice n&amp;#39; light&quot; data-tippy-theme=&quot;light&quot; data-tippy-arrow=&quot;true&quot;&gt;Light&lt;/button&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card--> 
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative mb-4">
+                                <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                    <div class="flex-none md:flex">
+                                        <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Popover Themes</h4>
+                                        <div class="dropdown inline-block">
+                                            <button data-fc-type="collapse" data-fc-target="Popover-7"  class="dropdown-toggle px-3 py-1 text-xs font-medium text-gray-500 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-50 hover:text-slate-800 focus:z-10   dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">                                               
+                                                <i class="fas fa-code text-xs me-2"></i> Code 
+                                            </button>                                            
+                                        </div>
+                                    </div>
+                                </div><!--end header-title-->
+                                <div class="flex-auto p-4 ">
+                                    <div class="w-full">
+                                        <button class="px-3 py-1 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700  ease-linear transition-all duration-150" type="button" data-placement="" onclick="openPopover(event,'popover-id')">
+                                            Popover
+                                        </button>
+                                        <div class="hidden bg-slate-50 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-id">
+                                            <div>
+                                                <div class="bg-slate-50 text-slate-800  font-semibold p-3 mb-0 border-b border-dashed border-slate-300 uppercase rounded-t-lg">
+                                                    Popover title
+                                                </div>
+                                                <div class="text-slate-600 p-3">
+                                                    And here's some amazing content. It's very engaging. Right?
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500  ease-linear transition-all duration-150" type="button" data-placement="" onclick="openPopover(event,'popover-primary')">
+                                            Popover
+                                        </button>
+                                        <div class="hidden bg-primary-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-primary">
+                                            <div>
+                                                <div class="bg-primary-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg">
+                                                    Popover title
+                                                </div>
+                                                <div class="text-white p-3">
+                                                    And here's some amazing content. It's very engaging. Right?
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="text-pink-500 hover:text-white border border-pink-500 hover:bg-pink-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-pink-500 dark:text-pink-500 dark:hover:text-white dark:hover:bg-pink-500  ease-linear transition-all duration-150" type="button" data-placement="" onclick="openPopover(event,'popover-pink')">
+                                            Popover
+                                        </button>
+                                        <div class="hidden bg-pink-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-pink">
+                                            <div>
+                                                <div class="bg-pink-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg">
+                                                    Popover title
+                                                </div>
+                                                <div class="text-slate-200 p-3">
+                                                    And here's some amazing content. It's very engaging. Right?
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="text-green-500 hover:text-white border border-green-500 hover:bg-green-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-500  ease-linear transition-all duration-150" type="button" data-placement="" onclick="openPopover(event,'popover-green')">
+                                            Popover
+                                        </button>
+                                        <div class="hidden bg-green-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-green">
+                                            <div>
+                                                <div class="bg-green-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg">
+                                                    Popover title
+                                                </div>
+                                                <div class="text-slate-200 p-3">
+                                                    And here's some amazing content. It's very engaging. Right?
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="text-yellow-500 hover:text-white border border-yellow-500 hover:bg-yellow-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-yellow-500 dark:text-yellow-500 dark:hover:text-white dark:hover:bg-yellow-500  ease-linear transition-all duration-150" type="button" data-placement="" onclick="openPopover(event,'popover-yellow')">
+                                            Popover
+                                        </button>
+                                        <div class="hidden bg-yellow-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-yellow">
+                                            <div>
+                                                <div class="bg-yellow-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg">
+                                                    Popover title
+                                                </div>
+                                                <div class="text-slate-200 p-3">
+                                                    And here's some amazing content. It's very engaging. Right?
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                
+                                <div id="Popover-7" class="transition-all duration-500 overflow-hidden bg-slate-50 dark:bg-slate-900 hidden">
+                                    <div class="grid">
+<pre class="max-h-96 overflow-auto rounded-lg">
+<code class="language-html">
+&lt;div class=&quot;w-full&quot;&gt;
+    &lt;button class=&quot;px-3 py-1 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10  dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700  ease-linear transition-all duration-150&quot; type=&quot;button&quot; data-placement=&quot;&quot; onclick=&quot;openPopover(event,'popover-id')&quot;&gt;
+        Popover
+    &lt;/button&gt;
+    &lt;div class=&quot;hidden bg-slate-50 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg&quot; id=&quot;popover-id&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;bg-slate-50 text-slate-800  font-semibold p-3 mb-0 border-b border-dashed border-slate-300 uppercase rounded-t-lg&quot;&gt;
+                Popover title
+            &lt;/div&gt;
+            &lt;div class=&quot;text-slate-600 p-3&quot;&gt;
+                And here's some amazing content. It's very engaging. Right?
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button class=&quot;text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500  ease-linear transition-all duration-150&quot; type=&quot;button&quot; data-placement=&quot;&quot; onclick=&quot;openPopover(event,'popover-primary')&quot;&gt;
+        Popover
+    &lt;/button&gt;
+    &lt;div class=&quot;hidden bg-primary-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg&quot; id=&quot;popover-primary&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;bg-primary-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg&quot;&gt;
+                Popover title
+            &lt;/div&gt;
+            &lt;div class=&quot;text-white p-3&quot;&gt;
+                And here's some amazing content. It's very engaging. Right?
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button class=&quot;text-pink-500 hover:text-white border border-pink-500 hover:bg-pink-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-pink-500 dark:text-pink-500 dark:hover:text-white dark:hover:bg-pink-500  ease-linear transition-all duration-150&quot; type=&quot;button&quot; data-placement=&quot;&quot; onclick=&quot;openPopover(event,'popover-pink')&quot;&gt;
+        Popover
+    &lt;/button&gt;
+    &lt;div class=&quot;hidden bg-pink-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg&quot; id=&quot;popover-pink&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;bg-pink-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg&quot;&gt;
+                Popover title
+            &lt;/div&gt;
+            &lt;div class=&quot;text-slate-200 p-3&quot;&gt;
+                And here's some amazing content. It's very engaging. Right?
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;text-green-500 hover:text-white border border-green-500 hover:bg-green-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-500  ease-linear transition-all duration-150&quot; type=&quot;button&quot; data-placement=&quot;&quot; onclick=&quot;openPopover(event,'popover-green')&quot;&gt;
+        Popover
+    &lt;/button&gt;
+    &lt;div class=&quot;hidden bg-green-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg&quot; id=&quot;popover-green&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;bg-green-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg&quot;&gt;
+                Popover title
+            &lt;/div&gt;
+            &lt;div class=&quot;text-slate-200 p-3&quot;&gt;
+                And here's some amazing content. It's very engaging. Right?
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button class=&quot;text-yellow-500 hover:text-white border border-yellow-500 hover:bg-yellow-500 focus:outline-none  font-medium rounded text-sm px-3 py-1 text-center mr-2 mb-2 dark:border-yellow-500 dark:text-yellow-500 dark:hover:text-white dark:hover:bg-yellow-500  ease-linear transition-all duration-150&quot; type=&quot;button&quot; data-placement=&quot;&quot; onclick=&quot;openPopover(event,'popover-yellow')&quot;&gt;
+        Popover
+    &lt;/button&gt;
+    &lt;div class=&quot;hidden bg-yellow-500 border-0 mb-3 shadow  z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg&quot; id=&quot;popover-yellow&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;bg-yellow-500 text-white  font-semibold p-3 mb-0 border-b border-dashed border-slate-200 uppercase rounded-t-lg&quot;&gt;
+                Popover title
+            &lt;/div&gt;
+            &lt;div class=&quot;text-slate-200 p-3&quot;&gt;
+                And here's some amazing content. It's very engaging. Right?
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                                    </div>
+                                </div>                              
+                            </div> <!--end card-->                            
+                        </div><!--end col-->
+                    </div><!--end inner-grid--> 
+                    <!-- footer -->
+                    @@include("partials/footer/footer.html")
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        @@include("partials/script-file.html")
+        <script src="assets/libs/prismjs/prism.js"></script> 
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="assets/libs/tippy.js/tippy.umd.min.js"></script>
+        <script src="assets/js/pages/tooltip-popover.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

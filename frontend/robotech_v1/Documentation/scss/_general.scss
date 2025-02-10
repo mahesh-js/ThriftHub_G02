@@ -1,0 +1,51 @@
+//
+// general.scss
+//
+
+body {
+    font-family: $font-family-secondary;
+    overflow-x: hidden !important;
+    font-size: $font-size-base;
+    color: $dark;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $font-family-base;
+    line-height: 1.5;
+    font-weight: 700;
+}
+::selection {
+    background: $gray-600;
+    color: $white;
+}
+a {
+    text-decoration: none !important;
+}
+p {
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+}
+
+.sub-title{
+    font-size: 16px;
+}
+
+.header-title{
+    font-size: 22px;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.header-title:after {
+    content: '';
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border: 1px dotted $danger;
+    border-radius: 63px;
+}
+
+.prettyprint{
+     background-color: $body-bg;
+}
