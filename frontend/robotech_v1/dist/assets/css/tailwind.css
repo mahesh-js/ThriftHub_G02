@@ -19180,12 +19180,12 @@ body[data-sidebar-size=collapsed] .main-sidebar {
 
 .group[data-sidebar=brand] .group-data-\[sidebar\=brand\]\:bg-brand{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(92 61 195 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity)) !important;
 }
 
 .group[data-sidebar=dark] .group-data-\[sidebar\=dark\]\:bg-\[\#603dc3\]{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(96 61 195 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity)) !important;
 }
 
 .group[data-sidebar=dark] .group-data-\[sidebar\=dark\]\:bg-dark-sidebar{
