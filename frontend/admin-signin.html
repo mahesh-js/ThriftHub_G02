@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin - ThriftHub</title>
+    <link rel="stylesheet" href="/ThriftHub_G02/frontend/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Signin</h2>
+        <form action="signin.html" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+            <button type="submit">Signin</button>
+        </form>
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="signup.html">Signup</a></p>
+        <p><a href="forgot-password.html">Admin</a></p>
+    </div>
+    <script src="/ThriftHub_G02/frontend/js/script.js"></script>
+</body>
+
+</html>
