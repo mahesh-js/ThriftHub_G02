@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth group" data-sidebar="brand" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>ThriftHub Malaysia | Dashboard</title>
+        <meta  name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta  content="Tailwind Multipurpose Admin & Dashboard Template"  name="description"/>
+        <meta content="" name="Mannatthemes" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        
+        <!-- Css -->
+        <!-- Main Css -->
+        <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css">
+        <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/tailwind.min.css">
+
+    </head>
+    
+    <body data-layout-mode="light"  data-sidebar-size="default" data-theme-layout="vertical" class="bg-[#EEF0FC] dark:bg-gray-900">
+    
+        <!-- leftbar-tab-menu -->
+        
+
+        <div class="min-h-full z-[99]  fixed inset-y-0 print:hidden bg-gradient-to-t from-[#111111] from-10% via-[#111111] via-40% to-[#111111] to-100% dark:bg-[#111111] main-sidebar duration-300 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111]">
+          <div class=" text-center border-b bg-[#111111] border-r h-[64px] flex justify-center items-center brand-logo dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111] group-data-[sidebar=brand]:border-slate-700/40">
+              <a href="index.html" class="logo">
+                  
+                  <span>
+                      <img src="assets/images/logo.png" alt="logo-large" class="logo-lg h-[52px] logo-light hidden dark:inline-block ms-1 group-data-[sidebar=dark]:inline-block group-data-[sidebar=brand]:inline-block">
+                      <img src="assets/images/logo.png" alt="logo-large"
+                          class="logo-lg h-[52px] logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden group-data-[sidebar=brand]:hidden">
+                  </span>
+              </a>
+          </div>
+          <div class="border-r pb-14 h-[100vh] dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:border-slate-700/40" data-simplebar>
+              <div class="p-4 block">
+                    <ul class="navbar-nav">
+                        <li class="uppercase text-[11px]  text-primary-500 dark:text-primary-400 mt-0 leading-4 mb-2 group-data-[sidebar=dark]:text-primary-400 group-data-[sidebar=brand]:text-primary-300">
+                           <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">DashboardS & Apps</span></li>
+                        <li>
+                            <div id="parent-accordion" data-fc-type="accordion">
+                                <a href="#"
+                                   class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200 "
+                                   data-fc-type="collapse" data-fc-parent="parent-accordion">
+                                    <span data-lucide="home"
+                                          class="w-5 h-5 text-center text-slate-800 dark:text-slate-400 me-2 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
+                                    <span>Admin</span>
+                                    <i class="icofont-thin-down ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400 fc-collapse-open:rotate-180 "></i>
+                                </a>
+
+                                <div id="Admin-flush" class="hidden  overflow-hidden">
+                                    <ul class="nav flex-col flex flex-wrap ps-0 mb-0 ms-2">
+                                        <li class="nav-item relative block">
+                                            <a href="index.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400 "></i>
+                                                Dashboard
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="pages-profile.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Profile
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-products.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Products
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-add-product.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                               Add New Product
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-customers.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Customers
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-customers-details.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Customers Details
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-orders.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Orders
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-order-details.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Order Details
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="admin-staff.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Staff
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="customers-home.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Homepage
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="apps-invoice.html"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Invoice
+                                            </a>
+                                        </li>
+                                    </ul>                            
+                                </div>
+                                
+                                
+                                <a href="customers-wishlist.html"
+                                       class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200">
+                                        <span data-lucide="grid"
+                                              class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
+                                        <span>Wishlist</span>
+                                </a>
+                                <a href="customers-order-track.html"
+                                       class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200">
+                                        <span data-lucide="grid"
+                                              class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
+                                        <span>Order track</span>
+                                </a>
+                                <a href="customers-invoice.html"
+                                       class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200">
+                                        <span data-lucide="grid"
+                                              class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
+                                        <span>Invoice</span>
+                                </a> 
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+            <nav id="topbar" class="topbar border-b  dark:border-slate-700/40  fixed inset-x-0  duration-300
+             block print:hidden z-50">
+            <div class="mx-0 flex max-w-full flex-wrap items-center lg:mx-auto relative top-[50%] start-[50%] transform -translate-x-1/2 -translate-y-1/2">
+              <div class="ltr:mx-2  rtl:mx-2">
+                <button id="toggle-menu-hide" class="button-menu-mobile flex rounded-full md:me-0 relative">
+                  <!-- <i class="ti ti-chevrons-left text-3xl  top-icon"></i> -->
+                  <i data-lucide="menu" class="top-icon w-5 h-5"></i>
+                </button>
+              </div>
+              <div class="flex items-center md:w-[40%] lg:w-[30%] xl:w-[20%]">
+                <div class="relative ltr:mx-2 rtl:mx-2 self-center">
+                  <button class="px-2 py-1 bg-primary-500/10 border border-transparent collapse:bg-green-100 text-primary text-sm rounded hover:bg-blue-600 hover:text-white"><i class="ti ti-plus me-1"></i> New Task</button>
+                </div>
+              </div>
+      
+              <div class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2">
+                <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
+                  <button
+                    type="button"
+                    class="dropdown-toggle flex rounded-full md:me-0"
+                    aria-expanded="false"
+                     data-fc-autoclose="both" data-fc-type="dropdown">
+                    <span data-lucide="search" class="top-icon w-5 h-5"></span>
+                  </button>
+
+                  <div
+                    class="left-auto right-0 z-50 my-1 hidden min-w-[300px]
+                    list-none divide-y  divide-gray-100 rounded-md border-slate-700
+                    md:border-white text-base shadow dark:divide-gray-600 bg-white
+                    dark:bg-slate-800" onclick="event.stopPropagation()">
+                    <div class="relative">
+                      <div
+                        class="pointer-events-none absolute inset-y-0 left-0 flex items-center
+                        pl-3">
+                        <i class="ti ti-search text-gray-400 z-10"></i>
+                      </div>
+                      <input
+                        type="text"
+                        id="email-adress-icon"
+                        class="block w-full rounded-lg border border-slate-200 dark:border-slate-700/60 bg-slate-200/10 p-1.5
+                        pl-10 text-slate-600 dark:text-slate-400 outline-none focus:border-slate-300
+                        focus:ring-slate-300 dark:bg-slate-800/20 sm:text-sm"
+                        placeholder="Search..."
+                        />
+                    </div>
+                  </div>
+                </div>
+                <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4">
+
+                  <button id="toggle-theme" class="flex rounded-full md:me-0 relative">
+                    <span data-lucide="moon" class="top-icon w-5 h-5 light "></span>
+                    <span data-lucide="sun" class="top-icon w-5 h-5 dark hidden"></span>
+                  </button>
+                </div>
+                <div class="ltr:me-2 ltr:lg:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
+                  <button
+                    type="button"
+                    class="dropdown-toggle flex rounded-full md:me-0"
+                    id="Notifications"
+                    aria-expanded="false"
+                     data-fc-autoclose="both" data-fc-type="dropdown">
+                    <span data-lucide="bell" class="top-icon w-5 h-5"></span>
+                  </button>
+
+                  <div
+                    class="left-auto right-0 z-50 my-1 hidden w-64
+                    list-none divide-y h-52 divide-gray-100 rounded border border-slate-700/10
+                   text-base shadow dark:divide-gray-600 bg-white
+                    dark:bg-slate-800"
+                    id="navNotifications" data-simplebar>
+                    <ul class="py-1" aria-labelledby="navNotifications">
+                      <li class="py-2 px-4">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                          <div class="flex">
+                              <div class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3">
+                                <span data-lucide="shopping-cart" class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"></span>
+                              </div>
+                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                              <p class="text-sm font-medium text-gray-900 truncate
+                                dark:text-gray-300">Karen Robinson</p>
+                              <p class="text-gray-500 mb-0 text-xs truncate
+                                dark:text-gray-400">
+                                Hey ! i'm available here
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="py-2 px-4">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                          <div class="flex">
+                            <img class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
+                              src="assets/images/users/avatar-3.png" alt="logo" />
+                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                              <p class="text-sm font-medium text-gray-900 truncate
+                                dark:text-gray-300">Your order is placed</p>
+                              <p class="text-gray-500 mb-0 text-xs truncate
+                                dark:text-gray-400">
+                                Dummy text of the printing and industry.
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="py-2 px-4">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                          <div class="flex">
+                            <div class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3">
+                              <span data-lucide="user" class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"></span>
+                            </div>
+                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                              <p class="text-sm font-medium text-gray-900 truncate
+                                dark:text-gray-300">Robert McCray</p>
+                              <p class="text-gray-500 mb-0 text-xs truncate
+                                dark:text-gray-400">
+                                Good Morning!
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="py-2 px-4">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                          <div class="flex">
+                            <img class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
+                              src="assets/images/users/avatar-9.png" alt="logo" />
+                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                              <p class="text-sm font-medium  text-gray-900 truncate
+                                dark:text-gray-300">Meeting with designers</p>
+                              <p class="text-gray-500 mb-0 text-xs truncate
+                                dark:text-gray-400">
+                                It is a long established fact that a reader.
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="me-2  dropdown relative">
+                  <button
+                    type="button"
+                    class="dropdown-toggle flex items-center rounded-full text-sm
+                    focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0"
+                    id="user-profile"
+                    aria-expanded="false"
+                     data-fc-autoclose="both" data-fc-type="dropdown">
+                    <img
+                      class="h-8 w-8 rounded-full"
+                      src="assets/images/users/avatar-1.png"
+                      alt="user photo"
+                      />
+                    <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
+                      <span class="block font-medium text-slate-600 dark:text-gray-300">Maria Gibson</span>
+                      <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span>
+                    </span>
+                  </button>
+
+                  <div
+                    class="left-auto right-0 z-50 my-1 hidden list-none
+                    divide-y divide-gray-100 rounded border border-slate-700/10
+                    text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40"
+                    id="navUserdata">
+            
+                    <ul class="py-1" aria-labelledby="navUserdata">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
+                          dark:text-gray-200 dark:hover:bg-gray-900/20
+                          dark:hover:text-white">
+                          <span data-lucide="user"
+                                          class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
+                          Profile</a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
+                          dark:text-gray-200 dark:hover:bg-gray-900/20
+                          dark:hover:text-white">
+                          <span data-lucide="settings"
+                                          class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
+                          Settings</a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
+                          dark:text-gray-200 dark:hover:bg-gray-900/20
+                          dark:hover:text-white">
+                          <span data-lucide="dollar-sign"
+                                          class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
+                          Earnings</a>
+                      </li>
+                      <li>
+                        <a
+                          href="auth-lockscreen.html"
+                          class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600
+                          dark:text-red-500 dark:hover:bg-gray-900/20
+                          dark:hover:text-red-500">
+                          <span data-lucide="power"
+                                          class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>
+                          Sign out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        
+        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+            <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+                <div class="xl:w-full">        
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center py-4 w-full">
+                            <div class="w-full">                    
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center ">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Invoice</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">ThriftHub Malaysia</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Apps</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Invoice</li>
+                                        </ol>
+                                    </div><!--end /div-->
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
+                                        </div>
+                                    </div><!--end /div-->
+                                </div><!--end /div-->
+                            </div><!--end /div-->
+                        </div><!--end /div-->
+                    </div><!--end /div-->
+                </div><!--end container-->
+            
+                <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
+                    <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                        <div class="sm:col-span-12  md:col-span-12 lg:col-span-12 xl:col-span-12 ">
+                            <div class="bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40  rounded-md w-full relative">                                
+                                <div class="flex-auto p-4">
+                                    <div class="flex flex-wrap">
+                                        <div class="w-full md:w-1/2 mb-4 md:mb-0 print:w-1/2">
+                                            <div class="flex items-center">
+                                                <div class="rounded">
+                                                    <img class="w-9 h-9 overflow-hidden object-cover rounded object-center" src="assets/images/favicon.ico" alt="logo" />
+                                                </div>
+                                                <div class="ms-3">
+                                                    <div class="cursor-pointer hover:text-gray-900 focus:text-gray-500 text-gray-800 dark:text-gray-100 focus:outline-none">
+                                                        <h5 class=" font-bold text-[18px] dark:text-slate-300">ThriftHub Malaysia</h5>
+                                                    </div>
+                                                    <p class="focus:outline-none text-gray-500 dark:text-gray-400 text-sm font-medium">Freelancer Invoice</p>
+                                                </div>
+                                            </div>   
+                                        </div><!--end col--> 
+                                        <div class="w-full md:w-1/2 print:w-1/2">
+                                            <div class="text-left md:text-right print:text-right">
+                                                <p class="text-gray-500 text-sm font-medium mb-0">2821 Kensington Road,</p>
+                                                <p class="text-gray-500 text-sm font-medium mb-0">Avondale Estates, GA 30002 USA.</p>
+                                            </div>
+                                        </div><!--end col-->   
+                                    </div><!--end grid-->
+                                </div><!--end card-body-->
+                                <div class="flex-auto p-4">
+                                    <div class="flex flex-wrap mb-4">
+                                        <div class="w-full md:w-1/3 self-center mb-4 md:mb-0 print:w-1/3">
+                                            <h6 class="font-medium dark:text-slate-400 text-sm mb-1"><span class="font-normal">Order Date :</span> 11/05/2023</h6>
+                                            <h6 class="font-medium dark:text-slate-400 text-sm"><span class="font-normal">Order ID :</span> # 23654789</h6>
+                                        </div><!--end col--> 
+                                        <div class="w-full md:w-1/3 mb-4 md:mb-0 print:w-1/3">
+                                            <div class="dark:text-slate-400">
+                                                <address class="text-sm">
+                                                    <strong>Billed To :</strong><br>
+                                                    Joe Smith<br>
+                                                    795 Folsom Ave<br>
+                                                    San Francisco, CA 94107<br>
+                                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                </address>
+                                            </div>
+                                        </div><!--end col--> 
+                                        <div class="w-full md:w-1/3 print:w-1/3">
+                                            <div class="dark:text-slate-400">
+                                                <address class="text-sm">
+                                                    <strong>Shipped To:</strong><br>
+                                                    Joe Smith<br>
+                                                    795 Folsom Ave<br>
+                                                    San Francisco, CA 94107<br>
+                                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                </address>
+                                            </div>
+                                        </div><!--end col-->    
+                                    </div><!--end grid-->
+                                    <div class="border-b border-dashed border-slate-200 my-5 dark:border-slate-700"></div> 
+                                    <div class="relative overflow-x-auto  flex flex-wrap sm:rounded-lg">
+                                        <table class="min-w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-slate-700 dark:text-gray-400 ">
+                                                <tr>
+                                                    <th scope="col" class="px-6 py-3 flex-1">
+                                                       Item
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 text-right w-auto md:w-[10%]">
+                                                        Quantity
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 text-right w-auto md:w-[18%]">
+                                                        Rate
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 text-right w-auto md:w-[10%]">
+                                                        Text
+                                                    </th>
+                                                    <th scope="col" class="px-6 py-3 text-right w-auto md:w-[10%]">
+                                                        Amount
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b dark:bg-gray-800 dark:border-slate-700 odd:bg-white even:bg-gray-50 odd:dark:bg-slate-800 even:dark:bg-slate-700">
+                                                    <th scope="row" class="px-4 py-2 text-gray-900 dark:text-white whitespace-nowrap">
+                                                        <h5 class=" text-sm font-medium">New Colorfull Shoes</h5>
+                                                        <p class="mb-0 text-slate-400 font-normal">Size-04-15 (Model 2023)</p>
+                                                    </th>
+                                                    <td class="px-4 py-2 text-right">
+                                                        1
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $50
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $4.00
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $54.00
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-slate-800 even:dark:bg-slate-700">
+                                                    <th scope="row" class="px-4 py-2 text-gray-900 dark:text-white whitespace-nowrap">
+                                                        <h5 class="mt-0 mb-1 text-sm font-medium">Imported VR Box</h5>
+                                                        <p class="mb-0 text-slate-400 font-normal">35px 5D (Model 2023)</p>
+                                                    </th>
+                                                    <td class="px-4 py-2 text-right">
+                                                        2
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $39
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $3.00
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $81.00
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-slate-800 even:dark:bg-slate -700">
+                                                    <th scope="row" class="px-4 py-2 text-gray-900 dark:text-white whitespace-nowrap">
+                                                        <h5 class="mt-0 mb-1 text-sm font-medium">White Table Camera</h5>
+                                                        <p class="mb-0 text-slate-400 font-normal">256px, 301px (Model 2023)</p>
+                                                    </th>
+                                                    <td class="px-4 py-2 text-right">
+                                                        1
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $99
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $9.00
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        $108.00
+                                                    </td>
+                                                </tr>
+                                                <tr class="border-b dark:border-gray-700 ">
+                                                    <th scope="row" class="px-4 py-2 text-gray-900 dark:text-white whitespace-nowrap">
+                                                       
+                                                    </th>
+                                                    <td class="px-4 py-2 text-right">
+                                                        
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right print:hidden">
+                                                        
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        <span class="font-bold text-slate-600 dark:text-slate-400">Sub Total</span>
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        <span class="font-bold text-slate-600 dark:text-slate-300">$243.00</span>
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr class="border-b dark:border-gray-700 ">
+                                                    <th scope="row" class="px-4 py-2 text-gray-900 dark:text-white whitespace-nowrap">
+                                                       
+                                                    </th>
+                                                    <td class="px-4 py-2 text-right">
+                                                        
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right print:hidden">
+                                                        
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        <span class="font-bold text-slate-600 dark:text-slate-400">Text</span>
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        <span class="font-semibold text-slate-600 dark:text-slate-300 me-1">(12%)</span>
+                                                        <span class="font-bold text-slate-600 dark:text-slate-300">$29.16</span>
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr class="">
+                                                    <th scope="row" class="px-4 py-2 text-gray-900 dark:text-white whitespace-nowrap">
+                                                       
+                                                    </th>
+                                                    <td class="px-4 py-2 text-right">
+                                                        
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right print:hidden">
+                                                        
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        <span class="font-bold text-xxl text-slate-800 dark:text-slate-400">Total</span>
+                                                    </td>
+                                                    <td class="px-4 py-2 text-right">
+                                                        <span class="font-bold text-xxl text-slate-800 dark:text-slate-300">$272.16</span>
+                                                    </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> 
+                                    <div class="border-b border-dashed border-slate-200 my-5 dark:border-slate-600"></div>
+                                    <div class="flex flex-wrap mb-4">
+                                        <div class="w-full md:w-1/2 print:w-full">
+                                            <h5 class="text-slate-800 font-medium text-sm">Terms And Condition :</h5>
+                                            <ul class="ps-3 dark:text-slate-400">
+                                                <li><small class="text-xs"><span class="font-bold">1.</span> All accounts are to be paid within 7 days from receipt of invoice. </small></li>
+                                                <li><small class="text-xs"><span class="font-bold">2.</span> To be paid by cheque or credit card or direct payment online.</small></li>
+                                                <li><small class="text-xs"><span class="font-bold">3.</span> If account is not paid within 7 days the credits details supplied as confirmation of work undertaken will be charged the agreed quoted fee noted above.</small></li>                                            
+                                            </ul>
+                                        </div>
+                                        <div class="w-full md:w-1/2 print:w-full self-center mt-5 md:mt-0">
+                                            <div class="float-none md:float-right w-[30%]">
+                                                <small class="dark:text-slate-400">Account Manager</small>
+                                                <img src="assets/images/signature-1.png" alt="" class="mt-2 mb-1 h-4">
+                                                <p class="border-t border-dashed border-slate-400 dark:text-slate-400">Signature</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class=" px-4 py-2 lg:px-4 bg-brand-500  text-white text-base  transition hover:bg-brand-500 hover:text-white border border-brand border-dashed font-medium mb-2 print:hidden" onclick="location.href='javascript:window.print()'">
+                                        Print
+                                    </button>
+                                    <button class=" px-4 py-2 lg:px-6 bg-transparent  text-red text-base  transition hover:bg-red-500 hover:text-white  border-red border-[2px] font-medium mb-2 print:hidden">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div> <!--end card-->
+                        </div><!--end col-->  
+                    </div><!--end inner-grid-->
+                    <!-- footer -->
+                    <div class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
+                        <div class="container">
+                          <!-- Footer Start -->
+                          <footer
+                            class="footer bg-transparent  text-center  font-medium text-slate-600 dark:text-slate-400 md:text-left "
+                          >
+                            &copy;
+                            <script>
+                              var year = new Date();document.write(year.getFullYear());
+                            </script>
+                            ThriftHub Malaysia
+                            <span class="float-right hidden text-slate-600 dark:text-slate-400 md:inline-block"
+                              >Crafted with <i class="ti ti-heart text-red-500"></i> by
+                              YUYIN</span>
+                          </footer>
+                          <!-- end Footer -->
+                        </div>
+                      </div>
+  
+  
+                </div><!--end container-->
+            </div><!--end page-wrapper-->
+        </div><!--end /div-->
+        
+
+        <!-- JAVASCRIPTS -->
+        <!-- <div class="menu-overlay"></div> -->
+        <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+        <script src="assets/js/app.js"></script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>
