@@ -1107,6 +1107,7 @@ header .flex-child.flex-right {
 .logo-dark {
     max-height: 50px;
     width: 160px;
+    margin-left: -4%;
 }
 
 .navbar-header,
@@ -5688,6 +5689,7 @@ abbr.required {
     display: inline-block;
     font-size: 15px;
     line-height: 32px;
+    margin-left: -3%;
 }
 
 .copyright a {
