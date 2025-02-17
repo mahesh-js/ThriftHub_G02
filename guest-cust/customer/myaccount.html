@@ -334,7 +334,7 @@
                             <span><strong>Username:</strong> ${user.displayName || "Not set"}</span>
                             <span><strong>Name:</strong> ${user.displayName || "Not set"}</span>
                             <span><strong>Email Address:</strong> ${user.email}</span>
-                            <span><strong>Phone:</strong> </span>
+                            
                             <button id="editProfileBtn">EDIT</button>
                             
                             <h3 style="margin-top:5%;margin-bottom:2%">Change Password</h3>
@@ -357,9 +357,6 @@
 
                                 <label for="email">Email Address:</label>
                                 <input type="email" id="email" value="${user.email}" disabled>
-
-                                <label for="phone">Phone:</label>
-                                <input type="text" id="phone" placeholder="Enter your phone number">
 
                                 <button type="submit" style="margin-bottom:2%">Save Changes</button>
                             </form>
@@ -413,7 +410,7 @@
                 document.getElementById("logoutBtn").addEventListener("click", () => {
                     firebase.auth().signOut()
                         .then(() => {
-                            window.location.href = "/guest-cust/signin.html"; // Redirect to login page
+                            window.location.href = "/ThriftHub_G02/guest-cust/signin.html"; // Redirect to login page
                         })
                         .catch((error) => alert("Error logging out: " + error.message));
                 });

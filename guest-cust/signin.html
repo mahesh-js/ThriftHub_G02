@@ -26,8 +26,10 @@
             messagingSenderId: "518014691134",
             appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
         };
-
         firebase.initializeApp(firebaseConfig);
+
+        // Google Auth Provider
+        const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
         function LoginForm() {
             const [email, setEmail] = React.useState("");
@@ -38,7 +40,6 @@
             const handleSubmit = async (e) => {
                 e.preventDefault();
                 setError("");
-
                 try {
                     const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
                     const user = userCredential.user;
@@ -48,16 +49,15 @@
                 } catch (error) {
                     setError(error.message);
                 }
-            };  
+            };
 
             const togglePasswordVisibility = () => {
                 setShowPassword(!showPassword);
             };
 
-             const handleForgotPassword = async () => {
+            const handleForgotPassword = async () => {
                 const email = prompt("Enter your email address to reset your password:");
                 if (!email) return;
-
                 try {
                     await firebase.auth().sendPasswordResetEmail(email);
                     alert("A password reset link has been sent to your email.");
@@ -65,7 +65,19 @@
                     alert("Error sending password reset email: " + error.message);
                 }
             };
-            
+
+            const handleGoogleSignIn = async () => {
+                try {
+                    const result = await firebase.auth().signInWithPopup(googleAuthProvider);
+                    const user = result.user;
+                    if (user) {
+                        window.location.href = "/guest-cust/customer/index.html";
+                    }
+                } catch (error) {
+                    setError(error.message);
+                }
+            };
+
             return (
                 <div className="container">
                     <h2>Sign In</h2>
@@ -96,6 +108,10 @@
                     <p>Don't have an account? <a href="signup.html">Signup</a></p>
                     <p><a href="/guest-cust/admin-signin.html">Admin</a></p>
                     <p><a href="/guest-cust/staff-signin.html">Staff</a></p>
+                    <hr />
+                    <button onClick={handleGoogleSignIn} className="google-signin-button">
+                        Sign in with Google
+                    </button>
                 </div>
             );
         }

@@ -26,8 +26,10 @@
             messagingSenderId: "518014691134",
             appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
         };
-
         firebase.initializeApp(firebaseConfig);
+
+        // Google Auth Provider
+        const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
         function SignupForm() {
             const [name, setName] = React.useState("");
@@ -40,29 +42,22 @@
             const handleSubmit = async (e) => {
                 e.preventDefault();
                 setError("");
-
                 try {
                     // Create user with email and password
                     const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
                     const user = userCredential.user;
-
                     // Update user profile with name
                     await user.updateProfile({
                         displayName: name
                     });
-
-                     // Send email verification
+                    // Send email verification
                     await user.sendEmailVerification();
-
                     // Set state to indicate that the verification email has been sent
                     setVerificationSent(true);
-
                     // Optionally, sign out the user immediately after signup
                     await firebase.auth().signOut();
-
                     // Show success message
-                    alert("A verification email has been sent to your email address. Please verify your email before logging in.")
-
+                    alert("A verification email has been sent to your email address. Please verify your email before logging in.");
                     // Redirect after successful signup
                     window.location.href = "/guest-cust/signin.html";
                 } catch (error) {
@@ -72,6 +67,29 @@
 
             const togglePasswordVisibility = () => {
                 setShowPassword(!showPassword);
+            };
+
+            const handleGoogleSignUp = async () => {
+                try {
+                    const result = await firebase.auth().signInWithPopup(googleAuthProvider);
+                    const user = result.user;
+
+                    // Check if the user is new or existing
+                    if (result.additionalUserInfo.isNewUser) {
+                        // Update user profile with a default display name if needed
+                        await user.updateProfile({
+                            displayName: user.displayName || "New User"
+                        });
+
+                        // Optionally send a welcome email or perform other actions
+                        alert("Welcome! You have successfully signed up with Google.");
+                    }
+
+                    // Redirect to the customer dashboard or another page
+                    window.location.href = "/guest-cust/customer/index.html";
+                } catch (error) {
+                    setError(error.message);
+                }
             };
 
             return (
@@ -108,6 +126,10 @@
                         <button type="submit">Sign Up</button>
                     </form>
                     <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                    <hr />
+                    <button onClick={handleGoogleSignUp} className="google-signup-button">
+                        Sign Up with Google
+                    </button>
                 </div>
             );
         }
