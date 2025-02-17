@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - ThriftHub</title>
     <link rel="stylesheet" href="/guest-cust/css/styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Add React -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -125,11 +126,12 @@
                         </div>
                         <button type="submit">Sign Up</button>
                     </form>
-                    <p>Already have an account? <a href="signin.html">Sign In</a></p>
-                    <hr />
+                   
+                    <div class="line-with-or"> or </div>
                     <button onClick={handleGoogleSignUp} className="google-signup-button">
                         Sign Up with Google
                     </button>
+                    <p>Already have an account? <a href="signin.html">Sign In</a></p>
                 </div>
             );
         }

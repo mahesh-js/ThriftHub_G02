@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - ThriftHub</title>
     <link rel="stylesheet" href="/guest-cust/css/styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Add React -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -14,6 +15,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
+
 <body>
     <div id="root"></div>
     <script type="text/babel">
@@ -102,16 +104,19 @@
                                 👁️
                             </span>
                         </div>
+                        <p><a href="#" onClick={handleForgotPassword}>Forgot Password?</a></p>
                         <button type="submit">Sign In</button>
                     </form>
-                    <p><a href="#" onClick={handleForgotPassword}>Forgot Password?</a></p>
-                    <p>Don't have an account? <a href="signup.html">Signup</a></p>
-                    <p><a href="/guest-cust/admin-signin.html">Admin</a></p>
-                    <p><a href="/guest-cust/staff-signin.html">Staff</a></p>
-                    <hr />
+                    
+                    
+                   
+                    <div class="line-with-or"> or </div>
                     <button onClick={handleGoogleSignIn} className="google-signin-button">
                         Sign in with Google
                     </button>
+                    <p>Don't have an account? <a href="signup.html">Signup</a></p>
+                    <p1><a href="/guest-cust/admin-signin.html">Admin / </a></p1>
+                    <p1><a href="/guest-cust/staff-signin.html">Staff</a></p1>
                 </div>
             );
         }
