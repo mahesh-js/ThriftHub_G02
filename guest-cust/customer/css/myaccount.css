@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Account Information Form */
+.account-info {
+    width: calc(100% - 300px);
+    max-width: 700px;
+}
+
+.account-info h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.required-fields {
+    color: red;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.edit-button:hover {
+    background-color: darkgray;
+}

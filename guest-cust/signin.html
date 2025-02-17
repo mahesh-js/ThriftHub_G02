@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - ThriftHub</title>
     <link rel="stylesheet" href="/guest-cust/css/styles.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Add React -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -44,17 +43,29 @@
                     const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
                     const user = userCredential.user;
                     if (user) {
-                        window.location.href = "/ThriftHub_G02/guest-cust/customer/index.html";
+                        window.location.href = "/guest-cust/customer/index.html";
                     }
                 } catch (error) {
                     setError(error.message);
                 }
-            };
+            };  
 
             const togglePasswordVisibility = () => {
                 setShowPassword(!showPassword);
             };
 
+             const handleForgotPassword = async () => {
+                const email = prompt("Enter your email address to reset your password:");
+                if (!email) return;
+
+                try {
+                    await firebase.auth().sendPasswordResetEmail(email);
+                    alert("A password reset link has been sent to your email.");
+                } catch (error) {
+                    alert("Error sending password reset email: " + error.message);
+                }
+            };
+            
             return (
                 <div className="container">
                     <h2>Sign In</h2>
@@ -81,10 +92,10 @@
                         </div>
                         <button type="submit">Sign In</button>
                     </form>
-                    <p><a href="forgot-password.html">Forgot Password?</a></p>
+                    <p><a href="#" onClick={handleForgotPassword}>Forgot Password?</a></p>
                     <p>Don't have an account? <a href="signup.html">Signup</a></p>
-                    <p><a href="admin-signin.html">Admin</a></p>
-                    <p><a href="staff-signin.html">Staff</a></p>
+                    <p><a href="/guest-cust/admin-signin.html">Admin</a></p>
+                    <p><a href="/guest-cust/staff-signin.html">Staff</a></p>
                 </div>
             );
         }

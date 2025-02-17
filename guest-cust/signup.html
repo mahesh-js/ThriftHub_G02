@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - ThriftHub</title>
     <link rel="stylesheet" href="/guest-cust/css/styles.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Add React -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -36,6 +35,7 @@
             const [password, setPassword] = React.useState("");
             const [error, setError] = React.useState("");
             const [showPassword, setShowPassword] = React.useState(false);
+            const [verificationSent, setVerificationSent] = React.useState(false); // Track if verification email is sent
 
             const handleSubmit = async (e) => {
                 e.preventDefault();
@@ -51,8 +51,20 @@
                         displayName: name
                     });
 
+                     // Send email verification
+                    await user.sendEmailVerification();
+
+                    // Set state to indicate that the verification email has been sent
+                    setVerificationSent(true);
+
+                    // Optionally, sign out the user immediately after signup
+                    await firebase.auth().signOut();
+
+                    // Show success message
+                    alert("A verification email has been sent to your email address. Please verify your email before logging in.")
+
                     // Redirect after successful signup
-                    window.location.href = "/ThriftHub_G02/guest-cust/customer/index.html";
+                    window.location.href = "/guest-cust/signin.html";
                 } catch (error) {
                     setError(error.message);
                 }

@@ -25,6 +25,8 @@
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
 
 <body class="relative">
@@ -80,9 +82,7 @@
                 </li>
               </ul>
         
-              <ul class="top-bar-acc">
-                <li><a href="#" class="btn">LogOut</a></li>
-              </ul>
+              
             </div>
           </div>
         </div> <!-- end top bar -->
@@ -296,8 +296,6 @@
     </section>
 
     <div class="content-wrapper oh">
-
-      <!-- Intro -->
       <div class="container1">
         <div class="sidebar1">
             <h2>My Account</h2>
@@ -305,22 +303,54 @@
                 <li><a href="myaccount.html">Account Information</a></li>
                 <li><a href="order-history.html">Order History</a></li>
                 <li><a href="myaccount-address.html">View Addresses</a></li>
-                <li><a href="#">Log out</a></li>
+                <li><a href="#" id="logoutBtn">Log out</a></li>
                 <li><a href="mailto:thrifthubmalaysia@gmail.com">Support</a></li>
             </ul>
         </div>
-        <div class="content1" >
-            <section id="order-history">
-                <h1>Order History</h1>
-                <p>You haven't placed any orders yet.</p>
-            </section>
+        <div class="content1">
+          <div id="root"></div>
         </div>
-    </div>
+      </div>
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+            authDomain: "thrifthub-demo.firebaseapp.com",
+            projectId: "thrifthub-demo",
+            storageBucket: "thrifthub-demo.firebasestorage.app",
+            messagingSenderId: "518014691134",
+            appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
+        };
+        firebase.initializeApp(firebaseConfig);
 
-    
+        // Check if user is logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is logged in
+                document.getElementById("root").innerHTML = `
+                    <div class="info-container">
+                        <div class="info-item">
+                            <h3>Order History</h3>
+                            <p>No orders yet.</p>
+                        </div>
+                    </div>
+                `;
 
-
-
+               
+                // Logout Button
+                document.getElementById("logoutBtn").addEventListener("click", () => {
+                    firebase.auth().signOut()
+                        .then(() => {
+                            window.location.href = "/guest-cust/signin.html"; // Redirect to login page
+                        })
+                        .catch((error) => alert("Error logging out: " + error.message));
+                });
+            } else {
+                // User is not logged in, redirect to login page
+                window.location.href = "guest-cust/signin.html";
+            }
+        });
+     </script>
 
       <!-- Newsletter -->
       <section class="newsletter" id="subscribe">

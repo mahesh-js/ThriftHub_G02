@@ -19,7 +19,7 @@
 /* General
 /*-------------------------------------------------------*/
 .clearfix {
-    *zoom: 1;
+    *zoom: 1; { background}
 }
 
 .clearfix:before,
@@ -7140,13 +7140,7 @@ abbr.required {
         padding-bottom: 140px;
     }
 }
-#add-new-address-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
+
 
 #add-new-address-form input, #add-new-address-form select {
     margin-bottom: 10px;
@@ -7156,27 +7150,22 @@ abbr.required {
 
 
 
-#add-new-address-form button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-#edit-profile-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
 
+.info-container .info-item button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
 .info-container .info-item {
     margin-bottom: 15px;
 }
 
 .info-container .info-item span {
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: 50%;
     display: block;
     padding: 10px;
