@@ -25,6 +25,8 @@
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
 
 <body class="relative">
@@ -80,9 +82,7 @@
                 </li>
               </ul>
         
-              <ul class="top-bar-acc">
-                <li><a href="#" class="btn">LogOut</a></li>
-              </ul>
+              
             </div>
           </div>
         </div> <!-- end top bar -->
@@ -274,7 +274,6 @@
         </div> <!-- end navigation -->
       </nav> <!-- end navbar -->
     </header>
-
     <!-- Page Title -->
     <section class="page-title text-center bg-img overlay"
       style="background-image: url(img/page_title/about_us_title_bg.jpg)">
@@ -297,8 +296,6 @@
     </section>
 
     <div class="content-wrapper oh">
-
-      <!-- Intro -->
       <div class="container1">
         <div class="sidebar1">
             <h2>My Account</h2>
@@ -306,50 +303,161 @@
                 <li><a href="myaccount.html">Account Information</a></li>
                 <li><a href="order-history.html">Order History</a></li>
                 <li><a href="myaccount-address.html">View Addresses</a></li>
-                <li><a href="#">Log out</a></li>
+                <li><a href="#" id="logoutBtn">Log out</a></li>
                 <li><a href="mailto:thrifthubmalaysia@gmail.com">Support</a></li>
             </ul>
         </div>
         <div class="content1">
-            <section id="your-addresses">
-                <h1>Your Addresses</h1>
-                <button id="add-new-address-btn">ADD A NEW ADDRESS</button>
-                <div id="add-new-address-form" style="display: none;">
-                  <br><h2>Add a New Address</h2>
-                    <form>
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name"><br>
-                        <input type="text" placeholder="Address1">
-                        <input type="text" placeholder="Address2"><br>
-                        <input type="text" placeholder="City">
-                        <select>
-                            <option value="Malaysia">Malaysia</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                        
-                        <input type="text" placeholder="Postal/Zip Code">
-                        <input type="text" placeholder="Phone"><br>
-                        <label>
-                            <input type="checkbox"> Set as default address
-                        </label><br>
-                        <button type="submit">ADD ADDRESS</button>
-                        <button type="button">Cancel</button>
-                    </form>
-                </div>
-            </section>
-            
+          <div id="root"></div>
         </div>
-    </div>
-
+      </div>
     <script>
-        document.getElementById('add-new-address-btn').addEventListener('click', function() {
-            document.getElementById('add-new-address-form').style.display = 'block';
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+            authDomain: "thrifthub-demo.firebaseapp.com",
+            projectId: "thrifthub-demo",
+            storageBucket: "thrifthub-demo.firebasestorage.app",
+            messagingSenderId: "518014691134",
+            appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Check if user is logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is logged in
+                document.getElementById("root").innerHTML = `
+                    <div class="info-container">
+                        <div class="info-item">
+                            <h3>View Addresses</h3>
+                            <div id="addressesList"></div>
+                            <button id="addAddressBtn">Add New Address</button>
+                        </div>
+                    </div>
+                `;
+
+                
+
+                // Load and display saved addresses
+                const loadAddresses = async () => {
+                    const addressesList = document.getElementById("addressesList");
+                    addressesList.innerHTML = ""; // Clear previous content
+
+                    try {
+                        const addressesSnapshot = await db.collection("users").doc(userId).collection("addresses").get();
+                        if (addressesSnapshot.empty) {
+                            addressesList.innerHTML = "<p>No addresses saved yet.</p>";
+                            return;
+                        }
+
+                        addressesSnapshot.forEach((doc) => {
+                            const address = doc.data();
+                            addressesList.innerHTML += `
+                                <div>
+                                    <p><strong>${address.label}:</strong></p>
+                                    <p>${address.line1}, ${address.city}, ${address.state}, ${address.zipCode}</p>
+                                    <button onclick="editAddress('${doc.id}', '${address.label}', '${address.line1}', '${address.city}', '${address.state}', '${address.postCode}')">Edit</button>
+                                    <button onclick="deleteAddress('${doc.id}')">Delete</button>
+                                </div>
+                            `;
+                        });
+                    } catch (error) {
+                        console.error("Error loading addresses: ", error);
+                        addressesList.innerHTML = "<p>Error loading addresses.</p>";
+                    }
+                };
+
+                // Add Address Button
+                document.getElementById("addAddressBtn").addEventListener("click", () => {
+                    const label = prompt("Enter a label for this address (e.g., Home, Work):");
+                    const line1 = prompt("Enter the address line 1:");
+                    const city = prompt("Enter the city:");
+                    const state = prompt("Enter the state:");
+                    const postcode = prompt("Enter the postcode code:");
+
+                    if (!label || !line1 || !city || !state || !postCode) {
+                        alert("All fields are required.");
+                        return;
+                    }
+
+                    db.collection("users").doc(userId).collection("addresses").add({
+                        label,
+                        line1,
+                        city,
+                        state,
+                        postCode,
+                    })
+                    .then(() => {
+                        alert("Address added successfully!");
+                        loadAddresses(); // Reload addresses
+                    })
+                    .catch((error) => {
+                        alert("Error adding address: " + error.message);
+                    });
+                });
+
+                // Edit Address Function
+                window.editAddress = (id, label, line1, city, state, zipCode) => {
+                    const newLabel = prompt("Edit label:", label);
+                    const newLine1 = prompt("Edit address line 1:", line1);
+                    const newCity = prompt("Edit city:", city);
+                    const newState = prompt("Edit state:", state);
+                    const newPostCode = prompt("Edit post code:", postCode);
+
+                    if (!newLabel || !newLine1 || !newCity || !newState || !newpostCode) {
+                        alert("All fields are required.");
+                        return;
+                    }
+
+                    db.collection("users").doc(userId).collection("addresses").doc(id).update({
+                        label: newLabel,
+                        line1: newLine1,
+                        city: newCity,
+                        state: newState,
+                        postCode: postZipCode,
+                    })
+                    .then(() => {
+                        alert("Address updated successfully!");
+                        loadAddresses(); // Reload addresses
+                    })
+                    .catch((error) => {
+                        alert("Error updating address: " + error.message);
+                    });
+                };
+
+                // Delete Address Function
+                window.deleteAddress = (id) => {
+                    if (confirm("Are you sure you want to delete this address?")) {
+                        db.collection("users").doc(userId).collection("addresses").doc(id).delete()
+                        .then(() => {
+                            alert("Address deleted successfully!");
+                            loadAddresses(); // Reload addresses
+                        })
+                        .catch((error) => {
+                            alert("Error deleting address: " + error.message);
+                        });
+                    }
+                };
+
+                // Load addresses on page load
+                loadAddresses();
+
+                // Logout Button
+                document.getElementById("logoutBtn").addEventListener("click", () => {
+                    firebase.auth().signOut()
+                        .then(() => {
+                            window.location.href = "/guest-cust/signin.html"; // Redirect to login page
+                        })
+                        .catch((error) => alert("Error logging out: " + error.message));
+                });
+            } else {
+                // User is not logged in, redirect to login page
+                window.location.href = "guest-cust/signin.html";
+            }
         });
-    </script>
-
-
-
-
+     </script>
+    </div>
       <!-- Newsletter -->
       <section class="newsletter" id="subscribe">
         <div class="container">
@@ -365,85 +473,85 @@
         </div>
       </section>
 
-     <!-- Footer Type-1 -->
-     <footer class="footer footer-type-1">
-      <div class="container">
-        <div class="footer-widgets">
-          <div class="row">
+      <!-- Footer Type-1 -->
+      <footer class="footer footer-type-1">
+        <div class="container">
+          <div class="footer-widgets">
+            <div class="row">
 
-            <div class="col-md-3 col-sm-12 col-xs-12">
-              <div class="widget footer-about-us">
-                <img src="img/thrifthub lg v1.png" alt="" class="logo">
-                <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
-                <div class="footer-socials">
-                  <div class="social-icons nobase">
-                    <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
+              <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="widget footer-about-us">
+                  <img src="img/thrifthub lg v1.png" alt="" class="logo">
+                  <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
+                  <div class="footer-socials">
+                    <div class="social-icons nobase">
+                      <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
+                      <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
+                    </div>
                   </div>
                 </div>
+              </div> <!-- end about us -->
+
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Explore</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="m-tops.html">Mens</a></li>
+                    <li><a href="w-tops.html">Womens</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                  </ul>
+                </div>
               </div>
-            </div> <!-- end about us -->
 
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Explore</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="m-tops.html">Mens</a></li>
-                  <li><a href="w-tops.html">Womens</a></li>
-                  <li><a href="kids.html">Kids</a></li>
-                </ul>
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Information</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="delivery-info.html">Delivery Information</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="faq.html">F.A.Q</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Information</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="delivery-info.html">Delivery Information</a></li>
-                  <li><a href="about-us.html">About us</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-                  <li><a href="faq.html">F.A.Q</a></li>
-                </ul>
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Account</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="myaccount.html">My account</a></li>
+                    <li><a href="shop-cart.html">My cart</a></li>
+                    <li><a href="order-history.html">Order history</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Account</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="myaccount.html">My account</a></li>
-                  <li><a href="shop-cart.html">My cart</a></li>
-                  <li><a href="order-history.html">Order history</a></li>
-                </ul>
+       
+        </div> <!-- end container -->
+
+        <div class="bottom-footer">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm-6 copyright sm-text-center">
+                <span>
+                  &copy;
+                  <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
+                  ThriftHub Malaysia | Made by <a href="">Group 2</a>
+                </span>
               </div>
+
+              <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
+                <i class="fa fa-cc-visa"></i>
+                <i class="fa fa-cc-mastercard"></i>
+                <i class="fa fa-cc-amex"></i>
+              </div>
+
             </div>
-
-     
-      </div> <!-- end container -->
-
-      <div class="bottom-footer">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-sm-6 copyright sm-text-center">
-              <span>
-                &copy;
-                <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
-                ThriftHub Malaysia | Made by <a href="">Group 2</a>
-              </span>
-            </div>
-
-            <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
-              <i class="fa fa-cc-visa"></i>
-              <i class="fa fa-cc-mastercard"></i>
-              <i class="fa fa-cc-amex"></i>
-            </div>
-
           </div>
-        </div>
-      </div> <!-- end bottom footer -->
-    </footer> <!-- end footer -->
+        </div> <!-- end bottom footer -->
+      </footer> <!-- end footer -->
 
       <div id="back-to-top">
         <a href="#top"><i class="fa fa-angle-up"></i></a>

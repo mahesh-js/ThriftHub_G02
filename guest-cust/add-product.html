@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product - ThriftHub</title>
+    <link rel="stylesheet" href="/guest-cust/css/styles.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const firebaseConfig = {
+        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+        authDomain: "thrifthub-demo.firebaseapp.com",
+        projectId: "thrifthub-demo",
+        storageBucket: "thrifthub-demo.firebasestorage.app",
+        messagingSenderId: "518014691134",
+        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      const storage = firebase.storage();
+
+      document.getElementById("root").innerHTML = `
+            <div class="container">
+                <h2>Add Product</h2>
+                <form id="addProductForm">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="">All Category</option>
+                        <option value="men">Men's</option>
+                        <option value="women">Women's</option>
+                        <option value="kids">Kids'</option>
+                    </select>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" required></textarea>
+
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" required>
+
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" accept="image/*">
+
+                    <button type="submit">Add Product</button>
+                </form>
+            </div>
+        `;
+
+      // Add Product Form Submission
+      document
+        .getElementById("addProductForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const title = document.getElementById("title").value;
+          const category = document.getElementById("category").value;
+          const description = document.getElementById("description").value;
+          const price = document.getElementById("price").value;
+          const imageFile = document.getElementById("image").files[0];
+
+          if (!imageFile) {
+            alert("Please upload an image.");
+            return;
+          }
+
+          try {
+            // Upload image
+            const storageRef = storage.ref(`products/${imageFile.name}`);
+            const snapshot = await storageRef.put(imageFile);
+            const imageUrl = await snapshot.ref.getDownloadURL();
+
+            // Save product
+            await db.collection("products").add({
+              title,
+              category,
+              description,
+              price,
+              imageUrl,
+              createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            });
+
+            alert("Product added successfully!");
+            window.location.href = "/products.html";
+          } catch (error) {
+            alert("Error adding product: " + error.message);
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -25,6 +25,8 @@
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
 
 <body class="relative">
@@ -80,9 +82,7 @@
                 </li>
               </ul>
         
-              <ul class="top-bar-acc">
-                <li><a href="#" class="btn">LogOut</a></li>
-              </ul>
+              
             </div>
           </div>
         </div> <!-- end top bar -->
@@ -296,8 +296,6 @@
     </section>
 
     <div class="content-wrapper oh">
-
-      <!-- Intro -->
       <div class="container1">
         <div class="sidebar1">
             <h2>My Account</h2>
@@ -305,38 +303,126 @@
                 <li><a href="myaccount.html">Account Information</a></li>
                 <li><a href="order-history.html">Order History</a></li>
                 <li><a href="myaccount-address.html">View Addresses</a></li>
-                <li><a href="#">Log out</a></li>
+                <li><a href="#" id="logoutBtn">Log out</a></li>
                 <li><a href="mailto:thrifthubmalaysia@gmail.com">Support</a></li>
             </ul>
         </div>
-        <div class="content1" >
-            <section id="order-history">
-              <div class="info-container">
-                <h2>Account Information</h2>
-                <p style="color: red;">*Required Fields</p>
-                <div class="info-item">
-                    <label for="Username">Username :</label>
-                    <span id="Username">JAMES</span>
-                </div>
-                <div class="info-item">
-                    <label for="Name">Name :</label>
-                    <span id="Name">GREY</span>
-                </div>
-                <div class="info-item">
-                    <label for="email">Email Address :</label>
-                    <span id="email">JAMES@GETFLITS.COM</span>
-                </div>
-                <div class="info-item">
-                    <label for="phone">Phone :</label>
-                    <span id="phone">+6012 345 6789</span>
-                </div><br><br>
-                <button id="edit-profile-btn">EDIT</button>
-            </div>
-        
-            </section>
+        <div class="content1">
+          <div id="root"></div>
         </div>
-    </div>
-    
+      </div>
+    <script>
+       
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+            authDomain: "thrifthub-demo.firebaseapp.com",
+            projectId: "thrifthub-demo",
+            storageBucket: "thrifthub-demo.firebasestorage.app",
+            messagingSenderId: "518014691134",
+            appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Check if user is logged in
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is logged in
+                document.getElementById("root").innerHTML = `
+                    <div class="info-container">
+                        <div class="info-item">
+                            <h3>Account Information</h3>
+                            <span><strong>Username:</strong> ${user.displayName || "Not set"}</span>
+                            <span><strong>Name:</strong> ${user.displayName || "Not set"}</span>
+                            <span><strong>Email Address:</strong> ${user.email}</span>
+                            <span><strong>Phone:</strong> </span>
+                            <button id="editProfileBtn">EDIT</button>
+                            
+                            <h3 style="margin-top:5%;margin-bottom:2%">Change Password</h3>
+                            <button id="changePasswordBtn">Change Password</button>
+                        </div>
+                        
+                    </div>
+                `;
+
+                // Edit Profile Button
+                document.getElementById("editProfileBtn").addEventListener("click", () => {
+                    // Show a form for editing profile
+                    document.getElementById("root").innerHTML = `
+                      <div class="info-container">
+                        <div class="info-item">
+                            <h2>Edit Profile</h2>
+                            <form id="editProfileForm">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" value="${user.displayName || ""}" required>
+
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" value="${user.email}" disabled>
+
+                                <label for="phone">Phone:</label>
+                                <input type="text" id="phone" placeholder="Enter your phone number">
+
+                                <button type="submit" style="margin-bottom:2%">Save Changes</button>
+                            </form>
+                            <button id="cancelEditBtn">Cancel</button>
+                        </div>
+                      </div>
+                    `;
+
+                    // Cancel Edit Button
+                    document.getElementById("cancelEditBtn").addEventListener("click", () => {
+                        location.reload(); // Reload the page to cancel editing
+                    });
+
+                    // Save Changes Form Submission
+                    document.getElementById("editProfileForm").addEventListener("submit", (e) => {
+                        e.preventDefault();
+                        const newUsername = document.getElementById("username").value.trim();
+                        const newPhone = document.getElementById("phone").value.trim();
+
+                        if (!newUsername) {
+                            alert("Username cannot be empty.");
+                            return;
+                        }
+
+                        // Update the user's profile
+                        user.updateProfile({ displayName: newUsername })
+                            .then(() => {
+                                alert("Profile updated successfully!");
+                                location.reload(); // Refresh to show updated profile
+                            })
+                            .catch((error) => alert("Error updating profile: " + error.message));
+                    });
+                });
+
+                // Change Password Button
+                document.getElementById("changePasswordBtn").addEventListener("click", async () => {
+                    const newPassword = prompt("Enter your new password:");
+                    if (!newPassword) return;
+
+                    try {
+                        await user.updatePassword(newPassword);
+                        alert("Password changed successfully!");
+                    } catch (error) {
+                        alert("Error changing password: " + error.message);
+                    }
+                });
+
+               
+
+                // Logout Button
+                document.getElementById("logoutBtn").addEventListener("click", () => {
+                    firebase.auth().signOut()
+                        .then(() => {
+                            window.location.href = "/guest-cust/signin.html"; // Redirect to login page
+                        })
+                        .catch((error) => alert("Error logging out: " + error.message));
+                });
+            } else {
+                // User is not logged in, redirect to login page
+                window.location.href = "guest-cust/signin.html";
+            }
+        });
+     </script>
 
       <!-- Newsletter -->
       <section class="newsletter" id="subscribe">
