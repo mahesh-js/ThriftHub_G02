@@ -6,21 +6,36 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.container p{
+  color: gray;
+}
+
+.container p a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.container p1 a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
 .password-container {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: -5px;
 }
 
 .toggle-password {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
 input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
@@ -30,7 +45,7 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 4px;
@@ -38,10 +53,25 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: gray;
 }
 
 .error-message {
   color: red;
   margin-bottom: 15px;
+}
+
+.line-with-or {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.line-with-or::before,
+.line-with-or::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid gray;
 }
