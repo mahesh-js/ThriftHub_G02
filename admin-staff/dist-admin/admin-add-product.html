@@ -1,552 +1,383 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth group" data-sidebar="brand" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>ThriftHub Malaysia | Dashboard</title>
-        <meta  name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta  content="Tailwind Multipurpose Admin & Dashboard Template"  name="description"/>
-        <meta content="" name="Mannatthemes" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico" />
-        
-        <!-- Css -->
-        <link rel="stylesheet" href="assets/libs/filepond/filepond.min.css">
-        <link rel="stylesheet" href="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
-        <link rel="stylesheet" href="assets/libs/vanillajs-datepicker/css/datepicker.min.css">
-        <link rel="stylesheet" href="assets/libs/mobius1-selectr/selectr.min.css">
-        <!-- Main Css -->
-        <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css">
-        <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/tailwind.min.css">
-
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>ThriftHub Malaysia | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="Add product | Thrifthub" name="description"/>
+    <meta content="" name="Mannatthemes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     
-    <body data-layout-mode="light"  data-sidebar-size="default" data-theme-layout="vertical" class="bg-[#EEF0FC] dark:bg-gray-900">
-    
-        <!-- leftbar-tab-menu -->
-        
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/libs/filepond/filepond.min.css">
+    <link rel="stylesheet" href="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
+    <link rel="stylesheet" href="assets/libs/vanillajs-datepicker/css/datepicker.min.css">
+    <link rel="stylesheet" href="assets/libs/mobius1-selectr/selectr.min.css">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css">
+    <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
 
-        <div class="min-h-full z-[99]  fixed inset-y-0 print:hidden bg-gradient-to-t from-[#111111] from-10% via-[#111111] via-40% to-[#111111] to-100% dark:bg-[#111111] main-sidebar duration-300 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111]">
-          <div class=" text-center border-b bg-[#111111] border-r h-[64px] flex justify-center items-center brand-logo dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111] group-data-[sidebar=brand]:border-slate-700/40">
-              <a href="index.html" class="logo">
-                  
-                  <span>
-                      <img src="assets/images/logo.png" alt="logo-large" class="logo-lg h-[52px] logo-light hidden dark:inline-block ms-1 group-data-[sidebar=dark]:inline-block group-data-[sidebar=brand]:inline-block">
-                      <img src="assets/images/logo.png" alt="logo-large"
-                          class="logo-lg h-[52px] logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden group-data-[sidebar=brand]:hidden">
-                  </span>
-              </a>
-          </div>
-          <div class="border-r pb-14 h-[100vh] dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:border-slate-700/40" data-simplebar>
-              <div class="p-4 block">
-                  <ul class="navbar-nav">
-                      <li class="uppercase text-[11px]  text-primary-500 dark:text-primary-400 mt-0 leading-4 mb-2 group-data-[sidebar=dark]:text-primary-400 group-data-[sidebar=brand]:text-primary-300">
-                         <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">DashboardS</span></li>
-                      <li>
-                          <div id="parent-accordion" data-fc-type="accordion">
-                              <a href="#"
-                                 class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200 "
-                                 data-fc-type="collapse" data-fc-parent="parent-accordion">
-                                  <span data-lucide="home"
-                                        class="w-5 h-5 text-center text-slate-800 dark:text-slate-400 me-2 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
-                                  <span>Admin</span>
-                                  <i class="icofont-thin-down ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400 fc-collapse-open:rotate-180 "></i>
-                              </a>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-storage.js"></script>
+    <script src="/admin-staff/dist-admin/assets/js/script.js"></script>
 
-                              <div id="Admin-flush" class="hidden  overflow-hidden">
-                                  <ul class="nav flex-col flex flex-wrap ps-0 mb-0 ms-2">
-                                      <li class="nav-item relative block">
-                                          <a href="index.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400 "></i>
-                                              Dashboard
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="pages-profile.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Profile
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-products.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Products
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-add-product.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                             Add New Product
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-customers.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Customers
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-customers-details.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Customers Details
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-orders.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Orders
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-order-details.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Order Details
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="admin-staff.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Staff
-                                          </a>
-                                      </li>
-                                      <li class="nav-item relative block">
-                                          <a href="apps-invoice.html"
-                                             class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                              <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                              Invoice
-                                          </a>
-                                      </li>
-                                  </ul>                            
-                              </div>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
+    <!-- Custom CSS for additional styling -->
+    <style>
+        /* Custom styles for the form */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
 
-        
-            <nav id="topbar" class="topbar border-b  dark:border-slate-700/40  fixed inset-x-0  duration-300
-             block print:hidden z-50">
-            <div class="mx-0 flex max-w-full flex-wrap items-center lg:mx-auto relative top-[50%] start-[50%] transform -translate-x-1/2 -translate-y-1/2">
-              <div class="ltr:mx-2  rtl:mx-2">
-                <button id="toggle-menu-hide" class="button-menu-mobile flex rounded-full md:me-0 relative">
-                  <!-- <i class="ti ti-chevrons-left text-3xl  top-icon"></i> -->
-                  <i data-lucide="menu" class="top-icon w-5 h-5"></i>
-                </button>
-              </div>
-              <div class="flex items-center md:w-[40%] lg:w-[30%] xl:w-[20%]">
-                <div class="relative ltr:mx-2 rtl:mx-2 self-center">
-                  <button class="px-2 py-1 bg-primary-500/10 border border-transparent collapse:bg-green-100 text-primary text-sm rounded hover:bg-blue-600 hover:text-white"><i class="ti ti-plus me-1"></i> New Task</button>
-                </div>
-              </div>
-      
-              <div class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2">
-                <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
-                  <button
-                    type="button"
-                    class="dropdown-toggle flex rounded-full md:me-0"
-                    aria-expanded="false"
-                     data-fc-autoclose="both" data-fc-type="dropdown">
-                    <span data-lucide="search" class="top-icon w-5 h-5"></span>
-                  </button>
+        .form-input {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px;
+            width: 100%;
+            transition: border-color 0.3s ease;
+        }
 
-                  <div
-                    class="left-auto right-0 z-50 my-1 hidden min-w-[300px]
-                    list-none divide-y  divide-gray-100 rounded-md border-slate-700
-                    md:border-white text-base shadow dark:divide-gray-600 bg-white
-                    dark:bg-slate-800" onclick="event.stopPropagation()">
-                    <div class="relative">
-                      <div
-                        class="pointer-events-none absolute inset-y-0 left-0 flex items-center
-                        pl-3">
-                        <i class="ti ti-search text-gray-400 z-10"></i>
-                      </div>
-                      <input
-                        type="text"
-                        id="email-adress-icon"
-                        class="block w-full rounded-lg border border-slate-200 dark:border-slate-700/60 bg-slate-200/10 p-1.5
-                        pl-10 text-slate-600 dark:text-slate-400 outline-none focus:border-slate-300
-                        focus:ring-slate-300 dark:bg-slate-800/20 sm:text-sm"
-                        placeholder="Search..."
-                        />
-                    </div>
-                  </div>
-                </div>
-                <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4">
+        .form-input:focus {
+            border-color: #3b82f6;
+            outline: none;
+        }
 
-                  <button id="toggle-theme" class="flex rounded-full md:me-0 relative">
-                    <span data-lucide="moon" class="top-icon w-5 h-5 light "></span>
-                    <span data-lucide="sun" class="top-icon w-5 h-5 dark hidden"></span>
-                  </button>
-                </div>
-                <div class="ltr:me-2 ltr:lg:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
-                  <button
-                    type="button"
-                    class="dropdown-toggle flex rounded-full md:me-0"
-                    id="Notifications"
-                    aria-expanded="false"
-                     data-fc-autoclose="both" data-fc-type="dropdown">
-                    <span data-lucide="bell" class="top-icon w-5 h-5"></span>
-                  </button>
+        .form-label {
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-                  <div
-                    class="left-auto right-0 z-50 my-1 hidden w-64
-                    list-none divide-y h-52 divide-gray-100 rounded border border-slate-700/10
-                   text-base shadow dark:divide-gray-600 bg-white
-                    dark:bg-slate-800"
-                    id="navNotifications" data-simplebar>
-                    <ul class="py-1" aria-labelledby="navNotifications">
-                      <li class="py-2 px-4">
-                        <a href="javascript:void(0);" class="dropdown-item">
-                          <div class="flex">
-                              <div class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3">
-                                <span data-lucide="shopping-cart" class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"></span>
-                              </div>
-                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                              <p class="text-sm font-medium text-gray-900 truncate
-                                dark:text-gray-300">Karen Robinson</p>
-                              <p class="text-gray-500 mb-0 text-xs truncate
-                                dark:text-gray-400">
-                                Hey ! i'm available here
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="py-2 px-4">
-                        <a href="javascript:void(0);" class="dropdown-item">
-                          <div class="flex">
-                            <img class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
-                              src="assets/images/users/avatar-3.png" alt="logo" />
-                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                              <p class="text-sm font-medium text-gray-900 truncate
-                                dark:text-gray-300">Your order is placed</p>
-                              <p class="text-gray-500 mb-0 text-xs truncate
-                                dark:text-gray-400">
-                                Dummy text of the printing and industry.
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="py-2 px-4">
-                        <a href="javascript:void(0);" class="dropdown-item">
-                          <div class="flex">
-                            <div class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3">
-                              <span data-lucide="user" class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"></span>
-                            </div>
-                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                              <p class="text-sm font-medium text-gray-900 truncate
-                                dark:text-gray-300">Robert McCray</p>
-                              <p class="text-gray-500 mb-0 text-xs truncate
-                                dark:text-gray-400">
-                                Good Morning!
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="py-2 px-4">
-                        <a href="javascript:void(0);" class="dropdown-item">
-                          <div class="flex">
-                            <img class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
-                              src="assets/images/users/avatar-9.png" alt="logo" />
-                            <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                              <p class="text-sm font-medium  text-gray-900 truncate
-                                dark:text-gray-300">Meeting with designers</p>
-                              <p class="text-gray-500 mb-0 text-xs truncate
-                                dark:text-gray-400">
-                                It is a long established fact that a reader.
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="me-2  dropdown relative">
-                  <button
-                    type="button"
-                    class="dropdown-toggle flex items-center rounded-full text-sm
-                    focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0"
-                    id="user-profile"
-                    aria-expanded="false"
-                     data-fc-autoclose="both" data-fc-type="dropdown">
-                    <img
-                      class="h-8 w-8 rounded-full"
-                      src="assets/images/users/avatar-1.png"
-                      alt="user photo"
-                      />
-                    <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
-                      <span class="block font-medium text-slate-600 dark:text-gray-300">Maria Gibson</span>
-                      <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span>
-                    </span>
-                  </button>
+        .form-button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-                  <div
-                    class="left-auto right-0 z-50 my-1 hidden list-none
-                    divide-y divide-gray-100 rounded border border-slate-700/10
-                    text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40"
-                    id="navUserdata">
-            
-                    <ul class="py-1" aria-labelledby="navUserdata">
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
-                          dark:text-gray-200 dark:hover:bg-gray-900/20
-                          dark:hover:text-white">
-                          <span data-lucide="user"
-                                          class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
-                          Profile</a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
-                          dark:text-gray-200 dark:hover:bg-gray-900/20
-                          dark:hover:text-white">
-                          <span data-lucide="settings"
-                                          class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
-                          Settings</a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
-                          dark:text-gray-200 dark:hover:bg-gray-900/20
-                          dark:hover:text-white">
-                          <span data-lucide="dollar-sign"
-                                          class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
-                          Earnings</a>
-                      </li>
-                      <li>
-                        <a
-                          href="auth-lockscreen.html"
-                          class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600
-                          dark:text-red-500 dark:hover:bg-gray-900/20
-                          dark:hover:text-red-500">
-                          <span data-lucide="power"
-                                          class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>
-                          Sign out</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
+        .form-button:hover {
+            background-color: #2563eb;
+        }
 
+        .form-button-secondary {
+            background-color: transparent;
+            color: #3b82f6;
+            border: 1px solid #3b82f6;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-        <div class="ltr:flex flex-1 rtl:flex-row-reverse">
-            <div class="page-wrapper relative ltr:ms-auto rtl:me-auto rtl:ms-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
-                <div class="xl:w-full">        
-                    <div class="flex flex-wrap">
-                        <div class="flex items-center py-4 w-full">
-                            <div class="w-full">                    
-                                <div class="">
-                                    <div class="flex flex-wrap justify-between">
-                                        <div class="items-center ">
-                                            <h1 class="font-medium text-3xl block dark:text-slate-100">Add Product</h1>
-                                            <ol class="list-reset flex text-sm">
-                                                <li><a href="#" class="text-gray-500 dark:text-slate-400">ThriftHub Malaysia</a></li>
-                                                <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
-                                                <li class="text-gray-500 dark:text-slate-400">Admin</li>
-                                                <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
-                                                <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Add Product</li>
-                                            </ol>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
-                                                <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly  required="">
-                                            </div>
+        .form-button-secondary:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+
+        .filepond-container {
+            border: 2px dashed #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f7fafc;
+        }
+
+        .filepond-container:hover {
+            border-color: #3b82f6;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Message div styling */
+        #message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        #message.success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        #message.error {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+    </style>
+</head>
+
+<body data-layout-mode="light" data-sidebar-size="default" data-theme-layout="vertical" class="bg-[#EEF0FC] dark:bg-gray-900">
+    <!-- Left sidebar and top navigation code remain unchanged -->
+
+    <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+        <div class="page-wrapper relative ltr:ms-auto rtl:me-auto rtl:ms-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+            <div class="xl:w-full">        
+                <div class="flex flex-wrap">
+                    <div class="flex items-center py-4 w-full">
+                        <div class="w-full">                    
+                            <div class="">
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="items-center">
+                                        <h1 class="font-medium text-3xl block dark:text-slate-100">Add Product</h1>
+                                        <ol class="list-reset flex text-sm">
+                                            <li><a href="#" class="text-gray-500 dark:text-slate-400">ThriftHub Malaysia</a></li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-gray-500 dark:text-slate-400">Admin</li>
+                                            <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                                            <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Add Product</li>
+                                        </ol>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <input type="text" class="dash_date border-0 focus:border-0 focus:outline-none" readonly required="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--end container-->
-            
-                <div class="xl:w-full  min-h-[calc(100vh-138px)] relative pb-14"> 
-                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 justify-between">
-                        <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3">
-                            <div class="w-full relative p-4"> 
-                                <label for="" class="font-medium text-sm text-slate-600 dark:text-slate-400">Upload Image</label>
-                                <div class="w-full h-56 mx-auto  mb-4">
-                                    <input type="file" class="filepond h-56" name="filepond" accept="image/png, image/jpeg, image/gif" />                                    
+                </div>
+            </div><!--end container-->
+        
+            <div class="xl:w-full min-h-[calc(100vh-138px)] relative pb-14"> 
+                <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 justify-between">
+                    <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3">
+                        <div class="w-full relative p-4 form-container"> 
+                            <label for="" class="form-label">Upload Image</label>
+                            <div class="w-full h-56 mx-auto mb-4 filepond-container">
+                                <input type="file" class="filepond h-56" name="filepond" accept="image/png, image/jpeg, image/gif" />                                    
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="col-span-1">
+                                    <input type="file" class="filepond"/>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2 ">
-                                    <div class="col-span-1">
-                                        <input type="file" class="filepond"/>
-                                    </div>
-                                    <div class="col-span-1">
-                                        <input type="file" class="filepond"/>
-                                    </div>
+                                <div class="col-span-1">
+                                    <input type="file" class="filepond"/>
                                 </div>
-                            </div><!--end card-->                                  
-                        </div><!--end col-->  
-                        <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6">
-                            <div class="w-full relative mb-4">  
-                                <div class="flex-auto p-0 md:p-4">                                   
-                                    <div class="mb-2">
-                                        <label for="title" class="font-medium text-sm text-slate-600 dark:text-slate-400">Title</label>
-                                        <input type="title" id="title" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700" placeholder="Title" required>
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="category" class="font-medium text-sm text-slate-600 dark:text-slate-400">Category</label>
-                                        <select id="category" class="w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
-                                            <option  class="dark:text-slate-700">All Category</option>
-                                            <option  class="dark:text-slate-700">Electronics</option>
-                                            <option  class="dark:text-slate-700">Furniture</option>
-                                            <option  class="dark:text-slate-700">Footwear</option>
-                                            <option  class="dark:text-slate-700">Clothes</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="description" class="font-medium text-sm text-slate-600 dark:text-slate-400">Description</label>
-                                        <textarea id="description" rows="3" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Description ..."></textarea>
-                                    </div>
-                                    <div class="mb-2">
-                                        <div class="grid grid-cols-2 gap-3">
-                                            <div class="col-span-1">
-                                                <label for="Product-date" class="font-medium text-sm text-slate-600 dark:text-slate-400">Product Date</label>
-                                                <input type="text" id="Product-date" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" name="foo">
-                                            </div>
-                                            <div class="col-span-1">
-                                                <label for="price" class="font-medium text-sm text-slate-600 dark:text-slate-400">Price</label>
-                                                <input type="title" id="price" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700" placeholder="Price" required>
-                                            </div>
+                            </div>
+                        </div><!--end card-->                                  
+                    </div><!--end col-->  
+                    <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6">
+                        <form id="productForm" class="w-full relative mb-4 form-container">  
+                            <div class="flex-auto p-0 md:p-4">                                   
+                                <div class="mb-4">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input type="text" id="title" class="form-input" placeholder="Title" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="category" class="form-label">Category</label>
+                                    <select id="category" class="form-input" required>
+                                        <option value="">Select Category</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Furniture">Furniture</option>
+                                        <option value="Footwear">Footwear</option>
+                                        <option value="Clothes">Clothes</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea id="description" rows="3" class="form-input" placeholder="Description ..." required></textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <div class="col-span-1">
+                                            <label for="Product-date" class="form-label">Product Date</label>
+                                            <input type="text" id="Product-date" class="form-input" name="foo" required>
+                                        </div>
+                                        <div class="col-span-1">
+                                            <label for="price" class="form-label">Price</label>
+                                            <input type="number" id="price" class="form-input" placeholder="Price" required>
                                         </div>
                                     </div>
-                                    <div class="mb-2">
-                                        <label for="gender" class="font-medium text-sm text-slate-600 dark:text-slate-400">For this product</label>
-                                        <select id="gender" class="w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700">
-                                            <option  class="dark:text-slate-700">-- Gender --</option>
-                                            <option  class="dark:text-slate-700">Men</option>
-                                            <option  class="dark:text-slate-700">Women</option>
-                                            <option  class="dark:text-slate-700">Kids</option>
-                                        </select>                                       
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="sizing" class="font-medium text-sm text-slate-600 dark:text-slate-400">Size</label>
-                                        <select id="sizing" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-brand-500 dark:focus:border-brand-500  dark:hover:border-slate-700">
-                                            <option>Size</option>
-                                            <option>S</option>
-                                            <option>M</option>
-                                            <option>L</option>
-                                            <option>XL</option>
-                                            <option>XXL</option>
-                                        </select>
-                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="gender" class="form-label">For this product</label>
+                                    <select id="gender" class="form-input" required>
+                                        <option value="">-- Gender --</option>
+                                        <option value="Men">Men</option>
+                                        <option value="Women">Women</option>
+                                        <option value="Kids">Kids</option>
+                                    </select>                                       
+                                </div>
+                                <div class="mb-4">
+                                    <label for="sizing" class="form-label">Size</label>
+                                    <select id="sizing" class="form-input" required>
+                                        <option value="">Size</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
+                                </div>
 
-                                    <div class="">
-                                        <button class="px-2 py-2 lg:px-4 bg-brand  text-white text-sm  rounded hover:bg-brand-600 border border-brand-500">Add Product</button>
-                                        <button class="px-2 py-2 lg:px-4 bg-transparent  text-brand text-sm  rounded transition hover:bg-brand-500 hover:text-white border border-brand font-medium">Save Product</button>
-                                    </div>
-                                </div><!--end card-body--> 
-                            </div><!--end card-->                                  
-                        </div><!--end col-->  
-                        <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3">
-                            <div class="w-full relative mb-4">  
-                                <div class="flex-auto p-0 md:p-4">                                   
-                                    <div>
-                                        <p class="text-slate-700 text-base dark:text-slate-400">Product Image</p>
-                                        <img src="assets/images/products/pro-3.png" alt="" class="w-full h-auto">                                    
-                                    </div>
-                                    <div class="mb-5">
-                                        <p class="text-slate-700 text-base dark:text-slate-400">Product Title</p>
-                                        <h4 class="text-xl font-semibold text-slate-700 dark:text-slate-300">Mannat HD, Smart LED Fire TV</h4>
-                                    </div>
-                                    <div class="mb-5">
-                                        <p class="text-slate-600 text-base dark:text-slate-400">Description</p>
-                                        <h4 class="text-base font-medium text-slate-900 dark:text-slate-300">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
-                                    </div>
-                                    <div class="mb-5">
-                                        <p class="text-slate-600 text-base dark:text-slate-400">Pro. Date</p>
-                                        <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300">02/05/2023</h4>
-                                    </div>
-                                    <div class="mb-5">
-                                        <p class="text-slate-600 text-base dark:text-slate-400">For this product</p>
-                                        <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300">Other</h4>
-                                    </div>
-                                    <div class="mb-5">
-                                        <p class="text-slate-600 text-base dark:text-slate-400">Size</p>
-                                        <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300">SM, MD, LG, XL</h4>
-                                    </div>
-                                </div><!--end card-body--> 
-                            </div><!--end card-->                                  
-                        </div><!--end col-->                        
-                    </div> <!--end grid-->                                        
-                    <!-- footer -->
-                    <div class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
-                        <div class="container">
-                          <!-- Footer Start -->
-                          <footer
-                            class="footer bg-transparent  text-center  font-medium text-slate-600 dark:text-slate-400 md:text-left "
-                          >
+                                <!-- Message Div for Success/Error Messages -->
+                                <div id="message"></div>
+
+                                <div class="flex gap-2">
+                                    <button type="submit" class="form-button">Add Product</button>
+                                    <button type="button" class="form-button-secondary">Save Product</button>
+                                </div>
+                            </div><!--end card-body--> 
+                        </form><!--end card-->                                  
+                    </div><!--end col-->  
+                    <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3">
+                        <div class="w-full relative mb-4 form-container">  
+                            <div class="flex-auto p-0 md:p-4">                                   
+                                <div>
+                                    <p class="text-slate-700 text-base dark:text-slate-400">Product Image</p>
+                                    <img src="assets/images/products/pro-3.png" alt="" class="preview-image">                                    
+                                </div>
+                                <div class="mb-5">
+                                    <p class="text-slate-700 text-base dark:text-slate-400">Product Title</p>
+                                    <h4 class="text-xl font-semibold text-slate-700 dark:text-slate-300">Mannat HD, Smart LED Fire TV</h4>
+                                </div>
+                                <div class="mb-5">
+                                    <p class="text-slate-600 text-base dark:text-slate-400">Description</p>
+                                    <h4 class="text-base font-medium text-slate-900 dark:text-slate-300">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h4>
+                                </div>
+                                <div class="mb-5">
+                                    <p class="text-slate-600 text-base dark:text-slate-400">Pro. Date</p>
+                                    <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300">02/05/2023</h4>
+                                </div>
+                                <div class="mb-5">
+                                    <p class="text-slate-600 text-base dark:text-slate-400">For this product</p>1
+                                    <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300">Other</h4>
+                                </div>
+                                <div class="mb-5">
+                                    <p class="text-slate-600 text-base dark:text-slate-400">Size</p>
+                                    <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300">SM, MD, LG, XL</h4>
+                                </div>
+                            </div><!--end card-body--> 
+                        </div><!--end card-->                                  
+                    </div><!--end col-->                        
+                </div> <!--end grid-->                                        
+                <!-- footer -->
+                <div class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
+                    <div class="container">
+                        <!-- Footer Start -->
+                        <footer class="footer bg-transparent text-center font-medium text-slate-600 dark:text-slate-400 md:text-left">
                             &copy;
                             <script>
-                              var year = new Date();document.write(year.getFullYear());
+                                var year = new Date();document.write(year.getFullYear());
                             </script>
                             ThriftHub Malaysia
-                            <span class="float-right hidden text-slate-600 dark:text-slate-400 md:inline-block"
-                              >Crafted with <i class="ti ti-heart text-red-500"></i> by
-                              YUYIN</span>
-                          </footer>
-                          <!-- end Footer -->
-                        </div>
-                      </div>
-  
-  
-                </div><!--end container-->
-            </div><!--end page-wrapper-->
-        </div><!--end /div-->
+                            <span class="float-right hidden text-slate-600 dark:text-slate-400 md:inline-block">Crafted with <i class="ti ti-heart text-red-500"></i> by YUYIN</span>
+                        </footer>
+                        <!-- end Footer -->
+                    </div>
+                </div>
+            </div><!--end container-->
+        </div><!--end page-wrapper-->
+    </div><!--end /div-->
 
-        <!-- JAVASCRIPTS -->
-        <!-- <div class="menu-overlay"></div> -->
-        <script src="assets/libs/lucide/umd/lucide.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-        <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+    <!-- JAVASCRIPTS -->
+    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
 
-        <script src="assets/libs/filepond/filepond.min.js"></script>
-        <script src="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
-        <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-        <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
-        <script src="assets/js/app.js"></script>
-        <!-- JAVASCRIPTS -->
-        <script>    
-            FilePond.registerPlugin(FilePondPluginImagePreview);    
-            // Get a reference to the file input element
-            const inputElement = document.querySelectorAll('input[type="file"]');
+    <script src="assets/libs/filepond/filepond.min.js"></script>
+    <script src="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
+    <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+    <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="assets/js/app.js"></script>
 
-            // Create a FilePond instance
-            inputElement.forEach(element => {
-                const pond = FilePond.create(element);    
-            });
-            
+    <!-- Firebase Initialization and Form Submission Logic -->
+    <script type="module">
+      import { db, storage } from './firebase-config.js'; // Import Firebase services
+    
+      // Initialize FilePond
+      FilePond.registerPlugin(FilePondPluginImagePreview);
+      const inputElement = document.querySelectorAll('input[type="file"]');
+      inputElement.forEach(element => {
+          const pond = FilePond.create(element);
+      });
+    
+      // Form Submission Logic
+      document.addEventListener('DOMContentLoaded', function() {
+          const productForm = document.getElementById('productForm');
+          const messageDiv = document.getElementById('message');
+          
+          productForm.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              
+              try {
+                  // Get form values
+                  const title = document.getElementById('title').value;
+                  const price = parseFloat(document.getElementById('price').value);
+                  const category = document.getElementById('category').value;
+                  const description = document.getElementById('description').value;
+                  const productDate = document.getElementById('Product-date').value;
+                  const gender = document.getElementById('gender').value;
+                  const size = document.getElementById('sizing').value;
 
-            var elem = document.querySelector('input[name="foo"]');
-            new Datepicker(elem, {
-            // ...options
-            }); 
-            new Selectr('#sizing',{
-                taggable: true,
-                tagSeperators: [",", "|"]
-            });
-        </script>
-    </body>
+                  // Get the main image file from FilePond
+                  const mainImagePond = FilePond.find(document.querySelector('.filepond'));
+                  const mainImageFile = mainImagePond.getFiles()[0]?.file;
+
+                  // Show loading message
+                  messageDiv.textContent = 'Uploading product...';
+                  messageDiv.className = '';
+
+                  let imageUrl = '';
+                  if (mainImageFile) {
+                      // Upload image to Firebase Storage
+                      const storageRef = storage.ref(`products/${Date.now()}_${mainImageFile.name}`);
+                      const snapshot = await storageRef.put(mainImageFile);
+                      imageUrl = await snapshot.ref.getDownloadURL();
+                  }
+
+                  // Add product to Firestore
+                  await db.collection('products').add({
+                      title: title,
+                      price: price,
+                      category: category,
+                      description: description,
+                      productDate: productDate,
+                      gender: gender,
+                      size: size,
+                      imageUrl: imageUrl,
+                      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                      status: 'available'
+                  });
+
+                  // Success message and reset form
+                  messageDiv.textContent = 'Product added successfully!';
+                  messageDiv.className = 'success';
+                  productForm.reset();
+
+                  // Clear message after 3 seconds
+                  setTimeout(() => {
+                      messageDiv.textContent = '';
+                      messageDiv.className = '';
+                  }, 3000);
+
+              } catch (error) {
+                  console.error('Error adding product:', error);
+                  messageDiv.textContent = 'Error adding product: ' + error.message;
+                  messageDiv.className = 'error';
+              }
+          });
+      });
+    </script>
+</body>
 </html>

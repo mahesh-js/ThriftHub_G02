@@ -1,10 +1,4 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
   authDomain: "thrifthub-demo.firebaseapp.com",
@@ -15,5 +9,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth();
+const app = firebase.initializeApp(firebaseConfig);
+
+// Export Firebase services
+export const db = firebase.firestore(app);
+export const storage = firebase.storage(app);
+export const auth = firebase.auth();

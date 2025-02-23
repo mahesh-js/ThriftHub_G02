@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ThriftHub</title>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+            authDomain: "thrifthub-demo.firebaseapp.com",
+            projectId: "thrifthub-demo",
+            storageBucket: "thrifthub-demo.firebasestorage.app",
+            messagingSenderId: "518014691134",
+            appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        document.getElementById("root").innerHTML = `
+            <div class="container">
+                <h2>Products</h2>
+                <div id="productsList"></div>
+            </div>
+        `;
+
+        // Load and display products
+        const loadProducts = async () => {
+            const productsList = document.getElementById("productsList");
+            productsList.innerHTML = ""; // Clear previous content
+
+            try {
+                const productsSnapshot = await db.collection("products").get();
+                if (productsSnapshot.empty) {
+                    productsList.innerHTML = "<p>No products found.</p>";
+                    return;
+                }
+
+                productsSnapshot.forEach((doc) => {
+                    const product = doc.data();
+                    productsList.innerHTML += `
+                        <div class="product">
+                            <img src="${product.imageUrl}" alt="${product.title}">
+                            <h3>${product.title}</h3>
+                            <p>${product.description}</p>
+                            <p>Price: $${product.price}</p>
+                            <p>Gender: ${product.gender}</p>
+                            <p>Size: ${product.size}</p>
+                        </div>
+                    `;
+                });
+            } catch (error) {
+                console.error("Error loading products: ", error);
+                productsList.innerHTML = "<p>Error loading products.</p>";
+            }
+        };
+
+        // Load products on page load
+        loadProducts();
+    </script>
+</body>
+</html>
