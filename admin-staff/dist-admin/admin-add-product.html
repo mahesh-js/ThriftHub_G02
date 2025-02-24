@@ -183,6 +183,21 @@
         color: #3b82f6;
         font-size: 14px;
       }
+
+      /* Style for category dropdown to match screenshot */
+      .form-select {
+          background-color: #1a202c; /* Black background for dropdown */
+          color: #ffffff; /* White text for options */
+      }
+
+      .form-select option {
+          background-color: #1a202c; /* Black background for options */
+          color: #ffffff; /* White text for options */
+      }
+
+      .form-select option:disabled {
+          color: #a0aec0; /* Gray text for disabled/placeholder option */
+      }
     </style>
   </head>
 
@@ -390,10 +405,16 @@
                     <label for="category" class="form-label">Category</label>
                     <select id="category" class="form-input" required>
                       <option value="">Select Category</option>
-                      <option value="Electronics">Electronics</option>
-                      <option value="Furniture">Furniture</option>
-                      <option value="Footwear">Footwear</option>
-                      <option value="Clothes">Clothes</option>
+                      <option value="m-tops.html">Men's Tops & Bottoms</option>
+                      <option value="m-foot.html">Men's Footwear</option>
+                      <option value="m-acc.html">Men's Accessories</option>
+                      <option value="m-bag.html">Men's Bags & Wallets</option>
+                      <option value="w-tops.html">Women's Tops & Bottoms</option>
+                      <option value="w-foot.html">Women's Footwear</option>
+                      <option value="w-acc.html">Women's Accessories</option>
+                      <option value="w-bag.html">Women's Bags & Wallets</option>
+                      <option value="kids.html">Kids Fashion</option>
+                      <option value="kids-foot.html">Kids Footwear</option>
                     </select>
                   </div>
                   <div class="mb-4">
@@ -411,18 +432,6 @@
                   <div class="mb-4">
                     <div class="grid grid-cols-2 gap-3">
                       <div class="col-span-1">
-                        <label for="Product-date" class="form-label"
-                          >Product Date</label
-                        >
-                        <input
-                          type="text"
-                          id="Product-date"
-                          class="form-input"
-                          name="foo"
-                          required
-                        />
-                      </div>
-                      <div class="col-span-1">
                         <label for="price" class="form-label">Price</label>
                         <input
                           type="number"
@@ -433,17 +442,6 @@
                         />
                       </div>
                     </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="gender" class="form-label"
-                      >For this product</label
-                    >
-                    <select id="gender" class="form-input" required>
-                      <option value="">-- Gender --</option>
-                      <option value="Men">Men</option>
-                      <option value="Women">Women</option>
-                      <option value="Kids">Kids</option>
-                    </select>
                   </div>
                   <div class="mb-4">
                     <label for="sizing" class="form-label">Size</label>
@@ -509,26 +507,6 @@
                       It is a long established fact that a reader will be
                       distracted by the readable content of a page when looking
                       at its layout.
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      Pro. Date
-                    </p>
-                    <h4
-                      class="preview-text text-base font-semibold text-slate-900 dark:text-slate-300"
-                    >
-                      02/05/2023
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      For this product
-                    </p>
-                    <h4
-                      class="preview-text text-base font-semibold text-slate-900 dark:text-slate-300"
-                    >
-                      Other
                     </h4>
                   </div>
                   <div class="mb-5">
@@ -639,8 +617,6 @@
             const price = parseFloat(document.getElementById("price").value);
             const category = document.getElementById("category").value;
             const description = document.getElementById("description").value;
-            const productDate = document.getElementById("Product-date").value;
-            const gender = document.getElementById("gender").value;
             const size = document.getElementById("sizing").value;
 
             // Get the main image file from FilePond
@@ -653,8 +629,6 @@
               price,
               category,
               description,
-              productDate,
-              gender,
               size,
               mainImageFile, // Log the file to check if it's being captured
             });
@@ -689,8 +663,6 @@
               price,
               category,
               description,
-              productDate,
-              gender,
               size,
               imageUrl,
             });
@@ -701,8 +673,6 @@
                 price: price,
                 category: category,
                 description: description,
-                productDate: productDate,
-                gender: gender,
                 size: size,
                 imageUrl: imageUrl,
                 createdAt: serverTimestamp(),
