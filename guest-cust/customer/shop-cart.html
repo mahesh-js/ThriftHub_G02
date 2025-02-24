@@ -312,84 +312,8 @@
                       <th class="product-subtotal" colspan="2">Total</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr class="cart_item">
-                      <td class="product-thumbnail">
-                        <a href="#">
-                          <img src="img/shop/shop_item_3.jpg" alt="">
-                        </a>
-                      </td>
-                      <td class="product-name">
-                        <a href="#">Fashion Shorts</a>
-                        <ul>
-                          <li>Size: XL</li>
-                          <li>Color: White</li>
-                        </ul>
-                      </td>
-                      <td class="product-price">
-                        <span class="amount">$1250.00</span>
-                      </td>
-                      <td class="product-quantity">
-                        <div class="quantity buttons_added">                  
-                          <input type="number" step="1" min="0" value="1" title="Qty" class="input-text qty text">
-                          <div class="quantity-adjust">
-                            <a href="#" class="plus">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a href="#" class="minus">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="product-subtotal">
-                        <span class="amount">$1250.00</span>
-                      </td>
-                      <td class="product-remove">
-                        <a href="#" class="remove" title="Remove this item">
-                          <i class="ui-close"></i>
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr class="cart_item">
-                      <td class="product-thumbnail">
-                        <a href="#">
-                          <img src="img/shop/shop_item_7.jpg" alt="">
-                        </a>
-                      </td>
-                      <td class="product-name">
-                        <a href="#">Business Suit</a>
-                        <ul>
-                          <li>Size: L</li>
-                          <li>Color: Black</li>
-                        </ul>
-                      </td>
-                      <td class="product-price">
-                        <span class="amount">$240.00</span>
-                      </td>
-                      <td class="product-quantity">
-                        <div class="quantity buttons_added">                  
-                          <input type="number" step="1" min="0" value="1" title="Qty" class="input-text qty text">
-                          <div class="quantity-adjust">
-                            <a href="#" class="plus">
-                              <i class="fa fa-angle-up"></i>
-                            </a>
-                            <a href="#" class="minus">
-                              <i class="fa fa-angle-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="product-subtotal">
-                        <span class="amount">$240.00</span>
-                      </td>
-                      <td class="product-remove">
-                        <a href="#" class="remove" title="Remove this item">
-                          <i class="ui-close"></i>
-                        </a>
-                      </td>
-                    </tr>
+                  <tbody id="cartItems">
+                    <!-- Cart items will be dynamically inserted here -->
                   </tbody>
                 </table>
               </div>
@@ -404,9 +328,9 @@
 
                 <div class="col-md-7">
                   <div class="actions">
-                    <input type="submit" name="update_cart" value="Update Cart" class="btn btn-lg btn-stroke">
+                    <input type="submit" name="update_cart" value="Update Cart" class="btn btn-lg btn-stroke" id="updateCartBtn">
                     <div class="wc-proceed-to-checkout">
-                      <a href="checkout.html" class="btn btn-lg btn-dark"><span>proceed to checkout</span></a>
+                      <a href="shop-checkout.html" class="btn btn-lg btn-dark"><span>Proceed to Checkout</span></a>
                     </div>
                   </div>
                 </div>
@@ -700,7 +624,7 @@
                     <tr class="cart-subtotal">
                       <th>Cart Subtotal</th>
                       <td>
-                        <span class="amount">$1490.00</span>
+                        <span class="amount" id="cartSubtotal">RM0.00</span>
                       </td>
                     </tr>
                     <tr class="shipping">
@@ -712,7 +636,7 @@
                     <tr class="order-total">
                       <th>Order Total</th>
                       <td>
-                        <strong><span class="amount">$1490.00</span></strong>
+                        <strong><span class="amount" id="orderTotal">RM0.00</span></strong>
                       </td>
                     </tr>
                   </tbody>
@@ -728,20 +652,7 @@
       </section> <!-- end cart -->
 
 
-      <!-- Newsletter -->
-      <section class="newsletter" id="subscribe">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <h4>Get the latest updates</h4>
-              <form class="relative newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Enter your email">
-                <input type="submit" class="btn btn-lg btn-dark newsletter-submit" value="Subscribe">
-              </form>
-            </div>
-          </div>
-        </div>       
-      </section>
+     
 
     <!-- Footer Type-1 -->
     <footer class="footer footer-type-1">
@@ -806,7 +717,7 @@
 
             <div class="col-sm-6 copyright sm-text-center">
               <span>
-                &copy;
+                ©
                 <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
                 ThriftHub Malaysia | Made by <a href="">Group 2</a>
               </span>
@@ -835,6 +746,144 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>  
   <script type="text/javascript" src="js/scripts.js"></script>
-    
+  <script type="module">
+    // No Firebase integration needed here since cart is stored in localStorage
+    document.addEventListener("DOMContentLoaded", () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartItems = document.getElementById('cartItems');
+        const cartSubtotalElement = document.getElementById('cartSubtotal');
+        const orderTotalElement = document.getElementById('orderTotal');
+
+        function displayCart() {
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<tr><td colspan="6" class="error-message">Your cart is empty.</td></tr>';
+                updateTotals();
+                return;
+            }
+
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const itemHtml = `
+                    <tr class="cart_item">
+                        <td class="product-thumbnail">
+                            <a href="shop-single.html?id=${item.id}">
+                                <img src="${item.imageUrl || 'img/shop/shop_item_3.jpg'}" alt="${item.name}">
+                            </a>
+                        </td>
+                        <td class="product-name">
+                            <a href="shop-single.html?id=${item.id}">${item.name}</a>
+                            <ul>
+                                <li>Size: ${item.size || 'N/A'}</li>
+                                <li>Color: N/A</li> <!-- Add color field to Firestore if needed -->
+                            </ul>
+                        </td>
+                        <td class="product-price">
+                            <span class="amount">RM${item.price.toFixed(2)}</span>
+                        </td>
+                        <td class="product-quantity">
+                            <div class="quantity buttons_added">                  
+                                <input type="number" step="1" min="0" value="${item.quantity || 1}" title="Qty" class="input-text qty text" data-index="${index}">
+                                <div class="quantity-adjust">
+                                    <a href="#" class="plus" data-index="${index}">
+                                        <i class="fa fa-angle-up"></i>
+                                    </a>
+                                    <a href="#" class="minus" data-index="${index}">
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="product-subtotal">
+                            <span class="amount" data-index="${index}">RM${(item.price * (item.quantity || 1)).toFixed(2)}</span>
+                        </td>
+                        <td class="product-remove">
+                            <a href="#" class="remove" data-index="${index}" title="Remove this item">
+                                <i class="ui-close"></i>
+                            </a>
+                        </td>
+                    </tr>
+                `;
+                cartItems.insertAdjacentHTML('beforeend', itemHtml);
+            });
+
+            // Add event listeners for quantity changes and removal
+            document.querySelectorAll('.qty').forEach(input => {
+                input.addEventListener('change', (e) => {
+                    const index = e.target.getAttribute('data-index');
+                    const quantity = parseInt(e.target.value) || 1;
+                    if (quantity < 0) e.target.value = 1;
+                    cart[index].quantity = quantity;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateItemTotal(index);
+                    updateTotals();
+                });
+            });
+
+            document.querySelectorAll('.plus').forEach(plus => {
+                plus.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const index = e.target.getAttribute('data-index');
+                    cart[index].quantity = (cart[index].quantity || 1) + 1;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateItemTotal(index);
+                    updateTotals();
+                });
+            });
+
+            document.querySelectorAll('.minus').forEach(minus => {
+                minus.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const index = e.target.getAttribute('data-index');
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity = (cart[index].quantity || 1) - 1;
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateItemTotal(index);
+                        updateTotals();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.remove').forEach(remove => {
+                remove.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const index = e.target.getAttribute('data-index');
+                    cart.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    displayCart();
+                });
+            });
+
+            // Update cart on "Update Cart" button click
+            document.getElementById('updateCartBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                displayCart(); // Re-render cart to reflect any manual changes
+            });
+
+            updateTotals();
+        }
+
+        function updateItemTotal(index) {
+            const item = cart[index];
+            const subtotalElement = document.querySelector(`.product-subtotal span[data-index="${index}"]`);
+            if (subtotalElement) {
+                subtotalElement.textContent = `RM${(item.price * (item.quantity || 1)).toFixed(2)}`;
+            }
+        }
+
+        function updateTotals() {
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+            const shipping = 0; // Free shipping for simplicity
+            const total = subtotal + shipping;
+
+            cartSubtotalElement.textContent = `RM${subtotal.toFixed(2)}`;
+            orderTotalElement.textContent = `RM${total.toFixed(2)}`;
+        }
+
+        // Initial cart display
+        displayCart();
+    });
+  </script>
+
 </body>
 </html>

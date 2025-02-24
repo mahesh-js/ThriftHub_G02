@@ -24,10 +24,10 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="firebase-config.js"></script>
-    <script src="ThriftHub_G02/frontend/js/script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="ThriftHub_G02/frontend/js/script.js"></script>
 
 </head>
 
@@ -185,7 +185,7 @@
                         <div class="nav-cart-outer">
                           <div class="nav-cart-inner">
                             <a href="#" class="nav-cart-icon">
-                              <span class="nav-cart-badge">2</span>
+                              <span class="nav-cart-badge" id="cartBadge">0</span>
                             </a>
                           </div>
                         </div>
@@ -207,59 +207,21 @@
                   <li class="nav-cart">
                     <div class="nav-cart-outer">
                       <div class="nav-cart-inner">
-                        <a href="#" class="nav-cart-icon">
-                          2
+                        <a href="#" class="nav-cart-icon" id="cartIcon">
+                          <span class="nav-cart-badge" id="cartBadge">0</span>
                         </a>
                       </div>
                     </div>
                     <div class="nav-cart-container">
-                      <div class="nav-cart-items">
+                      <div class="nav-cart-items" id="navCartItems">
 
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_1.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Ladies Bag
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-                          </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_2.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Sequin Suit longer title
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-                          </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
+                        <!-- Cart items will be dynamically inserted here -->
 
                       </div> <!-- end cart items -->
 
                       <div class="nav-cart-summary">
                         <span>Cart Subtotal</span>
-                        <span class="total-price">$1799.00</span>
+                        <span class="total-price" id="navCartSubtotal">RM0.00</span>
                       </div>
 
                       <div class="nav-cart-actions mt-20">
@@ -444,7 +406,7 @@
 
               <div class="col-sm-6 copyright sm-text-center">
                 <span>
-                  &copy;
+                  ©
                   <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
                   ThriftHub Malaysia | Made by <a href="">Group 2</a>
                 </span>
@@ -473,6 +435,95 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="module">
+    // No Firebase integration needed here since cart is stored in localStorage
+    document.addEventListener("DOMContentLoaded", () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartBadge = document.getElementById('cartBadge');
+        const navCartItems = document.getElementById('navCartItems');
+        const navCartSubtotal = document.getElementById('navCartSubtotal');
+        const cartIcon = document.getElementById('cartIcon');
+
+        function updateCartDisplay() {
+            // Update cart badge (number of items)
+            cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+
+            // Update cart items in the dropdown
+            if (cart.length === 0) {
+                navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+                navCartSubtotal.textContent = 'RM0.00';
+            } else {
+                navCartItems.innerHTML = '';
+                cart.forEach((item) => {
+                    const itemHtml = `
+                        <div class="nav-cart-item clearfix">
+                            <div class="nav-cart-img">
+                                <a href="shop-single.html?id=${item.id}">
+                                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                                </a>
+                            </div>
+                            <div class="nav-cart-title">
+                                <a href="shop-single.html?id=${item.id}">
+                                    ${item.name}
+                                </a>
+                                <div class="nav-cart-price">
+                                    <span>${item.quantity || 1} x</span>
+                                    <span>RM${item.price.toFixed(2)}</span>
+                                </div>
+                            </div>
+                            <div class="nav-cart-remove">
+                                <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
+                                    <i class="ui-close"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+                });
+
+                // Update subtotal in the dropdown
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+                navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+
+                // Add event listeners for remove buttons in the dropdown
+                document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
+                    remove.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const productId = e.target.getAttribute('data-id');
+                        cart = cart.filter(item => item.id !== productId);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCartDisplay();
+                    });
+                });
+            }
+        }
+
+        // Initial cart display
+        updateCartDisplay();
+
+        // Listen for cart updates from localStorage changes (across pages)
+        window.addEventListener('storage', () => {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateCartDisplay();
+        });
+
+        // Add click event to cart icon to toggle cart dropdown visibility
+        cartIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
+            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close cart dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            const cartContainer = document.querySelector('.nav-cart-container');
+            if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
+                cartContainer.style.display = 'none';
+            }
+        });
+    });
+  </script>
 
 </body>
 
