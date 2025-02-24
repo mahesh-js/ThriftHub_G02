@@ -282,56 +282,12 @@
 
             <div class="col-md-6 col-xs-12 product-slider mb-60">
 
-              <div class="flickity flickity-slider-wrap mfp-hover" id="gallery-main">
-
-                <div class="gallery-cell">
-                  <a href="img/shop/item_lg_1.jpg" class="lightbox-img">
-                    <img src="img/shop/item_lg_1.jpg" alt="" />
-                    <i class="ui-zoom zoom-icon"></i>
-                  </a>
-                </div>
-                <div class="gallery-cell">
-                  <a href="img/shop/item_lg_2.jpg" class="lightbox-img">
-                    <img src="img/shop/item_lg_2.jpg" alt="" />
-                    <i class="ui-zoom zoom-icon"></i>
-                  </a>
-                </div>
-                <div class="gallery-cell">
-                  <a href="img/shop/item_lg_3.jpg" class="lightbox-img">
-                    <img src="img/shop/item_lg_3.jpg" alt="" />
-                    <i class="ui-zoom zoom-icon"></i>
-                  </a>
-                </div>
-                <div class="gallery-cell">
-                  <a href="img/shop/item_lg_4.jpg" class="lightbox-img">
-                    <img src="img/shop/item_lg_4.jpg" alt="" />
-                    <i class="ui-zoom zoom-icon"></i>
-                  </a>
-                </div>
-                <div class="gallery-cell">
-                  <a href="img/shop/item_lg_5.jpg" class="lightbox-img">
-                    <img src="img/shop/item_lg_5.jpg" alt="" />
-                    <i class="ui-zoom zoom-icon"></i>
-                  </a>
-                </div>
+              <div class="flickity flickity-slider-wrap mfp-hover" id="gallery-main" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false, "prevNextButtons": true }'>
+                <!-- Product images will be dynamically inserted here -->
               </div> <!-- end gallery main -->
 
               <div class="gallery-thumbs">
-                <div class="gallery-cell">
-                  <img src="img/shop/item_thumb_1.jpg" alt="" />
-                </div>
-                <div class="gallery-cell">
-                  <img src="img/shop/item_thumb_2.jpg" alt="" />
-                </div>
-                <div class="gallery-cell">
-                  <img src="img/shop/item_thumb_3.jpg" alt="" />
-                </div>
-                <div class="gallery-cell">
-                  <img src="img/shop/item_thumb_4.jpg" alt="" />
-                </div>
-                <div class="gallery-cell">
-                  <img src="img/shop/item_thumb_5.jpg" alt="" />
-                </div>
+                <!-- Thumbnails will be dynamically inserted here -->
               </div> <!-- end gallery thumbs -->
 
             </div> <!-- end col img slider -->
@@ -344,23 +300,17 @@
                 <li>
                   <a href="index.html">Shop</a>
                 </li>
-                <li class="active">
-                  Description
-                </li>
+                <li class="active" id="productCategory"></li>
               </ol>
-              <h1 class="product-title">Sport T-Shirt</h1>              
-              <span class="price">
-                <del>
-                  <span>$1550.00</span>
-                </del>
-                <ins>
-                  <span class="amount">$1250.00</span>
-                </ins>
+              <h1 class="product-title" id="productTitle">Product Title</h1>              
+              <span class="price" id="productPrice">
+                <del><span>$1550.00</span></del>
+                <ins><span class="amount">$1250.00</span></ins>
               </span>
               <span class="rating">
                 <a href="#">3 Reviews</a>
               </span>
-              <p class="short-description">ThriftHub Malaysia offers stylish and eco-friendly shopping options, allowing you to embrace unique fashion while contributing to sustainability.</p>
+              <p class="short-description" id="productDescription">Product description will appear here.</p>
 
               <div class="color-swatches clearfix">
                 <span>Color:</span>
@@ -393,27 +343,26 @@
                   </div>
                 </div>
 
-                <a href="#" class="btn btn-dark btn-lg add-to-cart"><span>Add to Cart</span></a>
+                <a href="#" class="btn btn-dark btn-lg add-to-cart" id="addToCartBtn"><span>Add to Cart</span></a>
 
                 <a href="#" class="product-add-to-wishlist"><i class="fa fa-heart"></i></a>                          
               </div>
               
 
               <div class="product_meta">
-                <span class="sku">SKU: <a href="#">111763</a></span>
-                <span class="brand_as">Category: <a href="#">Men T-shirt</a></span>
-                <span class="posted_in">Tags: <a href="#">Sport, T-shirt, Blue</a></span>                
+                <span class="sku">SKU: <a href="#" id="productSKU">111763</a></span>
+                <span class="brand_as">Category: <a href="#" id="productCategoryLink">Men T-shirt</a></span>
+                <span class="posted_in">Tags: <a href="#" id="productTags">Sport, T-shirt, Blue</a></span>                
               </div>
 
               <!-- Accordion -->
               <div class="panel-group accordion mb-50" id="accordion">
                 <div class="panel">
                   <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="minus">Description<span>&nbsp;</span>
-                    </a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="minus">Description<span> </span></a>
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse in">
-                    <div class="panel-body">
+                    <div class="panel-body" id="productFullDescription">
                       Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.
                     </div>
                   </div>
@@ -421,8 +370,7 @@
 
                 <div class="panel">
                   <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="plus">Information<span>&nbsp;</span>
-                    </a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="plus">Information<span> </span></a>
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -430,15 +378,15 @@
                         <tbody>
                           <tr>
                             <th>Size:</th>
-                            <td>EU 41 (US 8), EU 42 (US 9), EU 43 (US 10), EU 45 (US 12)</td>
+                            <td id="productSize">EU 41 (US 8), EU 42 (US 9), EU 43 (US 10), EU 45 (US 12)</td>
                           </tr>
                           <tr>
                             <th>Colors:</th>
-                            <td>Violet, Black, Blue</td>
+                            <td id="productColors">Violet, Black, Blue</td>
                           </tr>
                           <tr>
                             <th>Fabric:</th>
-                            <td>Cotton (100%)</td>
+                            <td id="productFabric">Cotton (100%)</td>
                           </tr>                                     
                         </tbody>
                       </table>
@@ -448,8 +396,7 @@
 
                 <div class="panel">
                   <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="plus">Reviews<span>&nbsp;</span>
-                    </a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="plus">Reviews<span> </span></a>
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -515,6 +462,7 @@
           <div class="row">
 
             <div id="owl-related-items" class="owl-carousel owl-theme">
+              <!-- Related products will remain static for now, but can be dynamically updated later -->
               <div class="product">
                 <div class="product-item hover-trigger">
                   <div class="product-img">
@@ -727,20 +675,7 @@
 
 
 
-      <!-- Newsletter -->
-      <section class="newsletter" id="subscribe">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <h4>Get the latest updates</h4>
-              <form class="relative newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Enter your email">
-                <input type="submit" class="btn btn-lg btn-dark newsletter-submit" value="Subscribe">
-              </form>
-            </div>
-          </div>
-        </div>       
-      </section>
+     
 
      <!-- Footer Type-1 -->
      <footer class="footer footer-type-1">
@@ -805,7 +740,7 @@
 
             <div class="col-sm-6 copyright sm-text-center">
               <span>
-                &copy;
+                ©
                 <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
                 ThriftHub Malaysia | Made by <a href="">Group 2</a>
               </span>
@@ -834,6 +769,140 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>  
   <script type="text/javascript" src="js/scripts.js"></script>
-    
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script> <!-- Added for authentication -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+    import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
+    import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
+
+    // Firebase Configuration (use your actual config from Firebase Console)
+    const firebaseConfig = {
+        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+        authDomain: "thrifthub-demo.firebaseapp.com",
+        projectId: "thrifthub-demo",
+        storageBucket: "thrifthub-demo.firebasestorage.app",
+        messagingSenderId: "518014691134",
+        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Sign in anonymously for testing (remove in production or use proper auth)
+    signInAnonymously(auth).catch((error) => {
+        console.error("Error signing in anonymously:", error);
+    });
+
+    // Function to load and display a single product
+    async function loadProduct() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        if (!productId) {
+            document.querySelector('.product-slider').innerHTML = '<p class="error-message">No product ID provided.</p>';
+            document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">No product ID provided.</p>';
+            return;
+        }
+
+        try {
+            const productDoc = await getDoc(doc(db, "products", productId));
+            if (productDoc.exists()) {
+                const product = productDoc.data();
+
+                // Update product title
+                document.getElementById('productTitle').textContent = product.name || 'Untitled';
+
+                // Update product price
+                const priceElement = document.getElementById('productPrice');
+                if (product.price) {
+                    priceElement.innerHTML = product.price < (product.price * 1.3) ? `
+                        <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+                        <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
+                        `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`;
+                } else {
+                    priceElement.innerHTML = '<ins><span class="amount">RM0.00</span></ins>';
+                }
+
+                // Update product description
+                document.getElementById('productDescription').textContent = product.description || 'No description available.';
+                document.getElementById('productFullDescription').textContent = product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.';
+
+                // Update product category (breadcrumb and meta)
+                const category = product.category || 'Uncategorized';
+                document.getElementById('productCategory').textContent = category;
+                document.getElementById('productCategoryLink').textContent = category;
+                document.getElementById('productCategoryLink').href = `m-tops.html`; // Adjust based on category (e.g., m-tops.html for Clothes)
+
+                // Update product SKU and tags (placeholder values for now)
+                document.getElementById('productSKU').textContent = product.id || 'SKU-001';
+                document.getElementById('productTags').textContent = `${category}, ${product.name || 'Product'}, Fashion`;
+
+                // Update product size, colors, and fabric (use default values if not provided)
+                document.getElementById('productSize').textContent = product.size || 'N/A';
+                document.getElementById('productColors').textContent = 'Violet, Black, Blue'; // Add field in Firestore if needed
+                document.getElementById('productFabric').textContent = 'Cotton (100%)'; // Add field in Firestore if needed
+
+                // Update product images in the slider
+                const galleryMain = document.getElementById('gallery-main');
+                const galleryThumbs = document.querySelector('.gallery-thumbs');
+                galleryMain.innerHTML = '';
+                galleryThumbs.innerHTML = '';
+
+                const imageUrls = [product.imageUrl || 'img/shop/item_lg_1.jpg']; // Use single image for now, can expand to multiple
+                imageUrls.forEach((url, index) => {
+                    const mainCell = `
+                        <div class="gallery-cell">
+                            <a href="${url}" class="lightbox-img">
+                                <img src="${url}" alt="${product.name || 'Product'}" />
+                                <i class="ui-zoom zoom-icon"></i>
+                            </a>
+                        </div>
+                    `;
+                    galleryMain.insertAdjacentHTML('beforeend', mainCell);
+
+                    const thumbCell = `
+                        <div class="gallery-cell">
+                            <img src="${url}" alt="${product.name || 'Product'}" />
+                        </div>
+                    `;
+                    galleryThumbs.insertAdjacentHTML('beforeend', thumbCell);
+                });
+
+                // Add "Add to Cart" functionality
+                const addToCartBtn = document.getElementById('addToCartBtn');
+                addToCartBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    addToCart(productId, product.name || 'Untitled', product.price || 0, product.imageUrl || 'img/shop/item_lg_1.jpg');
+                });
+            } else {
+                document.querySelector('.product-slider').innerHTML = '<p class="error-message">Product not found.</p>';
+                document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">Product not found.</p>';
+            }
+        } catch (error) {
+            console.error("Error loading product:", error);
+            document.querySelector('.product-slider').innerHTML = '<p class="error-message">Error loading product. Please try again later.</p>';
+            document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">Error loading product. Please try again later.</p>';
+        }
+    }
+
+    // Function to add product to cart (using the same cart from m-tops.html)
+    function addToCart(productId, name, price, imageUrl) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || []; // Use localStorage for persistence
+        cart.push({ id: productId, name, price, imageUrl });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+        console.log('Cart:', cart);
+    }
+
+    // Load product when the page loads
+    document.addEventListener("DOMContentLoaded", () => {
+        loadProduct();
+    });
+  </script>
+
 </body>
 </html>

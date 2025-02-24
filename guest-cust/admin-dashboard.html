@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ThriftHub</title>
+    <link rel="stylesheet" href="/guest-cust/css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+            authDomain: "thrifthub-demo.firebaseapp.com",
+            projectId: "thrifthub-demo",
+            storageBucket: "thrifthub-demo.firebasestorage.app",
+            messagingSenderId: "518014691134",
+            appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        document.getElementById("root").innerHTML = `
+            <div class="container">
+                <h2>Admin Dashboard</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#add-product">Add Product</a></li>
+                        <li><a href="#view-products">View Products</a></li>
+                        <li><a href="#edit-product">Edit Product</a></li>
+                        <li><a href="#add-to-cart">Add to Cart</a></li>
+                        <li><a href="#view-cart">View Cart</a></li>
+                        <li><a href="#delete-customer">Delete Customer</a></li>
+                        <li><a href="#view-customers">View Customers</a></li>
+                        <li><a href="#add-staff">Add Staff</a></li>
+                        <li><a href="#edit-staff">Edit Staff</a></li>
+                        <li><a href="#view-staff">View Staff</a></li>
+                        <li><a href="#delete-staff">Delete Staff</a></li>
+                    </ul>
+                </nav>
+                <div id="content"></div>
+            </div>
+        `;
+
+        // Add Product
+        function addProduct() {
+            document.getElementById("content").innerHTML = `
+                <h3>Add Product</h3>
+                <form id="addProductForm">
+                    <!-- Form fields for adding a product -->
+                    <button type="submit">Add Product</button>
+                </form>
+            `;
+            // Handle form submission
+            document.getElementById("addProductForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                // Save product data to Firestore
+            });
+        }
+
+        // View Products
+        function viewProducts() {
+            document.getElementById("content").innerHTML = `
+                <h3>View Products</h3>
+                <div id="productsList"></div>
+            `;
+            // Load products from Firestore
+        }
+
+        // Edit Product
+        function editProduct() {
+            document.getElementById("content").innerHTML = `
+                <h3>Edit Product</h3>
+                <!-- Form fields for editing a product -->
+            `;
+            // Handle form submission
+        }
+
+        // Add to Cart
+        function addToCart() {
+            document.getElementById("content").innerHTML = `
+                <h3>Add to Cart</h3>
+                <!-- Form fields for adding items to cart -->
+            `;
+            // Handle form submission
+        }
+
+        // View Cart
+        function viewCart() {
+            document.getElementById("content").innerHTML = `
+                <h3>View Cart</h3>
+                <div id="cartItems"></div>
+            `;
+            // Load cart items from Firestore
+        }
+
+        // Delete Customer
+        function deleteCustomer() {
+            document.getElementById("content").innerHTML = `
+                <h3>Delete Customer</h3>
+                <!-- Form fields for deleting a customer -->
+            `;
+            // Handle form submission
+        }
+
+        // View Customers
+        function viewCustomers() {
+            document.getElementById("content").innerHTML = `
+                <h3>View Customers</h3>
+                <div id="customersList"></div>
+            `;
+            // Load customers from Firestore
+        }
+
+        // Add Staff
+        function addStaff() {
+            document.getElementById("content").innerHTML = `
+                <h3>Add Staff</h3>
+                <form id="addStaffForm">
+                    <!-- Form fields for adding a staff member -->
+                    <button type="submit">Add Staff</button>
+                </form>
+            `;
+            // Handle form submission
+            document.getElementById("addStaffForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                // Save staff data to Firestore
+            });
+        }
+
+        // Edit Staff
+        function editStaff() {
+            document.getElementById("content").innerHTML = `
+                <h3>Edit Staff</h3>
+                <!-- Form fields for editing a staff member -->
+            `;
+            // Handle form submission
+        }
+
+        // View Staff
+        function viewStaff() {
+            document.getElementById("content").innerHTML = `
+                <h3>View Staff</h3>
+                <div id="staffList"></div>
+            `;
+            // Load staff from Firestore
+        }
+
+        // Delete Staff
+        function deleteStaff() {
+            document.getElementById("content").innerHTML = `
+                <h3>Delete Staff</h3>
+                <!-- Form fields for deleting a staff member -->
+            `;
+            // Handle form submission
+        }
+
+        // Navigation Links
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = e.target.getAttribute("href").substring(1);
+                switch (target) {
+                    case "add-product":
+                        addProduct();
+                        break;
+                    case "view-products":
+                        viewProducts();
+                        break;
+                    case "edit-product":
+                        editProduct();
+                        break;
+                    case "add-to-cart":
+                        addToCart();
+                        break;
+                    case "view-cart":
+                        viewCart();
+                        break;
+                    case "delete-customer":
+                        deleteCustomer();
+                        break;
+                    case "view-customers":
+                        viewCustomers();
+                        break;
+                    case "add-staff":
+                        addStaff();
+                        break;
+                    case "edit-staff":
+                        editStaff();
+                        break;
+                    case "view-staff":
+                        viewStaff();
+                        break;
+                    case "delete-staff":
+                        deleteStaff();
+                        break;
+                    default:
+                        console.log("Unknown target");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
