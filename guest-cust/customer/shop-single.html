@@ -180,7 +180,6 @@
                         <div class="nav-cart-outer">
                           <div class="nav-cart-inner">
                             <a href="#" class="nav-cart-icon">
-                              <span class="nav-cart-badge">2</span>
                             </a>
                           </div>
                         </div>
@@ -189,82 +188,44 @@
 
               
 
-              <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
-                <ul>
-                  <li class="nav-register">
-                    <a href="myaccount.html">My Account</a>
-                  </li>
-                  <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
-                    <a href="#" class="nav-search search-trigger">
-                      <i class="fa fa-search"></i>
-                    </a>
-                  </li>
-                  <li class="nav-cart">
-                    <div class="nav-cart-outer">
-                      <div class="nav-cart-inner">
-                        <a href="#" class="nav-cart-icon">
-                          2
-                        </a>
-                      </div>
-                    </div>
-                    <div class="nav-cart-container">
-                      <div class="nav-cart-items">
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_1.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Ladies Bag
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
+                    <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
+                      <ul>
+                        <li class="nav-register">
+                          <a href="myaccount.html">My Account</a>
+                        </li>
+                        <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
+                          <a href="#" class="nav-search search-trigger">
+                            <i class="fa fa-search"></i>
+                          </a>
+                        </li>
+                        <li class="nav-cart">
+                          <div class="nav-cart-outer">
+                            <div class="nav-cart-inner">
+                              <a href="#" class="nav-cart-icon" id="cartIcon">
+                                <span class="nav-cart-badge" id="cartBadge">0</span>
+                              </a>
                             </div>
                           </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_2.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Sequin Suit longer title
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
+                          <div class="nav-cart-container">
+                            <div class="nav-cart-items" id="navCartItems">
+      
+                              <!-- Cart items will be dynamically inserted here -->
+      
+                            </div> <!-- end cart items -->
+      
+                            <div class="nav-cart-summary">
+                              <span>Cart Subtotal</span>
+                              <span class="total-price" id="navCartSubtotal">RM0.00</span>
+                            </div>
+      
+                            <div class="nav-cart-actions mt-20">
+                              <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
+                              <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
                             </div>
                           </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                      </div> <!-- end cart items -->
-
-                      <div class="nav-cart-summary">
-                        <span>Cart Subtotal</span>
-                        <span class="total-price">$1799.00</span>
-                      </div>
-
-                      <div class="nav-cart-actions mt-20">
-                        <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
-                        <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
-                      </div>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ul>
-              </div>
           
             </div> <!-- end row -->
           </div> <!-- end container -->
@@ -304,8 +265,8 @@
               </ol>
               <h1 class="product-title" id="productTitle">Product Title</h1>              
               <span class="price" id="productPrice">
-                <del><span>$1550.00</span></del>
-                <ins><span class="amount">$1250.00</span></ins>
+                <del><span>RM155.00</span></del>
+                <ins><span class="amount">RM125.00</span></ins>
               </span>
               <span class="rating">
                 <a href="#">3 Reviews</a>
@@ -314,18 +275,12 @@
 
               <div class="color-swatches clearfix">
                 <span>Color:</span>
-                <a href="#" class="swatch-violet"></a>
-                <a href="#" class="swatch-black"></a>
-                <a href="#" class="swatch-cream"></a>
+                <a href="#" class="size-m">same as picture</a>
               </div>
 
               <div class="size-options clearfix">
                 <span>Size:</span>
-                <a href="#" class="size-xs selected">XS</a>
-                <a href="#" class="size-s">S</a>
-                <a href="#" class="size-m">M</a>
-                <a href="#" class="size-l">L</a>
-                <a href="#" class="size-xl">XL</a>
+                <a href="#" class="size-m" id="productSize">M</a>
               </div>
 
               <div class="product-actions">
@@ -350,9 +305,9 @@
               
 
               <div class="product_meta">
-                <span class="sku">SKU: <a href="#" id="productSKU">111763</a></span>
-                <span class="brand_as">Category: <a href="#" id="productCategoryLink">Men T-shirt</a></span>
-                <span class="posted_in">Tags: <a href="#" id="productTags">Sport, T-shirt, Blue</a></span>                
+                <span class="sku">SKU: <a href="#" id="productSKU"></a></span>
+                <span class="brand_as">Category: <a href="#" id="productCategoryLink">Men's Tops & Bottoms</a></span>
+                <span class="posted_in">Tags: <a href="#" id="productTags"></a></span>                
               </div>
 
               <!-- Accordion -->
@@ -378,15 +333,15 @@
                         <tbody>
                           <tr>
                             <th>Size:</th>
-                            <td id="productSize">EU 41 (US 8), EU 42 (US 9), EU 43 (US 10), EU 45 (US 12)</td>
+                            <td id="productSize1"></td>
                           </tr>
                           <tr>
-                            <th>Colors:</th>
-                            <td id="productColors">Violet, Black, Blue</td>
+                            <th>Condition:</th>
+                            <td id="productCondition">Like New</td>
                           </tr>
                           <tr>
-                            <th>Fabric:</th>
-                            <td id="productFabric">Cotton (100%)</td>
+                            <th>Shipping To:</th>
+                            <td id="productShipping">West & East Malaysia</td>
                           </tr>                                     
                         </tbody>
                       </table>
@@ -405,11 +360,12 @@
                           <li>
                             <div class="review-body">
                               <div class="review-content">
-                                <p class="review-author"><strong>Alexander Samokhin</strong> - May 6, 2014 at 12:48 pm</p>
+                                <p class="review-author"><strong>Amirul Hafiz</strong> - Feb 6, 2025</p>
                                 <div class="rating">
                                   <a href="#"></a>
                                 </div>
-                                <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
+                                <p>The quality of items on ThriftHub exceeded my expectations.
+                                  I found great deals on branded clothes and accessories, all in excellent condition.</p>
                               </div>
                             </div>
                           </li>
@@ -417,11 +373,12 @@
                           <li>
                             <div class="review-body">
                               <div class="review-content">
-                                <p class="review-author"><strong>Christopher Robins</strong> - May 6, 2014 at 12:48 pm</p>
+                                <p class="review-author"><strong>Aisyah</strong> - Jan 20, 2025</p>
                                 <div class="rating">
                                   <a href="#"></a>
                                 </div>
-                                <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
+                                <p>ThriftHub Malaysia is my go-to platform for finding vintage clothes.
+                                  The user-friendly interface and fast delivery make it an even better experience.</p>
                               </div>
                             </div>
                           </li>
@@ -462,13 +419,12 @@
           <div class="row">
 
             <div id="owl-related-items" class="owl-carousel owl-theme">
-              <!-- Related products will remain static for now, but can be dynamically updated later -->
               <div class="product">
                 <div class="product-item hover-trigger">
                   <div class="product-img">
                     <a href="shop-single.html">
-                      <img src="img/shop/shop_item_3.jpg" alt="">
-                      <img src="img/shop/shop_item_back_3.jpg" alt="" class="back-img">
+                      <img src="img/shop/mt6.jpg" alt="">
+                      <img src="img/shop/mt6.jpg" alt="" class="back-img">
                     </a>
                     <div class="product-label">
                       <span class="sale">sale</span>
@@ -480,22 +436,22 @@
                         </a>
                       </div>                        
                     </div>
-                    <a href="#" class="product-quickview">Quick View</a>
+                    <a href="shop-single.html" class="product-quickview">Quick View</a>
                   </div>
                   <div class="product-details">                      
                     <h3 class="product-title">
-                      <a href="shop-single.html">Tribal Grey Blazer</a>
+                      <a href="shop-single.html">Men's Half-Zip Sweatshirt</a>
                     </h3>
                     <span class="category">
-                      <a href="catalogue-grid.html">Women</a>
+                      <a href="m-tops.html">MEN</a>
                     </span>
                   </div>
                   <span class="price">
                     <del>
-                      <span>$730.00</span>
+                      <span>RM99.00</span>
                     </del>
                     <ins>
-                      <span class="amount">$399.99</span>
+                      <span class="amount">RM33.00</span>
                     </ins>
                   </span>
                 </div>
@@ -505,8 +461,8 @@
                 <div class="product-item hover-trigger">
                   <div class="product-img">
                     <a href="shop-single.html">
-                      <img src="img/shop/shop_item_11.jpg" alt="">
-                      <img src="img/shop/shop_item_back_11.jpg" alt="" class="back-img">
+                      <img src="img/shop/mt11.jpg" alt="">
+                      <img src="img/shop/mt11.jpg" alt="" class="back-img">
                     </a>
                     <div class="hover-2">                    
                       <div class="product-actions">
@@ -515,19 +471,19 @@
                         </a>
                       </div>                        
                     </div>
-                    <a href="#" class="product-quickview">Quick View</a>
+                    <a href="shop-single.html" class="product-quickview">Quick View</a>
                   </div>
                   <div class="product-details">                      
                     <h3 class="product-title">
-                      <a href="shop-single.html">Mantle Brown Bag</a>
+                      <a href="shop-single.html">Polo Ralph Lauren Blackwatch</a>
                     </h3>
                     <span class="category">
-                      <a href="catalogue-grid.html">Accessories</a>
+                      <a href="m-tops.html">MEN</a>
                     </span>
                   </div>
                   <span class="price">
                     <ins>
-                      <span class="amount">$150.00</span>
+                      <span class="amount">RM250.00</span>
                     </ins>
                   </span>
                 </div>
@@ -537,8 +493,8 @@
                 <div class="product-item hover-trigger">
                   <div class="product-img">
                     <a href="shop-single.html">
-                      <img src="img/shop/shop_item_6.jpg" alt="">
-                      <img src="img/shop/shop_item_back_6.jpg" alt="" class="back-img">
+                      <img src="img/shop/mt3.jpg" alt="">
+                      <img src="img/shop/mt3.jpg" alt="" class="back-img">
                     </a>
                     <div class="hover-2">                    
                       <div class="product-actions">
@@ -547,19 +503,19 @@
                         </a>
                       </div>                        
                     </div>
-                    <a href="#" class="product-quickview">Quick View</a>
+                    <a href="shop-single.html" class="product-quickview">Quick View</a>
                   </div>
                   <div class="product-details">                      
                     <h3 class="product-title">
-                      <a href="shop-single.html">Faux Suits</a>
+                      <a href="shop-single.html">Nike Spellout</a>
                     </h3>
                     <span class="category">
-                      <a href="catalogue-grid.html">Men</a>
+                      <a href="m-tops.html">MEN</a>
                     </span>
                   </div>
                   <span class="price">
                     <ins>
-                      <span class="amount">$233.00</span>
+                      <span class="amount">RM50.00</span>
                     </ins>
                   </span>
                 </div>
@@ -569,8 +525,8 @@
                 <div class="product-item hover-trigger">
                   <div class="product-img">
                     <a href="shop-single.html">
-                      <img src="img/shop/shop_item_4.jpg" alt="">
-                      <img src="img/shop/shop_item_back_4.jpg" alt="" class="back-img">
+                      <img src="img/shop/mt4.jpg" alt="">
+                      <img src="img/shop/mt4.jpg" alt="" class="back-img">
                     </a>
                     <div class="hover-2">                    
                       <div class="product-actions">
@@ -579,19 +535,19 @@
                         </a>
                       </div>                        
                     </div>
-                    <a href="#" class="product-quickview">Quick View</a>
+                    <a href="shop-single.html" class="product-quickview">Quick View</a>
                   </div>
                   <div class="product-details">                      
                     <h3 class="product-title">
-                      <a href="shop-single.html">Sweater w/ Colar</a>
+                      <a href="shop-single.html">UNIQLO Corduroy Shirt</a>
                     </h3>
                     <span class="category">
-                      <a href="catalogue-grid.html">Men</a>
+                      <a href="m-tops.html">MEN</a>
                     </span>
                   </div>
                   <span class="price">
                     <ins>
-                      <span class="amount">$299.00</span>
+                      <span class="amount">RM55.00</span>
                     </ins>
                   </span>
                 </div>
@@ -601,8 +557,8 @@
                 <div class="product-item hover-trigger">
                   <div class="product-img">
                     <a href="shop-single.html">
-                      <img src="img/shop/shop_item_5.jpg" alt="">
-                      <img src="img/shop/shop_item_back_5.jpg" alt="" class="back-img">
+                      <img src="img/shop/mt5.jpg" alt="">
+                      <img src="img/shop/mt5.jpg" alt="" class="back-img">
                     </a>
                     <div class="hover-2">                    
                       <div class="product-actions">
@@ -611,19 +567,19 @@
                         </a>
                       </div>                        
                     </div>
-                    <a href="#" class="product-quickview">Quick View</a>
+                    <a href="shop-single.html" class="product-quickview">Quick View</a>
                   </div>
                   <div class="product-details">                      
                     <h3 class="product-title">
-                      <a href="shop-single.html">Lola May Crop Blazer</a>
+                      <a href="shop-single.html">Levis Graphic Tee</a>
                     </h3>
                     <span class="category">
-                      <a href="catalogue-grid.html">Women</a>
+                      <a href="m-tops.html">MEN</a>
                     </span>
                   </div>
                   <span class="price">
                     <ins>
-                      <span class="amount">$42.00</span>
+                      <span class="amount">RM69.00</span>
                     </ins>
                   </span>
                 </div>
@@ -633,8 +589,8 @@
                 <div class="product-item hover-trigger">
                   <div class="product-img">
                     <a href="shop-single.html">
-                      <img src="img/shop/shop_item_6.jpg" alt="">
-                      <img src="img/shop/shop_item_back_6.jpg" alt="" class="back-img">
+                      <img src="img/shop/mt12.jpg" alt="">
+                      <img src="img/shop/mt12.jpg" alt="" class="back-img">
                     </a>
                     <div class="product-label">
                       <span class="sale">sale</span>
@@ -646,22 +602,22 @@
                         </a>
                       </div>                        
                     </div>
-                    <a href="#" class="product-quickview">Quick View</a>
+                    <a href="shop-single.html" class="product-quickview">Quick View</a>
                   </div>
                   <div class="product-details">                      
                     <h3 class="product-title">
-                      <a href="shop-single.html">Faux Suits</a>
+                      <a href="shop-single.html">combo all branded collar shirt</a>
                     </h3>
                     <span class="category">
-                      <a href="catalogue-grid.html">Men</a>
+                      <a href="m-tops.html">MEN</a>
                     </span>
                   </div>
                   <span class="price">
                     <del>
-                      <span>$500.00</span>
+                      <span>RM90.00</span>
                     </del>
                     <ins>
-                      <span class="amount">$233.00</span>
+                      <span class="amount">RM30.00</span>
                     </ins>
                   </span>
                 </div>
@@ -672,7 +628,7 @@
           </div>
         </div>
       </section> <!-- end related products -->
-
+      
 
 
      
@@ -814,7 +770,7 @@
                 const product = productDoc.data();
 
                 // Update product title
-                document.getElementById('productTitle').textContent = product.name || 'Untitled';
+                document.getElementById('productTitle').textContent = product.title || 'Untitled';
 
                 // Update product price
                 const priceElement = document.getElementById('productPrice');
@@ -829,22 +785,22 @@
 
                 // Update product description
                 document.getElementById('productDescription').textContent = product.description || 'No description available.';
-                document.getElementById('productFullDescription').textContent = product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.';
+                document.getElementById('productFullDescription').textContent =  product.description ||'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.';
 
                 // Update product category (breadcrumb and meta)
                 const category = product.category || 'Uncategorized';
-                document.getElementById('productCategory').textContent = category;
-                document.getElementById('productCategoryLink').textContent = category;
+                document.getElementById('productCategory').textContent = `Men's Tops & Bottoms`;
                 document.getElementById('productCategoryLink').href = `m-tops.html`; // Adjust based on category (e.g., m-tops.html for Clothes)
 
                 // Update product SKU and tags (placeholder values for now)
                 document.getElementById('productSKU').textContent = product.id || 'SKU-001';
-                document.getElementById('productTags').textContent = `${category}, ${product.name || 'Product'}, Fashion`;
+                document.getElementById('productTags').textContent = `Men's Tops & Bottoms, ${product.name || 'Product'}, Fashion`;
 
-                // Update product size, colors, and fabric (use default values if not provided)
+                // Update product size, Condition, and Shipping (use default values if not provided)
                 document.getElementById('productSize').textContent = product.size || 'N/A';
-                document.getElementById('productColors').textContent = 'Violet, Black, Blue'; // Add field in Firestore if needed
-                document.getElementById('productFabric').textContent = 'Cotton (100%)'; // Add field in Firestore if needed
+                document.getElementById('productSize1').textContent = product.size || 'N/A';
+                document.getElementById('productCondition').textContent = 'Like New'; // Add field in Firestore if needed
+                document.getElementById('productShipping').textContent = 'West & East Malaysia'; // Add field in Firestore if needed
 
                 // Update product images in the slider
                 const galleryMain = document.getElementById('gallery-main');
@@ -901,6 +857,95 @@
     // Load product when the page loads
     document.addEventListener("DOMContentLoaded", () => {
         loadProduct();
+    });
+  </script>
+   <script type="module">
+    // No Firebase integration needed here since cart is stored in localStorage
+    document.addEventListener("DOMContentLoaded", () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartBadge = document.getElementById('cartBadge');
+        const navCartItems = document.getElementById('navCartItems');
+        const navCartSubtotal = document.getElementById('navCartSubtotal');
+        const cartIcon = document.getElementById('cartIcon');
+
+        function updateCartDisplay() {
+            // Update cart badge (number of items)
+            cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+
+            // Update cart items in the dropdown
+            if (cart.length === 0) {
+                navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+                navCartSubtotal.textContent = 'RM0.00';
+            } else {
+                navCartItems.innerHTML = '';
+                cart.forEach((item) => {
+                    const itemHtml = `
+                        <div class="nav-cart-item clearfix">
+                            <div class="nav-cart-img">
+                                <a href="shop-single.html?id=${item.id}">
+                                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                                </a>
+                            </div>
+                            <div class="nav-cart-title">
+                                <a href="shop-single.html?id=${item.id}">
+                                    ${item.name}
+                                </a>
+                                <div class="nav-cart-price">
+                                    <span>${item.quantity || 1} x</span>
+                                    <span>RM${item.price.toFixed(2)}</span>
+                                </div>
+                            </div>
+                            <div class="nav-cart-remove">
+                                <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
+                                    <i class="ui-close"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+                });
+
+                // Update subtotal in the dropdown
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+                navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+
+                // Add event listeners for remove buttons in the dropdown
+                document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
+                    remove.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const productId = e.target.getAttribute('data-id');
+                        cart = cart.filter(item => item.id !== productId);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCartDisplay();
+                    });
+                });
+            }
+        }
+
+        // Initial cart display
+        updateCartDisplay();
+
+        // Listen for cart updates from localStorage changes (across pages)
+        window.addEventListener('storage', () => {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateCartDisplay();
+        });
+
+        // Add click event to cart icon to toggle cart dropdown visibility
+        cartIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
+            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close cart dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            const cartContainer = document.querySelector('.nav-cart-container');
+            if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
+                cartContainer.style.display = 'none';
+            }
+        });
     });
   </script>
 
