@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>ThriftHub Malaysia | Homepage </title>
+  <title>ThriftHub Malaysia | Homepage</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/magnific-popup.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
-  <link rel="stylesheet" href="css/sliders.css" />
+  <link rel="stylesheet" href="css/sliders.css" /> <!-- Ensure this includes Owl Carousel styles -->
   <link rel="stylesheet" href="css/style.min.css" />
 
   <!-- Favicons -->
@@ -24,10 +24,12 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <script src="firebase-config.js"></script>
-  <script src="ThriftHub_G02/frontend/js/script.js"></script>
+
+  <!-- Firebase Scripts (as modules) -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script type="module" src="firebase-config.js"></script> <!-- Verify this path -->
+  <script type="module" src="ThriftHub_G02/frontend/js/script.js"></script> <!-- Verify this path -->
 
 </head>
 
@@ -59,50 +61,44 @@
         </div>        
       </div> <!-- end fullscreen search -->
 
-        <!-- Top Bar -->
-        <div class="top-bar hidden-xs">
-          <div class="container">
-            <div class="top-bar-links flex-parent">
-              <ul class="top-bar-currency-language">
-                <li>
-                  Currency: <a href="#">MYR<i class="fa fa-angle-down"></i></a>
-                  <div class="currency-dropdown">
-                    <ul>
-                      <li><a href="#">MYR</a></li>
-                      <li><a href="#">SGD</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="language">
-                  Language: <a href="#">ENG<i class="fa fa-angle-down"></i></a>
-                  <div class="language-dropdown">
-                    <ul>
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Malay</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-        
-              
-            </div>
+      <!-- Top Bar -->
+      <div class="top-bar hidden-xs">
+        <div class="container">
+          <div class="top-bar-links flex-parent">
+            <ul class="top-bar-currency-language">
+              <li>
+                Currency: <a href="#">MYR<i class="fa fa-angle-down"></i></a>
+                <div class="currency-dropdown">
+                  <ul>
+                    <li><a href="#">MYR</a></li>
+                    <li><a href="#">SGD</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="language">
+                Language: <a href="#">ENG<i class="fa fa-angle-down"></i></a>
+                <div class="language-dropdown">
+                  <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Malay</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
-        </div> <!-- end top bar -->
+        </div>
+      </div> <!-- end top bar -->
 
       <nav class="navbar navbar-responsive-top">
         <div class="navigation" id="sticky-nav">
           <div class="container relative">
-
             <nav class="navbar navbar-static-top">
               <div class="navigation" id="sticky-nav">
                 <div class="container relative">
-
                   <div class="row flex-parent">
                     <div class="nav-wrap flex-child" style="margin-left: -60px;">
                       <div class="collapse navbar-collapse text-left" id="navbar-collapse">
-      
                         <ul class="nav navbar-nav">
-      
                           <li class="dropdown">
                             <a href="#">Shop</a>
                             <i class="fa fa-angle-down dropdown-trigger"></i>
@@ -113,65 +109,46 @@
                                     <div class="col-md-2 megamenu-item"></div>
                                     <div class="col-md-3 megamenu-item">
                                       <ul class="menu-list">
-                                        <li>
-                                          <span>For Him</span>
-                                        </li>
+                                        <li><span>For Him</span></li>
                                         <li><a href="m-tops.html">Men's Tops & Bottoms</a></li>
                                         <li><a href="m-foot.html">Men's Footwear</a></li>
                                         <li><a href="m-acc.html">Men's Accessories</a></li>
                                         <li><a href="m-bag.html">Men's Bags & Wallets</a></li>
                                       </ul>
                                     </div>
-      
                                     <div class="col-md-3 megamenu-item">
                                       <ul class="menu-list">
-                                        <li>
-                                          <span>For Her</span>
-                                        </li>
+                                        <li><span>For Her</span></li>
                                         <li><a href="w-tops.html">Women's Tops & Bottoms</a></li>
                                         <li><a href="w-foot.html">Women's Footwear</a></li>
                                         <li><a href="w-acc.html">Women's Accessories</a></li>
                                         <li><a href="w-bag.html">Women's Bags & Wallets</a></li>
                                       </ul>
                                     </div>
-      
                                     <div class="col-md-3 megamenu-item">
                                       <ul class="menu-list">
-                                        <li>
-                                          <span>For Kids</span>
-                                        </li>
+                                        <li><span>For Kids</span></li>
                                         <li><a href="kids.html">Kids Fashion</a></li>
                                         <li><a href="kids-foot.html">Kids Footwear</a></li>
                                       </ul>
                                     </div>
-      
                                   </div>
                                 </div>
                               </li>
                             </ul>
                           </li>
-                          <li class="dropdown">
-                            <a href="about-us.html">About Us</a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="contact.html">Contact Us</a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="faq.html">F.A.Q</a>
-                          </li>
-                          </li> <!-- end elements -->
-      
-                        </ul> <!-- end menu -->
-                      </div> <!-- end collapse -->
-                    </div> <!-- end col -->
+                          <li class="dropdown"><a href="about-us.html">About Us</a></li>
+                          <li class="dropdown"><a href="contact.html">Contact Us</a></li>
+                          <li class="dropdown"><a href="faq.html">F.A.Q</a></li>
+                        </ul>
+                      </div>
+                    </div>
                     <div class="navbar-header flex-child" style="margin-left: -130px;">
                       <!-- Logo -->
                       <div class="logo-wrap">
-                        <div class="logo-wrap">
-                          <a href="index.html">
-                            <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png" alt="ThriftHub Logo">
-                          </a>
-                        </div>
+                        <a href="index.html">
+                          <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png" alt="ThriftHub Logo">
+                        </a>
                       </div>
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -183,58 +160,48 @@
                       <div class="nav-cart mobile-cart hidden-lg hidden-md">
                         <div class="nav-cart-outer">
                           <div class="nav-cart-inner">
-                            <a href="#" class="nav-cart-icon">
-                            </a>
+                            <a href="#" class="nav-cart-icon"></a>
                           </div>
                         </div>
                       </div>
-                    </div> <!-- end navbar-header -->
-
-              
-
-              <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
-                <ul>
-                  <li class="nav-register">
-                    <a href="myaccount.html">My Account</a>
-                  </li>
-                  <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
-                    <a href="#" class="nav-search search-trigger">
-                      <i class="fa fa-search"></i>
-                    </a>
-                  </li>
-                  <li class="nav-cart">
-                    <div class="nav-cart-outer">
-                      <div class="nav-cart-inner">
-                        <a href="#" class="nav-cart-icon" id="cartIcon">
-                          <span class="nav-cart-badge" id="cartBadge">0</span>
-                        </a>
-                      </div>
                     </div>
-                    <div class="nav-cart-container">
-                      <div class="nav-cart-items" id="navCartItems">
-
-                        <!-- Cart items will be dynamically inserted here -->
-
-                      </div> <!-- end cart items -->
-
-                      <div class="nav-cart-summary">
-                        <span>Cart Subtotal</span>
-                        <span class="total-price" id="navCartSubtotal">RM0.00</span>
-                      </div>
-
-                      <div class="nav-cart-actions mt-20">
-                        <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
-                        <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
-                      </div>
+                    <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
+                      <ul>
+                        <li class="nav-register"><a href="myaccount.html">My Account</a></li>
+                        <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
+                          <a href="#" class="nav-search search-trigger"><i class="fa fa-search"></i></a>
+                        </li>
+                        <li class="nav-cart">
+                          <div class="nav-cart-outer">
+                            <div class="nav-cart-inner">
+                              <a href="#" class="nav-cart-icon" id="cartIcon">
+                                <span class="nav-cart-badge" id="cartBadge">0</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-cart-container">
+                            <div class="nav-cart-items" id="navCartItems">
+                              <!-- Cart items will be dynamically inserted here -->
+                            </div>
+                            <div class="nav-cart-summary">
+                              <span>Cart Subtotal</span>
+                              <span class="total-price" id="navCartSubtotal">RM0.00</span>
+                            </div>
+                            <div class="nav-cart-actions mt-20">
+                              <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
+                              <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-          
-            </div> <!-- end row -->
-          </div> <!-- end container -->
-        </div> <!-- end navigation -->
-      </nav> <!-- end navbar -->
+            </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="content-wrapper oh">
@@ -242,12 +209,12 @@
       <!-- Hero Slider -->
       <section class="hero-wrap text-center relative">
         <div id="owl-hero" class="owl-carousel owl-theme light-arrows slider-animated">
-          <!-- Video Slide -->
+          <!-- Video Slide with YouTube Embed -->
           <div class="hero-slide overlay">
-            <video controls class="hero-video" poster="img/hero/video-poster.jpg">
-              <source src="" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <iframe class="hero-video" src="https://www.youtube.com/embed/v_ehd3m3tUs?autoplay=1&mute=1&loop=1&playlist=v_ehd3m3tUs" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
             <div class="container">
               <div class="hero-holder">
                 <div class="hero-message">
@@ -308,7 +275,6 @@
       <section class="section-wrap promo-banners pb-30">
         <div class="container">
           <div class="row">
-
             <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
               <a href="m-tops.html">
                 <img src="img/hero/IMG_1236.JPG" width="360" height="620" alt="">
@@ -319,7 +285,6 @@
                 </div>
               </a>
             </div>
-
             <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
               <a href="w-tops.html">
                 <img src="img/hero/homewomen.jpg" width="360" height="620" alt="">
@@ -330,7 +295,6 @@
                 </div>
               </a>
             </div>
-
             <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
               <a href="kids.html">
                 <img src="img/hero/homekids.jpg" width="360" height="620" alt="">
@@ -340,8 +304,7 @@
                   <span>New Collection</span>
                 </div>
               </a>
-            </div>0
-
+            </div>
           </div>
         </div>
       </section> <!-- end promo banners -->
@@ -366,10 +329,9 @@
         <div class="container">
           <div class="footer-widgets">
             <div class="row">
-
               <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="widget footer-about-us">
-                  utf-8 src="img/thrifthub ` 1q23456lg v1.png" alt="" class="logo">9
+                  <img src="img/thrifthub lg v1.png" alt="" class="logo">
                   <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
                   <div class="footer-socials">
                     <div class="social-icons nobase">
@@ -379,8 +341,7 @@
                     </div>
                   </div>
                 </div>
-              </div> <!-- end about us -->
-
+              </div>
               <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
                 <div class="widget footer-links">
                   <h5 class="widget-title bottom-line left-align grey">Explore</h5>
@@ -391,7 +352,6 @@
                   </ul>
                 </div>
               </div>
-
               <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
                 <div class="widget footer-links">
                   <h5 class="widget-title bottom-line left-align grey">Information</h5>
@@ -403,7 +363,6 @@
                   </ul>
                 </div>
               </div>
-
               <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
                 <div class="widget footer-links">
                   <h5 class="widget-title bottom-line left-align grey">Account</h5>
@@ -414,32 +373,24 @@
                   </ul>
                 </div>
               </div>
-
-       
-        </div> <!-- end container -->
-
-        <div class="bottom-footer">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-sm-6 copyright sm-text-center">
-                <span>
-                  ©
-                  <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
-                  ThriftHub Malaysia | Made by <a href="">Group 2</a>
-                </span>
-              </div>
-
-              <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
-                <i class="fa fa-cc-visa"></i>
-                <i class="fa fa-cc-mastercard"></i>
-                <i class="fa fa-cc-amex"></i>
-              </div>
-
             </div>
           </div>
-        </div> <!-- end bottom footer -->
-      </footer> <!-- end footer -->
+          <div class="bottom-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 copyright sm-text-center">
+                  <span>© <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script> ThriftHub Malaysia | Made by <a href="">Group 2</a></span>
+                </div>
+                <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
+                  <i class="fa fa-cc-visa"></i>
+                  <i class="fa fa-cc-mastercard"></i>
+                  <i class="fa fa-cc-amex"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       <div id="back-to-top">
         <a href="#top"><i class="fa fa-angle-up"></i></a>
@@ -452,6 +403,7 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script> <!-- Ensure Owl Carousel JS is included -->
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="module">
     // No Firebase integration needed here since cart is stored in localStorage
@@ -541,21 +493,34 @@
             }
         });
     });
+
+    // Owl Carousel Initialization for Hero Slider
+    $(document).ready(function(){
+      $("#owl-hero").owlCarousel({
+        items: 1,              // One slide at a time
+        loop: true,            // Loop through slides
+        autoplay: false,       // Disable initial autoplay to let video play first
+        autoplayTimeout: 5000, // 5 seconds per slide (adjust as needed for video duration)
+        nav: true,             // Navigation arrows
+        dots: true,            // Navigation dots
+        video: true,           // Enable video support
+        lazyLoad: true,        // Lazy load content
+        videoHeight: 600       // Match the height of .hero-slide.overlay
+      });
+    });
   </script>
 
-  <!-- CSS for Video Styling -->
+  <!-- CSS for Video and Slider Styling -->
   <style>
-    .hero-video {
+    .hero-wrap {
+      position: relative;
       width: 100%;
-      height: auto;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
+      overflow: hidden;
     }
     .hero-slide.overlay {
       position: relative;
+      width: 100%;
+      height: 600px; /* Fixed height for consistency, adjust as needed */
       overflow: hidden;
     }
     .hero-slide.overlay::after {
@@ -565,12 +530,43 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Dark overlay to match other slides */
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay to match image slides */
       z-index: 2;
+    }
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      border: none; /* Remove iframe border */
+    }
+    .hero-holder {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .hero-message {
       position: relative;
       z-index: 3;
+      color: #fff; /* Ensure text is visible over the overlay */
+      text-align: center;
+    }
+    .hero-title {
+      font-size: 48px; /* Adjust as needed */
+      margin-bottom: 10px;
+    }
+    .hero-subtitle {
+      font-size: 24px; /* Adjust as needed */
+      margin-bottom: 20px;
+    }
+    /* Ensure Owl Carousel compatibility */
+    .owl-carousel .owl-item .hero-video {
+      display: block;
     }
   </style>
 

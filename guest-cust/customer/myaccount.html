@@ -295,12 +295,7 @@
                             <span><strong>Username:</strong> ${user.displayName || "Not set"}</span>
                             <span><strong>Name:</strong> ${user.displayName || "Not set"}</span>
                             <span><strong>Email Address:</strong> ${user.email}</span>
-<<<<<<< HEAD
-=======
 
-                            <span><strong>Phone:</strong>${user.phone} || "Not set"}</span>
-
->>>>>>> 76d44e6a9684dc783c8475fed201adec57865536
                             <button id="editProfileBtn">EDIT</button>
                             <h3 style="margin-top:5%;margin-bottom:2%">Change Password</h3>
                             <button id="changePasswordBtn">Change Password</button>
@@ -323,8 +318,6 @@
                                 <label for="email">Email Address:</label>
                                 <input type="email" id="email" value="${user.email}" disabled>
 
-                                <label for="phone">Phone:</label>
-                                <input type="text" id="phone" placeholder="Enter your phone number">
 
                                 <button type="submit" style="margin-bottom:2%">Save Changes</button>
                             </form>
@@ -342,7 +335,6 @@
                     document.getElementById("editProfileForm").addEventListener("submit", (e) => {
                         e.preventDefault();
                         const newUsername = document.getElementById("username").value.trim();
-                        const newPhone = document.getElementById("phone").value.trim();
 
                         if (!newUsername) {
                             alert("Username cannot be empty.");
