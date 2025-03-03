@@ -568,7 +568,7 @@
                           aria-selected="true"
                         >
                           All
-                          <span class="text-slate-400" id="allCount">(4)</span>
+                          <span class="text-slate-400" id="allCount"></span>
                         </button>
                       </li>
                       <li class="me-4" role="presentation">
@@ -583,7 +583,7 @@
                         >
                           Published
                           <span class="text-slate-400" id="publishedCount"
-                            >(4)</span
+                            ></span
                           >
                         </button>
                       </li>
@@ -599,7 +599,7 @@
                         >
                           Drafts
                           <span class="text-slate-400" id="draftsCount"
-                            >(0)</span
+                            ></span
                           >
                         </button>
                       </li>
@@ -615,7 +615,7 @@
                         >
                           On Discount
                           <span class="text-slate-400" id="discountCount"
-                            >(1)</span
+                            ></span
                           >
                         </button>
                       </li>
@@ -1413,7 +1413,7 @@
                 const productId = doc.id;
 
                 // Ensure all required fields exist or provide defaults
-                const name = product.name || "Untitled"; // Use 'name' as the primary field for the product title
+                const name = product.title || "Untitled"; // Use 'name' as the primary field for the product title
                 const category = product.category || "Uncategorized";
                 const status = product.status || "available";
                 const price = product.price || 0;

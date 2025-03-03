@@ -790,7 +790,7 @@
                 // Update product category (breadcrumb and meta)
                 const category = product.category || 'Uncategorized';
                 document.getElementById('productCategory').textContent = `Men's Tops & Bottoms`;
-                document.getElementById('productCategoryLink').href = `m-tops.html`; // Adjust based on category (e.g., m-tops.html for Clothes)
+                document.getElementById('productCategoryLink').href = category; // Adjust based on category (e.g., m-tops.html for Clothes)
 
                 // Update product SKU and tags (placeholder values for now)
                 document.getElementById('productSKU').textContent = product.id || 'SKU-001';

@@ -704,7 +704,7 @@
             class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 justify-between"
           >
             <div
-              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4"
             >
               <div class="w-full relative p-4 form-container">
                 <label for="" class="form-label">Upload Image</label>
@@ -729,7 +729,7 @@
             </div>
             <!--end col-->
             <div
-              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6"
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8"
             >
               <form
                 id="productForm"
@@ -790,14 +790,13 @@
                   </div>
                   <div class="mb-4">
                     <label for="sizing" class="form-label">Size</label>
-                    <select id="sizing" class="form-input" required>
-                      <option value="">Size</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </select>
+                    <input
+                          type="text"
+                          id="sizing"
+                          class="form-input"
+                          placeholder="Size"
+                          required
+                        />
                   </div>
 
                   <!-- Message Div for Success/Error Messages -->
@@ -817,59 +816,7 @@
               <!--end card-->
             </div>
             <!--end col-->
-            <div
-              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
-            >
-              <div class="w-full relative mb-4 form-container">
-                <div class="flex-auto p-0 md:p-4">
-                  <div>
-                    <p class="text-slate-700 text-base dark:text-slate-400">
-                      Product Image
-                    </p>
-                    <img
-                      src="assets/images/products/pro-3.png"
-                      alt=""
-                      class="preview-image"
-                    />
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-700 text-base dark:text-slate-400">
-                      Product Title
-                    </p>
-                    <h4
-                      class="preview-title text-xl font-semibold text-slate-700 dark:text-slate-300"
-                    >
-                      Mannat HD, Smart LED Fire TV
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      Description
-                    </p>
-                    <h4
-                      class="preview-text text-base font-medium text-slate-900 dark:text-slate-300"
-                    >
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      Size
-                    </p>
-                    <h4
-                      class="preview-text text-base font-semibold text-slate-900 dark:text-slate-300"
-                    >
-                      SM, MD, LG, XL
-                    </h4>
-                  </div>
-                </div>
-                <!--end card-body-->
-              </div>
-              <!--end card-->
-            </div>
-            <!--end col-->
+            
           </div>
           <!--end grid-->
           <!-- footer -->
