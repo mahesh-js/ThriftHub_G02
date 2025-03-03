@@ -163,8 +163,7 @@
                       <div class="logo-wrap">
                         <div class="logo-wrap">
                           <a href="index.html">
-                            <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png"
-                              srcset="img/thrifthub lg v1.png 1x,img/thrifthub lg v1.png 2x" >
+                            <img class="thrifthub" width="160" height="50" src="img/thriftthub-lg-v1.png" alt="ThriftHub Logo">
                           </a>
                         </div>
                       </div>
@@ -187,44 +186,44 @@
 
               
 
-                    <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
-                      <ul>
-                        <li class="nav-register">
-                          <a href="myaccount.html">My Account</a>
-                        </li>
-                        <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
-                          <a href="#" class="nav-search search-trigger">
-                            <i class="fa fa-search"></i>
-                          </a>
-                        </li>
-                        <li class="nav-cart">
-                          <div class="nav-cart-outer">
-                            <div class="nav-cart-inner">
-                              <a href="#" class="nav-cart-icon" id="cartIcon">
-                                <span class="nav-cart-badge" id="cartBadge">0</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="nav-cart-container">
-                            <div class="nav-cart-items" id="navCartItems">
-      
-                              <!-- Cart items will be dynamically inserted here -->
-      
-                            </div> <!-- end cart items -->
-      
-                            <div class="nav-cart-summary">
-                              <span>Cart Subtotal</span>
-                              <span class="total-price" id="navCartSubtotal">RM0.00</span>
-                            </div>
-      
-                            <div class="nav-cart-actions mt-20">
-                              <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
-                              <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+              <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
+                <ul>
+                  <li class="nav-register">
+                    <a href="myaccount.html">My Account</a>
+                  </li>
+                  <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
+                    <a href="#" class="nav-search search-trigger">
+                      <i class="fa fa-search"></i>
+                    </a>
+                  </li>
+                  <li class="nav-cart">
+                    <div class="nav-cart-outer">
+                      <div class="nav-cart-inner">
+                        <a href="#" class="nav-cart-icon" id="cartIcon">
+                          <span class="nav-cart-badge" id="cartBadge">0</span>
+                        </a>
+                      </div>
                     </div>
+                    <div class="nav-cart-container">
+                      <div class="nav-cart-items" id="navCartItems">
+
+                        <!-- Cart items will be dynamically inserted here -->
+
+                      </div> <!-- end cart items -->
+
+                      <div class="nav-cart-summary">
+                        <span>Cart Subtotal</span>
+                        <span class="total-price" id="navCartSubtotal">RM0.00</span>
+                      </div>
+
+                      <div class="nav-cart-actions mt-20">
+                        <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
+                        <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
           
             </div> <!-- end row -->
           </div> <!-- end container -->
@@ -276,7 +275,7 @@
 
                 <div class="col-md-8" id="customer_details">
                   <div>
-                    <h2 class="heading uppercase bottom-line full-grey mb-30">billing address</h2>
+                    <h2 class="heading uppercase bottom-line full-grey mb-30">Billing Address</h2>
 
                     <p class="form-row form-row-wide address-field update_totals_on_change validate-required ecommerce-validated" id="billing_country_field">
                       <label for="billing_country">Country
@@ -629,73 +628,19 @@
                 <div class="col-md-4">
                   <div class="order-review-wrap ecommerce-checkout-review-order" id="order_review">
                     <h2 class="heading uppercase bottom-line full-grey">Your Order</h2>
-                    <table class="table shop_table ecommerce-checkout-review-order-table">
+                    <table class="table shop_table ecommerce-checkout-review-order-table" id="cartTable">
                       <tbody>
-                        <tr>
-                          <th>Business Suit<span class="count"> x 1</span></th>
-                          <td>
-                            <span class="amount">$599.00</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>California Dress<span class="count"> x 1</span></th>
-                          <td>
-                            <span class="amount">$1299.00</span>
-                          </td>
-                        </tr>
-                        <tr class="cart-subtotal">
-                          <th>Cart Subtotal</th>
-                          <td>
-                            <span class="amount">$1799.00</span>
-                          </td>
-                        </tr>
-                        <tr class="shipping">
-                          <th>Shipping</th>
-                          <td>
-                            <span>Free Shipping</span>
-                          </td>
-                        </tr>
-                        <tr class="order-total">
-                          <th><strong>Order Total</strong></th>
-                          <td>
-                            <strong><span class="amount">$1799.00</span></strong>
-                          </td>
-                        </tr>
+                        <!-- Cart items will be dynamically inserted here -->
                       </tbody>
                     </table>
 
                     <div id="payment" class="ecommerce-checkout-payment">
                       <h2 class="heading uppercase bottom-line full-grey">Payment Method</h2>
-                      <ul class="payment_methods methods">
-
-                        <li class="payment_method_bacs">
-                          <input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="bacs" checked="checked">
-                          <label for="payment_method_bacs">Direct Bank Transfer</label>
-                          <div class="payment_box payment_method_bacs">
-                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wont be shipped until the funds have cleared in our account.</p>
-                          </div>
-                        </li>
-
-                        <li class="payment_method_cheque">
-                          <input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="cheque">
-                          <label for="payment_method_cheque">Cheque payment</label>
-                          <div class="payment_box payment_method_cheque">
-                            <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                          </div>
-                        </li>
-
-                        <li class="payment_method_paypal">
-                          <input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="paypal">
-                          <label for="payment_method_paypal">Paypal</label>
-                          <img src="img/shop/paypal.png" alt="">
-                          <div class="payment_box payment_method_paypal">
-                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                          </div>
-                        </li>
-
-                      </ul>
+                      <div class="payment_methods methods">
+                        <button type="button" class="btn btn-lg btn-dark" id="stripeCheckoutButton">Pay with Stripe</button>
+                      </div>
                       <div class="form-row place-order">
-                        <input type="submit" name="ecommerce_checkout_place_order" class="btn btn-lg btn-dark" id="place_order" value="Place order">
+                        <!-- Removed the static "Place Order" button since Stripe handles payment -->
                       </div>
                     </div>
                   </div>
@@ -708,88 +653,85 @@
         </div> <!-- end container -->
       </section> <!-- end checkout -->
 
+      <!-- Footer Type-1 -->
+      <footer class="footer footer-type-1">
+        <div class="container">
+          <div class="footer-widgets">
+            <div class="row">
 
-     
-
-     <!-- Footer Type-1 -->
-     <footer class="footer footer-type-1">
-      <div class="container">
-        <div class="footer-widgets">
-          <div class="row">
-
-            <div class="col-md-3 col-sm-12 col-xs-12">
-              <div class="widget footer-about-us">
-                <img src="img/thrifthub lg v1.png" alt="" class="logo">
-                <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
-                <div class="footer-socials">
-                  <div class="social-icons nobase">
-                    <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
+              <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="widget footer-about-us">
+                  <img src="img/thriftthub-lg-v1.png" alt="" class="logo">
+                  <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
+                  <div class="footer-socials">
+                    <div class="social-icons nobase">
+                      <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
+                      <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div> <!-- end about us -->
+              </div> <!-- end about us -->
 
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Explore</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="m-tops.html">Mens</a></li>
-                  <li><a href="w-tops.html">Womens</a></li>
-                  <li><a href="kids.html">Kids</a></li>
-                </ul>
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Explore</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="m-tops.html">Mens</a></li>
+                    <li><a href="w-tops.html">Womens</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Information</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="delivery-info.html">Delivery Information</a></li>
-                  <li><a href="about-us.html">About us</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-                  <li><a href="faq.html">F.A.Q</a></li>
-                </ul>
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Information</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="delivery-info.html">Delivery Information</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="faq.html">F.A.Q</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Account</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="myaccount.html">My account</a></li>
-                  <li><a href="shop-cart.html">My cart</a></li>
-                  <li><a href="order-history.html">Order history</a></li>
-                </ul>
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Account</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="myaccount.html">My account</a></li>
+                    <li><a href="shop-cart.html">My cart</a></li>
+                    <li><a href="order-history.html">Order history</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
      
-      </div> <!-- end container -->
+        </div> <!-- end container -->
 
-      <div class="bottom-footer">
-        <div class="container">
-          <div class="row">
+        <div class="bottom-footer">
+          <div class="container">
+            <div class="row">
 
-            <div class="col-sm-6 copyright sm-text-center">
-              <span>
-                &copy;
-                <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
-                ThriftHub Malaysia | Made by <a href="">Group 2</a>
-              </span>
+              <div class="col-sm-6 copyright sm-text-center">
+                <span>
+                  ©
+                  <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
+                  ThriftHub Malaysia | Made by <a href="">Group 2</a>
+                </span>
+              </div>
+
+              <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
+                <i class="fa fa-cc-visa"></i>
+                <i class="fa fa-cc-mastercard"></i>
+                <i class="fa fa-cc-amex"></i>
+              </div>
+
             </div>
-
-            <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
-              <i class="fa fa-cc-visa"></i>
-              <i class="fa fa-cc-mastercard"></i>
-              <i class="fa fa-cc-amex"></i>
-            </div>
-
           </div>
-        </div>
-      </div> <!-- end bottom footer -->
-    </footer> <!-- end footer -->
+        </div> <!-- end bottom footer -->
+      </footer> <!-- end footer -->
 
       <div id="back-to-top">
         <a href="#top"><i class="fa fa-angle-up"></i></a>
@@ -799,99 +741,178 @@
   </main> <!-- end main wrapper -->
 
   <!-- jQuery Scripts -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>  
-  <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="module">
-    // No Firebase integration needed here since cart is stored in localStorage
-    document.addEventListener("DOMContentLoaded", () => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>  
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+<script src="https://js.stripe.com/v3/"></script> <!-- Load Stripe globally -->
+<script type="module">
+  // Import Firebase
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+  import { getAuth, onAuthStateChanged, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
+  import { getFirestore, collection, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
 
-        const cartBadge = document.getElementById('cartBadge');
-        const navCartItems = document.getElementById('navCartItems');
-        const navCartSubtotal = document.getElementById('navCartSubtotal');
-        const cartIcon = document.getElementById('cartIcon');
+  // Firebase Configuration (use your actual config from Firebase Console)
+  const firebaseConfig = {
+      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+      authDomain: "thrifthub-demo.firebaseapp.com",
+      projectId: "thrifthub-demo",
+      storageBucket: "thrifthub-demo.firebasestorage.app",
+      messagingSenderId: "518014691134",
+      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+  };
 
-        function updateCartDisplay() {
-            // Update cart badge (number of items)
-            cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
 
-            // Update cart items in the dropdown
-            if (cart.length === 0) {
-                navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
-                navCartSubtotal.textContent = 'RM0.00';
-            } else {
-                navCartItems.innerHTML = '';
-                cart.forEach((item) => {
-                    const itemHtml = `
-                        <div class="nav-cart-item clearfix">
-                            <div class="nav-cart-img">
-                                <a href="shop-single.html?id=${item.id}">
-                                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
-                                </a>
-                            </div>
-                            <div class="nav-cart-title">
-                                <a href="shop-single.html?id=${item.id}">
-                                    ${item.name}
-                                </a>
-                                <div class="nav-cart-price">
-                                    <span>${item.quantity || 1} x</span>
-                                    <span>RM${item.price.toFixed(2)}</span>
-                                </div>
-                            </div>
-                            <div class="nav-cart-remove">
-                                <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
-                                    <i class="ui-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                    navCartItems.insertAdjacentHTML('beforeend', itemHtml);
-                });
+  // Initialize Stripe with publishable key
+  const stripe = Stripe('pk_test_51QvgIMImHT6pRs88WKTunLXBUkRtpFZL0LyOqw2KwMAsIywCYPaRzrnb7LRJRlULH7oUFIJOs26Et0tCWRqQkb3o00uS0Wsgh0'); // Replace with your Stripe Publishable Key
 
-                // Update subtotal in the dropdown
-                const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
-                navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+  // Cart management (sync with previous category pages)
+  let cart = [];
 
-                // Add event listeners for remove buttons in the dropdown
-                document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
-                    remove.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const productId = e.target.getAttribute('data-id');
-                        cart = cart.filter(item => item.id !== productId);
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                        updateCartDisplay();
-                    });
-                });
-            }
+  // Load cart from localStorage or Firestore
+  async function loadCart() {
+    const user = auth.currentUser;
+    if (user) {
+      // Try to load cart from Firestore for the authenticated user
+      const cartRef = doc(db, "carts", user.uid);
+      const cartSnap = await getDoc(cartRef);
+      if (cartSnap.exists()) {
+        cart = cartSnap.data().items || [];
+      } else {
+        // Fallback to localStorage if no Firestore data
+        const storedCart = localStorage.getItem('cart');
+        if (storedCart) {
+          cart = JSON.parse(storedCart);
+          // Sync to Firestore
+          await setDoc(cartRef, { items: cart }, { merge: true });
         }
+      }
+    } else {
+      // If no user, use localStorage
+      const storedCart = localStorage.getItem('cart');
+      if (storedCart) {
+        cart = JSON.parse(storedCart);
+      }
+    }
+    displayCart();
+  }
 
-        // Initial cart display
-        updateCartDisplay();
+  // Display cart items in the table
+  function displayCart() {
+    const cartTable = document.getElementById('cartTable').querySelector('tbody');
+    cartTable.innerHTML = '';
+    let total = 0;
 
-        // Listen for cart updates from localStorage changes (across pages)
-        window.addEventListener('storage', () => {
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
-            updateCartDisplay();
-        });
-
-        // Add click event to cart icon to toggle cart dropdown visibility
-        cartIcon.addEventListener('click', (e) => {
-            e.preventDefault();
-            const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
-            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close cart dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            const cartContainer = document.querySelector('.nav-cart-container');
-            if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
-                cartContainer.style.display = 'none';
-            }
-        });
+    cart.forEach(item => {
+      const row = `
+        <tr>
+          <th>${item.name}<span class="count"> x 1</span></th>
+          <td><span class="amount">RM${item.price.toFixed(2)}</span></td>
+        </tr>
+      `;
+      cartTable.insertAdjacentHTML('beforeend', row);
+      total += item.price;
     });
-  </script>
-    
-</body>
-</html>
+
+    const subtotalRow = `
+      <tr class="cart-subtotal">
+        <th>Cart Subtotal</th>
+        <td><span class="amount">RM${total.toFixed(2)}</span></td>
+      </tr>
+    `;
+    const shippingRow = `
+      <tr class="shipping">
+        <th>Shipping</th>
+        <td><span>Free Shipping</span></td>
+      </tr>
+    `;
+    const totalRow = `
+      <tr class="order-total">
+        <th><strong>Order Total</strong></th>
+        <td><strong><span class="amount">RM${total.toFixed(2)}</span></strong></td>
+      </tr>
+    `;
+    cartTable.insertAdjacentHTML('beforeend', subtotalRow + shippingRow + totalRow);
+  }
+
+  // Save cart to localStorage and optionally Firestore
+  async function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    const user = auth.currentUser;
+    if (user) {
+      const cartRef = doc(db, "carts", user.uid);
+      await setDoc(cartRef, { items: cart }, { merge: true });
+    }
+  }
+
+  // Handle Stripe Checkout
+  async function handleStripeCheckout() {
+    const user = auth.currentUser;
+    if (!user) {
+      alert('Please sign in to proceed with checkout.');
+      return;
+    }
+
+    try {
+      // Create line items for Stripe Checkout
+      const lineItems = cart.map(item => ({
+        price_data: {
+          currency: 'myr',
+          product_data: {
+            name: item.name,
+          },
+          unit_amount: Math.round(item.price * 100), // Convert to cents
+        },
+        quantity: 1,
+      }));
+
+      // Call the backend endpoint to create a Stripe Checkout session
+      const response = await fetch('https://us-central1-thrifthub-demo.cloudfunctions.net/createCheckoutSession', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lineItems, userId: user.uid }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session: ' + await response.text());
+      }
+
+      const session = await response.json();
+
+      // Redirect to Stripe Checkout
+      stripe.redirectToCheckout({ sessionId: session.id });
+    } catch (error) {
+      console.error('Error processing payment:', error);
+      alert('Error processing payment. Please try again.');
+    }
+  }
+
+  // Auth state listener to ensure user is signed in
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      loadCart(); // Load cart when user is authenticated
+    } else {
+      // Optionally sign in anonymously or redirect to login
+      signInAnonymously(auth).catch((error) => {
+        console.error('Error signing in anonymously:', error);
+        alert('Please sign in to proceed with checkout.');
+        window.location.href = 'myaccount.html'; // Redirect to login page
+      });
+    }
+  });
+
+  // Add event listener for Stripe Checkout button
+  document.getElementById('stripeCheckoutButton').addEventListener('click', handleStripeCheckout);
+
+  // Load cart on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
+  });
+</script>

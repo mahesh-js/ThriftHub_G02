@@ -169,8 +169,7 @@
                       <div class="logo-wrap">
                         <div class="logo-wrap">
                           <a href="index.html">
-                            <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png"
-                              srcset="img/thrifthub lg v1.png 1x,img/thrifthub lg v1.png 2x" >
+                            <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png" alt="ThriftHub Logo">
                           </a>
                         </div>
                       </div>
@@ -243,6 +242,26 @@
       <!-- Hero Slider -->
       <section class="hero-wrap text-center relative">
         <div id="owl-hero" class="owl-carousel owl-theme light-arrows slider-animated">
+          <!-- Video Slide -->
+          <div class="hero-slide overlay">
+            <video controls class="hero-video" poster="img/hero/video-poster.jpg">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="container">
+              <div class="hero-holder">
+                <div class="hero-message">
+                  <h1 class="hero-title nocaps">Welcome to ThriftHub 2025</h1>
+                  <h2 class="hero-subtitle lines">Discover Affordable Thrift Shopping</h2>
+                  <div class="buttons-holder">
+                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Existing Image Slides -->
           <div class="hero-slide overlay" style="background-image:url(img/hero/pexels-cottonbro-6068964.jpg)">
             <div class="container">
               <div class="hero-holder">
@@ -321,7 +340,7 @@
                   <span>New Collection</span>
                 </div>
               </a>
-            </div>
+            </div>0
 
           </div>
         </div>
@@ -350,7 +369,7 @@
 
               <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="widget footer-about-us">
-                  <img src="img/thrifthub lg v1.png" alt="" class="logo">
+                  utf-8 src="img/thrifthub ` 1q23456lg v1.png" alt="" class="logo">9
                   <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
                   <div class="footer-socials">
                     <div class="social-icons nobase">
@@ -523,6 +542,37 @@
         });
     });
   </script>
+
+  <!-- CSS for Video Styling -->
+  <style>
+    .hero-video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .hero-slide.overlay {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-slide.overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay to match other slides */
+      z-index: 2;
+    }
+    .hero-message {
+      position: relative;
+      z-index: 3;
+    }
+  </style>
 
 </body>
 

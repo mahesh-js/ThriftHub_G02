@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Success</title>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+      authDomain: "thrifthub-demo.firebaseapp.com",
+      projectId: "thrifthub-demo",
+      storageBucket: "thrifthub-demo.firebasestorage.app",
+      messagingSenderId: "518014691134",
+      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    async function getReceipt() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = urlParams.get("session_id");
+
+      onAuthStateChanged(auth, async (user) => {
+        if (user && sessionId) {
+          const receiptRef = doc(db, "orders", sessionId);
+          const receiptSnap = await getDoc(receiptRef);
+
+          if (receiptSnap.exists()) {
+            const data = receiptSnap.data();
+            document.getElementById("amount").innerText = `Amount Paid: RM${data.amount}`;
+            document.getElementById("status").innerText = `Payment Status: ${data.payment_status}`;
+          } else {
+            document.getElementById("status").innerText = "Receipt Not Found.";
+          }
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      getReceipt();
+      setTimeout(() => {
+        window.location.href = "index.html"; // Redirect to homepage
+      }, 5000);
+    });
+  </script>
+</head>
+<body>
+  <h1>Payment Successful</h1>
+  <p id="amount"></p>
+  <p id="status"></p>
+  <p>Redirecting to homepage in 5 seconds...</p>
+</body>
+</html>
