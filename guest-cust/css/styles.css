@@ -76,3 +76,18 @@ button:hover {
   flex: 1;
   border-bottom: 1px solid gray;
 }
+.announcement-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.announcement-text {
+  display: none;
+  font-size: 16px;
+}
+.announcement-text.active {
+  display: block;
+}

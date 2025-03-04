@@ -78,7 +78,9 @@
                   </div>
                 </li>
               </ul>
-        
+              <ul class="top-bar-acc" style="margin-right: 38%;">
+                Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
+              </ul>
               
             </div>
           </div>
@@ -306,7 +308,7 @@
 
               <div class="product_meta">
                 <span class="sku">SKU: <a href="#" id="productSKU"></a></span>
-                <span class="brand_as">Category: <a href="#" id="productCategoryLink">Men's Tops & Bottoms</a></span>
+                <span class="brand_as">Category: <a href="#" id="productCategoryLink"></a></span>
                 <span class="posted_in">Tags: <a href="#" id="productTags"></a></span>                
               </div>
 
@@ -789,12 +791,13 @@
 
                 // Update product category (breadcrumb and meta)
                 const category = product.category || 'Uncategorized';
-                document.getElementById('productCategory').textContent = `Men's Tops & Bottoms`;
-                document.getElementById('productCategoryLink').href = category; // Adjust based on category (e.g., m-tops.html for Clothes)
+                document.getElementById('productCategory').textContent = category;
+                document.getElementById('productCategoryLink').textContent = category;
+                document.getElementById('productCategoryLink').href = `m-tops.html`;
 
                 // Update product SKU and tags (placeholder values for now)
                 document.getElementById('productSKU').textContent = product.id || 'SKU-001';
-                document.getElementById('productTags').textContent = `Men's Tops & Bottoms, ${product.name || 'Product'}, Fashion`;
+                document.getElementById('productTags').textContent = `${category}, ${product.name || 'Product'}, Fashion`;
 
                 // Update product size, Condition, and Shipping (use default values if not provided)
                 document.getElementById('productSize').textContent = product.size || 'N/A';

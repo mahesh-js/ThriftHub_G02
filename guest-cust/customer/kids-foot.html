@@ -78,7 +78,9 @@
                   </div>
                 </li>
               </ul>
-        
+              <ul class="top-bar-acc" style="margin-right: 38%;">
+                Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
+              </ul>
               
             </div>
           </div>
@@ -267,9 +269,9 @@
             </div>
             <div class="filter-show hidden-xs">
               <span>Show:</span>
-              <a href="#" class="active">12</a>
-              <a href="#">24</a>
-              <a href="#">all</a>
+              <a href="#" class="show-option active" data-limit="12">12</a>
+              <a href="#" class="show-option" data-limit="24">24</a>
+              <a href="#" class="show-option" data-limit="all">all</a>
             </div>
             <form class="ecommerce-ordering">
               <select>
@@ -295,7 +297,8 @@
               
               <!-- Pagination -->
               <div class="pagination-wrap clearfix">
-                <p class="result-count">Showing: 6 of 6 results</p>  
+                <p class="result-count" id="resultCount">Showing: 6 of 6 results</p>                 
+                
               </div>
 
             </div> <!-- end col -->
@@ -398,13 +401,13 @@
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
-  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script> <!-- Added for authentication -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
   <script type="module">
+    // Firebase Configuration
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
     import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
-    import { getFirestore, collection, query, where, onSnapshot } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
+    import { getFirestore, collection, query, where, orderBy, limit, onSnapshot, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
 
-    // Firebase Configuration (use your actual config from Firebase Console)
     const firebaseConfig = {
         apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
         authDomain: "thrifthub-demo.firebaseapp.com",
@@ -419,18 +422,28 @@
     const auth = getAuth(app);
     const db = getFirestore(app);
 
-    // Sign in anonymously for testing (remove in production or use proper auth)
-    signInAnonymously(auth).catch((error) => {
+    // Sign in anonymously for testing
+    signInAnonymously(auth).then(() => {
+        console.log('Signed in anonymously successfully');
+    }).catch((error) => {
         console.error("Error signing in anonymously:", error);
     });
 
-    // Cart management (simple array for now, can be expanded to localStorage or Firebase)
-    let cart = [];
+    // Cart management (stored in localStorage)
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Function to load products for Kids Footwear (category: kids-foot.html)
+    // Global variables for filtering
+    let currentLimit = 12; // Default limit (show 12 products)
+
+    // Function to load products for Kids Footwear (category: kids-foot.html) with show functionality
     function loadProducts() {
         const productsContainer = document.getElementById('productsContainer');
-        const q = query(collection(db, "products"), where("category", "==", "kids-foot.html"));
+        let q = query(collection(db, "products"), where("category", "==", "kids-foot.html"));
+
+        // Apply limit if not "all"
+        if (currentLimit !== 'all') {
+            q = query(q, limit(currentLimit));
+        }
 
         onSnapshot(q, (snapshot) => {
             productsContainer.innerHTML = ''; // Clear existing products
@@ -486,7 +499,7 @@
                                 </span>
                                 <div class="clear"></div>
                                 <p>${product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.'}</p>
-                                <a href="#" class="btn btn-dark btn-md left add-to-cart" data-product-id="${productId}"><span>Add to Cart</span></a>
+                                <a href="#" class="btn btn-dark btn-md left add-to-cart" data-product-id="${productId}" data-size="${product.size || 'N/A'}"><span>Add to Cart</span></a>
                                 <div class="product-add-to-wishlist">
                                     <a href="#"><i class="fa fa-heart"></i></a>
                                 </div>
@@ -497,132 +510,188 @@
                 productsContainer.insertAdjacentHTML('beforeend', productHtml);
             });
 
-            // Add event listeners for "Add to Cart" buttons after dynamically adding products
-            document.querySelectorAll('.add-to-cart').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const productId = e.target.getAttribute('data-product-id');
-                    addToCart(productId);
-                });
-            });
+            // Update result count
+            updateResultCount(snapshot.size);
         }, (error) => {
             console.error("Error fetching products:", error);
             productsContainer.innerHTML = '<p class="error-message">Error loading products. Please try again later.</p>';
         });
     }
 
-    // Function to add product to cart
+    // Function to update result count
+    function updateResultCount(totalProducts) {
+        const resultCount = document.getElementById('resultCount');
+        const showing = currentLimit === 'all' ? totalProducts : Math.min(currentLimit, totalProducts);
+        resultCount.textContent = `Showing: ${showing} of ${totalProducts} results`;
+    }
+
+    // Function to add product to cart (with size and debugging)
     function addToCart(productId) {
-        const q = query(collection(db, "products"), where("id", "==", productId)); // Note: Firestore uses doc.id, not a field called "id"
-        onSnapshot(q, (snapshot) => {
-            snapshot.forEach((doc) => {
-                const product = doc.data();
-                cart.push({
-                    id: productId,
-                    name: product.title || 'Untitled',
-                    price: product.price || 0,
-                    imageUrl: product.imageUrl || 'img/shop/kf1.jpg'
-                });
-                alert(`${product.title || 'Product'} added to cart!`);
-                console.log('Cart:', cart);
-            });
-        }, (error) => {
-            console.error("Error adding product to cart:", error);
+        console.log('Attempting to add product with ID:', productId);
+        const productRef = doc(db, "products", productId);
+        getDoc(productRef).then((docSnap) => {
+            console.log('Document snapshot exists:', docSnap.exists());
+            if (docSnap.exists()) {
+                const product = docSnap.data();
+                const size = product.size || 'N/A'; // Get size from Firestore or default to 'N/A'
+                const existingItem = cart.find(item => item.id === productId && item.size === size);
+                if (existingItem) {
+                    existingItem.quantity += 1; // Increment quantity if item with same size exists
+                } else {
+                    cart.push({
+                        id: productId,
+                        name: product.title || 'Untitled',
+                        price: product.price || 0,
+                        imageUrl: product.imageUrl || 'img/shop/kf1.jpg',
+                        size: size, // Add size to cart item
+                        quantity: 1
+                    });
+                }
+                alert(`${product.title || 'Product'} (Size: ${size}) added to cart!`);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            } else {
+                console.error("Product not found in Firestore for ID:", productId);
+                alert("Product not found. Please try again.");
+            }
+        }).catch((error) => {
+            console.error("Error fetching product:", error);
             alert("Error adding product to cart. Please try again.");
         });
     }
 
-    // Load products when the page loads
-    document.addEventListener("DOMContentLoaded", () => {
-        loadProducts();
-    });
-  </script>
-   <script type="module">
-    // No Firebase integration needed here since cart is stored in localStorage
-    document.addEventListener("DOMContentLoaded", () => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+    // Function to update cart display in the navbar (optimized, including size)
+    function updateCartDisplay() {
         const cartBadge = document.getElementById('cartBadge');
         const navCartItems = document.getElementById('navCartItems');
         const navCartSubtotal = document.getElementById('navCartSubtotal');
-        const cartIcon = document.getElementById('cartIcon');
 
-        function updateCartDisplay() {
-            // Update cart badge (number of items)
-            cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+        // Update cart badge (number of items)
+        cartBadge.textContent = cart.reduce((total, item) => total + item.quantity, 0) || 0;
 
-            // Update cart items in the dropdown
-            if (cart.length === 0) {
-                navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
-                navCartSubtotal.textContent = 'RM0.00';
-            } else {
-                navCartItems.innerHTML = '';
-                cart.forEach((item) => {
-                    const itemHtml = `
-                        <div class="nav-cart-item clearfix">
-                            <div class="nav-cart-img">
-                                <a href="shop-single.html?id=${item.id}">
-                                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
-                                </a>
-                            </div>
-                            <div class="nav-cart-title">
-                                <a href="shop-single.html?id=${item.id}">
-                                    ${item.name}
-                                </a>
-                                <div class="nav-cart-price">
-                                    <span>${item.quantity || 1} x</span>
-                                    <span>RM${item.price.toFixed(2)}</span>
-                                </div>
-                            </div>
-                            <div class="nav-cart-remove">
-                                <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
-                                    <i class="ui-close"></i>
-                                </a>
+        // Update cart items in the dropdown
+        if (cart.length === 0) {
+            navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+            navCartSubtotal.textContent = 'RM0.00';
+        } else {
+            navCartItems.innerHTML = '';
+            let subtotal = 0;
+            cart.forEach((item) => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                const itemHtml = `
+                    <div class="nav-cart-item clearfix">
+                        <div class="nav-cart-img">
+                            <a href="shop-single.html?id=${item.id}">
+                                <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                            </a>
+                        </div>
+                        <div class="nav-cart-title">
+                            <a href="shop-single.html?id=${item.id}">
+                                ${item.name} (Size: ${item.size})
+                            </a>
+                            <div class="nav-cart-price">
+                                <span>${item.quantity} x</span>
+                                <span>RM${item.price.toFixed(2)}</span>
                             </div>
                         </div>
-                    `;
-                    navCartItems.insertAdjacentHTML('beforeend', itemHtml);
-                });
+                        <div class="nav-cart-remove">
+                            <a href="#" class="remove" data-id="${item.id}" data-size="${item.size}" title="Remove this item">
+                                <i class="ui-close"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+            });
+            navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
 
-                // Update subtotal in the dropdown
-                const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
-                navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
-
-                // Add event listeners for remove buttons in the dropdown
-                document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
-                    remove.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const productId = e.target.getAttribute('data-id');
-                        cart = cart.filter(item => item.id !== productId);
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                        updateCartDisplay();
-                    });
-                });
+            // Remove any existing event listener to prevent duplicates
+            const existingListener = navCartItems._removeListener;
+            if (existingListener) {
+                navCartItems.removeEventListener('click', existingListener);
             }
+
+            // Use event delegation for remove buttons with a unique identifier
+            const removeListener = (e) => {
+                if (e.target.classList.contains('remove') || e.target.closest('.remove')) {
+                    e.preventDefault();
+                    console.log('Remove button clicked'); // Debug log
+                    const removeButton = e.target.classList.contains('remove') ? e.target : e.target.closest('.remove');
+                    const productId = removeButton.getAttribute('data-id');
+                    const size = removeButton.getAttribute('data-size');
+                    console.log('Removing product ID:', productId, 'Size:', size); // Debug log
+                    cart = cart.filter(item => !(item.id === productId && item.size === size));
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartDisplay();
+                }
+            };
+            navCartItems.addEventListener('click', removeListener);
+            navCartItems._removeListener = removeListener; // Store the listener to remove it later
         }
+    }
 
-        // Initial cart display
-        updateCartDisplay();
+    // Load products and set up event listeners when the page loads
+    document.addEventListener("DOMContentLoaded", () => {
+        loadProducts();
 
-        // Listen for cart updates from localStorage changes (across pages)
-        window.addEventListener('storage', () => {
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
-            updateCartDisplay();
+        // Use event delegation for "Add to Cart" buttons
+        const productsContainer = document.getElementById('productsContainer');
+        productsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
+                e.preventDefault();
+                const button = e.target.classList.contains('add-to-cart') ? e.target : e.target.closest('.add-to-cart');
+                const productId = button.getAttribute('data-product-id');
+
+                if (productId) {
+                    addToCart(productId);
+                } else {
+                    console.error('No product ID found on the button.');
+                }
+            }
         });
 
-        // Add click event to cart icon to toggle cart dropdown visibility
+        // Set up cart icon click handler (ensure it’s only added once)
+        const cartIcon = document.getElementById('cartIcon');
+        const cartContainer = document.querySelector('.nav-cart-container');
+        let isCartOpen = false;
+
         cartIcon.addEventListener('click', (e) => {
             e.preventDefault();
-            const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
-            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
+            isCartOpen = !isCartOpen;
+            cartContainer.style.display = isCartOpen ? 'block' : 'none';
         });
 
         // Close cart dropdown when clicking outside
         document.addEventListener('click', (e) => {
-            const cartContainer = document.querySelector('.nav-cart-container');
             if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
                 cartContainer.style.display = 'none';
+                isCartOpen = false;
             }
+        });
+
+        // Handle "Show" filter clicks
+        document.querySelectorAll('.show-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const limit = e.target.getAttribute('data-limit');
+                currentLimit = limit === 'all' ? 'all' : parseInt(limit);
+                loadProducts(); // Reload products with new limit
+                // Update active class for visual feedback
+                document.querySelectorAll('.show-option').forEach(opt => opt.classList.remove('active'));
+                e.target.classList.add('active');
+            });
+        });
+
+        // Do not handle sorting (sorting is disabled in HTML with `disabled` attribute)
+
+        // Initial cart display
+        updateCartDisplay();
+
+        // Listen for cart updates from localStorage changes
+        window.addEventListener('storage', () => {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateCartDisplay();
         });
     });
   </script>
