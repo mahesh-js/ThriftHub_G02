@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/sliders.css" /> <!-- Ensure this includes Owl Carousel styles -->
   <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico">
@@ -28,8 +30,8 @@
   <!-- Firebase Scripts (as modules) -->
   <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <script type="module" src="firebase-config.js"></script> <!-- Verify this path -->
-  <script type="module" src="ThriftHub_G02/frontend/js/script.js"></script> <!-- Verify this path -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+  <script type="module" src="/guest-cust/customer/auth/firebase.js"></script> <!-- Updated path -->
 
 </head>
 
@@ -40,6 +42,15 @@
     <div class="loader">
       <div></div>
       <div></div>
+    </div>
+  </div>
+
+  <!-- Ramadan/Hari Raya Notification Pop-Up with Sound Enable -->
+  <div id="ramadanPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.7); z-index: 1000; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;">
+    <div style="background: #fff; color: #333; padding: 20px; border-radius: 10px; max-width: 400px; width: 90%;">
+      <h2>Wishing You a Blessed Ramadan & Joyous Hari Raya!</h2>
+      <p>Enjoy exclusive offers on ThriftHub Malaysia during this festive season. Shop now for amazing deals!</p>
+      <button id="close" style="padding: 15px 30px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; margin-top: 10px;">close</button>
     </div>
   </div>
 
@@ -209,20 +220,17 @@
       <!-- Hero Slider -->
       <section class="hero-wrap text-center relative">
         <div id="owl-hero" class="owl-carousel owl-theme light-arrows slider-animated">
-          <!-- Video Slide with YouTube Embed -->
+          <!-- Video Slide with Firebase Storage Video -->
           <div class="hero-slide overlay">
-            <iframe class="hero-video" src="https://www.youtube.com/embed/v_ehd3m3tUs?autoplay=1&mute=1&loop=1&playlist=v_ehd3m3tUs" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
+            <video class="hero-video" id="firebaseVideo" controls autoplay muted playsinline>
+              <source id="videoSource" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
             <div class="container">
               <div class="hero-holder">
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Welcome to ThriftHub 2025</h1>
                   <h2 class="hero-subtitle lines">Discover Affordable Thrift Shopping</h2>
-                  <div class="buttons-holder">
-                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -235,9 +243,6 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Let's Thrift 2025</h1>
                   <h2 class="hero-subtitle lines">ThriftHub Malaysia</h2>
-                  <div class="buttons-holder">
-                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -248,9 +253,6 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Exclusive Products</h1>
                   <h2 class="hero-subtitle lines">Get awesome items only in ThriftHub Malaysia</h2>
-                  <div class="buttons-holder">
-                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -261,9 +263,6 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Enjoy Online Shopping</h1>
                   <h2 class="hero-subtitle lines">ThriftHub Malaysia</h2>
-                  <div class="buttons-holder">
-                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -403,95 +402,160 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
-  <script type="text/javascript" src="js/owl.carousel.min.js"></script> <!-- Ensure Owl Carousel JS is included -->
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script> <!-- Corrected and verified path -->
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="module">
-    // No Firebase integration needed here since cart is stored in localStorage
+    // Import Firebase services
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { db, storage, auth } from "/guest-cust/customer/auth/firebase.js"; // Import Firebase services from firebase.js
+
+    // Load video from Firebase Storage
+    async function loadVideo() {
+      try {
+        // Use the exact path from Firebase Storage (root level)
+        const videoRef = ref(storage, 'thrift-hub-vid.mp4'); // Matches your uploaded video path
+        const videoUrl = await getDownloadURL(videoRef);
+
+        const videoSource = document.getElementById("videoSource");
+        videoSource.src = videoUrl;
+        const video = document.getElementById("firebaseVideo");
+        video.load(); // Load the video
+        video.play(); // Attempt to autoplay (muted due to browser restrictions)
+        video.muted = true; // Ensure muted autoplay works
+      } catch (error) {
+        console.error("Error loading video from Firebase Storage:", error);
+      }
+    }
+
+    // Handle video end and slide transition
     document.addEventListener("DOMContentLoaded", () => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      // Show Ramadan/Hari Raya pop-up on page load
+      const ramadanPopup = document.getElementById("ramadanPopup");
+      ramadanPopup.style.display = "flex";
 
-        const cartBadge = document.getElementById('cartBadge');
-        const navCartItems = document.getElementById('navCartItems');
-        const navCartSubtotal = document.getElementById('navCartSubtotal');
-        const cartIcon = document.getElementById('cartIcon');
-
-        function updateCartDisplay() {
-            // Update cart badge (number of items)
-            cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
-
-            // Update cart items in the dropdown
-            if (cart.length === 0) {
-                navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
-                navCartSubtotal.textContent = 'RM0.00';
-            } else {
-                navCartItems.innerHTML = '';
-                cart.forEach((item) => {
-                    const itemHtml = `
-                        <div class="nav-cart-item clearfix">
-                            <div class="nav-cart-img">
-                                <a href="shop-single.html?id=${item.id}">
-                                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
-                                </a>
-                            </div>
-                            <div class="nav-cart-title">
-                                <a href="shop-single.html?id=${item.id}">
-                                    ${item.name}
-                                </a>
-                                <div class="nav-cart-price">
-                                    <span>${item.quantity || 1} x</span>
-                                    <span>RM${item.price.toFixed(2)}</span>
-                                </div>
-                            </div>
-                            <div class="nav-cart-remove">
-                                <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
-                                    <i class="ui-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                    navCartItems.insertAdjacentHTML('beforeend', itemHtml);
-                });
-
-                // Update subtotal in the dropdown
-                const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
-                navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
-
-                // Add event listeners for remove buttons in the dropdown
-                document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
-                    remove.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const productId = e.target.getAttribute('data-id');
-                        cart = cart.filter(item => item.id !== productId);
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                        updateCartDisplay();
-                    });
-                });
-            }
+      // Handle closing the Ramadan/Hari Raya pop-up and playing with sound
+      document.getElementById("close").addEventListener("click", () => {
+        const video = document.getElementById("firebaseVideo");
+        video.muted = false; // Unmute the video
+        if (video.paused) {
+          video.play().catch(error => {
+            console.error("Error playing video with sound:", error);
+          });
         }
+        ramadanPopup.style.display = "none"; // Hide pop-up after interaction
+      });
 
-        // Initial cart display
-        updateCartDisplay();
+      // Load and autoplay the video on page load (muted)
+      loadVideo();
 
-        // Listen for cart updates from localStorage changes (across pages)
-        window.addEventListener('storage', () => {
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
-            updateCartDisplay();
-        });
+      // Cart functionality (unchanged from your original code)
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        // Add click event to cart icon to toggle cart dropdown visibility
-        cartIcon.addEventListener('click', (e) => {
-            e.preventDefault();
-            const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
-            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
-        });
+      const cartBadge = document.getElementById('cartBadge');
+      const navCartItems = document.getElementById('navCartItems');
+      const navCartSubtotal = document.getElementById('navCartSubtotal');
+      const cartIcon = document.getElementById('cartIcon');
 
-        // Close cart dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            const cartContainer = document.querySelector('.nav-cart-container');
-            if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
-                cartContainer.style.display = 'none';
-            }
-        });
+      function updateCartDisplay() {
+          // Update cart badge (number of items)
+          cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+
+          // Update cart items in the dropdown
+          if (cart.length === 0) {
+              navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+              navCartSubtotal.textContent = 'RM0.00';
+          } else {
+              navCartItems.innerHTML = '';
+              cart.forEach((item) => {
+                  const itemHtml = `
+                      <div class="nav-cart-item clearfix">
+                          <div class="nav-cart-img">
+                              <a href="shop-single.html?id=${item.id}">
+                                  <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                              </a>
+                          </div>
+                          <div class="nav-cart-title">
+                              <a href="shop-single.html?id=${item.id}">
+                                  ${item.name}
+                              </a>
+                              <div class="nav-cart-price">
+                                  <span>${item.quantity || 1} x</span>
+                                  <span>RM${item.price.toFixed(2)}</span>
+                              </div>
+                          </div>
+                          <div class="nav-cart-remove">
+                              <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
+                                  <i class="ui-close"></i>
+                              </a>
+                          </div>
+                      </div>
+                  `;
+                  navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+              });
+
+              // Update subtotal in the dropdown
+              const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+              navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+
+              // Add event listeners for remove buttons in the dropdown
+              document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
+                  remove.addEventListener('click', (e) => {
+                      e.preventDefault();
+                      const productId = e.target.getAttribute('data-id');
+                      cart = cart.filter(item => item.id !== productId);
+                      localStorage.setItem('cart', JSON.stringify(cart));
+                      updateCartDisplay();
+                  });
+              });
+          }
+      }
+
+      // Initial cart display
+      updateCartDisplay();
+
+      // Listen for cart updates from localStorage changes (across pages)
+      window.addEventListener('storage', () => {
+          cart = JSON.parse(localStorage.getItem('cart')) || [];
+          updateCartDisplay();
+      });
+
+      // Add click event to cart icon to toggle cart dropdown visibility
+      cartIcon.addEventListener('click', (e) => {
+          e.preventDefault();
+          const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
+          cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Close cart dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+          const cartContainer = document.querySelector('.nav-cart-container');
+          if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
+              cartContainer.style.display = 'none';
+          }
+      });
+
+      // Handle video end and swift slide transition
+      const video = document.getElementById("firebaseVideo");
+      video.addEventListener("ended", () => {
+        const owl = $("#owl-hero").data('owl.carousel');
+        if (owl) {
+          owl.options.animateOut = 'fadeOut'; // Swift fade-out animation
+          owl.options.animateIn = 'fadeIn';    // Swift fade-in animation
+          owl.next(); // Move to the next slide swiftly
+        }
+      });
+
+      // Ensure authenticated access
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          console.warn("User not authenticated. Video access may be restricted.");
+          window.location.href = "/login.html"; // Adjust path as needed
+        } else {
+          loadVideo(); // Load video only if authenticated
+        }
+      });
     });
 
     // Owl Carousel Initialization for Hero Slider
@@ -500,17 +564,18 @@
         items: 1,              // One slide at a time
         loop: true,            // Loop through slides
         autoplay: false,       // Disable initial autoplay to let video play first
-        autoplayTimeout: 5000, // 5 seconds per slide (adjust as needed for video duration)
+        autoplayTimeout: 3000, // Reduced to 3 seconds for swift transitions (adjust as needed for video duration)
+        smartSpeed: 200,       // Faster animation speed for swift transitions
         nav: true,             // Navigation arrows
         dots: true,            // Navigation dots
         video: true,           // Enable video support
         lazyLoad: true,        // Lazy load content
-        videoHeight: 600       // Match the height of .hero-slide.overlay
+        videoHeight: '100vh'   // Set to full viewport height for full-screen video
       });
     });
   </script>
 
-  <!-- CSS for Video and Slider Styling -->
+  <!-- CSS for Video, Text Positioning, Splash Screen, and Slider Styling -->
   <style>
     .hero-wrap {
       position: relative;
@@ -520,7 +585,7 @@
     .hero-slide.overlay {
       position: relative;
       width: 100%;
-      height: 600px; /* Fixed height for consistency, adjust as needed */
+      height: 100vh; /* Full viewport height for full-screen video */
       overflow: hidden;
     }
     .hero-slide.overlay::after {
@@ -540,21 +605,22 @@
       top: 0;
       left: 0;
       z-index: 1;
-      border: none; /* Remove iframe border */
+      object-fit: cover; /* Ensure video fills the slide completely, cropping if necessary */
     }
     .hero-holder {
       position: relative;
       z-index: 3;
       height: 100%;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end; /* Align items to the bottom */
+      justify-content: center; /* Center horizontally */
     }
     .hero-message {
       position: relative;
       z-index: 3;
       color: #fff; /* Ensure text is visible over the overlay */
       text-align: center;
+      padding-bottom: 20px; /* Add some padding at the bottom */
     }
     .hero-title {
       font-size: 48px; /* Adjust as needed */
@@ -562,11 +628,26 @@
     }
     .hero-subtitle {
       font-size: 24px; /* Adjust as needed */
-      margin-bottom: 20px;
+      margin-bottom: 0;
     }
-    /* Ensure Owl Carousel compatibility */
+    /* Ensure Owl Carousel compatibility and full-screen video */
     .owl-carousel .owl-item .hero-video {
       display: block;
+    }
+    #owl-hero .owl-stage-outer, #owl-hero .owl-stage, #owl-hero .owl-item {
+      height: 100vh !important;
+    }
+    #owl-hero .owl-item.active {
+      height: 100vh !important;
+    }
+    /* Animation for swift transitions */
+    .owl-animated-out {
+      -webkit-animation-duration: 0.2s !important;
+      animation-duration: 0.2s !important;
+    }
+    .owl-animated-in {
+      -webkit-animation-duration: 0.2s !important;
+      animation-duration: 0.2s !important;
     }
   </style>
 

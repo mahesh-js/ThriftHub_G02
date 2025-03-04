@@ -3,7 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Success</title>
+  <title>Transaction Receipt - ThriftHub Malaysia</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    .header h1 {
+      color: #2c3e50;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+    .receipt-details {
+      padding: 20px;
+    }
+    .receipt-details p {
+      margin: 10px 0;
+      color: #34495e;
+      font-size: 16px;
+    }
+    .receipt-details strong {
+      color: #2c3e50;
+    }
+    .pdf-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .pdf-link a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .pdf-link a:hover {
+      background-color: #2980b9;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #7f8c8d;
+      font-size: 14px;
+      border-top: 2px solid #e0e0e0;
+    }
+    .redirect-message {
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
     import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
@@ -33,10 +105,29 @@
 
           if (receiptSnap.exists()) {
             const data = receiptSnap.data();
-            document.getElementById("amount").innerText = `Amount Paid: RM${data.amount}`;
-            document.getElementById("status").innerText = `Payment Status: ${data.payment_status}`;
+            document.getElementById("amount").innerText = `RM${data.amount.toFixed(2)}`;
+            document.getElementById("status").innerText = data.payment_status;
+            document.getElementById("date").innerText = new Date().toLocaleString();
+            document.getElementById("orderId").innerText = sessionId;
+
+            // Generate PDF content
+            const pdfContent = `
+              ThriftHub Malaysia - Transaction Receipt
+              Order ID: ${sessionId}
+              Amount Paid: RM${data.amount.toFixed(2)}
+              Payment Status: ${data.payment_status}
+              Date: ${new Date().toLocaleString()}
+            `;
+            // Create a Blob for the PDF (simplified for demo, use a library like jsPDF for real PDF generation)
+            const blob = new Blob([pdfContent], { type: 'application/pdf' });
+            const pdfUrl = URL.createObjectURL(blob);
+            document.getElementById("pdfLink").href = pdfUrl;
+            document.getElementById("pdfLink").download = `ThriftHub_Receipt_${sessionId}.pdf`;
           } else {
             document.getElementById("status").innerText = "Receipt Not Found.";
+            document.getElementById("amount").innerText = "";
+            document.getElementById("date").innerText = "";
+            document.getElementById("orderId").innerText = "";
           }
         }
       });
@@ -51,9 +142,24 @@
   </script>
 </head>
 <body>
-  <h1>Payment Successful</h1>
-  <p id="amount"></p>
-  <p id="status"></p>
-  <p>Redirecting to homepage in 5 seconds...</p>
+  <div class="container">
+    <div class="header">
+      <h1>Transaction Receipt</h1>
+      <p>ThriftHub Malaysia</p>
+    </div>
+    <div class="receipt-details">
+      <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+      <p><strong>Amount Paid:</strong> <span id="amount"></span></p>
+      <p><div id="status"></div>Payment Status: <span id="status"></span></p>
+      <p><strong>Date:</strong> <span id="date"></span></p>
+    </div>
+    <div class="pdf-link">
+      <a id="pdfLink" href="#" download>Download PDF Receipt</a>
+    </div>
+    </div>
+    <div class="footer">
+      <p>Thank you for shopping with ThriftHub Malaysia!</p>
+    </div>
+  </div>
 </body>
 </html>
