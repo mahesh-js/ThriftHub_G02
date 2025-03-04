@@ -47,12 +47,18 @@
 
   <!-- Ramadan/Hari Raya Notification Pop-Up with Sound Enable -->
   <div id="ramadanPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.7); z-index: 1000; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;">
-    <div style="background: #fff; color: #333; padding: 20px; border-radius: 10px; max-width: 400px; width: 90%;">
-      <h2>Wishing You a Blessed Ramadan & Joyous Hari Raya!</h2>
-      <p>Enjoy exclusive offers on ThriftHub Malaysia during this festive season. Shop now for amazing deals!</p>
-      <button id="close" style="padding: 15px 30px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; margin-top: 10px;">close</button>
+    <div style="background: #fff; color: #333;  border-radius: 10px; max-width: 800px;display: flex; flex-direction: row; align-items: center;">
+        <div style="text-align: left; flex: 1; padding-right: 10px;padding: 20px;">
+            <h2>Wishing You a Blessed Ramadan & Joyous Hari Raya!</h2><br>
+            <p>Enjoy exclusive offers on ThriftHub Malaysia during this festive season. Shop now for amazing deals!</p><br><br>
+            <button id="close" style="padding: 7px 20px; background-color: #71a888; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 15px; margin-top: 10px;">Close</button>
+        </div>
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <!-- Placeholder for photo/image -->
+            <img src="img/ramadan.jpg" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
     </div>
-  </div>
+ </div>
 
   <main class="main-wrapper">
 
@@ -181,7 +187,7 @@
                     </div>
                     <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
                       <ul>
-                        <li class="nav-register"><a href="myaccount.html">My Account</a></li>
+                        <li class="nav-register"><a href="myaccount.html"><i class="fa fa-user"></i></a></li>
                         <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
                           <a href="#" class="nav-search search-trigger"><i class="fa fa-search"></i></a>
                         </li>
@@ -232,7 +238,7 @@
             <div class="container">
               <div class="hero-holder">
                 <div class="hero-message">
-                  <h1 class="hero-title nocaps">Welcome to ThriftHub 2025</h1>
+                  <h1 class="hero-title nocaps">Explore ThriftHub 2025</h1>
                   <h2 class="hero-subtitle lines">Discover Affordable Thrift Shopping</h2>
                 </div>
               </div>
@@ -246,6 +252,9 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Let's Thrift 2025</h1>
                   <h2 class="hero-subtitle lines">ThriftHub Malaysia</h2>
+                  <div class="buttons-holder" style="margin-top: 1%;">
+                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -256,6 +265,9 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Exclusive Products</h1>
                   <h2 class="hero-subtitle lines">Get awesome items only in ThriftHub Malaysia</h2>
+                  <div class="buttons-holder" style="margin-top: 1%;">
+                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -266,6 +278,9 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Enjoy Online Shopping</h1>
                   <h2 class="hero-subtitle lines">ThriftHub Malaysia</h2>
+                  <div class="buttons-holder" style="margin-top: 1%;">
+                    <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -501,28 +516,28 @@
               // Update subtotal in the dropdown
               const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
               navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
-
-              // Add event listeners for remove buttons in the dropdown
-              document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
-                  remove.addEventListener('click', (e) => {
-                      e.preventDefault();
-                      const productId = e.target.getAttribute('data-id');
-                      cart = cart.filter(item => item.id !== productId);
-                      localStorage.setItem('cart', JSON.stringify(cart));
-                      updateCartDisplay();
-                  });
-              });
+              
+             
           }
       }
-
+      navCartItems.addEventListener('click', (e) => {
+        const removeLink = e.target.closest('.remove');
+        if (removeLink) {
+          e.preventDefault();
+          const productId = removeLink.getAttribute('data-id');
+          cart = cart.filter(item => item.id !== productId);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartDisplay();
+        }
+      });
       // Initial cart display
       updateCartDisplay();
 
       // Listen for cart updates from localStorage changes (across pages)
       window.addEventListener('storage', () => {
-          cart = JSON.parse(localStorage.getItem('cart')) || [];
-          updateCartDisplay();
-      });
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateCartDisplay();
+        });
 
       // Add click event to cart icon to toggle cart dropdown visibility
       cartIcon.addEventListener('click', (e) => {

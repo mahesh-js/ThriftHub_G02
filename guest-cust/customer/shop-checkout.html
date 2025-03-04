@@ -146,7 +146,7 @@
                     </div>
                     <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
                       <ul>
-                        <li class="nav-register"><a href="myaccount.html">My Account</a></li>
+                        <li class="nav-register"><a href="myaccount.html"><i class="fa fa-user"></i></a></li>
                         <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
                           <a href="#" class="nav-search search-trigger"><i class="fa fa-search"></i></a>
                         </li>
@@ -201,14 +201,7 @@
         <div class="container relative">
           <div class="row">
             <div class="ecommerce col-xs-12">
-              <div class="row mb-30">
-                <div class="col-md-8">
-                  <p class="ecommerce-info">
-                    Returning Customer? 
-                    <a href="#" class="showlogin">Click here to login</a>
-                  </p>
-                </div>
-              </div>
+              
 
               <form name="checkout" class="checkout ecommerce-checkout row">
                 <div class="col-md-8" id="customer_details">
@@ -263,18 +256,12 @@
                     <div class="clear"></div>
                   </div>
 
-                  <p class="form-row form-row-wide create-account">
-                    <input type="checkbox" class="input-checkbox" id="createaccount" name="createaccount" value="1">
-                    <label for="createaccount" class="checkbox">Create an account?</label>
-                  </p>
+                  
 
                   <div class="clear"></div>
 
                   <div>
-                    <div class="ecommerce-shipping-fields">
-                      <input type="checkbox" id="ship-to-different-address-checkbox" class="input-checkbox" name="ship_to_different_address" value="1">
-                      <label for="ship-to-different-address-checkbox" class="checkbox">Ship to a different address</label>
-                    </div>
+                    
                     <p class="form-row notes" id="order_comments_field">
                       <label for="order_comments">Order Notes</label>
                       <textarea name="order_comments" class="input-text" id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="6"></textarea>
@@ -291,7 +278,7 @@
                       <thead>
                         <tr>
                           <th class="product-name">Product</th>
-                          <th class="product-total">Total</th>
+                          <th class="product-total" style="text-align: right;">Total</th>
                         </tr>
                       </thead>
                       <tbody></tbody>
@@ -456,7 +443,7 @@
           }
           const row = `
             <tr>
-              <td class="product-name">${item.name} <span class="count">x 1</span></td>
+              <td class="product-name" style="text-align:left;">${item.name} <span class="count">x 1</span></td>
               <td class="product-total"><span class="amount">RM${item.price.toFixed(2)}</span></td>
             </tr>
           `;

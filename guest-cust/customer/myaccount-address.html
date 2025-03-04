@@ -196,7 +196,7 @@
                     <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
                       <ul>
                         <li class="nav-register">
-                          <a href="myaccount.html">My Account</a>
+                          <a href="myaccount.html"><i class="fa fa-user"></i></a>
                         </li>
                         <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
                           <a href="#" class="nav-search search-trigger">
@@ -566,19 +566,21 @@
                 const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
                 navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
 
-                // Add event listeners for remove buttons in the dropdown
-                document.querySelectorAll('.nav-cart-remove .remove').forEach(remove => {
-                    remove.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const productId = e.target.getAttribute('data-id');
-                        cart = cart.filter(item => item.id !== productId);
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                        updateCartDisplay();
-                    });
-                });
+                
             }
         }
 
+        navCartItems.addEventListener('click', (e) => {
+        const removeLink = e.target.closest('.remove');
+        if (removeLink) {
+          e.preventDefault();
+          const productId = removeLink.getAttribute('data-id');
+          cart = cart.filter(item => item.id !== productId);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartDisplay();
+        }
+      });
+      
         // Initial cart display
         updateCartDisplay();
 

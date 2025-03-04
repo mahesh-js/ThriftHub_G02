@@ -1660,7 +1660,7 @@ input.main-search-input:-ms-input-placeholder {
 .nav-register a {
     display: inline-block;
     line-height: 1;
-    font-size: 14px;
+    font-size: 22px;
     color: #000;
 }
 
@@ -2251,6 +2251,7 @@ input.main-search-input:-ms-input-placeholder {
     font-size: 80px;
     font-weight: 700;
     line-height: 1;
+    margin-top: 25%;
 }
 
 @media only screen and (max-width: 991px) {
