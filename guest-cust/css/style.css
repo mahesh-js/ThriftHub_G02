@@ -4712,10 +4712,33 @@ h2.heading-frame {
 
 .ecommerce-ordering select {
     margin-bottom: 0;
-    padding: 0;
-    height: 30px;
-    border: none;
-    background-color: #fff;
+    padding: 8px 12px; 
+    height: 36px;
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px; 
+    background-color: #fff; 
+    font-size: 14px; 
+    color: #333;
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* 自定义下拉箭头 */
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-size: 12px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+
+.ecommerce-ordering select:hover {
+    border-color: #999; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.ecommerce-ordering select:focus {
+    outline: none; 
+    border-color: #000; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0); 
 }
 
 .shop-filter,

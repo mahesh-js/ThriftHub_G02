@@ -260,11 +260,8 @@
             <form class="ecommerce-ordering">
               <select>
                 <option value="default-sorting">Default Sorting</option>
-                <option value="price-low-to-high">Price: high to low</option>
-                <option value="price-high-to-low">Price: low to high</option>
-                <option value="by-popularity">By Popularity</option>
-                <option value="date">By Newness</option>
-                <option value="rating">By Rating</option>
+                <option value="price-high-to-low">Price: high to low</option>
+                <option value="price-low-to-high">Price: low to high</option>
               </select>
             </form>
           </div>
@@ -381,139 +378,170 @@
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
     import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
     import { getFirestore, collection, query, where, onSnapshot } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
-
-    // Firebase Configuration (use your actual config from Firebase Console)
+  
+    // Firebase Configuration
     const firebaseConfig = {
-        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
-        authDomain: "thrifthub-demo.firebaseapp.com",
-        projectId: "thrifthub-demo",
-        storageBucket: "thrifthub-demo.firebasestorage.app",
-        messagingSenderId: "518014691134",
-        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+      authDomain: "thrifthub-demo.firebaseapp.com",
+      projectId: "thrifthub-demo",
+      storageBucket: "thrifthub-demo.firebasestorage.app",
+      messagingSenderId: "518014691134",
+      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
     };
-
+  
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
-
-    // Sign in anonymously for testing (remove in production or use proper auth)
+  
+    // Sign in anonymously for testing
     signInAnonymously(auth).catch((error) => {
-        console.error("Error signing in anonymously:", error);
+      console.error("Error signing in anonymously:", error);
     });
-
-    // Cart management (simple array for now, can be expanded to localStorage or Firebase)
+  
+    // Cart management
     let cart = [];
-
-    // Function to load products for Men's Accessories (category: m-acc.html)
-    function loadProducts() {
-        const productsContainer = document.getElementById('productsContainer');
-        const q = query(collection(db, "products"), where("category", "==", "m-acc.html"));
-
-        onSnapshot(q, (snapshot) => {
-            productsContainer.innerHTML = ''; // Clear existing products
-            snapshot.forEach((doc) => {
-                const product = doc.data();
-                const productId = doc.id;
-
-                const productHtml = `
-                    <div class="col-md-4 col-xs-6 product product-grid">
-                        <div class="product-item clearfix">
-                            <div class="product-img hover-trigger">
-                                <a href="shop-single.html?id=${productId}">
-                                    <img src="${product.imageUrl || 'img/shop/ma1.jpg'}" alt="${product.title || 'Product'}">
-                                    <img src="${product.imageUrl || 'img/shop/ma1.jpg'}" alt="${product.title || 'Product'}" class="back-img">
-                                </a>
-                                <div class="hover-2">                    
-                                    <div class="product-actions">
-                                        <a href="#" class="product-add-to-wishlist">
-                                            <i class="fa fa-heart"></i>
-                                        </a>
-                                    </div>                        
-                                </div>
-                                <a href="shop-single.html?id=${productId}" class="product-quickview">Quick View</a>
-                            </div>
-
-                            <div class="product-details">
-                                <h3 class="product-title">
-                                    <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
-                                </h3>
-                                <span class="category">
-                                    <a href="m-acc.html">Men's Accessories</a>
-                                </span>
-                            </div>
-
-                            <span class="price">
-                                ${product.price && product.price < (product.price * 1.3) ? `
-                                    <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
-                                    <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
-                                    `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
-                            </span>
-                            <div class="product-description">
-                                <h3 class="product-title">
-                                    <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
-                                </h3>
-                                <span class="price">
-                                    ${product.price && product.price < (product.price * 1.3) ? `
-                                        <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
-                                        <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
-                                        `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
-                                </span>
-                                <span class="rating">
-                                    <a href="#">13 Reviews</a>
-                                </span>
-                                <div class="clear"></div>
-                                <p>${product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.'}</p>
-                                <a href="#" class="btn btn-dark btn-md left add-to-cart" data-product-id="${productId}"><span>Add to Cart</span></a>
-                                <div class="product-add-to-wishlist">
-                                    <a href="#"><i class="fa fa-heart"></i></a>
-                                </div>
-                            </div>         
-                        </div>
-                    </div>
-                `;
-                productsContainer.insertAdjacentHTML('beforeend', productHtml);
-            });
-
-            // Add event listeners for "Add to Cart" buttons after dynamically adding products
-            document.querySelectorAll('.add-to-cart').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const productId = e.target.getAttribute('data-product-id');
-                    addToCart(productId);
-                    window.location.href = 'signin.html';
-                });
-            });
-        }, (error) => {
-            console.error("Error fetching products:", error);
-            productsContainer.innerHTML = '<p class="error-message">Error loading products. Please try again later.</p>';
+  
+    // Function to render products
+    function renderProducts(products) {
+      const productsContainer = document.getElementById('productsContainer');
+      productsContainer.innerHTML = ''; // Clear existing products
+  
+      products.forEach((product) => {
+        const productId = product.id;
+        const productHtml = `
+          <div class="col-md-4 col-xs-6 product product-grid">
+            <div class="product-item clearfix">
+              <div class="product-img hover-trigger">
+                <a href="shop-single.html?id=${productId}">
+                  <img src="${product.imageUrl || 'img/shop/ma1.jpg'}" alt="${product.title || 'Product'}">
+                  <img src="${product.imageUrl || 'img/shop/ma1.jpg'}" alt="${product.title || 'Product'}" class="back-img">
+                </a>
+                <div class="hover-2">                    
+                  <div class="product-actions">
+                    <a href="#" class="product-add-to-wishlist">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                  </div>                        
+                </div>
+                <a href="shop-single.html?id=${productId}" class="product-quickview">Quick View</a>
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">
+                  <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
+                </h3>
+                <span class="category">
+                  <a href="m-acc.html">Men's Accessories</a>
+                </span>
+              </div>
+              <span class="price">
+                ${product.price && product.price < (product.price * 1.3) ? `
+                  <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+                  <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
+                  `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
+              </span>
+              <div class="product-description">
+                <h3 class="product-title">
+                  <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
+                </h3>
+                <span class="price">
+                  ${product.price && product.price < (product.price * 1.3) ? `
+                    <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+                    <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
+                    `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
+                </span>
+                <span class="rating">
+                  <a href="#">${product.reviews || 'No'} Reviews</a>
+                </span>
+                <div class="clear"></div>
+                <p>${product.description || 'Our products are carefully curated to meet high-quality standards.'}</p>
+                <a href="#" class="btn btn-dark btn-md left add-to-cart" data-product-id="${productId}"><span>Add to Cart</span></a>
+                <div class="product-add-to-wishlist">
+                  <a href="#"><i class="fa fa-heart"></i></a>
+                </div>
+              </div>         
+            </div>
+          </div>
+        `;
+        productsContainer.insertAdjacentHTML('beforeend', productHtml);
+      });
+  
+      // Add event listeners for "Add to Cart" buttons
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const productId = e.target.getAttribute('data-product-id');
+          addToCart(productId);
+          window.location.href = 'signin.html';
         });
+      });
     }
-
+  
+    // Function to load and sort products
+    function loadProducts(sortOption = 'default-sorting') {
+      const q = query(collection(db, "products"), where("category", "==", "m-acc.html"));
+      let products = [];
+  
+      onSnapshot(q, (snapshot) => {
+        products = [];
+        snapshot.forEach((doc) => {
+          products.push({ id: doc.id, ...doc.data() });
+        });
+  
+        // Sort products based on the selected option
+        switch (sortOption) {
+          case 'price-low-to-high':
+            products.sort((a, b) => (a.price || 0) - (b.price || 0));
+            break;
+          case 'price-high-to-low':
+            products.sort((a, b) => (b.price || 0) - (a.price || 0));
+            break;
+          case 'default-sorting':
+          default:
+            products.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+            break;
+        }
+  
+        renderProducts(products);
+      }, (error) => {
+        console.error("Error fetching products:", error);
+        document.getElementById('productsContainer').innerHTML = '<p class="error-message">Error loading products.</p>';
+      });
+    }
+  
     // Function to add product to cart
     function addToCart(productId) {
-        const q = query(collection(db, "products"), where("id", "==", productId)); // Note: Firestore uses doc.id, not a field called "id"
-        onSnapshot(q, (snapshot) => {
-            snapshot.forEach((doc) => {
-                const product = doc.data();
-                cart.push({
-                    id: productId,
-                    name: product.title || 'Untitled',
-                    price: product.price || 0,
-                    imageUrl: product.imageUrl || 'img/shop/ma1.jpg'
-                });
-                alert(`${product.title || 'Product'} added to cart!`);
-                console.log('Cart:', cart);
+      const q = query(collection(db, "products"), where("category", "==", "m-acc.html"));
+      onSnapshot(q, (snapshot) => {
+        snapshot.forEach((doc) => {
+          if (doc.id === productId) {
+            const product = doc.data();
+            cart.push({
+              id: productId,
+              name: product.title || 'Untitled',
+              price: product.price || 0,
+              imageUrl: product.imageUrl || 'img/shop/ma1.jpg'
             });
-        }, (error) => {
-            console.error("Error adding product to cart:", error);
-            alert("Error adding product to cart. Please try again.");
+            alert(`${product.title || 'Product'} added to cart!`);
+            console.log('Cart:', cart);
+          }
         });
+      }, (error) => {
+        console.error("Error adding product to cart:", error);
+        alert("Error adding product to cart.");
+      });
     }
-
-    // Load products when the page loads
+  
+    // Load products when the page loads and handle sorting
     document.addEventListener("DOMContentLoaded", () => {
-        loadProducts();
+      loadProducts(); // Initial load with default sorting
+  
+      // Event listener for sorting dropdown
+      const sortSelect = document.querySelector('.ecommerce-ordering select');
+      sortSelect.addEventListener('change', (e) => {
+        const sortOption = e.target.value;
+        loadProducts(sortOption); // Reload and sort products
+      });
     });
   </script>
    <script type="module">
