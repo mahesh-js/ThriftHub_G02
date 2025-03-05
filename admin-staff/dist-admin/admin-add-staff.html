@@ -1,0 +1,1068 @@
+@ -0,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth group" data-sidebar="brand" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ThriftHub Malaysia | Add Staff</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta content="Add staff | Thrifthub" name="description" />
+    <meta content="" name="Mannatthemes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/libs/filepond/filepond.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/libs/vanillajs-datepicker/css/datepicker.min.css"
+    />
+    <link rel="stylesheet" href="assets/libs/mobius1-selectr/selectr.min.css" />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css" />
+    <link
+      href="assets/libs/flatpickr/flatpickr.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+    <!-- Custom CSS for additional styling -->
+    <style>
+      /* Custom styles for the form */
+      .form-container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .form-input {
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 10px;
+        width: 100%;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-input:focus {
+        border-color: #3b82f6;
+        outline: none;
+      }
+
+      .form-label {
+        font-weight: 500;
+        color: #4a5568;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .form-button {
+        background-color: #3b82f6;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-button:hover {
+        background-color: #2563eb;
+      }
+
+      .form-button-secondary {
+        background-color: transparent;
+        color: #3b82f6;
+        border: 1px solid #3b82f6;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-button-secondary:hover {
+        background-color: #3b82f6;
+        color: #ffffff;
+      }
+
+      .filepond-container {
+        border: 2px dashed #e2e8f0;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        background-color: #f7fafc;
+      }
+
+      .filepond-container:hover {
+        border-color: #3b82f6;
+      }
+
+      .preview-image {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+
+      #message {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      #message.success {
+        background-color: #d1fae5;
+        color: #065f46;
+      }
+
+      #message.error {
+        background-color: #fee2e2;
+        color: #dc2626;
+      }
+
+      /* Login Form Styles */
+      .login-container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+
+  <body
+    data-layout-mode="light"
+    data-sidebar-size="default"
+    data-theme-layout="vertical"
+    class="bg-[#EEF0FC] dark:bg-gray-900"
+  >
+    <!-- Login Form -->
+    <div class="login-container">
+      <h2 class="text-xl font-semibold mb-4 text-center">Admin Login</h2>
+      <form id="loginForm" class="space-y-4">
+        <div>
+          <label for="loginEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            id="loginEmail"
+            class="form-input"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div>
+          <label for="loginPassword" class="form-label">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            class="form-input"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button type="submit" class="form-button w-full">Login</button>
+      </form>
+      <div id="loginMessage"></div>
+    </div>
+
+    <!-- leftbar-tab-menu -->
+    <div
+      class="min-h-full z-[99] fixed inset-y-0 print:hidden bg-gradient-to-t from-[#111111] from-10% via-[#111111] via-40% to-[#111111] to-100% dark:bg-[#111111] main-sidebar duration-300 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111]"
+    >
+      <div
+        class="text-center border-b bg-[#111111] border-r h-[64px] flex justify-center items-center brand-logo dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111] group-data-[sidebar=brand]:border-slate-700/40"
+      >
+        <a href="index.html" class="logo">
+          <span>
+            <img
+              src="assets/images/logo.png"
+              alt="logo-large"
+              class="logo-lg h-[52px] logo-light hidden dark:inline-block ms-1 group-data-[sidebar=dark]:inline-block group-data-[sidebar=brand]:inline-block"
+            />
+            <img
+              src="assets/images/logo.png"
+              alt="logo-large"
+              class="logo-lg h-[52px] logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden group-data-[sidebar=brand]:hidden"
+            />
+          </span>
+        </a>
+      </div>
+      <div
+        class="border-r pb-14 h-[100vh] dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:border-slate-700/40"
+        data-simplebar
+      >
+        <div class="p-4 block">
+          <ul class="navbar-nav">
+            <li
+              class="uppercase text-[11px] text-primary-500 dark:text-primary-400 mt-0 leading-4 mb-2 group-data-[sidebar=dark]:text-primary-400 group-data-[sidebar=brand]:text-primary-300"
+            >
+              <span
+                class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400"
+                >Dashboards</span
+              >
+            </li>
+            <li>
+              <div id="parent-accordion" data-fc-type="accordion">
+                <a
+                  href="#"
+                  class="nav-link hover:bg-transparent hover:text-black rounded-md dark:hover:text-slate-200 flex items-center decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200"
+                  data-fc-type="collapse"
+                  data-fc-parent="parent-accordion"
+                >
+                  <span
+                    data-lucide="home"
+                    class="w-5 h-5 text-center text-slate-800 dark:text-slate-400 me-2 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"
+                  ></span>
+                  <span>Admin</span>
+                  <i
+                    class="icofont-thin-down ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400 fc-collapse-open:rotate-180"
+                  ></i>
+                </a>
+
+                <div id="Admin-flush" class="hidden overflow-hidden">
+                  <ul class="nav flex-col flex flex-wrap ps-0 mb-0 ms-2">
+                    <li class="nav-item relative block">
+                      <a
+                        href="index.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="admin-products.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Products
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="admin-customers.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Customers
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="admin-customers-details.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Customers Details
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="admin-orders.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Orders
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="admin-order-details.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Order Details
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="admin-staff.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Staff
+                      </a>
+                    </li>
+                    <li class="nav-item relative block">
+                      <a
+                        href="apps-invoice.html"
+                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
+                      >
+                        <i
+                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
+                        ></i>
+                        Invoice
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      id="topbar"
+      class="topbar border-b dark:border-slate-700/40 fixed inset-x-0 duration-300 block print:hidden z-50"
+    >
+      <div
+        class="mx-0 flex max-w-full flex-wrap items-center lg:mx-auto relative top-[50%] start-[50%] transform -translate-x-1/2 -translate-y-1/2"
+      >
+        <div class="ltr:mx-2 rtl:mx-2">
+          <button
+            id="toggle-menu-hide"
+            class="button-menu-mobile flex rounded-full md:me-0 relative"
+          >
+            <i data-lucide="menu" class="top-icon w-5 h-5"></i>
+          </button>
+        </div>
+        <div class="flex items-center md:w-[40%] lg:w-[30%] xl:w-[20%]">
+          <div class="relative ltr:mx-2 rtl:mx-2 self-center">
+            <button
+              class="px-2 py-1 bg-primary-500/10 border border-transparent collapse:bg-green-100 text-primary text-sm rounded hover:bg-blue-600 hover:text-white"
+            >
+              <i class="ti ti-plus me-1"></i> New Task
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2"
+        >
+          <div
+            class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative"
+          >
+            <button
+              type="button"
+              class="dropdown-toggle flex rounded-full md:me-0"
+              aria-expanded="false"
+              data-fc-autoclose="both"
+              data-fc-type="dropdown"
+            >
+              <span data-lucide="search" class="top-icon w-5 h-5"></span>
+            </button>
+
+            <div
+              class="left-auto right-0 z-50 my-1 hidden min-w-[300px] list-none divide-y divide-gray-100 rounded-md border-slate-700 md:border-white text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800"
+              onclick="event.stopPropagation()"
+            >
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                >
+                  <i class="ti ti-search text-gray-400 z-10"></i>
+                </div>
+                <input
+                  type="text"
+                  id="email-adress-icon"
+                  class="block w-full rounded-lg border border-slate-200 dark:border-slate-700/60 bg-slate-200/10 p-1.5 pl-10 text-slate-600 dark:text-slate-400 outline-none focus:border-slate-300 focus:ring-slate-300 dark:bg-slate-800/20 sm:text-sm"
+                  placeholder="Search..."
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4"
+          >
+            <button
+              id="toggle-theme"
+              class="flex rounded-full md:me-0 relative"
+            >
+              <span data-lucide="moon" class="top-icon w-5 h-5 light"></span>
+              <span
+                data-lucide="sun"
+                class="top-icon w-5 h-5 dark hidden"
+              ></span>
+            </button>
+          </div>
+          <div
+            class="ltr:me-2 ltr:lg:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative"
+          >
+            <button
+              type="button"
+              class="dropdown-toggle flex rounded-full md:me-0"
+              id="Notifications"
+              aria-expanded="false"
+              data-fc-autoclose="both"
+              data-fc-type="dropdown"
+            >
+              <span data-lucide="bell" class="top-icon w-5 h-5"></span>
+            </button>
+
+            <div
+              class="left-auto right-0 z-50 my-1 hidden w-64 list-none divide-y h-52 divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800"
+              id="navNotifications"
+              data-simplebar
+            >
+              <ul class="py-1" aria-labelledby="navNotifications">
+                <li class="py-2 px-4">
+                  <a href="javascript:void(0);" class="dropdown-item">
+                    <div class="flex">
+                      <div
+                        class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3"
+                      >
+                        <span
+                          data-lucide="shopping-cart"
+                          class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"
+                        ></span>
+                      </div>
+                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                        <p
+                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                        >
+                          Karen Robinson
+                        </p>
+                        <p
+                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
+                        >
+                          Hey ! i'm available here
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="py-2 px-4">
+                  <a href="javascript:void(0);" class="dropdown-item">
+                    <div class="flex">
+                      <img
+                        class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
+                        src="assets/images/users/avatar-3.png"
+                        alt="logo"
+                      />
+                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                        <p
+                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                        >
+                          Your order is placed
+                        </p>
+                        <p
+                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
+                        >
+                          Dummy text of the printing and industry.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="py-2 px-4">
+                  <a href="javascript:void(0);" class="dropdown-item">
+                    <div class="flex">
+                      <div
+                        class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3"
+                      >
+                        <span
+                          data-lucide="user"
+                          class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"
+                        ></span>
+                      </div>
+                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                        <p
+                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                        >
+                          Robert McCray
+                        </p>
+                        <p
+                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
+                        >
+                          Good Morning!
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="py-2 px-4">
+                  <a href="javascript:void(0);" class="dropdown-item">
+                    <div class="flex">
+                      <img
+                        class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
+                        src="assets/images/users/avatar-9.png"
+                        alt="logo"
+                      />
+                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
+                        <p
+                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                        >
+                          Meeting with designers
+                        </p>
+                        <p
+                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
+                        >
+                          It is a long established fact that a reader.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="me-2 dropdown relative">
+            <button
+              type="button"
+              class="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0"
+              id="user-profile"
+              aria-expanded="false"
+              data-fc-autoclose="both"
+              data-fc-type="dropdown"
+            >
+              <img
+                class="h-8 w-8 rounded-full"
+                src="assets/images/users/avatar-1.png"
+                alt="user photo"
+              />
+              <span
+                class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block"
+              >
+                <span
+                  class="block font-medium text-slate-600 dark:text-gray-300"
+                  >Maria Gibson</span
+                >
+                <span
+                  class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400"
+                  >Admin</span
+                >
+              </span>
+            </button>
+
+            <div
+              class="left-auto right-0 z-50 my-1 hidden list-none divide-y divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40"
+              id="navUserdata"
+            >
+              <ul class="py-1" aria-labelledby="navUserdata">
+                <li>
+                  <a
+                    href="pages-profile.html"
+                    class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"
+                  >
+                    <span
+                      data-lucide="user"
+                      class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"
+                    ></span>
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"
+                  >
+                    <span
+                      data-lucide="settings"
+                      class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"
+                    ></span>
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"
+                  >
+                    <span
+                      data-lucide="dollar-sign"
+                      class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"
+                    ></span>
+                    Earnings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="auth-lockscreen.html"
+                    class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500"
+                  >
+                    <span
+                      data-lucide="power"
+                      class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"
+                    ></span>
+                    Sign out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+      <div
+        class="page-wrapper relative ltr:ms-auto rtl:me-auto rtl:ms-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300"
+      >
+        <div class="xl:w-full">
+          <div class="flex flex-wrap">
+            <div class="flex items-center py-4 w-full">
+              <div class="w-full">
+                <div class="">
+                  <div class="flex flex-wrap justify-between">
+                    <div class="items-center">
+                      <h1
+                        class="font-medium text-3xl block dark:text-slate-100"
+                      >
+                        Add Staff
+                      </h1>
+                      <ol class="list-reset flex text-sm">
+                        <li>
+                          <a href="#" class="text-gray-500 dark:text-slate-400"
+                            >ThriftHub Malaysia</a
+                          >
+                        </li>
+                        <li>
+                          <span class="text-gray-500 dark:text-slate-400 mx-2"
+                            >/</span
+                          >
+                        </li>
+                        <li class="text-gray-500 dark:text-slate-400">Admin</li>
+                        <li>
+                          <span class="text-gray-500 dark:text-slate-400 mx-2"
+                            >/</span
+                          >
+                        </li>
+                        <li
+                          class="text-primary-500 hover:text-primary-600 dark:text-primary-400"
+                        >
+                          Add Staff
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="flex items-center">
+                      <div
+                        class="today-date leading-5 mt-2 lg:mt-0 form-input w-auto rounded-md border inline-block border-primary-500/60 dark:border-primary-500/60 text-primary-500 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-primary-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700"
+                      >
+                        <input
+                          type="text"
+                          class="dash_date border-0 focus:border-0 focus:outline-none"
+                          readonly
+                          required=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end container-->
+
+        <div class="xl:w-full min-h-[calc(100vh-138px)] relative pb-14">
+          <div
+            class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 justify-between"
+          >
+            <div
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
+            >
+              <div class="w-full relative p-4 form-container">
+                <label for="" class="form-label">Upload Profile Photo</label>
+                <div class="w-full h-56 mx-auto mb-4 filepond-container">
+                  <input
+                    type="file"
+                    class="filepond h-56"
+                    name="filepond"
+                    accept="image/png, image/jpeg, image/gif"
+                  />
+                </div>
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6"
+            >
+              <form id="staffForm" class="w-full relative mb-4 form-container">
+                <div class="flex-auto p-0 md:p-4">
+                  <div class="mb-4">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-input"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-input"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-input"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="role" class="form-label">Role</label>
+                    <select id="role" class="form-input" required>
+                      <option value="">Select Role</option>
+                      <option value="Admin">Admin</option>
+                      <option value="Manager">Manager</option>
+                      <option value="Sales">Sales</option>
+                      <option value="Support">Support</option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <label for="hireDate" class="form-label">Hire Date</label>
+                    <input
+                      type="text"
+                      id="hireDate"
+                      class="form-input"
+                      name="foo"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="status" class="form-label">Status</label>
+                    <select id="status" class="form-input" required>
+                      <option value="">Select Status</option>
+                      <option value="Active">Active</option>
+                      <option value="Inactive">Inactive</option>
+                    </select>
+                  </div>
+
+                  <!-- Message Div for Success/Error Messages -->
+                  <div id="message"></div>
+
+                  <div class="flex gap-2">
+                    <button type="submit" class="form-button">Add Staff</button>
+                    <button type="button" class="form-button-secondary">
+                      Save Staff
+                    </button>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </form>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
+            >
+              <div class="w-full relative mb-4 form-container">
+                <div class="flex-auto p-0 md:p-4">
+                  <div>
+                    <p class="text-slate-700 text-base dark:text-slate-400">
+                      Profile Photo
+                    </p>
+                    <img
+                      src="assets/images/users/avatar-1.png"
+                      alt=""
+                      class="preview-image"
+                    />
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-slate-700 text-base dark:text-slate-400">
+                      Full Name
+                    </p>
+                    <h4
+                      class="text-xl font-semibold text-slate-700 dark:text-slate-300"
+                    >
+                      John Doe
+                    </h4>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-slate-600 text-base dark:text-slate-400">
+                      Email
+                    </p>
+                    <h4
+                      class="text-base font-medium text-slate-900 dark:text-slate-300"
+                    >
+                      john.doe@example.com
+                    </h4>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-slate-600 text-base dark:text-slate-400">
+                      Phone Number
+                    </p>
+                    <h4
+                      class="text-base font-semibold text-slate-900 dark:text-slate-300"
+                    >
+                      +60 12-345-6789
+                    </h4>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-slate-600 text-base dark:text-slate-400">
+                      Role
+                    </p>
+                    <h4
+                      class="text-base font-semibold text-slate-900 dark:text-slate-300"
+                    >
+                      Manager
+                    </h4>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-slate-600 text-base dark:text-slate-400">
+                      Hire Date
+                    </p>
+                    <h4
+                      class="text-base font-semibold text-slate-900 dark:text-slate-300"
+                    >
+                      01/01/2023
+                    </h4>
+                  </div>
+                  <div class="mb-5">
+                    <p class="text-slate-600 text-base dark:text-slate-400">
+                      Status
+                    </p>
+                    <h4
+                      class="text-base font-semibold text-slate-900 dark:text-slate-300"
+                    >
+                      Active
+                    </h4>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end grid-->
+          <!-- footer -->
+          <div
+            class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40"
+          >
+            <div class="container">
+              <!-- Footer Start -->
+              <footer
+                class="footer bg-transparent text-center font-medium text-slate-600 dark:text-slate-400 md:text-left"
+              >
+                ©
+                <script>
+                  var year = new Date();
+                  document.write(year.getFullYear());
+                </script>
+                ThriftHub Malaysia
+                <span
+                  class="float-right hidden text-slate-600 dark:text-slate-400 md:inline-block"
+                  >Crafted with <i class="ti ti-heart text-red-500"></i> by
+                  YUYIN</span
+                >
+              </footer>
+              <!-- end Footer -->
+            </div>
+          </div>
+        </div>
+        <!--end container-->
+      </div>
+      <!--end page-wrapper-->
+    </div>
+    <!--end /div-->
+
+    <!-- Firebase and Form Handling Scripts -->
+    <!-- Firebase and Form Handling Scripts -->
+    <script type="module">
+      // Import Firebase SDK
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+      import {
+        getStorage,
+        ref,
+        uploadBytes,
+        getDownloadURL,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+
+      // Firebase Configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+        authDomain: "thrifthub-demo.firebaseapp.com",
+        projectId: "thrifthub-demo",
+        storageBucket: "thrifthub-demo.firebasestorage.app",
+        messagingSenderId: "518014691134",
+        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const storage = getStorage(app);
+      const auth = getAuth(app);
+
+      // Login Form Handling
+      const loginForm = document.getElementById("loginForm");
+      const loginMessage = document.getElementById("loginMessage");
+
+      loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+
+        try {
+          loginMessage.textContent = "Logging in...";
+          loginMessage.className = "";
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+          loginMessage.textContent = "Logged in successfully as: " + userCredential.user.email;
+          loginMessage.className = "success";
+          console.log("Signed in as:", userCredential.user.email);
+
+          // Hide login form and show the main content after successful login
+          document.querySelector(".login-container").style.display = "none";
+          document.querySelector(".page-wrapper").style.display = "block";
+        } catch (error) {
+          console.error("Login failed:", error.message);
+          loginMessage.textContent = "Login failed: " + error.message;
+          loginMessage.className = "error";
+        }
+      });
+
+      // Check auth state to handle page reloads or initial state
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          console.log("User is signed in:", user.email);
+          document.querySelector(".login-container").style.display = "none";
+          document.querySelector(".page-wrapper").style.display = "block";
+        } else {
+          console.log("No user is signed in");
+          document.querySelector(".login-container").style.display = "block";
+          document.querySelector(".page-wrapper").style.display = "none";
+        }
+      });
+
+      // Initialize FilePond
+      FilePond.registerPlugin(FilePondPluginImagePreview);
+      const inputElements = document.querySelectorAll('input[type="file"]');
+      inputElements.forEach((element) => {
+        FilePond.create(element, {
+          storeAsFile: true,
+          allowMultiple: false,
+          acceptedFileTypes: ["image/*"],
+          onaddfile: (fileItem) => console.log("File added to FilePond:", fileItem.file),
+        });
+      });
+
+      // Form Submission Logic
+      document.addEventListener("DOMContentLoaded", async function () {
+        // Ensure user is authenticated before allowing form submission
+        const staffForm = document.getElementById("staffForm");
+        const messageDiv = document.getElementById("message");
+
+        staffForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // Check if user is authenticated
+          if (!auth.currentUser) {
+            messageDiv.textContent = "Please log in to add staff.";
+            messageDiv.className = "error";
+            return;
+          }
+
+          try {
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const role = document.getElementById("role").value;
+            const hireDate = document.getElementById("hireDate").value;
+            const status = document.getElementById("status").value;
+
+            const profilePhotoPond = FilePond.find(inputElements[0]);
+            const profilePhotoFiles = profilePhotoPond?.getFiles() || [];
+            const profilePhotoFile = profilePhotoFiles[0]?.file;
+
+            console.log("Form Data:", { name, email, phone, role, hireDate, status, profilePhotoFile });
+
+            messageDiv.textContent = "Adding staff...";
+            messageDiv.className = "";
+
+            let photoUrl = "";
+            if (profilePhotoFile) {
+              console.log("Uploading file:", profilePhotoFile.name, profilePhotoFile);
+              const storageRef = ref(storage, `staff/${Date.now()}_${profilePhotoFile.name}`);
+              const snapshot = await uploadBytes(storageRef, profilePhotoFile);
+              photoUrl = await getDownloadURL(snapshot.ref);
+              console.log("Photo uploaded, URL:", photoUrl);
+            }
+
+            await addDoc(collection(db, "staff"), {
+              name,
+              email,
+              phone,
+              role,
+              hireDate,
+              status,
+              photoUrl,
+              createdAt: serverTimestamp(),
+            });
+            console.log("Staff added to Firestore successfully");
+
+            messageDiv.textContent = "Staff added successfully!";
+            messageDiv.className = "success";
+            staffForm.reset();
+            if (profilePhotoPond) profilePhotoPond.removeFiles();
+
+            setTimeout(() => {
+              messageDiv.textContent = "";
+              messageDiv.className = "";
+            }, 3000);
+          } catch (error) {
+            console.error("Error adding staff:", error);
+            messageDiv.textContent = "Error adding staff: " + error.message;
+            messageDiv.className = "error";
+          }
+        });
+      });
+    </script>
+
+    <!-- Other JavaScript libraries remain unchanged -->
+    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+    <script src="assets/libs/filepond/filepond.min.js"></script>
+    <script src="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
+    <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+    <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

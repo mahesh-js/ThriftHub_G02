@@ -31,6 +31,12 @@
 
         // Google Auth Provider
         const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+        
+        // Phone Auth Provider
+        const phoneAuthProvider = new firebase.auth.PhoneAuthProvider();
+
+        // Apple Auth Provider
+        const appleAuthProvider = new firebase.auth.OAuthProvider('apple.com');
 
         function SignupForm() {
             const [name, setName] = React.useState("");
