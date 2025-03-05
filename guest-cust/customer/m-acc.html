@@ -78,7 +78,9 @@
                   </div>
                 </li>
               </ul>
-        
+              <ul class="top-bar-acc" style="margin-right: 38%;">
+                Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
+              </ul>
               
             </div>
           </div>
@@ -180,7 +182,6 @@
                         <div class="nav-cart-outer">
                           <div class="nav-cart-inner">
                             <a href="#" class="nav-cart-icon">
-                              <span class="nav-cart-badge">2</span>
                             </a>
                           </div>
                         </div>
@@ -189,82 +190,44 @@
 
               
 
-              <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
-                <ul>
-                  <li class="nav-register">
-                    <a href="myaccount.html">My Account</a>
-                  </li>
-                  <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
-                    <a href="#" class="nav-search search-trigger">
-                      <i class="fa fa-search"></i>
-                    </a>
-                  </li>
-                  <li class="nav-cart">
-                    <div class="nav-cart-outer">
-                      <div class="nav-cart-inner">
-                        <a href="#" class="nav-cart-icon">
-                          2
-                        </a>
-                      </div>
-                    </div>
-                    <div class="nav-cart-container">
-                      <div class="nav-cart-items">
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_1.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Ladies Bag
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
+                    <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
+                      <ul>
+                        <li class="nav-register">
+                          <a href="myaccount.html"><i class="fa fa-user"></i></a>
+                        </li>
+                        <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
+                          <a href="#" class="nav-search search-trigger">
+                            <i class="fa fa-search"></i>
+                          </a>
+                        </li>
+                        <li class="nav-cart">
+                          <div class="nav-cart-outer">
+                            <div class="nav-cart-inner">
+                              <a href="#" class="nav-cart-icon" id="cartIcon">
+                                <span class="nav-cart-badge" id="cartBadge">0</span>
+                              </a>
                             </div>
                           </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_2.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Sequin Suit longer title
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
+                          <div class="nav-cart-container">
+                            <div class="nav-cart-items" id="navCartItems">
+      
+                              <!-- Cart items will be dynamically inserted here -->
+      
+                            </div> <!-- end cart items -->
+      
+                            <div class="nav-cart-summary">
+                              <span>Cart Subtotal</span>
+                              <span class="total-price" id="navCartSubtotal">RM0.00</span>
+                            </div>
+      
+                            <div class="nav-cart-actions mt-20">
+                              <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
+                              <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
                             </div>
                           </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                      </div> <!-- end cart items -->
-
-                      <div class="nav-cart-summary">
-                        <span>Cart Subtotal</span>
-                        <span class="total-price">$1799.00</span>
-                      </div>
-
-                      <div class="nav-cart-actions mt-20">
-                        <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
-                        <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
-                      </div>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ul>
-              </div>
           
             </div> <!-- end row -->
           </div> <!-- end container -->
@@ -306,745 +269,34 @@
             </div>
             <div class="filter-show hidden-xs">
               <span>Show:</span>
-              <a href="#" class="active">12</a>
-              <a href="#">24</a>
-              <a href="#">all</a>
+              <a href="#" class="show-option active" data-limit="12">12</a>
+              <a href="#" class="show-option" data-limit="24">24</a>
+              <a href="#" class="show-option" data-limit="all">all</a>
             </div>
-            <form class="ecommerce-ordering">
-              <select>
-                <option value="default-sorting">Default Sorting</option>
-                <option value="price-low-to-high">Price: high to low</option>
-                <option value="price-high-to-low">Price: low to high</option>
-                <option value="by-popularity">By Popularity</option>
-                <option value="date">By Newness</option>
-                <option value="rating">By Rating</option>
-              </select>
-            </form>
+            <div class="ecommerce-ordering custom-dropdown">
+              <div class="selected-option">Default Sorting</div>
+              <ul class="dropdown-options">
+                <li data-value="default-sorting" class="selected">Default Sorting</li>
+                <li data-value="price-high-to-low">Price: high to low</li>
+                <li data-value="price-low-to-high">Price: low to high</li>
+              </ul>
+            </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 catalogue-col right mb-50">
               <div class="shop-catalogue grid-view">
 
-                <div class="row items-grid">
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_1.jpg" alt="">
-                          <img src="img/shop/shop_item_back_1.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="product-label">
-                          <span class="sale">sale</span>
-                        </div>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Women</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <del>
-                          <span>$730.00</span>
-                        </del>
-                        <ins>
-                          <span class="amount">$159.99</span>
-                        </ins>                        
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_2.jpg" alt="">
-                          <img src="img/shop/shop_item_back_2.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Mesh Brown Sandal</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Accessories</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$190.00</span>
-                        </ins>                       
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_3.jpg" alt="">
-                          <img src="img/shop/shop_item_back_3.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Tribal Grey Blazer</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Women</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$330.00</span>
-                        </ins>                        
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_4.jpg" alt="">
-                          <img src="img/shop/shop_item_back_4.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Sweater w/ Colar</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Men</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$299.00</span>
-                        </ins>                        
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_5.jpg" alt="">
-                          <img src="img/shop/shop_item_back_5.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Lola May Crop Blazer</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Women</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$42.00</span>
-                        </ins>                        
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_6.jpg" alt="">
-                          <img src="img/shop/shop_item_back_6.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="product-label">
-                          <span class="sale">sale</span>
-                        </div>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Faux Suits</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Men</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <del>
-                          <span>$500.00</span>
-                        </del>
-                        <ins>
-                          <span class="amount">$233.00</span>
-                        </ins>                        
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_7.jpg" alt="">
-                          <img src="img/shop/shop_item_back_7.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Crew Watch</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Accessories</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$280.00</span>
-                        </ins>                       
-                      </span>
-
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_8.jpg" alt="">
-                          <img src="img/shop/shop_item_back_8.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Jersey Stylish</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Women</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$298.00</span>
-                        </ins>                       
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                      
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_9.jpg" alt="">
-                          <img src="img/shop/shop_item_back_9.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Camo Belt</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Accessories</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$33.00</span>
-                        </ins>                       
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_10.jpg" alt="">
-                          <img src="img/shop/shop_item_back_10.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Heathered Scarf</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Accessories</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$180.00</span>
-                        </ins>                       
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_11.jpg" alt="">
-                          <img src="img/shop/shop_item_back_11.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Mantle Brown Bag</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Accessories</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <ins>
-                          <span class="amount">$150.00</span>
-                        </ins>                       
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
-
-                  <div class="col-md-4 col-xs-6 product product-grid">
-                    <div class="product-item clearfix">
-                      <div class="product-img hover-trigger">
-                        <a href="shop-single.html">
-                          <img src="img/shop/shop_item_12.jpg" alt="">
-                          <img src="img/shop/shop_item_back_12.jpg" alt="" class="back-img">
-                        </a>
-                        <div class="product-label">
-                          <span class="sale">sale</span>
-                        </div>
-                        <div class="hover-2">                    
-                          <div class="product-actions">
-                            <a href="#" class="product-add-to-wishlist">
-                              <i class="fa fa-heart"></i>
-                            </a>
-                          </div>                        
-                        </div>
-                        <a href="#" class="product-quickview">Quick View</a>
-                      </div>
-
-                      <div class="product-details">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Sport T-shirt</a>
-                        </h3>
-                        <span class="category">
-                          <a href="catalogue-grid.html">Men</a>
-                        </span>
-                      </div>
-
-                      <span class="price">
-                        <del>
-                          <span>$500.00</span>
-                        </del>
-                        <ins>
-                          <span class="amount">$230.00</span>
-                        </ins>                       
-                      </span>
-                      <div class="product-description">
-                        <h3 class="product-title">
-                          <a href="shop-single.html">Drawstring Dress</a>
-                        </h3>
-                        <span class="price">
-                          <del>
-                            <span>$730.00</span>
-                          </del>
-                          <ins>
-                            <span class="amount">$159.99</span>
-                          </ins>                        
-                        </span>
-                        <span class="rating">
-                          <a href="#">3 Reviews</a>
-                        </span>
-                        <div class="clear"></div>
-                        <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
-                        <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
-                        <div class="product-add-to-wishlist">
-                          <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-                      </div>   
-                    </div>
-                  </div> <!-- end product -->
-
+                <div class="row items-grid" id="productsContainer">
+                  <!-- Products will be dynamically inserted here -->
                 </div> <!-- end row -->
+
               </div> <!-- end grid mode -->
               
               <!-- Pagination -->
               <div class="pagination-wrap clearfix">
-                <p class="result-count">Showing: 12 of 80 results</p>                 
-                <nav class="pagination right clearfix">
-                  <a href="#"><i class="fa fa-angle-left"></i></a>
-                  <span class="page-numbers current">1</span>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#"><i class="fa fa-angle-right"></i></a>
-                </nav>
+                <p class="result-count" id="resultCount">Showing: 6 of 6 results</p>                 
+                
               </div>
 
             </div> <!-- end col -->
@@ -1052,9 +304,6 @@
           </div> <!-- end row -->
         </div> <!-- end container -->
       </section> <!-- end catalog -->
-
-
-     
 
       <!-- Footer Type-1 -->
       <footer class="footer footer-type-1">
@@ -1110,7 +359,7 @@
                 </div>
               </div>
 
-       
+     
         </div> <!-- end container -->
 
         <div class="bottom-footer">
@@ -1119,7 +368,7 @@
 
               <div class="col-sm-6 copyright sm-text-center">
                 <span>
-                  &copy;
+                  ©
                   <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
                   ThriftHub Malaysia | Made by <a href="">Group 2</a>
                 </span>
@@ -1148,6 +397,346 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>  
   <script type="text/javascript" src="js/scripts.js"></script>
-    
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+  <script type="module">
+    // Firebase Configuration
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+    import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
+    import { getFirestore, collection, query, where, limit, onSnapshot, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+        authDomain: "thrifthub-demo.firebaseapp.com",
+        projectId: "thrifthub-demo",
+        storageBucket: "thrifthub-demo.firebasestorage.app",
+        messagingSenderId: "518014691134",
+        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Sign in anonymously for testing
+    signInAnonymously(auth).then(() => {
+        console.log('Signed in anonymously successfully');
+    }).catch((error) => {
+        console.error("Error signing in anonymously:", error);
+    });
+
+    // Cart management (stored in localStorage)
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let currentLimit = 12; // Default limit (show 12 products)
+    let currentSortOption = 'default-sorting'; // Default sorting option
+
+    // Function to render products
+    function renderProducts(products) {
+        const productsContainer = document.getElementById('productsContainer');
+        productsContainer.innerHTML = '';
+
+        if (products.length === 0) {
+            productsContainer.innerHTML = '<p class="error-message">No products found for this category.</p>';
+            return;
+        }
+
+        products.forEach((product) => {
+            const productId = product.id;
+            const productHtml = `
+                <div class="col-md-4 col-xs-6 product product-grid">
+                    <div class="product-item clearfix">
+                        <div class="product-img hover-trigger">
+                            <a href="shop-single.html?id=${productId}">
+                                <img src="${product.imageUrl || 'img/shop/ma1.jpg'}" alt="${product.title || 'Product'}">
+                                <img src="${product.imageUrl || 'img/shop/ma1.jpg'}" alt="${product.title || 'Product'}" class="back-img">
+                            </a>
+                            <div class="hover-2">                    
+                                <div class="product-actions">
+                                    <a href="#" class="product-add-to-wishlist">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </div>                        
+                            </div>
+                            <a href="shop-single.html?id=${productId}" class="product-quickview">Quick View</a>
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">
+                                <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
+                            </h3>
+                            <span class="category">
+                                <a href="m-acc.html">Men's Accessories</a>
+                            </span>
+                        </div>
+                        <span class="price">
+                            ${product.price && product.price < (product.price * 1.3) ? `
+                                <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+                                <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
+                                `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
+                        </span>
+                        <div class="product-description">
+                            <h3 class="product-title">
+                                <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
+                            </h3>
+                            <span class="price">
+                                ${product.price && product.price < (product.price * 1.3) ? `
+                                    <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+                                    <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
+                                    `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
+                            </span>
+                            <span class="rating">
+                                <a href="#">13 Reviews</a>
+                            </span>
+                            <div class="clear"></div>
+                            <p>${product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.'}</p>
+                            <a href="#" class="btn btn-dark btn-md left add-to-cart" data-product-id="${productId}" data-size="${product.size || 'N/A'}"><span>Add to Cart</span></a>
+                            <div class="product-add-to-wishlist">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>         
+                    </div>
+                </div>
+            `;
+            productsContainer.insertAdjacentHTML('beforeend', productHtml);
+        });
+
+        updateResultCount(products.length);
+    }
+
+    // Function to load and sort products using JavaScript
+    function loadProducts(sortOption = currentSortOption) {
+        let q = query(collection(db, "products"), where("category", "==", "m-acc.html"));
+
+        onSnapshot(q, (snapshot) => {
+            let products = [];
+            snapshot.forEach((doc) => {
+                products.push({ id: doc.id, ...doc.data() });
+            });
+
+            // Sort products using JavaScript
+            switch (sortOption) {
+                case 'price-low-to-high':
+                    products.sort((a, b) => (a.price || 0) - (b.price || 0));
+                    break;
+                case 'price-high-to-low':
+                    products.sort((a, b) => (b.price || 0) - (a.price || 0));
+                    break;
+                case 'default-sorting':
+                default:
+                    products.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+                    break;
+            }
+
+            // Apply limit after sorting
+            if (currentLimit !== 'all') {
+                products = products.slice(0, currentLimit);
+            }
+
+            renderProducts(products);
+        }, (error) => {
+            console.error("Error fetching products:", error);
+            document.getElementById('productsContainer').innerHTML = '<p class="error-message">Error loading products. Please try again later.</p>';
+        });
+    }
+
+    // Function to update result count
+    function updateResultCount(totalProducts) {
+        const resultCount = document.getElementById('resultCount');
+        const showing = currentLimit === 'all' ? totalProducts : Math.min(currentLimit, totalProducts);
+        resultCount.textContent = `Showing: ${showing} of ${totalProducts} results`;
+    }
+
+    // Function to add product to cart
+    function addToCart(productId) {
+        console.log('Attempting to add product with ID:', productId);
+        const productRef = doc(db, "products", productId);
+        getDoc(productRef).then((docSnap) => {
+            console.log('Document snapshot exists:', docSnap.exists());
+            if (docSnap.exists()) {
+                const product = docSnap.data();
+                const size = product.size || 'N/A';
+                const existingItem = cart.find(item => item.id === productId && item.size === size);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        id: productId,
+                        name: product.title || 'Untitled',
+                        price: product.price || 0,
+                        imageUrl: product.imageUrl || 'img/shop/ma1.jpg',
+                        size: size,
+                        quantity: 1
+                    });
+                }
+                alert(`${product.title || 'Product'} (Size: ${size}) added to cart!`);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            } else {
+                console.error("Product not found in Firestore for ID:", productId);
+                alert("Product not found. Please try again.");
+            }
+        }).catch((error) => {
+            console.error("Error fetching product:", error);
+            alert("Error adding product to cart. Please try again.");
+        });
+    }
+
+    // Function to update cart display in the navbar
+    function updateCartDisplay() {
+        const cartBadge = document.getElementById('cartBadge');
+        const navCartItems = document.getElementById('navCartItems');
+        const navCartSubtotal = document.getElementById('navCartSubtotal');
+
+        cartBadge.textContent = cart.reduce((total, item) => total + item.quantity, 0) || 0;
+
+        if (cart.length === 0) {
+            navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+            navCartSubtotal.textContent = 'RM0.00';
+        } else {
+            navCartItems.innerHTML = '';
+            let subtotal = 0;
+            cart.forEach((item) => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                const itemHtml = `
+                    <div class="nav-cart-item clearfix">
+                        <div class="nav-cart-img">
+                            <a href="shop-single.html?id=${item.id}">
+                                <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                            </a>
+                        </div>
+                        <div class="nav-cart-title">
+                            <a href="shop-single.html?id=${item.id}">
+                                ${item.name} (Size: ${item.size})
+                            </a>
+                            <div class="nav-cart-price">
+                                <span>${item.quantity} x</span>
+                                <span>RM${item.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <div class="nav-cart-remove">
+                            <a href="#" class="remove" data-id="${item.id}" data-size="${item.size}" title="Remove this item">
+                                <i class="ui-close"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+            });
+            navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+
+            const existingListener = navCartItems._removeListener;
+            if (existingListener) {
+                navCartItems.removeEventListener('click', existingListener);
+            }
+
+            const removeListener = (e) => {
+                if (e.target.classList.contains('remove') || e.target.closest('.remove')) {
+                    e.preventDefault();
+                    const removeButton = e.target.classList.contains('remove') ? e.target : e.target.closest('.remove');
+                    const productId = removeButton.getAttribute('data-id');
+                    const size = removeButton.getAttribute('data-size');
+                    cart = cart.filter(item => !(item.id === productId && item.size === size));
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartDisplay();
+                }
+            };
+            navCartItems.addEventListener('click', removeListener);
+            navCartItems._removeListener = removeListener;
+        }
+    }
+
+    // Load products and set up event listeners when the page loads
+    document.addEventListener("DOMContentLoaded", () => {
+        loadProducts();
+
+        // Use event delegation for "Add to Cart" buttons
+        const productsContainer = document.getElementById('productsContainer');
+        productsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('add-to-cart') || e.target.closest('.add-to-cart')) {
+                e.preventDefault();
+                const button = e.target.classList.contains('add-to-cart') ? e.target : e.target.closest('.add-to-cart');
+                const productId = button.getAttribute('data-product-id');
+                if (productId) {
+                    addToCart(productId);
+                } else {
+                    console.error('No product ID found on the button.');
+                }
+            }
+        });
+
+        // Set up cart icon click handler
+        const cartIcon = document.getElementById('cartIcon');
+        const cartContainer = document.querySelector('.nav-cart-container');
+        let isCartOpen = false;
+
+        cartIcon.addEventListener('click', (e) => {
+            e.preventDefault();
+            isCartOpen = !isCartOpen;
+            cartContainer.style.display = isCartOpen ? 'block' : 'none';
+        });
+
+        // Close cart dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
+                cartContainer.style.display = 'none';
+                isCartOpen = false;
+            }
+        });
+
+        // Handle "Show" filter clicks
+        document.querySelectorAll('.show-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const limit = e.target.getAttribute('data-limit');
+                currentLimit = limit === 'all' ? 'all' : parseInt(limit);
+                loadProducts();
+                document.querySelectorAll('.show-option').forEach(opt => opt.classList.remove('active'));
+                e.target.classList.add('active');
+            });
+        });
+
+        // Handle sorting dropdown
+        const dropdowns = document.querySelectorAll('.custom-dropdown');
+        dropdowns.forEach(dropdown => {
+            const selected = dropdown.querySelector('.selected-option');
+            const options = dropdown.querySelectorAll('.dropdown-options li');
+
+            selected.addEventListener('click', () => {
+                dropdown.classList.toggle('open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    selected.textContent = option.textContent;
+                    options.forEach(opt => opt.classList.remove('selected'));
+                    option.classList.add('selected');
+                    dropdown.classList.remove('open');
+
+                    const sortOption = option.getAttribute('data-value');
+                    currentSortOption = sortOption;
+                    loadProducts(sortOption);
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('open');
+                }
+            });
+        });
+
+        // Initial cart display
+        updateCartDisplay();
+
+        // Listen for cart updates from localStorage changes
+        window.addEventListener('storage', () => {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateCartDisplay();
+        });
+    });
+</script>
+
 </body>
 </html>

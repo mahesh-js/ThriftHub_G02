@@ -15,7 +15,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
-<body>
+<body style="background-image: url(/guest-cust/img/signin-bg.png);">
     <div id="root"></div>
     <script type="text/babel">
         // Initialize Firebase
@@ -31,6 +31,12 @@
 
         // Google Auth Provider
         const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+        
+        // Phone Auth Provider
+        const phoneAuthProvider = new firebase.auth.PhoneAuthProvider();
+
+        // Apple Auth Provider
+        const appleAuthProvider = new firebase.auth.OAuthProvider('apple.com');
 
         function SignupForm() {
             const [name, setName] = React.useState("");

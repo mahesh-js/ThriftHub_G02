@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "cors": "^2.8.5",
+    "firebase": "^11.4.0"
+  }
+}

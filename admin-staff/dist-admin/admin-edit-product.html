@@ -23,22 +23,21 @@
                 border-radius: 6px;
                 padding: 8px 12px;
                 width: 100%;
-                background-color: #f3f4f6;
             }
             .form-input:focus {
                 outline: none;
-                border-color: #9333ea;
-                box-shadow: 0 0 0 1px #9333ea;
+                border-color: #000;
+                box-shadow: 0 0 0 1px #000;
             }
             .save-button {
-                background-color: #9333ea;
+                background-color: #000;
                 color: white;
                 padding: 8px 16px;
                 border-radius: 6px;
                 font-weight: 500;
             }
             .save-button:hover {
-                background-color: #7e22ce;
+                background-color: #7d7d7d;
             }
             .error-message {
                 color: #dc2626;
@@ -303,10 +302,17 @@
                                         <div>
                                             <label for="category" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Category</label>
                                             <select id="category" name="category" class="form-input mt-1" required>
-                                                <option value="Electronics">Electronics</option>
-                                                <option value="Furniture">Furniture</option>
-                        <option value="Footwear">Footwear</option>
-                        <option value="Clothes">Clothes</option>
+                                              <option value="">Select Category</option>
+                                              <option value="m-tops.html">Men's Tops & Bottoms</option>
+                                              <option value="m-foot.html">Men's Footwear</option>
+                                              <option value="m-acc.html">Men's Accessories</option>
+                                              <option value="m-bag.html">Men's Bags & Wallets</option>
+                                              <option value="w-tops.html">Women's Tops & Bottoms</option>
+                                              <option value="w-foot.html">Women's Footwear</option>
+                                              <option value="w-acc.html">Women's Accessories</option>
+                                              <option value="w-bag.html">Women's Bags & Wallets</option>
+                                              <option value="kids.html">Kids Fashion</option>
+                                              <option value="kids-foot.html">Kids Footwear</option>
                                             </select>
                                         </div>
                                         <div>
@@ -321,16 +327,9 @@
                                             <label for="image" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Image</label>
                                             <input type="file" id="image" name="image" class="form-input mt-1" accept="image/*">
                                         </div>
-                                        <div>
-                                            <label for="status" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Status</label>
-                                            <select id="status" name="status" class="form-input mt-1" required>
-                                                <option value="available">Available</option>
-                                                <option value="draft">Draft</option>
-                                            </select>
-                                        </div>
                                         <div id="message" class="mt-4"></div>
                                         <button type="submit" class="save-button focus:outline-none">Save Changes</button>
-                                        <a href="admin-products.html" class="text-gray-500 ml-4">Back to Products</a>
+                                        <a href="admin-products.html" class="text-gray-500 ml-4" style="margin-left: 1%;">Back to Products</a>
                                     </form>
                                 </div><!--end card-body--> 
                             </div><!--end card-->                                  
@@ -494,5 +493,6 @@
             // Load product data when the page loads
             document.addEventListener("DOMContentLoaded", loadProduct);
         </script>
+        <script src="assets/js/app.js"></script>
     </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth group" data-sidebar="brand" dir="ltr">
     <head>
         <meta charset="utf-8" />
-        <title>ThriftHub Malaysia | Dashboard</title>
+        <title>ThriftHub Malaysia</title>
         <meta  name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta  content="Tailwind Multipurpose Admin & Dashboard Template"  name="description"/>
         <meta content="" name="Mannatthemes" />
@@ -17,21 +17,166 @@
         <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/tailwind.min.css">
 
+        <!-- Custom CSS to match screenshot -->
+        <style>
+            body {
+                background-color: #e6f0ff; /* Light blue background from screenshot */
+            }
+
+            .form-container {
+                background-color: #ffffff;
+                border-radius: 12px; /* Rounded corners as in screenshot */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .form-input,
+            .form-select {
+                border: 1px solid #e2e8f0;
+                border-radius: 8px; /* Rounded corners for inputs */
+                padding: 10px;
+                width: 100%;
+                transition: border-color 0.3s ease;
+                font-size: 14px;
+                color: #4a5568;
+            }
+
+            .form-input:focus,
+            .form-select:focus {
+                border-color: #3b82f6;
+                outline: none;
+            }
+
+            .form-label {
+                font-weight: 500;
+                color: #4a5568;
+                margin-bottom: 8px;
+                display: block;
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                background-color: #3b82f6;
+                color: #ffffff;
+                padding: 10px 20px;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                font-size: 14px;
+            }
+
+            .submit-btn:hover {
+                background-color: #2563eb;
+            }
+
+            .cancel-btn {
+                background-color: transparent;
+                color: #e53e3e;
+                border: 1px solid #e53e3e;
+                padding: 10px 20px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                font-size: 14px;
+            }
+
+            .cancel-btn:hover {
+                background-color: #e53e3e;
+                color: #ffffff;
+            }
+
+            .custom-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 15px;
+                font-size: 14px;
+                color: #4a5568;
+            }
+
+            .custom-label input[type="checkbox"] {
+                display: none;
+            }
+
+            .custom-label .checkbox-icon {
+                border: 2px solid #e2e8f0;
+                border-radius: 4px;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffffff;
+                transition: border-color 0.3s ease, background-color 0.3s ease;
+            }
+
+            .custom-label input[type="checkbox"]:checked + .checkbox-icon {
+                border-color: #3b82f6;
+                background-color: #3b82f6;
+            }
+
+            .custom-label input[type="checkbox"]:checked + .checkbox-icon i {
+                display: block;
+                color: #ffffff;
+            }
+
+            .custom-label i {
+                display: none;
+                font-size: 10px;
+            }
+
+            #message {
+                margin-top: 10px;
+                padding: 10px;
+                border-radius: 6px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            #message.success {
+                background-color: #d1fae5;
+                color: #065f46;
+            }
+
+            #message.error {
+                background-color: #fee2e2;
+                color: #dc2626;
+            }
+
+            .today-date {
+                background-color: #e6f0ff;
+                border-radius: 8px;
+                border: 1px solid #93c5fd;
+                color: #3b82f6;
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+
+            .today-date input {
+                background-color: transparent;
+                border: none;
+                color: #3b82f6;
+                font-size: 14px;
+            }
+
+            /* Ensure breadcrumb text is smaller and matches screenshot */
+            ol.list-reset {
+                font-size: 12px;
+            }
+        </style>
     </head>
     
     <body data-layout-mode="light"  data-sidebar-size="default" data-theme-layout="vertical" class="bg-[#EEF0FC] dark:bg-gray-900">
     
-        <!-- leftbar-tab-menu -->
-        
-
+        <!-- leftbar-tab-menu (unchanged) -->
         <div class="min-h-full z-[99]  fixed inset-y-0 print:hidden bg-gradient-to-t from-[#111111] from-10% via-[#111111] via-40% to-[#111111] to-100% dark:bg-[#111111] main-sidebar duration-300 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111]">
           <div class=" text-center border-b bg-[#111111] border-r h-[64px] flex justify-center items-center brand-logo dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111] group-data-[sidebar=brand]:border-slate-700/40">
               <a href="index.html" class="logo">
-                  
                   <span>
                       <img src="assets/images/logo.png" alt="logo-large" class="logo-lg h-[52px] logo-light hidden dark:inline-block ms-1 group-data-[sidebar=dark]:inline-block group-data-[sidebar=brand]:inline-block">
-                      <img src="assets/images/logo.png" alt="logo-large"
-                          class="logo-lg h-[52px] logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden group-data-[sidebar=brand]:hidden">
+                      <img src="assets/images/logo.png" alt="logo-large" class="logo-lg h-[52px] logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden group-data-[sidebar=brand]:hidden">
                   </span>
               </a>
           </div>
@@ -39,7 +184,7 @@
               <div class="p-4 block">
                   <ul class="navbar-nav">
                       <li class="uppercase text-[11px]  text-primary-500 dark:text-primary-400 mt-0 leading-4 mb-2 group-data-[sidebar=dark]:text-primary-400 group-data-[sidebar=brand]:text-primary-300">
-                         <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">DashboardS</span></li>
+                         <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">Dashboards</span></li>
                       <li>
                           <div id="parent-accordion" data-fc-type="accordion">
                               <a href="#"
@@ -130,11 +275,7 @@
                   <i data-lucide="menu" class="top-icon w-5 h-5"></i>
                 </button>
               </div>
-              <div class="flex items-center md:w-[40%] lg:w-[30%] xl:w-[20%]">
-                <div class="relative ltr:mx-2 rtl:mx-2 self-center">
-                  <button class="px-2 py-1 bg-primary-500/10 border border-transparent collapse:bg-green-100 text-primary text-sm rounded hover:bg-blue-600 hover:text-white"><i class="ti ti-plus me-1"></i> New Task</button>
-                </div>
-              </div>
+              
       
               <div class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2">
                 <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
@@ -275,7 +416,7 @@
                       alt="user photo"
                       />
                     <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
-                      <span class="block font-medium text-slate-600 dark:text-gray-300">Maria Gibson</span>
+                      <span class="block font-medium text-slate-600 dark:text-gray-300" id="userName">Maria Gibson</span>
                       <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span>
                     </span>
                   </button>
@@ -289,7 +430,7 @@
                     <ul class="py-1" aria-labelledby="navUserdata">
                       <li>
                         <a
-                          href="#"
+                          href="pages-profile.html"
                           class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50
                           dark:text-gray-200 dark:hover:bg-gray-900/20
                           dark:hover:text-white">
@@ -366,120 +507,128 @@
             <div class="xl:w-full  min-h-[calc(100vh-152px)] relative pb-14"> 
                 <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                     <div class="col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12">
-                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative">
+                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative form-container">
                             <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
                                 <h4 class="font-medium">Personal Information</h4>
                             </div><!--end card-header-->
                             <div class="flex-auto p-4">
-                                <form> 
-                                    <div class="grid md:grid-cols-12 lg:grid-cols-12">
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="First_Name" class="font-medium text-sm text-slate-600 dark:text-slate-400">First Name</label>
+                                <form id="profileForm"> 
+                                    <div class="grid md:grid-cols-12 lg:grid-cols-12 gap-4">
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="First_Name" class="form-label">First Name</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7 mb-2">
-                                            <input type="text" id="First_Name" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" value="Rosa" placeholder="First name" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="text" id="First_Name" class="form-input" placeholder="First name" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Last_Name" class="font-medium text-sm text-slate-600 dark:text-slate-400">Last Name</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Last_Name" class="form-label">Last Name</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="text" id="Last_Name" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" value="Dodson" placeholder="Last name" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="text" id="Last_Name" class="form-input" placeholder="Last name" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Company_Name" class="font-medium text-sm text-slate-600 dark:text-slate-400">Company Name</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Company_Name" class="form-label">Company Name</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="text" id="Company_Name" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" value="Example Themes" placeholder="Last name" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="text" id="Company_Name" class="form-input" placeholder="Company name" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Contact_Phone" class="font-medium text-sm text-slate-600 dark:text-slate-400">Contact Phone</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Contact_Phone" class="form-label">Contact Phone</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="text" id="Contact_Phone" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" value="+601 234 5678" placeholder="Last name" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="text" id="Contact_Phone" class="form-input" placeholder="Contact phone" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Your_Email" class="font-medium text-sm text-slate-600 dark:text-slate-400">Email Address</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Your_Email" class="form-label">Email Address</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="email" id="Your_Email" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" value="example@example.com" placeholder="Last name" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="email" id="Your_Email" class="form-input" placeholder="Email address" required readonly>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Position" class="font-medium text-sm text-slate-600 dark:text-slate-400">Position</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Position" class="form-label">Position</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="text" id="Position" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" value="Admin" placeholder="Last name" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="text" id="Position" class="form-input" placeholder="Position" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="countries" class="font-medium text-sm text-slate-600 dark:text-slate-400">Countries</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="countries" class="form-label">Countries</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <select id="countries" class=" w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-[6.5px] focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
-                                                <option>Malaysia</option>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <select id="countries" class="form-select">
+                                                <option value="Malaysia">Malaysia</option>
+                                                <!-- Add more countries as needed -->
                                             </select>
                                         </div><!--end col-->
-                                        <div class=" col-start-4 col-end-13  mb-2">
-                                            <button type="submit" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Submit</button>
-                                            <button type="submit" class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded">Cancel</button>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 offset-md-3 offset-lg-3 mb-2 flex gap-2">
+                                            <button type="submit" class="submit-btn">Submit</button>
+                                            <button type="button" class="cancel-btn" id="cancelProfileBtn">Cancel</button>
                                         </div><!--end col-->
                                     </div><!--end grid-->
+                                    <div id="profileMessage"></div>
                                 </form>
                             </div><!--end card-body-->
                         </div> <!--end card-->
                     </div><!--end col-->
                     <div class="col-span-12 md:col-span-12 lg:col-span-12 xl:col-span-12">
-                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative">    
+                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative form-container">    
                             <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
                                 <h4 class="font-medium">Change Password</h4>
                             </div><!--end card-header-->                
                             <div class="flex-auto p-4"> 
-                                <form> 
-                                    <div class="grid md:grid-cols-12 lg:grid-cols-12">
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Current_Password" class="font-medium text-sm text-slate-600 dark:text-slate-400">Current Password</label>
+                                <form id="passwordForm"> 
+                                    <div class="grid md:grid-cols-12 lg:grid-cols-12 gap-4">
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Current_Password" class="form-label">Current Password</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7 mb-2">
-                                            <input type="password" id="Current_Password" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700"  placeholder="Current Password" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="password" id="Current_Password" class="form-input" placeholder="Current Password" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="New_Password" class="font-medium text-sm text-slate-600 dark:text-slate-400">New Password</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="New_Password" class="form-label">New Password</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="password" id="New_Password" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700"  placeholder="New Password" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="password" id="New_Password" class="form-input" placeholder="New Password" required>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-3 ">
-                                            <label for="Confirm_Password" class="font-medium text-sm text-slate-600 dark:text-slate-400">Confirm Password</label>
+                                        <div class="col-span-12 md:col-span-3 lg:col-span-3">
+                                            <label for="Confirm_Password" class="form-label">Confirm Password</label>
                                         </div><!--end col-->
-                                        <div class="col-span-12 md:col-span-12 lg:col-span-7  mb-2">
-                                            <input type="password" id="Confirm_Password" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Confirm Password" required>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 mb-2">
+                                            <input type="password" id="Confirm_Password" class="form-input" placeholder="Confirm Password" required>
                                         </div><!--end col-->                                                        
-                                        <div class=" col-start-4 col-end-13  mb-2">
-                                            <button type="submit" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded">Chang Password</button>
-                                            <button type="submit" class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded">Cancel</button>
+                                        <div class="col-span-12 md:col-span-9 lg:col-span-9 offset-md-3 offset-lg-3 mb-2 flex gap-2">
+                                            <button type="submit" class="submit-btn">Change Password</button>
+                                            <button type="button" class="cancel-btn" id="cancelPasswordBtn">Cancel</button>
                                         </div><!--end col-->
                                     </div><!--end grid-->
+                                    <div id="passwordMessage"></div>
                                 </form> 
                             </div><!--end card-body-->
                         </div> <!--end card-->
-                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative mt-4">    
+                        <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative form-container mt-4">    
                             <div class="border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
                                 <h4 class="font-medium">Other Settings</h4>
                             </div><!--end card-header-->                
                             <div class="flex-auto p-4"> 
-                                <form> 
-                                    <label class="custom-label block mb-2 dark:text-slate-300">
-                                        <div class="bg-white border border-slate-200 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
-                                          <input type="checkbox" class="hidden">
-                                          <i class="fas fa-check hidden text-xs text-slate-700 "></i>
+                                <form id="settingsForm"> 
+                                    <label class="custom-label">
+                                        <input type="checkbox" id="emailNotifications" name="emailNotifications">
+                                        <div class="checkbox-icon">
+                                            <i class="fas fa-check"></i>
                                         </div>
                                         Email Notifications <span class="text-slate-400">Do you need them?</span>
                                     </label>
-                                    <label class="custom-label block dark:text-slate-300">
-                                        <div class="bg-white border border-slate-200 rounded w-4 h-4  inline-block leading-4 text-center -mb-[3px]">
-                                          <input type="checkbox" class="hidden">
-                                          <i class="fas fa-check hidden text-xs text-slate-700"></i>
+                                    <label class="custom-label">
+                                        <input type="checkbox" id="apiAccess" name="apiAccess">
+                                        <div class="checkbox-icon">
+                                            <i class="fas fa-check"></i>
                                         </div>
-                                        API Access <span class="text-slate-400">Enable/Disable access</span> 
+                                        API Access <span class="text-slate-400">Enable/Disable access</span>
                                     </label>
+                                    <div class="mt-4 flex gap-2">
+                                        <button type="submit" class="submit-btn">Save Settings</button>
+                                        <button type="button" class="cancel-btn" id="cancelSettingsBtn">Cancel</button>
+                                    </div>
+                                    <div id="settingsMessage"></div>
                                 </form> 
                             </div><!--end card-body-->
                         </div> <!--end card-->
@@ -491,7 +640,7 @@
                       <footer
                         class="footer bg-transparent  text-center  font-medium text-slate-600 dark:text-slate-400 md:text-left "
                       >
-                        &copy;
+                        ©
                         <script>
                           var year = new Date();document.write(year.getFullYear());
                         </script>
@@ -515,8 +664,176 @@
         <script src="assets/libs/simplebar/simplebar.min.js"></script>
         <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
         <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
-
         <script src="assets/libs/prismjs/prism.js"></script> 
+        <script type="module">
+            // Import Firebase SDK
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+            import { getAuth, onAuthStateChanged, updatePassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+            import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+            // Firebase Configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+                authDomain: "thrifthub-demo.firebaseapp.com",
+                projectId: "thrifthub-demo",
+                storageBucket: "thrifthub-demo.firebasestorage.app",
+                messagingSenderId: "518014691134",
+                appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            const db = getFirestore(app);
+
+            // Function to show messages
+            function showMessage(elementId, message, type) {
+                const messageDiv = document.getElementById(elementId);
+                messageDiv.textContent = message;
+                messageDiv.className = type === 'success' ? 'success' : 'error';
+                setTimeout(() => {
+                    messageDiv.textContent = '';
+                    messageDiv.className = '';
+                }, 3000);
+            }
+
+            // Load user profile data
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    const userDocRef = doc(db, "users", user.uid);
+                    const userDoc = await getDoc(userDocRef);
+
+                    if (userDoc.exists()) {
+                        const userData = userDoc.data();
+                        document.getElementById('First_Name').value = userData.firstName || '';
+                        document.getElementById('Last_Name').value = userData.lastName || '';
+                        document.getElementById('Company_Name').value = userData.companyName || '';
+                        document.getElementById('Contact_Phone').value = userData.contactPhone || '';
+                        document.getElementById('Your_Email').value = user.email || '';
+                        document.getElementById('Position').value = userData.position || '';
+                        document.getElementById('countries').value = userData.country || 'Malaysia';
+
+                        // Load settings
+                        document.getElementById('emailNotifications').checked = userData.emailNotifications || false;
+                        document.getElementById('apiAccess').checked = userData.apiAccess || false;
+
+                        // Update user name in topbar
+                        const fullName = `${userData.firstName || ''} ${userData.lastName || ''}`.trim() || user.email;
+                        document.getElementById('userName').textContent = fullName;
+                    } else {
+                        // If no profile exists, create a new one with basic data
+                        await setDoc(userDocRef, {
+                            firstName: '',
+                            lastName: '',
+                            companyName: '',
+                            contactPhone: '',
+                            email: user.email,
+                            position: '',
+                            country: 'Malaysia',
+                            emailNotifications: false,
+                            apiAccess: false,
+                            createdAt: new Date().toISOString()
+                        });
+                        document.getElementById('Your_Email').value = user.email;
+                        showMessage('profileMessage', 'New profile created. Please update your information.', 'success');
+                    }
+                } else {
+                    window.location.href = 'auth-login.html'; // Redirect to login if not authenticated
+                }
+            });
+
+            // Handle profile form submission
+            document.getElementById('profileForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const user = auth.currentUser;
+                if (user) {
+                    const userDocRef = doc(db, "users", user.uid);
+                    try {
+                        await updateDoc(userDocRef, {
+                            firstName: document.getElementById('First_Name').value,
+                            lastName: document.getElementById('Last_Name').value,
+                            companyName: document.getElementById('Company_Name').value,
+                            contactPhone: document.getElementById('Contact_Phone').value,
+                            position: document.getElementById('Position').value,
+                            country: document.getElementById('countries').value
+                        });
+                        showMessage('profileMessage', 'Profile updated successfully!', 'success');
+                    } catch (error) {
+                        showMessage('profileMessage', 'Error updating profile: ' + error.message, 'error');
+                    }
+                }
+            });
+
+            // Handle password form submission
+            document.getElementById('passwordForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const user = auth.currentUser;
+                if (user) {
+                    const currentPassword = document.getElementById('Current_Password').value;
+                    const newPassword = document.getElementById('New_Password').value;
+                    const confirmPassword = document.getElementById('Confirm_Password').value;
+
+                    if (newPassword !== confirmPassword) {
+                        showMessage('passwordMessage', 'New password and confirm password do not match.', 'error');
+                        return;
+                    }
+
+                    try {
+                        const credentials = await signInWithEmailAndPassword(auth, user.email, currentPassword);
+                        await updatePassword(user, newPassword);
+                        showMessage('passwordMessage', 'Password changed successfully!', 'success');
+                        document.getElementById('passwordForm').reset();
+                    } catch (error) {
+                        showMessage('passwordMessage', 'Error changing password: ' + error.message, 'error');
+                    }
+                }
+            });
+
+            // Handle settings form submission
+            document.getElementById('settingsForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const user = auth.currentUser;
+                if (user) {
+                    const userDocRef = doc(db, "users", user.uid);
+                    try {
+                        await updateDoc(userDocRef, {
+                            emailNotifications: document.getElementById('emailNotifications').checked,
+                            apiAccess: document.getElementById('apiAccess').checked
+                        });
+                        showMessage('settingsMessage', 'Settings saved successfully!', 'success');
+                    } catch (error) {
+                        showMessage('settingsMessage', 'Error saving settings: ' + error.message, 'error');
+                    }
+                }
+            });
+
+            // Handle cancel buttons
+            document.getElementById('cancelProfileBtn').addEventListener('click', () => {
+                document.getElementById('profileForm').reset();
+                showMessage('profileMessage', 'Changes cancelled.', 'success');
+            });
+
+            document.getElementById('cancelPasswordBtn').addEventListener('click', () => {
+                document.getElementById('passwordForm').reset();
+                showMessage('passwordMessage', 'Password change cancelled.', 'success');
+            });
+
+            document.getElementById('cancelSettingsBtn').addEventListener('click', () => {
+                document.getElementById('settingsForm').reset();
+                showMessage('settingsMessage', 'Settings changes cancelled.', 'success');
+            });
+
+            // Handle sign out
+            document.querySelector('#navUserdata a[href="auth-lockscreen.html"]').addEventListener('click', async (e) => {
+                e.preventDefault();
+                try {
+                    await signOut(auth);
+                    window.location.href = 'auth-lockscreen.html';
+                } catch (error) {
+                    showMessage('profileMessage', 'Error signing out: ' + error.message, 'error');
+                }
+            });
+        </script>
         <script src="assets/js/app.js"></script>
         <!-- JAVASCRIPTS -->
     </body>

@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/sliders.css" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico">
@@ -25,6 +27,11 @@
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
+  <!-- Firebase Scripts (as modules) -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+  <script type="module" src="/guest-cust/customer/auth/firebase.js"></script> <!-- Updated path -->
 </head>
 
 <body class="relative">
@@ -36,7 +43,20 @@
       <div></div>
     </div>
   </div>
-
+  <!-- Ramadan/Hari Raya Notification Pop-Up with Sound Enable -->
+  <div id="ramadanPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.7); z-index: 1000; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;">
+    <div style="background: #fff; color: #333;  border-radius: 10px; max-width: 800px;display: flex; flex-direction: row; align-items: center;">
+        <div style="text-align: left; flex: 1; padding-right: 10px;padding: 20px;">
+            <h2>Wishing You a Blessed Ramadan & Joyous Hari Raya!</h2><br>
+            <p>Enjoy exclusive offers on ThriftHub Malaysia during this festive season. Shop now for amazing deals!</p><br><br>
+            <button id="close" style="padding: 7px 20px; background-color: #71a888; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 15px; margin-top: 10px;">Close</button>
+        </div>
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <!-- Placeholder for photo/image -->
+            <img src="img/ramadan.jpg" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
+    </div>
+ </div>
   <main class="main-wrapper">
 
     <header class="nav-type-1">
@@ -79,13 +99,14 @@
                 </div>
               </li>
             </ul>
-
+            <ul class="top-bar-acc">
+              Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
+            </ul>
             <ul class="top-bar-acc">
                   <div class="buttons">
                     <a href="signup.html" class="btn">Signup</a>
                     <a href="signin.html" class="btn">Signin</a>
             </ul>
-
           </div>
         </div>
       </div> <!-- end top bar -->
@@ -218,13 +239,30 @@
       <!-- Hero Slider -->
       <section class="hero-wrap text-center relative">
         <div id="owl-hero" class="owl-carousel owl-theme light-arrows slider-animated">
+          <!-- Video Slide with Firebase Storage Video -->
+          <div class="hero-slide overlay">
+            <video class="hero-video" id="firebaseVideo" controls autoplay muted playsinline>
+              <source id="videoSource" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="container">
+              <div class="hero-holder">
+                <div class="hero-message">
+                  <h1 class="hero-title nocaps">Explore ThriftHub 2025</h1>
+                  <h2 class="hero-subtitle lines">Discover Affordable Thrift Shopping</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Existing Image Slides -->
           <div class="hero-slide overlay" style="background-image:url(img/hero/pexels-cottonbro-6068964.jpg)">
             <div class="container">
               <div class="hero-holder">
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Let's Thrift 2025</h1>
                   <h2 class="hero-subtitle lines">ThriftHub Malaysia</h2>
-                  <div class="buttons-holder">
+                  <div class="buttons-holder" style="margin-top: 1%;">
                     <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
                   </div>
                 </div>
@@ -237,7 +275,7 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Exclusive Products</h1>
                   <h2 class="hero-subtitle lines">Get awesome items only in ThriftHub Malaysia</h2>
-                  <div class="buttons-holder">
+                  <div class="buttons-holder" style="margin-top: 1%;">
                     <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
                   </div>
                 </div>
@@ -250,7 +288,7 @@
                 <div class="hero-message">
                   <h1 class="hero-title nocaps">Enjoy Online Shopping</h1>
                   <h2 class="hero-subtitle lines">ThriftHub Malaysia</h2>
-                  <div class="buttons-holder">
+                  <div class="buttons-holder" style="margin-top: 1%;">
                     <a href="m-tops.html" class="btn btn-lg btn-transparent"><span>Shop Now</span></a>
                   </div>
                 </div>
@@ -264,7 +302,6 @@
       <section class="section-wrap promo-banners pb-30">
         <div class="container">
           <div class="row">
-
             <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
               <a href="m-tops.html">
                 <img src="img/hero/IMG_1236.JPG" width="360" height="620" alt="">
@@ -275,7 +312,6 @@
                 </div>
               </a>
             </div>
-
             <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
               <a href="w-tops.html">
                 <img src="img/hero/homewomen.jpg" width="360" height="620" alt="">
@@ -286,7 +322,6 @@
                 </div>
               </a>
             </div>
-
             <div class="col-xs-4 col-xxs-12 mb-30 promo-banner">
               <a href="kids.html">
                 <img src="img/hero/homekids.jpg" width="360" height="620" alt="">
@@ -297,18 +332,31 @@
                 </div>
               </a>
             </div>
-
           </div>
         </div>
       </section> <!-- end promo banners -->
+
+      <!-- Newsletter -->
+      <section class="newsletter" id="subscribe">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h4>Get the latest updates</h4>
+              <form class="relative newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email">
+                <input type="submit" class="btn btn-lg btn-dark newsletter-submit" value="Subscribe">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer Type-1 -->
       <footer class="footer footer-type-1">
         <div class="container">
           <div class="footer-widgets">
             <div class="row">
-
-              <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="widget footer-about-us">
                   <img src="img/thrifthub lg v1.png" alt="" class="logo">
                   <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
@@ -320,8 +368,7 @@
                     </div>
                   </div>
                 </div>
-              </div> <!-- end about us -->
-
+              </div>
               <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
                 <div class="widget footer-links">
                   <h5 class="widget-title bottom-line left-align grey">Explore</h5>
@@ -332,8 +379,7 @@
                   </ul>
                 </div>
               </div>
-
-              <div class="col-md-3 col-md-offset-1 col-sm-4 col-xs-12">
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
                 <div class="widget footer-links">
                   <h5 class="widget-title bottom-line left-align grey">Information</h5>
                   <ul class="list-no-dividers">
@@ -344,31 +390,34 @@
                   </ul>
                 </div>
               </div>
-
-        </div> <!-- end container -->
-
-        <div class="bottom-footer">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-sm-6 copyright sm-text-center">
-                <span>
-                  &copy;
-                  <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
-                  ThriftHub Malaysia | Made by <a href="">Group 2</a>
-                </span>
+              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+                <div class="widget footer-links">
+                  <h5 class="widget-title bottom-line left-align grey">Account</h5>
+                  <ul class="list-no-dividers">
+                    <li><a href="myaccount.html">My account</a></li>
+                    <li><a href="shop-cart.html">My cart</a></li>
+                    <li><a href="order-history.html">Order history</a></li>
+                  </ul>
+                </div>
               </div>
-
-              <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
-                <i class="fa fa-cc-visa"></i>
-                <i class="fa fa-cc-mastercard"></i>
-                <i class="fa fa-cc-amex"></i>
-              </div>
-
             </div>
           </div>
-        </div> <!-- end bottom footer -->
-      </footer> <!-- end footer -->
+          <div class="bottom-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 copyright sm-text-center">
+                  <span>© <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script> ThriftHub Malaysia | Made by <a href="">Group 2</a></span>
+                </div>
+                <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
+                  <i class="fa fa-cc-visa"></i>
+                  <i class="fa fa-cc-mastercard"></i>
+                  <i class="fa fa-cc-amex"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       <div id="back-to-top">
         <a href="#top"><i class="fa fa-angle-up"></i></a>
@@ -382,7 +431,167 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script> <!-- Corrected and verified path -->
+  <script type="module">
+    // Import Firebase services
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { db, storage, auth } from "/guest-cust/customer/auth/firebase.js"; // Import Firebase services from firebase.js
 
+    // Load video from Firebase Storage
+    async function loadVideo() {
+      try {
+        // Use the exact path from Firebase Storage (root level)
+        const videoRef = ref(storage, 'thrift-hub-vid.mp4'); // Matches your uploaded video path
+        const videoUrl = await getDownloadURL(videoRef);
+
+        const videoSource = document.getElementById("videoSource");
+        videoSource.src = videoUrl;
+        const video = document.getElementById("firebaseVideo");
+        video.load(); // Load the video
+        video.play(); // Attempt to autoplay (muted due to browser restrictions)
+        video.muted = true; // Ensure muted autoplay works
+      } catch (error) {
+        console.error("Error loading video from Firebase Storage:", error);
+      }
+    }
+
+    // Handle video end and slide transition
+    document.addEventListener("DOMContentLoaded", () => {
+      // Show Ramadan/Hari Raya pop-up on page load
+      const ramadanPopup = document.getElementById("ramadanPopup");
+      ramadanPopup.style.display = "flex";
+
+      // Handle closing the Ramadan/Hari Raya pop-up and playing with sound
+      document.getElementById("close").addEventListener("click", () => {
+        const video = document.getElementById("firebaseVideo");
+        video.muted = false; // Unmute the video
+        if (video.paused) {
+          video.play().catch(error => {
+            console.error("Error playing video with sound:", error);
+          });
+        }
+        ramadanPopup.style.display = "none"; // Hide pop-up after interaction
+      });
+
+      // Load and autoplay the video on page load (muted)
+      loadVideo();
+
+       // Handle video end and swift slide transition
+       const video = document.getElementById("firebaseVideo");
+      video.addEventListener("ended", () => {
+        const owl = $("#owl-hero").data('owl.carousel');
+        if (owl) {
+          owl.options.animateOut = 'fadeOut'; // Swift fade-out animation
+          owl.options.animateIn = 'fadeIn';    // Swift fade-in animation
+          owl.next(); // Move to the next slide swiftly
+        }
+      });
+
+      // Ensure authenticated access
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          console.warn("User not authenticated. Video access may be restricted.");
+          window.location.href = "/login.html"; // Adjust path as needed
+        } else {
+          loadVideo(); // Load video only if authenticated
+        }
+      });
+    });
+
+    // Owl Carousel Initialization for Hero Slider
+    $(document).ready(function(){
+      $("#owl-hero").owlCarousel({
+        items: 1,              // One slide at a time
+        loop: true,            // Loop through slides
+        autoplay: false,       // Disable initial autoplay to let video play first
+        autoplayTimeout: 3000, // Reduced to 3 seconds for swift transitions (adjust as needed for video duration)
+        smartSpeed: 200,       // Faster animation speed for swift transitions
+        nav: true,             // Navigation arrows
+        dots: true,            // Navigation dots
+        video: true,           // Enable video support
+        lazyLoad: true,        // Lazy load content
+        videoHeight: '100vh'   // Set to full viewport height for full-screen video
+      });
+    });
+  </script>
+
+  <!-- CSS for Video, Text Positioning, Splash Screen, and Slider Styling -->
+  <style>
+    .hero-wrap {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-slide.overlay {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full viewport height for full-screen video */
+      overflow: hidden;
+    }
+    .hero-slide.overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay to match image slides */
+      z-index: 2;
+    }
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      object-fit: cover; /* Ensure video fills the slide completely, cropping if necessary */
+    }
+    .hero-holder {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      align-items: flex-end; /* Align items to the bottom */
+      justify-content: center; /* Center horizontally */
+    }
+    .hero-message {
+      position: relative;
+      z-index: 3;
+      color: #fff; /* Ensure text is visible over the overlay */
+      text-align: center;
+      padding-bottom: 20px; /* Add some padding at the bottom */
+    }
+    .hero-title {
+      font-size: 48px; /* Adjust as needed */
+      margin-bottom: 10px;
+    }
+    .hero-subtitle {
+      font-size: 24px; /* Adjust as needed */
+      margin-bottom: 0;
+    }
+    /* Ensure Owl Carousel compatibility and full-screen video */
+    .owl-carousel .owl-item .hero-video {
+      display: block;
+    }
+    #owl-hero .owl-stage-outer, #owl-hero .owl-stage, #owl-hero .owl-item {
+      height: 100vh !important;
+    }
+    #owl-hero .owl-item.active {
+      height: 100vh !important;
+    }
+    /* Animation for swift transitions */
+    .owl-animated-out {
+      -webkit-animation-duration: 0.2s !important;
+      animation-duration: 0.2s !important;
+    }
+    .owl-animated-in {
+      -webkit-animation-duration: 0.2s !important;
+      animation-duration: 0.2s !important;
+    }
+  </style>
 </body>
 
 </html>

@@ -1,26 +1,29 @@
+/* Existing styles from your original styles.css */
 .container {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
-.container p{
+.container p {
   color: gray;
 }
 
-.container p a{
+.container p a {
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
-.container p1 a{
+
+.container p1 a {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  
 }
+
 .password-container {
   position: relative;
   margin-bottom: -5px;
@@ -74,4 +77,87 @@ button:hover {
   content: '';
   flex: 1;
   border-bottom: 1px solid gray;
+}
+
+.announcement-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.announcement-text {
+  display: none;
+  font-size: 16px;
+}
+
+.announcement-text.active {
+  display: block;
+}
+
+/* Google Translate Widget Styles */
+#google_translate_element {
+  margin-bottom: 15px;
+}
+
+.goog-te-gadget {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.goog-te-gadget-simple {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.goog-te-menu-value {
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.goog-te-menu-value:hover {
+  background-color: #f0f0f0;
+}
+
+.goog-te-menu2 {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.goog-te-menu2-item {
+  padding: 8px;
+  color: black;
+}
+
+.goog-te-menu2-item:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* Ensure the Google Translate dropdown matches your button style */
+.goog-te-gadget .goog-te-combo {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.goog-te-gadget .goog-te-combo:hover {
+  background-color: gray;
+}
+
+/* Hide the "Google Translate" text if desired */
+.goog-te-gadget .goog-te-banner-frame {
+  display: none;
 }

@@ -78,7 +78,9 @@
                   </div>
                 </li>
               </ul>
-        
+              <ul class="top-bar-acc" style="margin-right: 38%;">
+                Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
+              </ul>
               
             </div>
           </div>
@@ -180,7 +182,6 @@
                         <div class="nav-cart-outer">
                           <div class="nav-cart-inner">
                             <a href="#" class="nav-cart-icon">
-                              <span class="nav-cart-badge">2</span>
                             </a>
                           </div>
                         </div>
@@ -189,82 +190,44 @@
 
               
 
-              <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
-                <ul>
-                  <li class="nav-register">
-                    <a href="myaccount.html">My Account</a>
-                  </li>
-                  <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
-                    <a href="#" class="nav-search search-trigger">
-                      <i class="fa fa-search"></i>
-                    </a>
-                  </li>
-                  <li class="nav-cart">
-                    <div class="nav-cart-outer">
-                      <div class="nav-cart-inner">
-                        <a href="#" class="nav-cart-icon">
-                          2
-                        </a>
-                      </div>
-                    </div>
-                    <div class="nav-cart-container">
-                      <div class="nav-cart-items">
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_1.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Ladies Bag
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
+                    <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
+                      <ul>
+                        <li class="nav-register">
+                          <a href="myaccount.html"><i class="fa fa-user"></i></a>
+                        </li>
+                        <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
+                          <a href="#" class="nav-search search-trigger">
+                            <i class="fa fa-search"></i>
+                          </a>
+                        </li>
+                        <li class="nav-cart">
+                          <div class="nav-cart-outer">
+                            <div class="nav-cart-inner">
+                              <a href="#" class="nav-cart-icon" id="cartIcon">
+                                <span class="nav-cart-badge" id="cartBadge">0</span>
+                              </a>
                             </div>
                           </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                        <div class="nav-cart-item clearfix">
-                          <div class="nav-cart-img">
-                            <a href="#">
-                              <img src="img/shop/shop_item_2.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="nav-cart-title">
-                            <a href="#">
-                              Sequin Suit longer title
-                            </a>
-                            <div class="nav-cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
+                          <div class="nav-cart-container">
+                            <div class="nav-cart-items" id="navCartItems">
+      
+                              <!-- Cart items will be dynamically inserted here -->
+      
+                            </div> <!-- end cart items -->
+      
+                            <div class="nav-cart-summary">
+                              <span>Cart Subtotal</span>
+                              <span class="total-price" id="navCartSubtotal">RM0.00</span>
+                            </div>
+      
+                            <div class="nav-cart-actions mt-20">
+                              <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
+                              <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
                             </div>
                           </div>
-                          <div class="nav-cart-remove">
-                            <a href="#" class="remove"><i class="ui-close"></i></a>
-                          </div>
-                        </div>
-
-                      </div> <!-- end cart items -->
-
-                      <div class="nav-cart-summary">
-                        <span>Cart Subtotal</span>
-                        <span class="total-price">$1799.00</span>
-                      </div>
-
-                      <div class="nav-cart-actions mt-20">
-                        <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
-                        <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
-                      </div>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ul>
-              </div>
           
             </div> <!-- end row -->
           </div> <!-- end container -->
@@ -304,8 +267,8 @@
               </ol>
               <h1 class="product-title" id="productTitle">Product Title</h1>              
               <span class="price" id="productPrice">
-                <del><span>$1550.00</span></del>
-                <ins><span class="amount">$1250.00</span></ins>
+                <del><span>RM155.00</span></del>
+                <ins><span class="amount">RM125.00</span></ins>
               </span>
               <span class="rating">
                 <a href="#">3 Reviews</a>
@@ -314,18 +277,12 @@
 
               <div class="color-swatches clearfix">
                 <span>Color:</span>
-                <a href="#" class="swatch-violet"></a>
-                <a href="#" class="swatch-black"></a>
-                <a href="#" class="swatch-cream"></a>
+                <a href="#" class="size-m">same as picture</a>
               </div>
 
               <div class="size-options clearfix">
                 <span>Size:</span>
-                <a href="#" class="size-xs selected">XS</a>
-                <a href="#" class="size-s">S</a>
-                <a href="#" class="size-m">M</a>
-                <a href="#" class="size-l">L</a>
-                <a href="#" class="size-xl">XL</a>
+                <a href="#" class="size-m" id="productSize">M</a>
               </div>
 
               <div class="product-actions">
@@ -350,16 +307,16 @@
               
 
               <div class="product_meta">
-                <span class="sku">SKU: <a href="#" id="productSKU">111763</a></span>
-                <span class="brand_as">Category: <a href="#" id="productCategoryLink">Men T-shirt</a></span>
-                <span class="posted_in">Tags: <a href="#" id="productTags">Sport, T-shirt, Blue</a></span>                
+                <span class="sku">SKU: <a href="#" id="productSKU"></a></span>
+                <span class="brand_as">Category: <a href="#" id="productCategoryLink"></a></span>
+                <span class="posted_in">Tags: <a href="#" id="productTags"></a></span>                
               </div>
 
               <!-- Accordion -->
               <div class="panel-group accordion mb-50" id="accordion">
                 <div class="panel">
                   <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="minus">Description<span> </span></a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="minus">Description<span> </span></a>
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse in">
                     <div class="panel-body" id="productFullDescription">
@@ -370,7 +327,7 @@
 
                 <div class="panel">
                   <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="plus">Information<span> </span></a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="plus">Information<span> </span></a>
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -378,15 +335,15 @@
                         <tbody>
                           <tr>
                             <th>Size:</th>
-                            <td id="productSize">EU 41 (US 8), EU 42 (US 9), EU 43 (US 10), EU 45 (US 12)</td>
+                            <td id="productSize1"></td>
                           </tr>
                           <tr>
-                            <th>Colors:</th>
-                            <td id="productColors">Violet, Black, Blue</td>
+                            <th>Condition:</th>
+                            <td id="productCondition">Like New</td>
                           </tr>
                           <tr>
-                            <th>Fabric:</th>
-                            <td id="productFabric">Cotton (100%)</td>
+                            <th>Shipping To:</th>
+                            <td id="productShipping">West & East Malaysia</td>
                           </tr>                                     
                         </tbody>
                       </table>
@@ -396,7 +353,7 @@
 
                 <div class="panel">
                   <div class="panel-heading">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="plus">Reviews<span> </span></a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="plus">Reviews<span> </span></a>
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse">
                     <div class="panel-body">
@@ -405,11 +362,12 @@
                           <li>
                             <div class="review-body">
                               <div class="review-content">
-                                <p class="review-author"><strong>Alexander Samokhin</strong> - May 6, 2014 at 12:48 pm</p>
+                                <p class="review-author"><strong>Amirul Hafiz</strong> - Feb 6, 2025</p>
                                 <div class="rating">
                                   <a href="#"></a>
                                 </div>
-                                <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
+                                <p>The quality of items on ThriftHub exceeded my expectations.
+                                  I found great deals on branded clothes and accessories, all in excellent condition.</p>
                               </div>
                             </div>
                           </li>
@@ -417,11 +375,12 @@
                           <li>
                             <div class="review-body">
                               <div class="review-content">
-                                <p class="review-author"><strong>Christopher Robins</strong> - May 6, 2014 at 12:48 pm</p>
+                                <p class="review-author"><strong>Aisyah</strong> - Jan 20, 2025</p>
                                 <div class="rating">
                                   <a href="#"></a>
                                 </div>
-                                <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
+                                <p>ThriftHub Malaysia is my go-to platform for finding vintage clothes.
+                                  The user-friendly interface and fast delivery make it an even better experience.</p>
                               </div>
                             </div>
                           </li>
@@ -438,7 +397,7 @@
                 <div class="social-icons nobase">
                   <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
                       <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
-                      <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
+                      <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm Graphs=qr"><i class="fa fa-instagram"></i></a>
                 </div>
               </div>
             </div> <!-- end col product description -->
@@ -448,320 +407,13 @@
       </section> <!-- end single product -->
 
 
-      <!-- Related Products -->
-      <section class="section-wrap pt-0 shop-items-slider">
-        <div class="container">
-          <div class="row heading-row">
-            <div class="col-md-12 text-center">
-              <h2 class="heading bottom-line">
-                Related Products
-              </h2>
-            </div>
-          </div>
-
-          <div class="row">
-
-            <div id="owl-related-items" class="owl-carousel owl-theme">
-              <!-- Related products will remain static for now, but can be dynamically updated later -->
-              <div class="product">
-                <div class="product-item hover-trigger">
-                  <div class="product-img">
-                    <a href="shop-single.html">
-                      <img src="img/shop/shop_item_3.jpg" alt="">
-                      <img src="img/shop/shop_item_back_3.jpg" alt="" class="back-img">
-                    </a>
-                    <div class="product-label">
-                      <span class="sale">sale</span>
-                    </div>
-                    <div class="hover-2">                    
-                      <div class="product-actions">
-                        <a href="#" class="product-add-to-wishlist">
-                          <i class="fa fa-heart"></i>
-                        </a>
-                      </div>                        
-                    </div>
-                    <a href="#" class="product-quickview">Quick View</a>
-                  </div>
-                  <div class="product-details">                      
-                    <h3 class="product-title">
-                      <a href="shop-single.html">Tribal Grey Blazer</a>
-                    </h3>
-                    <span class="category">
-                      <a href="catalogue-grid.html">Women</a>
-                    </span>
-                  </div>
-                  <span class="price">
-                    <del>
-                      <span>$730.00</span>
-                    </del>
-                    <ins>
-                      <span class="amount">$399.99</span>
-                    </ins>
-                  </span>
-                </div>
-              </div>
-
-              <div class="product">
-                <div class="product-item hover-trigger">
-                  <div class="product-img">
-                    <a href="shop-single.html">
-                      <img src="img/shop/shop_item_11.jpg" alt="">
-                      <img src="img/shop/shop_item_back_11.jpg" alt="" class="back-img">
-                    </a>
-                    <div class="hover-2">                    
-                      <div class="product-actions">
-                        <a href="#" class="product-add-to-wishlist">
-                          <i class="fa fa-heart"></i>
-                        </a>
-                      </div>                        
-                    </div>
-                    <a href="#" class="product-quickview">Quick View</a>
-                  </div>
-                  <div class="product-details">                      
-                    <h3 class="product-title">
-                      <a href="shop-single.html">Mantle Brown Bag</a>
-                    </h3>
-                    <span class="category">
-                      <a href="catalogue-grid.html">Accessories</a>
-                    </span>
-                  </div>
-                  <span class="price">
-                    <ins>
-                      <span class="amount">$150.00</span>
-                    </ins>
-                  </span>
-                </div>
-              </div>
-
-              <div class="product">
-                <div class="product-item hover-trigger">
-                  <div class="product-img">
-                    <a href="shop-single.html">
-                      <img src="img/shop/shop_item_6.jpg" alt="">
-                      <img src="img/shop/shop_item_back_6.jpg" alt="" class="back-img">
-                    </a>
-                    <div class="hover-2">                    
-                      <div class="product-actions">
-                        <a href="#" class="product-add-to-wishlist">
-                          <i class="fa fa-heart"></i>
-                        </a>
-                      </div>                        
-                    </div>
-                    <a href="#" class="product-quickview">Quick View</a>
-                  </div>
-                  <div class="product-details">                      
-                    <h3 class="product-title">
-                      <a href="shop-single.html">Faux Suits</a>
-                    </h3>
-                    <span class="category">
-                      <a href="catalogue-grid.html">Men</a>
-                    </span>
-                  </div>
-                  <span class="price">
-                    <ins>
-                      <span class="amount">$233.00</span>
-                    </ins>
-                  </span>
-                </div>
-              </div>
-
-              <div class="product">
-                <div class="product-item hover-trigger">
-                  <div class="product-img">
-                    <a href="shop-single.html">
-                      <img src="img/shop/shop_item_4.jpg" alt="">
-                      <img src="img/shop/shop_item_back_4.jpg" alt="" class="back-img">
-                    </a>
-                    <div class="hover-2">                    
-                      <div class="product-actions">
-                        <a href="#" class="product-add-to-wishlist">
-                          <i class="fa fa-heart"></i>
-                        </a>
-                      </div>                        
-                    </div>
-                    <a href="#" class="product-quickview">Quick View</a>
-                  </div>
-                  <div class="product-details">                      
-                    <h3 class="product-title">
-                      <a href="shop-single.html">Sweater w/ Colar</a>
-                    </h3>
-                    <span class="category">
-                      <a href="catalogue-grid.html">Men</a>
-                    </span>
-                  </div>
-                  <span class="price">
-                    <ins>
-                      <span class="amount">$299.00</span>
-                    </ins>
-                  </span>
-                </div>
-              </div>
-
-              <div class="product">
-                <div class="product-item hover-trigger">
-                  <div class="product-img">
-                    <a href="shop-single.html">
-                      <img src="img/shop/shop_item_5.jpg" alt="">
-                      <img src="img/shop/shop_item_back_5.jpg" alt="" class="back-img">
-                    </a>
-                    <div class="hover-2">                    
-                      <div class="product-actions">
-                        <a href="#" class="product-add-to-wishlist">
-                          <i class="fa fa-heart"></i>
-                        </a>
-                      </div>                        
-                    </div>
-                    <a href="#" class="product-quickview">Quick View</a>
-                  </div>
-                  <div class="product-details">                      
-                    <h3 class="product-title">
-                      <a href="shop-single.html">Lola May Crop Blazer</a>
-                    </h3>
-                    <span class="category">
-                      <a href="catalogue-grid.html">Women</a>
-                    </span>
-                  </div>
-                  <span class="price">
-                    <ins>
-                      <span class="amount">$42.00</span>
-                    </ins>
-                  </span>
-                </div>
-              </div>
-
-              <div class="product">
-                <div class="product-item hover-trigger">
-                  <div class="product-img">
-                    <a href="shop-single.html">
-                      <img src="img/shop/shop_item_6.jpg" alt="">
-                      <img src="img/shop/shop_item_back_6.jpg" alt="" class="back-img">
-                    </a>
-                    <div class="product-label">
-                      <span class="sale">sale</span>
-                    </div>
-                    <div class="hover-2">                    
-                      <div class="product-actions">
-                        <a href="#" class="product-add-to-wishlist">
-                          <i class="fa fa-heart"></i>
-                        </a>
-                      </div>                        
-                    </div>
-                    <a href="#" class="product-quickview">Quick View</a>
-                  </div>
-                  <div class="product-details">                      
-                    <h3 class="product-title">
-                      <a href="shop-single.html">Faux Suits</a>
-                    </h3>
-                    <span class="category">
-                      <a href="catalogue-grid.html">Men</a>
-                    </span>
-                  </div>
-                  <span class="price">
-                    <del>
-                      <span>$500.00</span>
-                    </del>
-                    <ins>
-                      <span class="amount">$233.00</span>
-                    </ins>
-                  </span>
-                </div>
-              </div>
-
-            </div> <!-- end slider -->
-
-          </div>
-        </div>
-      </section> <!-- end related products -->
-
+      
+      
 
 
      
 
-     <!-- Footer Type-1 -->
-     <footer class="footer footer-type-1">
-      <div class="container">
-        <div class="footer-widgets">
-          <div class="row">
-
-            <div class="col-md-3 col-sm-12 col-xs-12">
-              <div class="widget footer-about-us">
-                <img src="img/thrifthub lg v1.png" alt="" class="logo">
-                <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
-                <div class="footer-socials">
-                  <div class="social-icons nobase">
-                    <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- end about us -->
-
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Explore</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="m-tops.html">Mens</a></li>
-                  <li><a href="w-tops.html">Womens</a></li>
-                  <li><a href="kids.html">Kids</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Information</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="delivery-info.html">Delivery Information</a></li>
-                  <li><a href="about-us.html">About us</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-                  <li><a href="faq.html">F.A.Q</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-              <div class="widget footer-links">
-                <h5 class="widget-title bottom-line left-align grey">Account</h5>
-                <ul class="list-no-dividers">
-                  <li><a href="myaccount.html">My account</a></li>
-                  <li><a href="shop-cart.html">My cart</a></li>
-                  <li><a href="order-history.html">Order history</a></li>
-                </ul>
-              </div>
-            </div>
-
      
-      </div> <!-- end container -->
-
-      <div class="bottom-footer">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-sm-6 copyright sm-text-center">
-              <span>
-                ©
-                <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
-                ThriftHub Malaysia | Made by <a href="">Group 2</a>
-              </span>
-            </div>
-
-            <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
-              <i class="fa fa-cc-visa"></i>
-              <i class="fa fa-cc-mastercard"></i>
-              <i class="fa fa-cc-amex"></i>
-            </div>
-
-          </div>
-        </div>
-      </div> <!-- end bottom footer -->
-    </footer> <!-- end footer -->
-
-      <div id="back-to-top">
-        <a href="#top"><i class="fa fa-angle-up"></i></a>
-      </div>
-
-    </div> <!-- end content wrapper -->
   </main> <!-- end main wrapper -->
 
   <!-- jQuery Scripts -->
@@ -771,138 +423,452 @@
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
-  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script> <!-- Added for authentication -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
     import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
-    import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
-
-    // Firebase Configuration (use your actual config from Firebase Console)
+    import { getFirestore, doc, getDoc, collection, query, where, limit, getDocs } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
+  
+    // Firebase Configuration
     const firebaseConfig = {
-        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
-        authDomain: "thrifthub-demo.firebaseapp.com",
-        projectId: "thrifthub-demo",
-        storageBucket: "thrifthub-demo.firebasestorage.app",
-        messagingSenderId: "518014691134",
-        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+      authDomain: "thrifthub-demo.firebaseapp.com",
+      projectId: "thrifthub-demo",
+      storageBucket: "thrifthub-demo.firebasestorage.app",
+      messagingSenderId: "518014691134",
+      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
     };
-
+  
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
-
-    // Sign in anonymously for testing (remove in production or use proper auth)
+  
+    // Sign in anonymously for testing
     signInAnonymously(auth).catch((error) => {
-        console.error("Error signing in anonymously:", error);
+      console.error("Error signing in anonymously:", error);
     });
-
+  
+    // Category Mapping
+    const categoryMap = {
+      "m-tops.html": { name: "Men's Tops & Bottoms", url: "m-tops.html" },
+      "m-foot.html": { name: "Men's Footwear", url: "m-foot.html" },
+      "m-acc.html": { name: "Men's Accessories", url: "m-acc.html" },
+      "m-bag.html": { name: "Men's Bags & Wallets", url: "m-bag.html" },
+      "w-tops.html": { name: "Women's Tops & Bottoms", url: "w-tops.html" },
+      "w-foot.html": { name: "Women's Footwear", url: "w-foot.html" },
+      "w-acc.html": { name: "Women's Accessories", url: "w-acc.html" },
+      "w-bag.html": { name: "Women's Bags & Wallets", url: "w-bag.html" },
+      "kids.html": { name: "Kids Fashion", url: "kids.html" },
+      "kids-foot.html": { name: "Kids Footwear", url: "kids-foot.html" },
+    };
+  
+    // Initialize cart
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
     // Function to load and display a single product
     async function loadProduct() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
-
-        if (!productId) {
-            document.querySelector('.product-slider').innerHTML = '<p class="error-message">No product ID provided.</p>';
-            document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">No product ID provided.</p>';
-            return;
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+  
+      if (!productId) {
+        document.querySelector('.product-slider').innerHTML = '<p class="error-message">No product ID provided.</p>';
+        document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">No product ID provided.</p>';
+        return;
+      }
+  
+      try {
+        const productDoc = await getDoc(doc(db, "products", productId));
+        if (productDoc.exists()) {
+          const product = productDoc.data();
+  
+          // Update product title
+          document.getElementById('productTitle').textContent = product.title || 'Untitled';
+  
+          // Update product price
+          const priceElement = document.getElementById('productPrice');
+          if (product.price) {
+            priceElement.innerHTML = product.price < (product.price * 1.3) ? `
+              <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+              <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` :
+              `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`;
+          } else {
+            priceElement.innerHTML = '<ins><span class="amount">RM0.00</span></ins>';
+          }
+  
+          // Update product description
+          document.getElementById('productDescription').textContent = product.description || 'No description available.';
+          document.getElementById('productFullDescription').textContent = product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.';
+  
+          // Update product category dynamically using the category map
+          const categoryKey = product.category || 'Uncategorized';
+          const categoryInfo = categoryMap[categoryKey] || { name: 'Uncategorized', url: '#' };
+          document.getElementById('productCategory').textContent = categoryInfo.name;
+          document.getElementById('productCategoryLink').textContent = categoryInfo.name;
+          document.getElementById('productCategoryLink').href = categoryInfo.url;
+  
+          // Update product SKU and tags
+          document.getElementById('productSKU').textContent = product.id || 'SKU-001';
+          document.getElementById('productTags').textContent = `${categoryInfo.name}, ${product.title || 'Product'}, Fashion`;
+  
+          // Update product size, condition, and shipping
+          document.getElementById('productSize').textContent = product.size || 'N/A';
+          document.getElementById('productSize1').textContent = product.size || 'N/A';
+          document.getElementById('productCondition').textContent = 'Like New';
+          document.getElementById('productShipping').textContent = 'West & East Malaysia';
+  
+          // Update product images in the slider
+          const galleryMain = document.getElementById('gallery-main');
+          const galleryThumbs = document.querySelector('.gallery-thumbs');
+          galleryMain.innerHTML = '';
+          galleryThumbs.innerHTML = '';
+  
+          const imageUrls = [product.imageUrl || 'img/shop/item_lg_1.jpg'];
+          imageUrls.forEach((url, index) => {
+            const mainCell = `
+              <div class="gallery-cell">
+                <a href="${url}" class="lightbox-img">
+                  <img src="${url}" alt="${product.title || 'Product'}" />
+                  <i class="ui-zoom zoom-icon"></i>
+                </a>
+              </div>`;
+            galleryMain.insertAdjacentHTML('beforeend', mainCell);
+  
+            const thumbCell = `
+              <div class="gallery-cell">
+                <img src="${url}" alt="${product.title || 'Product'}" />
+              </div>`;
+            galleryThumbs.insertAdjacentHTML('beforeend', thumbCell);
+          });
+  
+          // Add "Add to Cart" functionality
+          const addToCartBtn = document.getElementById('addToCartBtn');
+          addToCartBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            addToCart(productId);
+          });
+  
+          // Load related products
+          loadRelatedProducts(product.category, productId);
+        } else {
+          document.querySelector('.product-slider').innerHTML = '<p class="error-message">Product not found.</p>';
+          document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">Product not found.</p>';
         }
-
-        try {
-            const productDoc = await getDoc(doc(db, "products", productId));
-            if (productDoc.exists()) {
-                const product = productDoc.data();
-
-                // Update product title
-                document.getElementById('productTitle').textContent = product.name || 'Untitled';
-
-                // Update product price
-                const priceElement = document.getElementById('productPrice');
-                if (product.price) {
-                    priceElement.innerHTML = product.price < (product.price * 1.3) ? `
-                        <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
-                        <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
-                        `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`;
-                } else {
-                    priceElement.innerHTML = '<ins><span class="amount">RM0.00</span></ins>';
-                }
-
-                // Update product description
-                document.getElementById('productDescription').textContent = product.description || 'No description available.';
-                document.getElementById('productFullDescription').textContent = product.description || 'Our products are carefully curated to meet high-quality standards, ensuring you find something special with every purchase.';
-
-                // Update product category (breadcrumb and meta)
-                const category = product.category || 'Uncategorized';
-                document.getElementById('productCategory').textContent = category;
-                document.getElementById('productCategoryLink').textContent = category;
-                document.getElementById('productCategoryLink').href = `m-tops.html`; // Adjust based on category (e.g., m-tops.html for Clothes)
-
-                // Update product SKU and tags (placeholder values for now)
-                document.getElementById('productSKU').textContent = product.id || 'SKU-001';
-                document.getElementById('productTags').textContent = `${category}, ${product.name || 'Product'}, Fashion`;
-
-                // Update product size, colors, and fabric (use default values if not provided)
-                document.getElementById('productSize').textContent = product.size || 'N/A';
-                document.getElementById('productColors').textContent = 'Violet, Black, Blue'; // Add field in Firestore if needed
-                document.getElementById('productFabric').textContent = 'Cotton (100%)'; // Add field in Firestore if needed
-
-                // Update product images in the slider
-                const galleryMain = document.getElementById('gallery-main');
-                const galleryThumbs = document.querySelector('.gallery-thumbs');
-                galleryMain.innerHTML = '';
-                galleryThumbs.innerHTML = '';
-
-                const imageUrls = [product.imageUrl || 'img/shop/item_lg_1.jpg']; // Use single image for now, can expand to multiple
-                imageUrls.forEach((url, index) => {
-                    const mainCell = `
-                        <div class="gallery-cell">
-                            <a href="${url}" class="lightbox-img">
-                                <img src="${url}" alt="${product.name || 'Product'}" />
-                                <i class="ui-zoom zoom-icon"></i>
-                            </a>
-                        </div>
-                    `;
-                    galleryMain.insertAdjacentHTML('beforeend', mainCell);
-
-                    const thumbCell = `
-                        <div class="gallery-cell">
-                            <img src="${url}" alt="${product.name || 'Product'}" />
-                        </div>
-                    `;
-                    galleryThumbs.insertAdjacentHTML('beforeend', thumbCell);
-                });
-
-                // Add "Add to Cart" functionality
-                const addToCartBtn = document.getElementById('addToCartBtn');
-                addToCartBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    addToCart(productId, product.name || 'Untitled', product.price || 0, product.imageUrl || 'img/shop/item_lg_1.jpg');
-                });
-            } else {
-                document.querySelector('.product-slider').innerHTML = '<p class="error-message">Product not found.</p>';
-                document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">Product not found.</p>';
+      } catch (error) {
+        console.error("Error loading product:", error);
+        document.querySelector('.product-slider').innerHTML = '<p class="error-message">Error loading product. Please try again later.</p>';
+        document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">Error loading product. Please try again later.</p>';
+      }
+    }
+  
+    // Function to load related products
+    async function loadRelatedProducts(category, currentProductId) {
+      const relatedProductsSection = document.createElement('section');
+      relatedProductsSection.className = 'section-wrap pt-0 shop-items-slider';
+      relatedProductsSection.innerHTML = `
+        <div class="container-fluid semi-fluid">
+          <div class="row heading-row">
+            <div class="col-md-12 text-center">
+              <h2 class="heading bottom-line">Related Products</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div id="owl-related-items" class="owl-carousel owl-theme"></div>
+          </div>
+        </div>
+      `;
+      document.querySelector('.content-wrapper').appendChild(relatedProductsSection);
+  
+      try {
+        const q = query(
+          collection(db, "products"),
+          where("category", "==", category),
+          limit(6)
+        );
+        const querySnapshot = await getDocs(q);
+        const relatedItemsContainer = document.getElementById('owl-related-items');
+        relatedItemsContainer.innerHTML = '';
+  
+        querySnapshot.forEach((doc) => {
+          const product = doc.data();
+          const productId = doc.id;
+  
+          // Skip the current product
+          if (productId === currentProductId) return;
+  
+          const productHtml = `
+            <div class="product">
+              <div class="product-item hover-trigger">
+                <div class="product-img">
+                  <a href="shop-single.html?id=${productId}">
+                    <img src="${product.imageUrl || 'img/shop/item_lg_1.jpg'}" alt="${product.title || 'Product'}">
+                    <img src="${product.imageUrl || 'img/shop/item_lg_1.jpg'}" alt="${product.title || 'Product'}" class="back-img">
+                  </a>
+                  ${product.price < (product.price * 1.3) ? '<div class="product-label"><span class="sale">sale</span></div>' : ''}
+                  <div class="hover-2">
+                    <div class="product-actions">
+                      <a href="#" class="product-add-to-wishlist">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="shop-single.html?id=${productId}" class="product-quickview">Quick View</a>
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">
+                    <a href="shop-single.html?id=${productId}">${product.title || 'Untitled'}</a>
+                  </h3>
+                  <span class="category">
+                    <a href="${categoryMap[product.category]?.url || '#'}">${categoryMap[product.category]?.name || 'Uncategorized'}</a>
+                  </span>
+                </div>
+                <span class="price">
+                  ${product.price && product.price < (product.price * 1.3) ? `
+                    <del><span>RM${(product.price * 1.3).toFixed(2)}</span></del>
+                    <ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>` : 
+                    `<ins><span class="amount">RM${product.price.toFixed(2)}</span></ins>`}
+                </span>
+              </div>
+            </div>
+          `;
+          relatedItemsContainer.insertAdjacentHTML('beforeend', productHtml);
+        });
+  
+        // Initialize Owl Carousel after adding items (assuming jQuery and Owl Carousel are available)
+        if (typeof jQuery !== 'undefined' && jQuery.fn.owlCarousel) {
+          jQuery('#owl-related-items').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+              0: { items: 1 },
+              600: { items: 3 },
+              1000: { items: 5 }
             }
-        } catch (error) {
-            console.error("Error loading product:", error);
-            document.querySelector('.product-slider').innerHTML = '<p class="error-message">Error loading product. Please try again later.</p>';
-            document.querySelector('.product-description-wrap').innerHTML = '<p class="error-message">Error loading product. Please try again later.</p>';
+          });
         }
+      } catch (error) {
+        console.error("Error loading related products:", error);
+        relatedItemsContainer.innerHTML = '<p>Error loading related products.</p>';
+      }
     }
-
-    // Function to add product to cart (using the same cart from m-tops.html)
-    function addToCart(productId, name, price, imageUrl) {
-        let cart = JSON.parse(localStorage.getItem('cart')) || []; // Use localStorage for persistence
-        cart.push({ id: productId, name, price, imageUrl });
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to cart!`);
-        console.log('Cart:', cart);
+  
+    // Function to add product to cart
+    function addToCart(productId) {
+      console.log('Attempting to add product with ID:', productId);
+      const productRef = doc(db, "products", productId);
+      getDoc(productRef).then((docSnap) => {
+        console.log('Document snapshot exists:', docSnap.exists());
+        if (docSnap.exists()) {
+          const product = docSnap.data();
+          const size = product.size || 'N/A';
+          const existingItem = cart.find(item => item.id === productId && item.size === size);
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            cart.push({
+              id: productId,
+              name: product.title || 'Untitled',
+              price: product.price || 0,
+              imageUrl: product.imageUrl || 'img/shop/item_lg_1.jpg',
+              size: size,
+              quantity: 1
+            });
+          }
+          alert(`${product.title || 'Product'} (Size: ${size}) added to cart!`);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartDisplay();
+        } else {
+          console.error("Product not found in Firestore for ID:", productId);
+          alert("Product not found. Please try again.");
+        }
+      }).catch((error) => {
+        console.error("Error fetching product:", error);
+        alert("Error adding product to cart. Please try again.");
+      });
     }
-
-    // Load product when the page loads
+  
+    // Function to update cart display
+    function updateCartDisplay() {
+      const cartBadge = document.getElementById('cartBadge');
+      const navCartItems = document.getElementById('navCartItems');
+      const navCartSubtotal = document.getElementById('navCartSubtotal');
+  
+      cartBadge.textContent = cart.reduce((total, item) => total + item.quantity, 0) || 0;
+  
+      if (cart.length === 0) {
+        navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+        navCartSubtotal.textContent = 'RM0.00';
+      } else {
+        navCartItems.innerHTML = '';
+        let subtotal = 0;
+        cart.forEach((item) => {
+          const itemTotal = item.price * item.quantity;
+          subtotal += itemTotal;
+          const itemHtml = `
+            <div class="nav-cart-item clearfix">
+              <div class="nav-cart-img">
+                <a href="shop-single.html?id=${item.id}">
+                  <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                </a>
+              </div>
+              <div class="nav-cart-title">
+                <a href="shop-single.html?id=${item.id}">
+                  ${item.name} (Size: ${item.size})
+                </a>
+                <div class="nav-cart-price">
+                  <span>${item.quantity} x</span>
+                  <span>RM${item.price.toFixed(2)}</span>
+                </div>
+              </div>
+              <div class="nav-cart-remove">
+                <a href="#" class="remove" data-id="${item.id}" data-size="${item.size}" title="Remove this item">
+                  <i class="ui-close"></i>
+                </a>
+              </div>
+            </div>
+          `;
+          navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+        });
+        navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+  
+        const existingListener = navCartItems._removeListener;
+        if (existingListener) {
+          navCartItems.removeEventListener('click', existingListener);
+        }
+  
+        const removeListener = (e) => {
+          if (e.target.classList.contains('remove') || e.target.closest('.remove')) {
+            e.preventDefault();
+            console.log('Remove button clicked');
+            const removeButton = e.target.classList.contains('remove') ? e.target : e.target.closest('.remove');
+            const productId = removeButton.getAttribute('data-id');
+            const size = removeButton.getAttribute('data-size');
+            console.log('Removing product ID:', productId, 'Size:', size);
+            cart = cart.filter(item => !(item.id === productId && item.size === size));
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+          }
+        };
+        navCartItems.addEventListener('click', removeListener);
+        navCartItems._removeListener = removeListener;
+      }
+    }
+  
+    // Load product and initialize cart when the page loads
     document.addEventListener("DOMContentLoaded", () => {
-        loadProduct();
+      loadProduct();
+  
+      const cartIcon = document.getElementById('cartIcon');
+      const cartContainer = document.querySelector('.nav-cart-container');
+      let isCartOpen = false;
+  
+      cartIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        isCartOpen = !isCartOpen;
+        cartContainer.style.display = isCartOpen ? 'block' : 'none';
+      });
+  
+      document.addEventListener('click', (e) => {
+        if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
+          cartContainer.style.display = 'none';
+          isCartOpen = false;
+        }
+      });
+  
+      updateCartDisplay();
+  
+      window.addEventListener('storage', () => {
+        cart = JSON.parse(localStorage.getItem('cart')) || [];
+        updateCartDisplay();
+      });
     });
   </script>
 
+  <!-- Footer Type-1 -->
+  <footer class="footer footer-type-1">
+    <div class="container">
+      <div class="footer-widgets">
+        <div class="row">
+
+          <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="widget footer-about-us">
+              <img src="img/thrifthub lg v1.png" alt="" class="logo">
+              <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
+              <div class="footer-socials">
+                <div class="social-icons nobase">
+                  <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end about us -->
+
+          <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+            <div class="widget footer-links">
+              <h5 class="widget-title bottom-line left-align grey">Explore</h5>
+              <ul class="list-no-dividers">
+                <li><a href="m-tops.html">Mens</a></li>
+                <li><a href="w-tops.html">Womens</a></li>
+                <li><a href="kids.html">Kids</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+            <div class="widget footer-links">
+              <h5 class="widget-title bottom-line left-align grey">Information</h5>
+              <ul class="list-no-dividers">
+                <li><a href="delivery-info.html">Delivery Information</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="faq.html">F.A.Q</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+            <div class="widget footer-links">
+              <h5 class="widget-title bottom-line left-align grey">Account</h5>
+              <ul class="list-no-dividers">
+                <li><a href="myaccount.html">My account</a></li>
+                <li><a href="shop-cart.html">My cart</a></li>
+                <li><a href="order-history.html">Order history</a></li>
+              </ul>
+            </div>
+          </div>
+
+   
+    </div> <!-- end container -->
+
+    <div class="bottom-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-6 copyright sm-text-center">
+            <span>
+              ©
+              <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
+              ThriftHub Malaysia | Made by <a href="">Group 2</a>
+            </span>
+          </div>
+
+          <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
+            <i class="fa fa-cc-visa"></i>
+            <i class="fa fa-cc-mastercard"></i>
+            <i class="fa fa-cc-amex"></i>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- end bottom footer -->
+  </footer> <!-- end footer -->
+
+    <div id="back-to-top">
+      <a href="#top"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+  </div> <!-- end content wrapper -->
 </body>
 </html>
