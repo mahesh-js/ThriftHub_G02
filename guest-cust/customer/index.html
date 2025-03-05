@@ -33,6 +33,8 @@
   <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
   <script type="module" src="/guest-cust/customer/auth/firebase.js"></script> <!-- Updated path -->
 
+  <!-- Google Translate Script -->
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body class="relative">
@@ -93,11 +95,13 @@
                 </div>
               </li>
               <li class="language">
-                Language: <a href="#">ENG<i class="fa fa-angle-down"></i></a>
+                Language: <a href="#" id="currentLanguage">ENG<i class="fa fa-angle-down"></i></a>
                 <div class="language-dropdown">
                   <ul>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Malay</a></li>
+                    <li><a href="#" class="language-option" data-lang="en">English</a></li>
+                    <li><a href="#" class="language-option" data-lang="ms">Malay</a></li>
+                    <li><a href="#" class="language-option" data-lang="zh">Chinese (Simplified)</a></li>
+                    <li><a href="#" class="language-option" data-lang="zh-TW">Chinese (Traditional)</a></li>
                   </ul>
                 </div>
               </li>
@@ -1098,10 +1102,9 @@
               // Update subtotal in the dropdown
               const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
               navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
-              
-             
           }
       }
+
       navCartItems.addEventListener('click', (e) => {
         const removeLink = e.target.closest('.remove');
         if (removeLink) {
@@ -1112,6 +1115,7 @@
           updateCartDisplay();
         }
       });
+
       // Initial cart display
       updateCartDisplay();
 
@@ -1156,6 +1160,66 @@
           loadVideo(); // Load video only if authenticated
         }
       });
+
+      // Google Translate initialization with delay to ensure loading
+      let translateInitialized = false;
+
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,ms,zh,zh-TW',
+          autoDisplay: false,
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+        translateInitialized = true;
+        console.log("Google Translate initialized");
+      }
+
+      // Language switcher integration with Google Translate, with retry logic
+      let currentLanguage = 'en'; // Default language
+
+      function changeLanguage(lang, retry = 3) {
+        if (retry < 0) {
+          console.error("Failed to initialize Google Translate after multiple retries");
+          return;
+        }
+
+        if (window.google && window.google.translate) {
+          const translateElement = document.querySelector('.goog-te-combo');
+          if (translateElement) {
+            translateElement.value = lang;
+            google.translate.TranslateElement.prototype.c = lang;
+            translateElement.dispatchEvent(new Event('change')); // Trigger translation
+            console.log("Changed language to:", lang);
+          } else {
+            console.warn("Google Translate element not found, retrying...");
+            setTimeout(() => changeLanguage(lang, retry - 1), 500); // Retry after 500ms
+          }
+        } else {
+          console.warn("Google Translate not loaded, retrying...");
+          setTimeout(() => changeLanguage(lang, retry - 1), 500); // Retry after 500ms
+        }
+
+        document.getElementById("currentLanguage").textContent = lang === "en" ? "ENG" : 
+                                                             lang === "ms" ? "MS" : 
+                                                             lang === "zh" ? "ZH" : 
+                                                             "ZH-TW";
+      }
+
+      // Wait for Google Translate to load before setting up language switcher
+      const checkTranslateLoad = setInterval(() => {
+        if (translateInitialized) {
+          clearInterval(checkTranslateLoad);
+          document.querySelectorAll(".language-option").forEach(option => {
+            option.addEventListener("click", (e) => {
+              e.preventDefault();
+              currentLanguage = option.getAttribute("data-lang");
+              changeLanguage(currentLanguage);
+            });
+          });
+        }
+      }, 100); // Check every 100ms
+
     });
 
     // Owl Carousel Initialization for Hero Slider
@@ -1249,8 +1313,18 @@
       -webkit-animation-duration: 0.2s !important;
       animation-duration: 0.2s !important;
     }
+
+    /* Hide Google Translate widget by default, use custom navbar */
+    #google_translate_element {
+      display: none;
+    }
+    .goog-te-gadget {
+      font-size: 0; /* Hide default widget */
+    }
   </style>
 
+  <!-- Placeholder for Google Translate Element (hidden, used for initialization) -->
+  <div id="google_translate_element"></div>
 </body>
 
 </html>
