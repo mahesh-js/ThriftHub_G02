@@ -14,6 +14,8 @@
     <!-- Add Firebase -->
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <!-- Add Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 </head>
 <body style="background-image: url(/guest-cust/img/signin-bg.png);">
     <div id="root"></div>
@@ -28,6 +30,9 @@
             appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
         };
         firebase.initializeApp(firebaseConfig);
+        
+        // Initialize Firestore
+        const db = firebase.firestore();
 
         // Google Auth Provider
         const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
@@ -44,7 +49,7 @@
             const [password, setPassword] = React.useState("");
             const [error, setError] = React.useState("");
             const [showPassword, setShowPassword] = React.useState(false);
-            const [verificationSent, setVerificationSent] = React.useState(false); // Track if verification email is sent
+            const [verificationSent, setVerificationSent] = React.useState(false);
 
             const handleSubmit = async (e) => {
                 e.preventDefault();
@@ -53,19 +58,27 @@
                     // Create user with email and password
                     const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
                     const user = userCredential.user;
+                    
                     // Update user profile with name
                     await user.updateProfile({
                         displayName: name
                     });
+
+                    // Save user data to Firestore
+                    await db.collection("users").doc(user.uid).set({
+                        uid: user.uid,
+                        name: name,
+                        email: email,
+                        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                        // Add any additional fields you want to store
+                    });
+
                     // Send email verification
                     await user.sendEmailVerification();
-                    // Set state to indicate that the verification email has been sent
                     setVerificationSent(true);
-                    // Optionally, sign out the user immediately after signup
+                    
                     await firebase.auth().signOut();
-                    // Show success message
                     alert("A verification email has been sent to your email address. Please verify your email before logging in.");
-                    // Redirect after successful signup
                     window.location.href = "/guest-cust/signin.html";
                 } catch (error) {
                     setError(error.message);
@@ -81,18 +94,23 @@
                     const result = await firebase.auth().signInWithPopup(googleAuthProvider);
                     const user = result.user;
 
-                    // Check if the user is new or existing
                     if (result.additionalUserInfo.isNewUser) {
-                        // Update user profile with a default display name if needed
                         await user.updateProfile({
                             displayName: user.displayName || "New User"
                         });
 
-                        // Optionally send a welcome email or perform other actions
+                        // Save Google user data to Firestore
+                        await db.collection("users").doc(user.uid).set({
+                            uid: user.uid,
+                            name: user.displayName,
+                            email: user.email,
+                            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                            provider: "google"
+                        });
+
                         alert("Welcome! You have successfully signed up with Google.");
                     }
 
-                    // Redirect to the customer dashboard or another page
                     window.location.href = "/guest-cust/customer/index.html";
                 } catch (error) {
                     setError(error.message);
@@ -142,7 +160,6 @@
             );
         }
 
-        // Render the component
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<SignupForm />);
     </script>
