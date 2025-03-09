@@ -30,7 +30,7 @@
 .toggle-password {
   position: absolute;
   right: 10px;
-  top: 35%;
+  top: 31%;
   transform: translateY(-50%);
   cursor: pointer;
 }
