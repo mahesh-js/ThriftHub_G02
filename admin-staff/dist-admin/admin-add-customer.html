@@ -24,8 +24,12 @@
       .form-input { border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; width: 100%; transition: border-color 0.3s ease; }
       .form-input:focus { border-color: #3b82f6; outline: none; }
       .form-label { font-weight: 500; color: #4a5568; margin-bottom: 8px; display: block; }
-      .form-button { background-color: #3b82f6; color: #ffffff; padding: 10px 20px; border-radius: 6px; border: none; cursor: pointer; transition: background-color 0.3s ease; }
-      .form-button:hover { background-color: #2563eb; }
+      .form-button {background-color: #000;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: 500; }
+      .form-button:hover { background-color: #7b7b7b; }
       .form-button-secondary { background-color: transparent; color: #3b82f6; border: 1px solid #3b82f6; padding: 10px 20px; border-radius: 6px; cursor: pointer; transition: background-color 0.3s ease; }
       .form-button-secondary:hover { background-color: #3b82f6; color: #ffffff; }
       .filepond-container { border: 2px dashed #e2e8f0; border-radius: 8px; padding: 20px; text-align: center; background-color: #f7fafc; }
@@ -526,15 +530,15 @@
 
         <div class="xl:w-full min-h-[calc(100vh-138px)] relative pb-14">
           <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 justify-between">
-            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3">
+            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4">
               <div class="w-full relative p-4 form-container">
                 <label for="" class="form-label">Upload Profile Photo</label>
-                <div class="w-full h-56 mx-auto mb-4 filepond-container">
-                  <input type="file" class="filepond h-56" name="filepond" accept="image/png, image/jpeg, image/gif" />
+                <div class="w-full h-58 mx-auto mb-4 filepond-container">
+                  <input type="file" class="filepond h-48" name="filepond" accept="image/png, image/jpeg, image/gif" />
                 </div>
               </div>
             </div>
-            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6">
+            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8">
               <form id="customerForm" class="w-full relative mb-4 form-container">
                 <div class="flex-auto p-0 md:p-4">
                   <div class="mb-4">
@@ -567,41 +571,12 @@
                   <div id="message"></div>
                   <div class="flex gap-2">
                     <button type="submit" class="form-button">Add Customer</button>
-                    <a href="admin-customers.html" class="form-button-secondary">Back to Customers</a>
+                    <a href="admin-customers.html" class="text-gray-500 ml-4" style="margin-left: 1%;margin-top: 1%;">Back to Customers</a>
                   </div>
                 </div>
               </form>
             </div>
-            <div class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3">
-              <div class="w-full relative mb-4 form-container">
-                <div class="flex-auto p-0 md:p-4">
-                  <div>
-                    <p class="text-slate-700 text-base dark:text-slate-400">Profile Photo</p>
-                    <img src="assets/images/users/avatar-1.png" alt="" class="preview-image" id="previewPhoto" />
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-700 text-base dark:text-slate-400">Full Name</p>
-                    <h4 class="text-xl font-semibold text-slate-700 dark:text-slate-300" id="previewName">John Doe</h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">Email</p>
-                    <h4 class="text-base font-medium text-slate-900 dark:text-slate-300" id="previewEmail">john.doe@example.com</h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">Phone Number</p>
-                    <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300" id="previewPhone">+60 12-345-6789</h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">Status</p>
-                    <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300" id="previewStatus">Active</h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">Country</p>
-                    <h4 class="text-base font-semibold text-slate-900 dark:text-slate-300" id="previewCountry">Malaysia</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <!-- Footer (unchanged) -->
           <div class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
