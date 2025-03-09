@@ -1660,7 +1660,7 @@ input.main-search-input:-ms-input-placeholder {
 .nav-register a {
     display: inline-block;
     line-height: 1;
-    font-size: 14px;
+    font-size: 22px;
     color: #000;
 }
 
@@ -7261,3 +7261,7 @@ abbr.required {
 }
 
 /*# sourceMappingURL=style.css.map */
+.password-container {
+    position: relative;
+    margin-bottom: -5px;
+  }

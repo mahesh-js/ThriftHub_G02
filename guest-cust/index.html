@@ -99,13 +99,8 @@
                 </div>
               </li>
             </ul>
-            <ul class="top-bar-acc">
+            <ul class="top-bar-acc" style="margin-right: 38%;">
               Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
-            </ul>
-            <ul class="top-bar-acc">
-                  <div class="buttons">
-                    <a href="signup.html" class="btn">Signup</a>
-                    <a href="signin.html" class="btn">Signin</a>
             </ul>
           </div>
         </div>
@@ -218,7 +213,7 @@
 
               <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
                 <ul>
-                  <li class="nav-register"><a href="myaccount.html"><i class="fa fa-user"></i></a></li>
+                  <li class="nav-register"><a href="signin.html"><i class="fa fa-user"></i></a></li>
                   <li class="nav-search-wrap style-2 hidden-sm hidden-xs">
                     <a href="#" class="nav-search search-trigger">
                       <i class="fa fa-search"></i>
@@ -336,20 +331,248 @@
         </div>
       </section> <!-- end promo banners -->
 
-      <!-- Newsletter -->
-      <section class="newsletter" id="subscribe">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
+     <!-- Newsletter -->
+      <!-- MailerLite Styles -->
+      <style type="text/css">
+        @import url("https://assets.mlcdn.com/fonts.css?version=1741084");
+      
+        /* Base Container */
+        #mlb2-23337095.ml-form-embedContainer {
+          padding: 33px 0;
+          border-top: 1px solid #ebebeb;
+          border-bottom: 1px solid #ebebeb;
+          background-color: #f7f8f9;
+        }
+      
+        /* Form Wrapper */
+        #mlb2-23337095.ml-form-embedContainer .ml-form-embedWrapper {
+          background-color: #f6f6f6;
+          border-radius: 4px;
+          display: inline-block;
+          width: 100%;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-form-align-center {
+          text-align: center;
+        }
+      
+        
+      
+        /* Horizontal Form Layout */
+        #mlb2-23337095.ml-form-embedContainer .ml-form-horizontalRow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-form-horizontalRow h4 {
+          display: inline-block;
+          margin-bottom: 0;
+          font-size:14px;
+          display: block;
+          margin-right: 10%;
+          margin-bottom: 10px;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-input-horizontal {
+          flex: 1; /* Take available space */
+          max-width: 200px; /* Minimum width for input */
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-button-horizontal {
+          margin-left: 10px; /* Space between input and button */
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .horizontal-fields {
+          width: 100%;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-field-email input {
+          background-color: #fff;
+          color: #333;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          padding:0 16px;
+          width: 150%;
+          box-sizing: border-box;
+          margin-left: -53%;
+          margin-top: 5%;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-field-email input::-webkit-input-placeholder,
+        #mlb2-23337095.ml-form-embedContainer .ml-field-email input::-moz-placeholder,
+        #mlb2-23337095.ml-form-embedContainer .ml-field-email input:-ms-input-placeholder,
+        #mlb2-23337095.ml-form-embedContainer .ml-field-email input:-moz-placeholder {
+          color: #333;
+        }
+      
+        /* Button Styles */
+        #mlb2-23337095.ml-form-embedContainer .ml-button-horizontal button,
+        #mlb2-23337095.ml-form-embedContainer .ml-mobileButton-horizontal button {
+          background-color: #000;
+          border: 1px solid #000;
+          border-radius: 4px;
+          color: #fff;
+          cursor: pointer;
+          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          padding: 10px 20px;
+          width: auto; /* Button adjusts to content */
+          margin-left: 7%;
+          margin-bottom: 16%;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-button-horizontal button:hover,
+        #mlb2-23337095.ml-form-embedContainer .ml-mobileButton-horizontal button:hover {
+          background-color: #333;
+          border-color: #333;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-button-horizontal button.loading,
+        #mlb2-23337095.ml-form-embedContainer .ml-mobileButton-horizontal button.loading {
+          display: none;
+        }
+      
+        /* Success Message */
+        #mlb2-23337095.ml-form-embedContainer .ml-form-successBody {
+          padding: 20px;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-form-successContent h4 {
+          color: #000;
+          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+          font-size: 25px;
+          font-weight: 700;
+          margin: 0 0 10px;
+          text-align: center;
+        }
+      
+        #mlb2-23337095.ml-form-embedContainer .ml-form-successContent p {
+          color: #000;
+          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          text-align: center;
+        }
+      
+        /* Loader */
+        .ml-form-embedSubmitLoad {
+          display: inline-block;
+          width: 20px;
+          height: 15px;
+        }
+      
+        .ml-form-embedSubmitLoad:after {
+          content: " ";
+          display: block;
+          width: 11px;
+          height: 11px;
+          margin: 1px;
+          border-radius: 50%;
+          border: 4px solid #fff;
+          border-color: #fff #fff #fff transparent;
+          animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+        }
+      
+        @keyframes ml-form-embedSubmitLoad {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      
+        /* Responsive Design */
+        @media only screen and (max-width: 400px) {
+          #mlb2-23337095.ml-form-embedContainer .ml-form-horizontalRow {
+            flex-direction: column;
+            align-items: center;
+          }
+          #mlb2-23337095.ml-form-embedContainer .ml-form-horizontalRow h4 {
+            margin: 0 0 10px 0; /* Stack h4 above input on small screens */
+          }
+          #mlb2-23337095.ml-form-embedContainer .ml-input-horizontal {
+            width: 100%;
+            min-width: 0;
+          }
+          #mlb2-23337095.ml-form-embedContainer .ml-button-horizontal {
+            display: none;
+            margin-left: 0;
+          }
+          #mlb2-23337095.ml-form-embedContainer .ml-mobileButton-horizontal {
+            display: block;
+            width: 100%;
+          }
+          #mlb2-23337095.ml-form-embedContainer .ml-mobileButton-horizontal button {
+            width: 100%;
+          }
+        }
+      
+        /* Accessibility */
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          border: 0;
+        }
+      </style>
+
+
+<!-- MailerLite Form HTML -->
+<div id="mlb2-23337095" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-23337095">
+  <div class="ml-form-align-center">
+    <div class="ml-form-embedWrapper embedForm">
+      <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1367509/forms/147997468345239269/subscribe" data-code="" method="post" target="_blank">
+          <div class="ml-form-formContent horozintalForm">
+            <div class="ml-form-horizontalRow">
               <h4>Get the latest updates</h4>
-              <form class="relative newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Enter your email">
-                <input type="submit" class="btn btn-lg btn-dark newsletter-submit" value="Subscribe">
-              </form>
+              <div class="ml-input-horizontal">
+                <div class="horizontal-fields">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Enter your email" autocomplete="email">
+                  </div>
+                </div>
+              </div>
+              <div class="ml-button-horizontal primary">
+                <button type="submit" class="primary">Subscribe</button>
+                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
             </div>
           </div>
+          <input type="hidden" name="ml-submit" value="1">
+          
+          <input type="hidden" name="anticsrf" value="true">
+        </form>
+      </div>
+      <div class="ml-form-successBody row-success" style="display: none">
+        <div class="ml-form-successContent">
+          <h4>Thank you!</h4>
+          <p>You have successfully joined our subscriber list.</p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function ml_webform_success_23337095() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-23337095 .row-success').show();
+    $('.ml-subscribe-form-23337095 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+<script>
+  fetch("https://assets.mailerlite.com/jsonp/1367509/forms/147997468345239269/takel")
+</script>
 
       <!-- Footer Type-1 -->
       <footer class="footer footer-type-1">
