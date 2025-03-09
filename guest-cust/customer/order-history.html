@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>ThriftHub | My Account</title>
+  <title>ThriftHub | Order History</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -25,8 +25,51 @@
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+  <!-- Add some custom CSS for the order history section -->
+  <style>
+    .order-history-container {
+      padding: 20px;
+    }
+    .order-item {
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+    }
+    .order-item h4 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .order-item p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .order-item ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .order-item li {
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .order-item li:last-child {
+      border-bottom: none;
+    }
+    .no-orders {
+      text-align: center;
+      color: #777;
+      font-size: 16px;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body class="relative">
@@ -42,7 +85,6 @@
   <main class="main-wrapper">
 
     <header class="nav-type-1">
-
       <!-- Fullscreen search -->
       <div class="search-wrap">
         <div class="search-inner">
@@ -57,52 +99,47 @@
         </div>        
       </div> <!-- end fullscreen search -->
 
-        <!-- Top Bar -->
-        <div class="top-bar hidden-xs">
-          <div class="container">
-            <div class="top-bar-links flex-parent">
-              <ul class="top-bar-currency-language">
-                <li>
-                  Currency: <a href="#">MYR<i class="fa fa-angle-down"></i></a>
-                  <div class="currency-dropdown">
-                    <ul>
-                      <li><a href="#">MYR</a></li>
-                      <li><a href="#">SGD</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="language">
-                  Language: <a href="#">ENG<i class="fa fa-angle-down"></i></a>
-                  <div class="language-dropdown">
-                    <ul>
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Malay</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-              <ul class="top-bar-acc" style="margin-right: 38%;">
-                Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
-              </ul>
-              
-            </div>
+      <!-- Top Bar -->
+      <div class="top-bar hidden-xs">
+        <div class="container">
+          <div class="top-bar-links flex-parent">
+            <ul class="top-bar-currency-language">
+              <li>
+                Currency: <a href="#">MYR<i class="fa fa-angle-down"></i></a>
+                <div class="currency-dropdown">
+                  <ul>
+                    <li><a href="#">MYR</a></li>
+                    <li><a href="#">SGD</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="language">
+                Language: <a href="#">ENG<i class="fa fa-angle-down"></i></a>
+                <div class="language-dropdown">
+                  <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Malay</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="top-bar-acc" style="margin-right: 38%;">
+              Pre-Raya Sale: Enjoy Free Shipping! <a href="m-tops.html" style="color:darkgoldenrod;">Shop Now</a>
+            </ul>
           </div>
-        </div> <!-- end top bar -->
+        </div>
+      </div> <!-- end top bar -->
 
       <nav class="navbar navbar-responsive-top">
         <div class="navigation" id="sticky-nav">
           <div class="container relative">
-
             <nav class="navbar navbar-static-top">
               <div class="navigation" id="sticky-nav">
                 <div class="container relative">
-
                   <div class="row flex-parent">
                     <div class="nav-wrap flex-child" style="margin-left: -60px;">
                       <div class="collapse navbar-collapse text-left" id="navbar-collapse">
-      
                         <ul class="nav navbar-nav">
-      
                           <li class="dropdown">
                             <a href="#">Shop</a>
                             <i class="fa fa-angle-down dropdown-trigger"></i>
@@ -113,66 +150,47 @@
                                     <div class="col-md-2 megamenu-item"></div>
                                     <div class="col-md-3 megamenu-item">
                                       <ul class="menu-list">
-                                        <li>
-                                          <span>For Him</span>
-                                        </li>
+                                        <li><span>For Him</span></li>
                                         <li><a href="m-tops.html">Men's Tops & Bottoms</a></li>
                                         <li><a href="m-foot.html">Men's Footwear</a></li>
                                         <li><a href="m-acc.html">Men's Accessories</a></li>
                                         <li><a href="m-bag.html">Men's Bags & Wallets</a></li>
                                       </ul>
                                     </div>
-      
                                     <div class="col-md-3 megamenu-item">
                                       <ul class="menu-list">
-                                        <li>
-                                          <span>For Her</span>
-                                        </li>
+                                        <li><span>For Her</span></li>
                                         <li><a href="w-tops.html">Women's Tops & Bottoms</a></li>
                                         <li><a href="w-foot.html">Women's Footwear</a></li>
                                         <li><a href="w-acc.html">Women's Accessories</a></li>
                                         <li><a href="w-bag.html">Women's Bags & Wallets</a></li>
                                       </ul>
                                     </div>
-      
                                     <div class="col-md-3 megamenu-item">
                                       <ul class="menu-list">
-                                        <li>
-                                          <span>For Kids</span>
-                                        </li>
+                                        <li><span>For Kids</span></li>
                                         <li><a href="kids.html">Kids Fashion</a></li>
                                         <li><a href="kids-foot.html">Kids Footwear</a></li>
                                       </ul>
                                     </div>
-      
                                   </div>
                                 </div>
                               </li>
                             </ul>
                           </li>
-                          <li class="dropdown">
-                            <a href="about-us.html">About Us</a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="contact.html">Contact Us</a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="faq.html">F.A.Q</a>
-                          </li>
-                          </li> <!-- end elements -->
-      
+                          <li class="dropdown"><a href="about-us.html">About Us</a></li>
+                          <li class="dropdown"><a href="contact.html">Contact Us</a></li>
+                          <li class="dropdown"><a href="faq.html">F.A.Q</a></li>
                         </ul> <!-- end menu -->
                       </div> <!-- end collapse -->
                     </div> <!-- end col -->
                     <div class="navbar-header flex-child" style="margin-left: -130px;">
                       <!-- Logo -->
                       <div class="logo-wrap">
-                        <div class="logo-wrap">
-                          <a href="index.html">
-                            <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png"
-                              srcset="img/thrifthub lg v1.png 1x,img/thrifthub lg v1.png 2x" >
-                          </a>
-                        </div>
+                        <a href="index.html">
+                          <img class="thrifthub" width="160" height="50" src="img/thrifthub lg v1.png"
+                            srcset="img/thrifthub lg v1.png 1x, img/thrifthub lg v1.png 2x">
+                        </a>
                       </div>
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -184,14 +202,11 @@
                       <div class="nav-cart mobile-cart hidden-lg hidden-md">
                         <div class="nav-cart-outer">
                           <div class="nav-cart-inner">
-                            <a href="#" class="nav-cart-icon">
-                            </a>
+                            <a href="#" class="nav-cart-icon"></a>
                           </div>
                         </div>
                       </div>
                     </div> <!-- end navbar-header -->
-
-              
 
                     <div class="flex-child flex-right nav-right hidden-sm hidden-xs">
                       <ul>
@@ -212,17 +227,11 @@
                             </div>
                           </div>
                           <div class="nav-cart-container">
-                            <div class="nav-cart-items" id="navCartItems">
-      
-                              <!-- Cart items will be dynamically inserted here -->
-      
-                            </div> <!-- end cart items -->
-      
+                            <div class="nav-cart-items" id="navCartItems"></div>
                             <div class="nav-cart-summary">
                               <span>Cart Subtotal</span>
                               <span class="total-price" id="navCartSubtotal">RM0.00</span>
                             </div>
-      
                             <div class="nav-cart-actions mt-20">
                               <a href="shop-cart.html" class="btn btn-md btn-dark"><span>View Cart</span></a>
                               <a href="shop-checkout.html" class="btn btn-md btn-color mt-10"><span>Proceed to Checkout</span></a>
@@ -231,27 +240,25 @@
                         </li>
                       </ul>
                     </div>
-          
-            </div> <!-- end row -->
-          </div> <!-- end container -->
-        </div> <!-- end navigation -->
-      </nav> <!-- end navbar -->
+                  </div> <!-- end row -->
+                </div> <!-- end container -->
+              </div> <!-- end navigation -->
+            </nav> <!-- end navbar -->
+          </div>
+        </div>
+      </nav>
     </header>
+
     <!-- Page Title -->
     <section class="page-title text-center bg-img overlay"
       style="background-image: url(img/page_title/about_us_title_bg.jpg)">
       <div class="container relative clearfix">
         <div class="title-holder">
           <div class="title-text">
-            <h1 class="uppercase">My Account</h1>
+            <h1 class="uppercase">Order History</h1>
             <ol class="breadcrumb">
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              
-              <li class="active">
-                My Account
-              </li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Order History</li>
             </ol>
           </div>
         </div>
@@ -261,147 +268,98 @@
     <div class="content-wrapper oh">
       <div class="container1">
         <div class="sidebar1">
-            <h2>My Account</h2>
-            <ul>
-                <li><a href="myaccount.html">Account Information</a></li>
-                <li><a href="order-history.html">Order History</a></li>
-                <li><a href="myaccount-address.html">View Addresses</a></li>
-                <li><a href="#" id="logoutBtn">Log out</a></li>
-                <li><a href="mailto:thrifthubmalaysia@gmail.com">Support</a></li>
-            </ul>
+          <h2>My Account</h2>
+          <ul>
+            <li><a href="myaccount.html">Account Information</a></li>
+            <li><a href="order-history.html">Order History</a></li>
+            <li><a href="myaccount-address.html">View Addresses</a></li>
+            <li><a href="#" id="logoutBtn">Log out</a></li>
+            <li><a href="mailto:thrifthubmalaysia@gmail.com">Support</a></li>
+          </ul>
         </div>
         <div class="content1">
           <div id="root"></div>
         </div>
       </div>
-    <script>
-        // Initialize Firebase
-        const firebaseConfig = {
-            apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
-            authDomain: "thrifthub-demo.firebaseapp.com",
-            projectId: "thrifthub-demo",
-            storageBucket: "thrifthub-demo.firebasestorage.app",
-            messagingSenderId: "518014691134",
-            appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
-        };
-        firebase.initializeApp(firebaseConfig);
+    </div>
 
-        // Check if user is logged in
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                // User is logged in
-                document.getElementById("root").innerHTML = `
-                    <div class="info-container">
-                        <div class="info-item">
-                            <h3>Order History</h3>
-                            <p>No orders yet.</p>
-                        </div>
-                    </div>
-                `;
-
-               
-                // Logout Button
-                document.getElementById("logoutBtn").addEventListener("click", () => {
-                    firebase.auth().signOut()
-                        .then(() => {
-                            window.location.href = "/guest-cust/signin.html"; // Redirect to login page
-                        })
-                        .catch((error) => alert("Error logging out: " + error.message));
-                });
-            } else {
-                // User is not logged in, redirect to login page
-                window.location.href = "guest-cust/signin.html";
-            }
-        });
-     </script>
-
-      
-
-      <!-- Footer Type-1 -->
-      <footer class="footer footer-type-1">
-        <div class="container">
-          <div class="footer-widgets">
-            <div class="row">
-
-              <div class="col-md-3 col-sm-12 col-xs-12">
-                <div class="widget footer-about-us">
-                  <img src="img/thrifthub lg v1.png" alt="" class="logo">
-                  <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
-                  <div class="footer-socials">
-                    <div class="social-icons nobase">
-                      <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
-                      <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
-                      <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
-                    </div>
+    <!-- Footer Type-1 -->
+    <footer class="footer footer-type-1">
+      <div class="container">
+        <div class="footer-widgets">
+          <div class="row">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+              <div class="widget footer-about-us">
+                <img src="img/thrifthub lg v1.png" alt="" class="logo">
+                <p class="mb-40">ThriftHub store offers wide variety of used clothes at an affordable price.</p>
+                <div class="footer-socials">
+                  <div class="social-icons nobase">
+                    <a href="https://x.com/thrifthub_mls?s=21"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/15CSCqVAFu/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/thrifthub_malaysia?igsh=YTFoYWFlMDB1Nmc2&utm_source=qr"><i class="fa fa-instagram"></i></a>
                   </div>
                 </div>
-              </div> <!-- end about us -->
-
-              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-                <div class="widget footer-links">
-                  <h5 class="widget-title bottom-line left-align grey">Explore</h5>
-                  <ul class="list-no-dividers">
-                    <li><a href="m-tops.html">Mens</a></li>
-                    <li><a href="w-tops.html">Womens</a></li>
-                    <li><a href="kids.html">Kids</a></li>
-                  </ul>
-                </div>
               </div>
-
-              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-                <div class="widget footer-links">
-                  <h5 class="widget-title bottom-line left-align grey">Information</h5>
-                  <ul class="list-no-dividers">
-                    <li><a href="delivery-info.html">Delivery Information</a></li>
-                    <li><a href="about-us.html">About us</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="faq.html">F.A.Q</a></li>
-                  </ul>
-                </div>
+            </div> <!-- end about us -->
+            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+              <div class="widget footer-links">
+                <h5 class="widget-title bottom-line left-align grey">Explore</h5>
+                <ul class="list-no-dividers">
+                  <li><a href="m-tops.html">Mens</a></li>
+                  <li><a href="w-tops.html">Womens</a></li>
+                  <li><a href="kids.html">Kids</a></li>
+                </ul>
               </div>
-
-              <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
-                <div class="widget footer-links">
-                  <h5 class="widget-title bottom-line left-align grey">Account</h5>
-                  <ul class="list-no-dividers">
-                    <li><a href="myaccount.html">My account</a></li>
-                    <li><a href="shop-cart.html">My cart</a></li>
-                    <li><a href="order-history.html">Order history</a></li>
-                  </ul>
-                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+              <div class="widget footer-links">
+                <h5 class="widget-title bottom-line left-align grey">Information</h5>
+                <ul class="list-no-dividers">
+                  <li><a href="delivery-info.html">Delivery Information</a></li>
+                  <li><a href="about-us.html">About us</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="faq.html">F.A.Q</a></li>
+                </ul>
               </div>
-
-       
-        </div> <!-- end container -->
-
-        <div class="bottom-footer">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-sm-6 copyright sm-text-center">
-                <span>
-                  &copy;
-                  <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
-                  ThriftHub Malaysia | Made by <a href="">Group 2</a>
-                </span>
+            </div>
+            <div class="col-md-2 col-md-offset-1 col-sm-4 col-xs-12">
+              <div class="widget footer-links">
+                <h5 class="widget-title bottom-line left-align grey">Account</h5>
+                <ul class="list-no-dividers">
+                  <li><a href="myaccount.html">My account</a></li>
+                  <li><a href="shop-cart.html">My cart</a></li>
+                  <li><a href="order-history.html">Order history</a></li>
+                </ul>
               </div>
-
-              <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
-                <i class="fa fa-cc-visa"></i>
-                <i class="fa fa-cc-mastercard"></i>
-                <i class="fa fa-cc-amex"></i>
-              </div>
-
             </div>
           </div>
-        </div> <!-- end bottom footer -->
-      </footer> <!-- end footer -->
+        </div>
+      </div> <!-- end container -->
 
-      <div id="back-to-top">
-        <a href="#top"><i class="fa fa-angle-up"></i></a>
-      </div>
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 copyright sm-text-center">
+              <span>
+                ©
+                <script>document.querySelector(".copyright span").innerHTML += new Date().getFullYear();</script>
+                ThriftHub Malaysia | Made by <a href="">Group 2</a>
+              </span>
+            </div>
+            <div class="col-sm-6 col-xs-12 footer-payment-systems text-right sm-text-center mt-sml-10">
+              <i class="fa fa-cc-visa"></i>
+              <i class="fa fa-cc-mastercard"></i>
+              <i class="fa fa-cc-amex"></i>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end bottom footer -->
+    </footer> <!-- end footer -->
 
-    </div> <!-- end content wrapper -->
+    <div id="back-to-top">
+      <a href="#top"><i class="fa fa-angle-up"></i></a>
+    </div>
+
   </main> <!-- end main wrapper -->
 
   <!-- jQuery Scripts -->
@@ -409,62 +367,139 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="module">
-    // No Firebase integration needed here since cart is stored in localStorage
-    document.addEventListener("DOMContentLoaded", () => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        const cartBadge = document.getElementById('cartBadge');
-        const navCartItems = document.getElementById('navCartItems');
-        const navCartSubtotal = document.getElementById('navCartSubtotal');
-        const cartIcon = document.getElementById('cartIcon');
+  <!-- Update the Firebase script to include order history fetching -->
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+      authDomain: "thrifthub-demo.firebaseapp.com",
+      projectId: "thrifthub-demo",
+      storageBucket: "thrifthub-demo.firebasestorage.app",
+      messagingSenderId: "518014691134",
+      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f"
+    };
+    firebase.initializeApp(firebaseConfig);
 
-        function updateCartDisplay() {
-            // Update cart badge (number of items)
-            cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+    // Check if user is logged in
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is logged in, fetch and display order history
+        const rootDiv = document.getElementById("root");
+        rootDiv.innerHTML = `
+          <div class="info-container order-history-container">
+            <div class="info-item">
+              <h3>Order History</h3>
+              <div id="orderHistory"></div>
+            </div>
+          </div>
+        `;
 
-            // Update cart items in the dropdown
-            if (cart.length === 0) {
-                navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
-                navCartSubtotal.textContent = 'RM0.00';
-            } else {
-                navCartItems.innerHTML = '';
-                cart.forEach((item) => {
-                    const itemHtml = `
-                        <div class="nav-cart-item clearfix">
-                            <div class="nav-cart-img">
-                                <a href="shop-single.html?id=${item.id}">
-                                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
-                                </a>
-                            </div>
-                            <div class="nav-cart-title">
-                                <a href="shop-single.html?id=${item.id}">
-                                    ${item.name}
-                                </a>
-                                <div class="nav-cart-price">
-                                    <span>${item.quantity || 1} x</span>
-                                    <span>RM${item.price.toFixed(2)}</span>
-                                </div>
-                            </div>
-                            <div class="nav-cart-remove">
-                                <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
-                                    <i class="ui-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                    navCartItems.insertAdjacentHTML('beforeend', itemHtml);
-                });
+        const orderHistoryDiv = document.getElementById("orderHistory");
+        const db = firebase.firestore();
 
-                // Update subtotal in the dropdown
-                const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
-                navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
-
-                
+        // Fetch orders from users/{uid}/checkout_sessions
+        db.collection(`users/${user.uid}/checkout_sessions`)
+          .where("status", "==", "completed")
+          .get()
+          .then((snapshot) => {
+            if (snapshot.empty) {
+              orderHistoryDiv.innerHTML = '<p class="no-orders">No orders yet.</p>';
+              return;
             }
-        }
 
-        navCartItems.addEventListener('click', (e) => {
+            snapshot.forEach((doc) => {
+              const order = doc.data();
+              const createdAt = order.createdAt ? new Date(order.createdAt.seconds * 1000).toLocaleString() : "N/A";
+              const updatedAt = order.updatedAt ? new Date(order.updatedAt.seconds * 1000).toLocaleString() : "N/A";
+              const lineItems = order.lineItems || [];
+              const itemsHtml = lineItems.map(item => `
+                <li>${item.price_data.product_data.name} - Quantity: ${item.quantity} - RM${(item.price_data.unit_amount / 100).toFixed(2)}</li>
+              `).join('');
+
+              const orderHtml = `
+                <div class="order-item">
+                  <h4>Order ID: ${doc.id}</h4>
+                  <p><strong>Date:</strong> ${createdAt}</p>
+                  <p><strong>Updated:</strong> ${updatedAt}</p>
+                  <p><strong>Total Amount:</strong> RM${order.amount_total.toFixed(2)}</p>
+                  <p><strong>Payment Status:</strong> ${order.payment_status || 'N/A'}</p>
+                  <p><strong>Items:</strong></p>
+                  <ul>${itemsHtml || '<li>No items</li>'}</ul>
+                </div>
+              `;
+              orderHistoryDiv.insertAdjacentHTML('beforeend', orderHtml);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching orders:", error);
+            orderHistoryDiv.innerHTML = '<p class="no-orders">Error loading orders. Please try again later.</p>';
+          });
+
+        // Logout Button
+        document.getElementById("logoutBtn").addEventListener("click", () => {
+          firebase.auth().signOut()
+            .then(() => {
+              window.location.href = "/guest-cust/signin.html"; // Redirect to login page
+            })
+            .catch((error) => alert("Error logging out: " + error.message));
+        });
+      } else {
+        // User is not logged in, redirect to login page
+        window.location.href = "guest-cust/signin.html";
+      }
+    });
+
+    // Cart display logic (unchanged)
+    document.addEventListener("DOMContentLoaded", () => {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const cartBadge = document.getElementById('cartBadge');
+      const navCartItems = document.getElementById('navCartItems');
+      const navCartSubtotal = document.getElementById('navCartSubtotal');
+      const cartIcon = document.getElementById('cartIcon');
+
+      function updateCartDisplay() {
+        cartBadge.textContent = cart.reduce((total, item) => total + (item.quantity || 1), 0) || 0;
+
+        if (cart.length === 0) {
+          navCartItems.innerHTML = '<p class="nav-cart-item">Your cart is empty.</p>';
+          navCartSubtotal.textContent = 'RM0.00';
+        } else {
+          navCartItems.innerHTML = '';
+          cart.forEach((item) => {
+            const itemHtml = `
+              <div class="nav-cart-item clearfix">
+                <div class="nav-cart-img">
+                  <a href="shop-single.html?id=${item.id}">
+                    <img src="${item.imageUrl || 'img/shop/shop_item_1.jpg'}" alt="${item.name}">
+                  </a>
+                </div>
+                <div class="nav-cart-title">
+                  <a href="shop-single.html?id=${item.id}">
+                    ${item.name}
+                  </a>
+                  <div class="nav-cart-price">
+                    <span>${item.quantity || 1} x</span>
+                    <span>RM${item.price.toFixed(2)}</span>
+                  </div>
+                </div>
+                <div class="nav-cart-remove">
+                  <a href="#" class="remove" data-id="${item.id}" title="Remove this item">
+                    <i class="ui-close"></i>
+                  </a>
+                </div>
+              </div>
+            `;
+            navCartItems.insertAdjacentHTML('beforeend', itemHtml);
+          });
+
+          const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+          navCartSubtotal.textContent = `RM${subtotal.toFixed(2)}`;
+        }
+      }
+
+      navCartItems.addEventListener('click', (e) => {
         const removeLink = e.target.closest('.remove');
         if (removeLink) {
           e.preventDefault();
@@ -474,30 +509,26 @@
           updateCartDisplay();
         }
       });
-      
-        // Initial cart display
+
+      updateCartDisplay();
+
+      window.addEventListener('storage', () => {
+        cart = JSON.parse(localStorage.getItem('cart')) || [];
         updateCartDisplay();
+      });
 
-        // Listen for cart updates from localStorage changes (across pages)
-        window.addEventListener('storage', () => {
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
-            updateCartDisplay();
-        });
+      cartIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
+        cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
+      });
 
-        // Add click event to cart icon to toggle cart dropdown visibility
-        cartIcon.addEventListener('click', (e) => {
-            e.preventDefault();
-            const cartContainer = cartIcon.closest('.nav-cart').querySelector('.nav-cart-container');
-            cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Close cart dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            const cartContainer = document.querySelector('.nav-cart-container');
-            if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
-                cartContainer.style.display = 'none';
-            }
-        });
+      document.addEventListener('click', (e) => {
+        const cartContainer = document.querySelector('.nav-cart-container');
+        if (!cartIcon.contains(e.target) && !cartContainer.contains(e.target)) {
+          cartContainer.style.display = 'none';
+        }
+      });
     });
   </script>
 
