@@ -1285,7 +1285,7 @@
                 const productId = doc.id;
 
                 // Ensure all required fields exist or provide defaults
-                const name = product.name || "Untitled"; // Use 'name' as the primary field for the product title
+                const name = product.title || "Untitled"; // Use 'name' as the primary field for the product title
                 const category = product.category || "Uncategorized";
                 const status = product.status || "available";
                 const price = product.price || 0;

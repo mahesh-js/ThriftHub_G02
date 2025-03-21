@@ -1937,7 +1937,7 @@ input.main-search-input:-ms-input-placeholder {
 }
 
 .language-dropdown {
-    right: 0;
+    margin-right: -50%;
 }
 
 .currency-dropdown ul li,

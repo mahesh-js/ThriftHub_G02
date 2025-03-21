@@ -11,7 +11,8 @@
 
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,400i,600,700' rel='stylesheet'>
-
+  <!-- Jawi Font (Optional: Add a Jawi-specific font for rendering) -->
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
   <!-- Css -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/magnific-popup.css" />
@@ -26,7 +27,12 @@
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
 </head>
-
+<style>
+  .jawi-text {
+      font-family: 'Scheherazade', Arial, sans-serif;
+      direction: rtl; /* Right-to-left for Jawi script */
+    }
+</style>
 <body class="relative">
 
   <!-- Preloader -->
@@ -70,11 +76,17 @@
                   </div>
                 </li>
                 <li class="language">
-                  Language: <a href="#">ENG<i class="fa fa-angle-down"></i></a>
+                  Language: <a href="#" id="currentLanguage">ENG<i class="fa fa-angle-down"></i></a>
                   <div class="language-dropdown">
                     <ul>
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Malay</a></li>
+                      <li><a href="#" class="language-option" data-lang="en">English</a></li>
+                      <li><a href="#" class="language-option" data-lang="ms">Malay</a></li>
+                      <li><a href="#" class="language-option" data-lang="zh">Chinese (Simplified)</a></li>
+                      <li><a href="#" class="language-option" data-lang="zh-TW">Chinese (Traditional)</a></li>
+                      <li><a href="#" class="language-option" data-lang="ko">Korean</a></li>
+                      <li><a href="#" class="language-option" data-lang="ja">Japanese</a></li>
+                      <li><a href="#" class="language-option" data-lang="ms-Arab">Malay (Jawi)</a></li>
+                      <li><a href="#" class="language-option" data-lang="ta">Tamil</a></li>
                     </ul>
                   </div>
                 </li>
@@ -551,7 +563,100 @@
         });
     });
   </script>
+<script>
+  // Programmatic Google Cloud Translate API
+async function translateText(text, targetLang) {
+  const apiKey = "AIzaSyARV7pg1hw8TQhNYV1f-FbrAE6Hih2FxmQ"; // Replace with your Google Cloud API key
+  const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&q=${encodeURIComponent(text)}&target=${targetLang}&source=en`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.data.translations[0].translatedText;
+  } catch (error) {
+    console.error("Translation error:", error);
+    return text;
+  }
+}
 
+async function updateTranslations(lang) {
+  // Select all text-containing elements, excluding scripts, styles, and specific non-text elements
+  const elements = document.querySelectorAll("body *:not(script):not(style):not(img):not(video):not(source):not(link):not(meta)");
+  for (const element of elements) {
+    // Reset translated state for all elements before translating
+    element.removeAttribute('data-translated');
+
+    if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
+      const text = element.textContent.trim();
+      if (text) {
+        let translated = await translateText(text, lang);
+        // Special handling for Jawi (ms-Arab): Convert standard Malay to Jawi script if possible
+        if (lang === 'ms-Arab') {
+          translated = convertToJawi(translated); // Custom function for Jawi conversion
+        }
+        element.textContent = translated;
+        element.setAttribute('data-translated', 'true'); // Mark as translated
+        if (lang === 'ms-Arab') {
+          element.classList.add('jawi-text'); // Apply Jawi font class
+        } else {
+          element.classList.remove('jawi-text'); // Remove Jawi font class for other languages
+        }
+      }
+    } else {
+      // Handle elements with mixed content (e.g., text and children)
+      for (const child of element.childNodes) {
+        if (child.nodeType === Node.TEXT_NODE && child.textContent.trim()) {
+          const text = child.textContent.trim();
+          if (!child.parentElement.hasAttribute('data-translated')) {
+            let translated = await translateText(text, lang);
+            if (lang === 'ms-Arab') {
+              translated = convertToJawi(translated); // Custom function for Jawi conversion
+            }
+            child.textContent = translated;
+            child.parentElement.setAttribute('data-translated', 'true'); // Mark parent as translated
+            if (lang === 'ms-Arab') {
+              child.parentElement.classList.add('jawi-text'); // Apply Jawi font class
+            } else {
+              child.parentElement.classList.remove('jawi-text'); // Remove Jawi font class for other languages
+            }
+          }
+        }
+      }
+    }
+  }
+  document.getElementById("currentLanguage").textContent = lang === "en" ? "ENG" : 
+                                                        lang === "ms" ? "MS" : 
+                                                        lang === "zh" ? "ZH" : 
+                                                        lang === "zh-TW" ? "ZH-TW" : 
+                                                        lang === "ko" ? "KO" : 
+                                                        lang === "ja" ? "JA" : 
+                                                        lang === "ms-Arab" ? "MS-JAWI" : 
+                                                        "TA";
+}
+
+// Custom function to convert standard Malay to Jawi script (simplified example)
+function convertToJawi(text) {
+  // This is a basic example; you may need a more comprehensive mapping or a third-party library
+  const jawiMapping = {
+    'a': 'ا', 'b': 'ب', 'c': 'ج', 'd': 'د', 'e': 'ە', 'f': 'ف', 'g': 'گ', 'h': 'ه', 'i': 'ي', 'j': 'ج',
+    'k': 'ك', 'l': 'ل', 'm': 'م', 'n': 'ن', 'o': 'و', 'p': 'پ', 'q': 'ق', 'r': 'ر', 's': 'س', 't': 'ت',
+    'u': 'و', 'v': 'ڤ', 'w': 'و', 'x': 'کس', 'y': 'ي', 'z': 'ز'
+    // Add more mappings for vowels, diacritics, and special characters as needed
+  };
+  let jawiText = '';
+  for (let char of text.toLowerCase()) {
+    jawiText += jawiMapping[char] || char; // Use mapping if available, otherwise keep original char
+  }
+  return jawiText;
+}
+
+document.querySelectorAll(".language-option").forEach(option => {
+  option.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const lang = option.getAttribute("data-lang");
+    await updateTranslations(lang);
+  });
+});
+</script>
 </body>
 
 </html>

@@ -1924,6 +1924,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .currency-dropdown,
 .language-dropdown {
+    white-space: nowrap;
     background-color: #fff;
     padding: 0 10px;
     position: absolute;
@@ -1936,7 +1937,7 @@ input.main-search-input:-ms-input-placeholder {
 }
 
 .language-dropdown {
-    right: 0;
+    margin-right: -50%;
 }
 
 .currency-dropdown ul li,
