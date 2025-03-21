@@ -323,6 +323,17 @@
                 setShowPassword(!showPassword);
             };
 
+            const handleForgotPassword = async () => {
+                const email = prompt("Enter your email address to reset your password:");
+                if (!email) return;
+                try {
+                    await firebase.auth().sendPasswordResetEmail(email);
+                    alert("A password reset link has been sent to your email.");
+                } catch (error) {
+                    alert("Error sending password reset email: " + error.message);
+                }
+            };
+
             return (
                 <div className="container2">
                     <h2>Admin Sign In</h2>
@@ -347,7 +358,7 @@
                                 👁️
                             </span>
                         </div>
-                        <p><a href="forgot-password.html">Forgot Password?</a></p>
+                        <p><a href="#" onClick={handleForgotPassword}>Forgot Password?</a></p>
                         <button type="submit">Sign In</button>
                     </form>
                 </div>
