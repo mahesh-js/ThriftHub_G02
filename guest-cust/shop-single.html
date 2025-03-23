@@ -234,7 +234,7 @@
                   </div>
                 </div>
                 <a href="signin.html" class="btn btn-dark btn-lg add-to-cart"><span>Add to Cart</span></a>
-                <a href="#" class="product-add-to-wishlist"><i class="fa fa-heart"></i></a>                          
+                                         
               </div>
               <div class="product_meta">
                 <span class="sku">SKU: <a href="#" id="productSKU"></a></span>
@@ -565,13 +565,7 @@
                     <img src="${product.imageUrl || 'img/shop/item_lg_1.jpg'}" alt="${product.title || 'Product'}" class="back-img">
                   </a>
                   ${product.price < (product.price * 1.3) ? '<div class="product-label"><span class="sale">sale</span></div>' : ''}
-                  <div class="hover-2">
-                    <div class="product-actions">
-                      <a href="#" class="product-add-to-wishlist">
-                        <i class="fa fa-heart"></i>
-                      </a>
-                    </div>
-                  </div>
+                 
                   <a href="shop-single.html?id=${productId}" class="product-quickview">Quick View</a>
                 </div>
                 <div class="product-details">

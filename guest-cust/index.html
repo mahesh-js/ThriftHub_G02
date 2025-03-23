@@ -723,15 +723,8 @@
         }
       });
 
-      // Ensure authenticated access
-      onAuthStateChanged(auth, (user) => {
-        if (!user) {
-          console.warn("User not authenticated. Video access may be restricted.");
-          window.location.href = "/login.html"; // Adjust path as needed
-        } else {
-          loadVideo(); // Load video only if authenticated
-        }
-      });
+      
+      
     });
 
 // Programmatic Google Cloud Translate API

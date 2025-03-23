@@ -241,13 +241,7 @@
                                             Customers
                                         </a>
                                     </li>
-                                    <li class="nav-item relative block">
-                                        <a href="staff-customers-details.html"
-                                           class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                            <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                            Customers Details
-                                        </a>
-                                    </li>
+                                   
                                     <li class="nav-item relative block">
                                         <a href="staff-orders.html"
                                            class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
@@ -255,20 +249,7 @@
                                             Orders
                                         </a>
                                     </li>
-                                    <li class="nav-item relative block">
-                                        <a href="staff-order-details.html"
-                                           class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                            <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                            Order Details
-                                        </a>
-                                    </li>
-                                    <li class="nav-item relative block">
-                                        <a href="apps-invoice.html"
-                                           class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                                            <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                            Invoice
-                                        </a>
-                                    </li>
+                                    
                                 </ul>                            
                             </div>
                         </div>
@@ -559,11 +540,11 @@
             class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 justify-between"
           >
             <div
-              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4"
             >
               <div class="w-full relative p-4 form-container">
                 <label for="" class="form-label">Upload Image</label>
-                <div class="w-full h-56 mx-auto mb-4 filepond-container">
+                <div class="w-full h-50 mx-auto mb-4 filepond-container">
                   <input
                     type="file"
                     class="filepond h-56"
@@ -584,7 +565,7 @@
             </div>
             <!--end col-->
             <div
-              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6"
+              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8"
             >
               <form
                 id="productForm"
@@ -605,10 +586,16 @@
                     <label for="category" class="form-label">Category</label>
                     <select id="category" class="form-input" required>
                       <option value="">Select Category</option>
-                      <option value="Electronics">Electronics</option>
-                      <option value="Furniture">Furniture</option>
-                      <option value="Footwear">Footwear</option>
-                      <option value="Clothes">Clothes</option>
+                      <option value="m-tops.html">Men's Tops & Bottoms</option>
+                      <option value="m-foot.html">Men's Footwear</option>
+                      <option value="m-acc.html">Men's Accessories</option>
+                      <option value="m-bag.html">Men's Bags & Wallets</option>
+                      <option value="w-tops.html">Women's Tops & Bottoms</option>
+                      <option value="w-foot.html">Women's Footwear</option>
+                      <option value="w-acc.html">Women's Accessories</option>
+                      <option value="w-bag.html">Women's Bags & Wallets</option>
+                      <option value="kids.html">Kids Fashion</option>
+                      <option value="kids-foot.html">Kids Footwear</option>
                     </select>
                   </div>
                   <div class="mb-4">
@@ -626,18 +613,6 @@
                   <div class="mb-4">
                     <div class="grid grid-cols-2 gap-3">
                       <div class="col-span-1">
-                        <label for="Product-date" class="form-label"
-                          >Product Date</label
-                        >
-                        <input
-                          type="text"
-                          id="Product-date"
-                          class="form-input"
-                          name="foo"
-                          required
-                        />
-                      </div>
-                      <div class="col-span-1">
                         <label for="price" class="form-label">Price</label>
                         <input
                           type="number"
@@ -650,38 +625,26 @@
                     </div>
                   </div>
                   <div class="mb-4">
-                    <label for="gender" class="form-label"
-                      >For this product</label
-                    >
-                    <select id="gender" class="form-input" required>
-                      <option value="">-- Gender --</option>
-                      <option value="Men">Men</option>
-                      <option value="Women">Women</option>
-                      <option value="Kids">Kids</option>
-                    </select>
-                  </div>
-                  <div class="mb-4">
                     <label for="sizing" class="form-label">Size</label>
-                    <select id="sizing" class="form-input" required>
-                      <option value="">Size</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                      <option value="XXL">XXL</option>
-                    </select>
+                    <input
+                    type="text"
+                    id="sizing"
+                    class="form-input"
+                    placeholder="Size"
+                    required
+                  />
+            </div>
                   </div>
-
+        
                   <!-- Message Div for Success/Error Messages -->
                   <div id="message"></div>
-
+        
                   <div class="flex gap-2">
                     <button type="submit" class="form-button">
                       Add Product
                     </button>
-                    <button type="button" class="form-button-secondary">
-                      Save Product
-                    </button>
+                    <a href="staff-products.html" class="text-gray-500 ml-4" style="margin-left: 1%;margin-top: 1%;">Back to Products</a>
+        
                   </div>
                 </div>
                 <!--end card-body-->
@@ -689,79 +652,7 @@
               <!--end card-->
             </div>
             <!--end col-->
-            <div
-              class="col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
-            >
-              <div class="w-full relative mb-4 form-container">
-                <div class="flex-auto p-0 md:p-4">
-                  <div>
-                    <p class="text-slate-700 text-base dark:text-slate-400">
-                      Product Image
-                    </p>
-                    <img
-                      src="assets/images/products/pro-3.png"
-                      alt=""
-                      class="preview-image"
-                    />
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-700 text-base dark:text-slate-400">
-                      Product Title
-                    </p>
-                    <h4
-                      class="preview-title text-xl font-semibold text-slate-700 dark:text-slate-300"
-                    >
-                      Mannat HD, Smart LED Fire TV
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      Description
-                    </p>
-                    <h4
-                      class="preview-text text-base font-medium text-slate-900 dark:text-slate-300"
-                    >
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      Pro. Date
-                    </p>
-                    <h4
-                      class="preview-text text-base font-semibold text-slate-900 dark:text-slate-300"
-                    >
-                      02/05/2023
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      For this product
-                    </p>
-                    <h4
-                      class="preview-text text-base font-semibold text-slate-900 dark:text-slate-300"
-                    >
-                      Other
-                    </h4>
-                  </div>
-                  <div class="mb-5">
-                    <p class="text-slate-600 text-base dark:text-slate-400">
-                      Size
-                    </p>
-                    <h4
-                      class="preview-text text-base font-semibold text-slate-900 dark:text-slate-300"
-                    >
-                      SM, MD, LG, XL
-                    </h4>
-                  </div>
-                </div>
-                <!--end card-body-->
-              </div>
-              <!--end card-->
-            </div>
-            <!--end col-->
+            
           </div>
           <!--end grid-->
           <!-- footer -->
@@ -790,47 +681,47 @@
           </div>
         </div>
         <!--end container-->
-      </div>
-      <!--end page-wrapper-->
-    </div>
-    <!--end /div-->
-
-    <!-- Firebase and Form Handling Scripts -->
-    <script type="module">
-      // Import Firebase SDK
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-      import {
+        </div>
+        <!--end page-wrapper-->
+        </div>
+        <!--end /div-->
+        
+        <!-- Firebase and Form Handling Scripts -->
+        <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import {
         getFirestore,
         collection,
         addDoc,
         serverTimestamp,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-      import {
+        } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import {
         getStorage,
         ref,
         uploadBytes,
         getDownloadURL,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js";
-
-      // Firebase Configuration
-      const firebaseConfig = {
+        } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js";
+        
+        // Firebase Configuration
+        const firebaseConfig = {
         apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
         authDomain: "thrifthub-demo.firebaseapp.com",
         projectId: "thrifthub-demo",
         storageBucket: "thrifthub-demo.firebasestorage.app",
         messagingSenderId: "518014691134",
         appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
-      const storage = getStorage(app);
-
-      // Initialize FilePond
-      FilePond.registerPlugin(FilePondPluginImagePreview);
-      const inputElements = document.querySelectorAll('input[type="file"]');
-      inputElements.forEach((element) => {
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+        
+        // Initialize FilePond
+        FilePond.registerPlugin(FilePondPluginImagePreview);
+        const inputElements = document.querySelectorAll('input[type="file"]');
+        inputElements.forEach((element) => {
         FilePond.create(element, {
           storeAsFile: true,
           allowMultiple: false, // Ensure only one file is selected for the main image
@@ -838,46 +729,42 @@
           onaddfile: (fileItem) =>
             console.log("File added to FilePond:", fileItem.file),
         });
-      });
-
-      // Form Submission Logic
-      document.addEventListener("DOMContentLoaded", function () {
+        });
+        
+        // Form Submission Logic
+        document.addEventListener("DOMContentLoaded", function () {
         const productForm = document.getElementById("productForm");
         const messageDiv = document.getElementById("message");
-
+        
         productForm.addEventListener("submit", async (e) => {
           e.preventDefault();
-
+        
           try {
             // Get form values
             const title = document.getElementById("title").value;
             const price = parseFloat(document.getElementById("price").value);
             const category = document.getElementById("category").value;
             const description = document.getElementById("description").value;
-            const productDate = document.getElementById("Product-date").value;
-            const gender = document.getElementById("gender").value;
             const size = document.getElementById("sizing").value;
-
+        
             // Get the main image file from FilePond
             const mainImagePond = FilePond.find(inputElements[0]);
             const mainImageFiles = mainImagePond?.getFiles() || [];
             const mainImageFile = mainImageFiles[0]?.file;
-
+        
             console.log("Form Data:", {
               title,
               price,
               category,
               description,
-              productDate,
-              gender,
               size,
               mainImageFile, // Log the file to check if it's being captured
             });
-
+        
             // Show loading message
             messageDiv.textContent = "Uploading product...";
             messageDiv.className = "";
-
+        
             let imageUrl = "";
             if (mainImageFile) {
               console.log("Uploading file:", mainImageFile.name, mainImageFile);
@@ -897,27 +784,23 @@
             } else {
               console.log("No image file selected");
             }
-
+        
             // Add product to Firestore
             console.log("Adding to Firestore with data:", {
               title,
               price,
               category,
               description,
-              productDate,
-              gender,
               size,
               imageUrl,
             });
-
+        
             try {
               await addDoc(collection(db, "products"), {
                 title: title,
                 price: price,
                 category: category,
                 description: description,
-                productDate: productDate,
-                gender: gender,
                 size: size,
                 imageUrl: imageUrl,
                 createdAt: serverTimestamp(),
@@ -930,13 +813,13 @@
                 `Firestore write failed: ${firestoreError.message}`
               );
             }
-
+        
             // Success message and reset form
             messageDiv.textContent = "Product added successfully!";
             messageDiv.className = "success";
             productForm.reset();
             if (mainImagePond) mainImagePond.removeFiles();
-
+        
             // Clear message after 3 seconds
             setTimeout(() => {
               messageDiv.textContent = "";
@@ -948,18 +831,19 @@
             messageDiv.className = "error";
           }
         });
-      });
-    </script>
-
-    <!-- Other JavaScript libraries remain unchanged -->
-    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
-    <script src="assets/libs/filepond/filepond.min.js"></script>
-    <script src="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
-    <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-    <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="assets/js/app.js"></script>
-  </body>
-</html>
+        });
+        </script>
+        
+        <!-- Other JavaScript libraries remain unchanged -->
+        <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+        <script src="assets/libs/filepond/filepond.min.js"></script>
+        <script src="assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
+        <script src="assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+        <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+        
+        <script src="assets/js/app.js"></script>
+        </body>
+        </html>
