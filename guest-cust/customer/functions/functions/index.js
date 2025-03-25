@@ -30,7 +30,7 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://127.0.0.1:5500/guest-cust/customer/success.html", // Replace with your success URL
+      success_url: "https://thrifthub-demo.web.app/guest-cust/customer/success.html", // Replace with your success URL
       cancel_url: "http://127.0.0.1:5500/guest-cust/customer/cancel.html", // Replace with your cancel URL
       metadata: { userId },
     });
