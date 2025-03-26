@@ -192,15 +192,9 @@
                         Orders
                       </a>
                     </li>
-                   
                     <li class="nav-item relative block">
-                      <a
-                        href="admin-staff.html"
-                        class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"
-                      >
-                        <i
-                          class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"
-                        ></i>
+                      <a href="admin-staff.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                        <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                         Staff
                       </a>
                     </li>
@@ -233,38 +227,7 @@
         <div
           class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2"
         >
-          <div
-            class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative"
-          >
-            <button
-              type="button"
-              class="dropdown-toggle flex rounded-full md:me-0"
-              aria-expanded="false"
-              data-fc-autoclose="both"
-              data-fc-type="dropdown"
-            >
-              <span data-lucide="search" class="top-icon w-5 h-5"></span>
-            </button>
-
-            <div
-              class="left-auto right-0 z-50 my-1 hidden min-w-[300px] list-none divide-y divide-gray-100 rounded-md border-slate-700 md:border-white text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800"
-              onclick="event.stopPropagation()"
-            >
-              <div class="relative">
-                <div
-                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
-                >
-                  <i class="ti ti-search text-gray-400 z-10"></i>
-                </div>
-                <input
-                  type="text"
-                  id="email-adress-icon"
-                  class="block w-full rounded-lg border border-slate-200 dark:border-slate-700/60 bg-slate-200/10 p-1.5 pl-10 text-slate-600 dark:text-slate-400 outline-none focus:border-slate-300 focus:ring-slate-300 dark:bg-slate-800/20 sm:text-sm"
-                  placeholder="Search..."
-                />
-              </div>
-            </div>
-          </div>
+          
           <div
             class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4"
           >
@@ -279,147 +242,64 @@
               ></span>
             </button>
           </div>
-          <div
-            class="ltr:me-2 ltr:lg:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative"
-          >
+          
+          <div class="me-2 dropdown relative">
             <button
               type="button"
-              class="dropdown-toggle flex rounded-full md:me-0"
-              id="Notifications"
+              class="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0"
+              id="user-profile"
               aria-expanded="false"
               data-fc-autoclose="both"
               data-fc-type="dropdown"
             >
-              <span data-lucide="bell" class="top-icon w-5 h-5"></span>
-            </button>
-            <div
-              class="left-auto right-0 z-50 my-1 hidden w-64 list-none divide-y h-52 divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800"
-              id="navNotifications"
-              data-simplebar
-            >
-              <ul class="py-1" aria-labelledby="navNotifications">
-                <li class="py-2 px-4">
-                  <a href="javascript:void(0);" class="dropdown-item">
-                    <div class="flex">
-                      <div
-                        class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3"
-                      >
-                        <span
-                          data-lucide="shopping-cart"
-                          class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"
-                        ></span>
-                      </div>
-                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                        <p
-                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                        >
-                          Karen Robinson
-                        </p>
-                        <p
-                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
-                        >
-                          Hey ! i'm available here
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="py-2 px-4">
-                  <a href="javascript:void(0);" class="dropdown-item">
-                    <div class="flex">
-                      <img
-                        class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
-                        src="assets/images/users/avatar-3.png"
-                        alt="logo"
-                      />
-                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                        <p
-                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                        >
-                          Your order is placed
-                        </p>
-                        <p
-                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
-                        >
-                          Dummy text of the printing and industry.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="py-2 px-4">
-                  <a href="javascript:void(0);" class="dropdown-item">
-                    <div class="flex">
-                      <div
-                        class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3"
-                      >
-                        <span
-                          data-lucide="user"
-                          class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"
-                        ></span>
-                      </div>
-                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                        <p
-                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                        >
-                          Robert McCray
-                        </p>
-                        <p
-                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
-                        >
-                          Good Morning!
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="py-2 px-4">
-                  <a href="javascript:void(0);" class="dropdown-item">
-                    <div class="flex">
-                      <img
-                        class="object-cover rounded-full h-8 w-8 shrink-0 me-3"
-                        src="assets/images/users/avatar-9.png"
-                        alt="logo"
-                      />
-                      <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                        <p
-                          class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                        >
-                          Meeting with designers
-                        </p>
-                        <p
-                          class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400"
-                        >
-                          It is a long established fact that a reader.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="me-2 dropdown relative">
-            <button type="button" class="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0" id="user-profile" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
-              <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo"/>
-              <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
-                <span class="block font-medium text-slate-600 dark:text-gray-300" id="userName">...</span>
-                <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span>
+              <img
+                class="h-8 w-8 rounded-full"
+                src="assets/images/users/avatar-1.png"
+                alt="user photo"
+              />
+              <span
+                class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block"
+              >
+                <span
+                  class="block font-medium text-slate-600 dark:text-gray-300"
+                  >...</span
+                >
+                <span
+                  class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400"
+                  >Admin</span
+                >
               </span>
             </button>
-    
-            <div class="left-auto right-0 z-50 my-1 hidden list-none divide-y divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40" id="navUserdata">
+
+            <div
+              class="left-auto right-0 z-50 my-1 hidden list-none divide-y divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40"
+              id="navUserdata"
+            >
               <ul class="py-1" aria-labelledby="navUserdata">
                 <li>
-                  <a href="pages-profile.html" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white">
-                    <span data-lucide="user" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
-                    Profile</a>
+                  <a
+                    href="pages-profile.html"
+                    class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"
+                  >
+                    <span
+                      data-lucide="user"
+                      class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"
+                    ></span>
+                    Profile</a
+                  >
                 </li>
                
                 <li>
-                  <a href="/guest-cust/signin.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500">
-                    <span data-lucide="power" class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>
-                    Sign out</a>
+                  <a
+                    href="/guest-cust/signin.html"
+                    class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500"
+                  >
+                    <span
+                      data-lucide="power"
+                      class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"
+                    ></span>
+                    Sign out</a
+                  >
                 </li>
               </ul>
             </div>
@@ -953,350 +833,250 @@
       type="module"
       src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js"
     ></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js"></script>
     <script type="module" src="./script.js"></script>
     <!-- Ensure script.js is in the correct path -->
 
     <!-- Firebase SDK and Main Logic -->
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import {
-  getAuth,
-  signInAnonymously,
-  onAuthStateChanged,
-  signOut,
-} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  doc,
-  deleteDoc,
-  getDoc,
-  onSnapshot,
-  query,
-  where,
-} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
-import {
-  getStorage,
-  ref,
-  deleteObject,
-  getDownloadURL,
-  uploadBytes,
-} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
-import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  import { getFirestore, collection, getDocs, doc, deleteDoc, getDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+  import { getStorage, ref, deleteObject } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
 
-// Firebase Configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
-  authDomain: "thrifthub-demo.firebaseapp.com",
-  projectId: "thrifthub-demo",
-  storageBucket: "thrifthub-demo.firebasestorage.app",
-  messagingSenderId: "518014691134",
-  appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
-};
+  // Firebase Configuration
+  const firebaseConfig = {
+      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+      authDomain: "thrifthub-demo.firebaseapp.com",
+      projectId: "thrifthub-demo",
+      storageBucket: "thrifthub-demo.firebasestorage.app",
+      messagingSenderId: "518014691134",
+      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+  };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const storage = getStorage(app);
-const analytics = getAnalytics(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
 
-// Log page view
-logEvent(analytics, 'page_view', {
-  page_title: 'Products Dashboard',
-  page_location: window.location.href,
-  page_path: '/admin-products.html'
-});
+  // Expose db and storage to global scope for editProduct and deleteProduct
+  window.db = db;
+  window.storage = storage;
 
-// Handle authentication state changes
-onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    const userDocRef = doc(db, "users", user.uid);
-    const userDoc = await getDoc(userDocRef);
-    
-    if (userDoc.exists()) {
-      const userData = userDoc.data();
-      const fullName = `${userData.firstName || ''} ${userData.lastName || ''}`.trim() || user.email;
-      document.getElementById('userName').textContent = fullName;
-      
-      // Log user login event
-      logEvent(analytics, 'login', {
-        method: 'email',
-        user_id: user.uid
-      });
-    }
-    // Load products only after user is authenticated
-    await updateTabCounts();
-    loadProducts({}, "published"); // Default to "published" tab
-  } else {
-    window.location.href = '/guest-cust/signin.html';
-  }
-});
-
-// Handle sign out
-document.querySelector('#navUserdata a[href="/guest-cust/signin.html"]').addEventListener('click', async (e) => {
-  e.preventDefault();
-  try {
-    await signOut(auth);
-    logEvent(analytics, 'logout', {
-      user_id: auth.currentUser?.uid
-    });
-    window.location.href = '/guest-cust/signin.html';
-  } catch (error) {
-    console.error('Error signing out:', error);
-  }
-});
-
-      // Expose db and storage to global scope for editProduct and deleteProduct
-      window.db = db;
-      window.storage = storage;
-
-      // Function to count products for each tab
-      async function updateTabCounts() {
-        try {
-          const publishedQuery = query(
-            collection(db, "products"),
-            where("status", "==", "available")
-          );
-          const publishedSnapshot = await getDocs(publishedQuery);
-          document.getElementById(
-            "publishedCount"
-          ).textContent = `(${publishedSnapshot.size})`;
-
-          const draftsQuery = query(
-            collection(db, "products"),
-            where("status", "==", "draft")
-          );
-          const draftsSnapshot = await getDocs(draftsQuery);
-          document.getElementById(
-            "draftsCount"
-          ).textContent = `(${draftsSnapshot.size})`;
-
-          const discountQuery = query(
-            collection(db, "products"),
-            where("price", "<", 100)
-          ); // Example discount logic
-          const discountSnapshot = await getDocs(discountQuery);
-          document.getElementById(
-            "discountCount"
-          ).textContent = `(${discountSnapshot.size})`;
-        } catch (error) {
-          console.error("Error updating tab counts:", error);
-        }
+  // Authentication state listener
+  onAuthStateChanged(auth, async (user) => {
+      if (user) {
+          const userDocRef = doc(db, "users", user.uid);
+          const userDoc = await getDoc(userDocRef);
+          
+          if (userDoc.exists()) {
+              const userData = userDoc.data();
+              const fullName = `${userData.firstName || ''} ${userData.lastName || ''}`.trim() || user.email;
+              document.querySelector('#user-profile span:first-child').textContent = fullName;
+          }
+          // Load products after authentication
+          await updateTabCounts();
+          document.getElementById("published").classList.remove("hidden");
+          loadProducts({}, "published");
+      } else {
+          window.location.href = '/guest-cust/signin.html';
       }
+  });
 
-      // Function to load products based on filter and tab
-      function loadProducts(filter = {}, tab = "published") {
-        const productsBody = document.getElementById(
-          `productsBody${tab.charAt(0).toUpperCase() + tab.slice(1)}`
-        );
-        if (!productsBody) {
+  // Handle sign out
+  document.querySelector('#navUserdata a[href="/guest-cust/signin.html"]').addEventListener('click', async (e) => {
+      e.preventDefault();
+      try {
+          await signOut(auth);
+          window.location.href = '/guest-cust/signin.html';
+      } catch (error) {
+          console.error('Error signing out:', error);
+      }
+  });
+
+  // Function to count products for each tab
+  async function updateTabCounts() {
+      try {
+          const publishedQuery = query(collection(db, "products"), where("status", "==", "available"));
+          const publishedSnapshot = await getDocs(publishedQuery);
+          document.getElementById("publishedCount").textContent = `(${publishedSnapshot.size})`;
+
+          const draftsQuery = query(collection(db, "products"), where("status", "==", "draft"));
+          const draftsSnapshot = await getDocs(draftsQuery);
+          document.getElementById("draftsCount").textContent = `(${draftsSnapshot.size})`;
+
+          const discountQuery = query(collection(db, "products"), where("price", "<", 100));
+          const discountSnapshot = await getDocs(discountQuery);
+          document.getElementById("discountCount").textContent = `(${discountSnapshot.size})`;
+      } catch (error) {
+          console.error("Error updating tab counts:", error);
+      }
+  }
+
+  // Function to load products based on filter and tab
+  function loadProducts(filter = {}, tab = "published") {
+      const productsBody = document.getElementById(`productsBody${tab.charAt(0).toUpperCase() + tab.slice(1)}`);
+      const pagination = document.querySelector(`#${tab} .flex.justify-between.mt-4 p`);
+      
+      if (!productsBody || !pagination) {
           console.error(`DOM element for tab ${tab} not found`);
           return;
-        }
-
-        let q = query(collection(db, "products"));
-
-        if (filter.category) {
-          q = query(q, where("category", "==", filter.category));
-        }
-        if (filter.search) {
-          q = query(
-            q,
-            where("name", ">=", filter.search),
-            where("name", "<=", filter.search + "\uf8ff")
-          );
-        }
-        if (tab === "published") {
-          q = query(q, where("status", "==", "available"));
-        } else if (tab === "drafts") {
-          q = query(q, where("status", "==", "draft"));
-        } else if (tab === "discount") {
-          q = query(q, where("price", "<", 100)); // Adjust discount logic as needed
-        }
-
-        const unsubscribe = onSnapshot(
-          q,
-          (snapshot) => {
-            productsBody.innerHTML = "";
-            if (snapshot.empty) {
-              productsBody.innerHTML =
-                '<tr><td colspan="8" class="error-message">No products found</td></tr>';
-            } else {
-              snapshot.forEach((doc) => {
-                const product = doc.data();
-                const productId = doc.id;
-
-                const name = product.title || "Untitled";
-                const category = product.category || "Uncategorized";
-                const status = product.status || "available";
-                const price = product.price || 0;
-                const size = product.size || "N/A";
-                const imageUrl =
-                  product.imageUrl || "assets/images/products/pro-3.png";
-                const createdAt = product.createdAt
-                ? product.createdAt.toDate
-                    ? product.createdAt.toDate()
-                    : new Date(product.createdAt)
-                  : new Date();
-
-                const stockStatus =
-                  status === "available"
-                    ? '<span class="stock-in-stock">In stock</span>'
-                    : '<span class="stock-soldout">Soldout</span>';
-
-                const row = `
-                  <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
-                    <td class="w-4 p-4">
-                      <label class="custom-label">
-                        <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4 inline-block text-center -mb-[3px]">
-                          <input type="checkbox" class="hidden">
-                          <i class="icofont-verification-check hidden text-ms dark:text-slate-200 leading-4"></i>
-                        </div>
-                      </label>
-                    </td>
-                    <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
-                      <div class="flex items-center">
-                        <img src="${imageUrl}" alt="${name}" class="me-2 h-8 inline-block">
-                        <div class="self-center">
-                          <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">${name}</h5>
-                          <span class="block font-medium text-slate-500">${size}</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                      <a href="#" class="category-link">${category}</a>
-                    </td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${stockStatus}</td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                      <div>Size: <span class="ms-2">${size}</span></div>
-                    </td>
-                    <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
-                      RM${price.toFixed(2)}
-                    </td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                      ${createdAt.toLocaleDateString("en-US", {
-                        day: "numeric",
-                        month: "short",
-                        year: "numeric",
-                      })}
-                    </td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 product-actions">
-                      <a href="#" onclick="editProduct('${productId}')"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
-                      <a href="#" onclick="deleteProduct('${productId}', '${imageUrl}')"><i class="icofont-trash text-lg text-red-500 dark:text-red-400"></i></a>
-                    </td>
-                  </tr>
-                `;
-                productsBody.insertAdjacentHTML("beforeend", row);
-              });
-            }
-          },
-          (error) => {
-            console.error(`Error fetching ${tab} products:`, error);
-            productsBody.innerHTML =
-              '<tr><td colspan="8" class="error-message">Error loading products</td></tr>';
-          }
-        );
-
-        return unsubscribe;
       }
 
-      // Initial load
-      document.addEventListener("DOMContentLoaded", async () => {
-        await updateTabCounts();
-        document.getElementById("published").classList.remove("hidden");
-        loadProducts({}, "published"); // Default to "published" tab
-      });
+      let q = query(collection(db, "products"));
 
-      // Handle tab switching
-      document.querySelectorAll("[data-fc-target]").forEach((tab) => {
-        tab.addEventListener("click", () => {
-          const target = tab.getAttribute("data-fc-target").replace("#", "");
-          document
-            .querySelectorAll("#myTabContent > div")
-            .forEach((panel) => panel.classList.add("hidden"));
-          document.getElementById(target).classList.remove("hidden");
-          document
-            .querySelectorAll(".border-b-2")
-            .forEach((btn) =>
-              btn.classList.remove("border-b-2", "active")
-            );
-          tab.classList.add("border-b-2", "active");
+      if (filter.category) {
+          q = query(q, where("category", "==", filter.category));
+      }
+      if (filter.search) {
+          q = query(q, where("title", ">=", filter.search), where("title", "<=", filter.search + "\uf8ff"));
+      }
+      if (tab === "published") {
+          q = query(q, where("status", "==", "available"));
+      } else if (tab === "drafts") {
+          q = query(q, where("status", "==", "draft"));
+      } else if (tab === "discount") {
+          q = query(q, where("price", "<", 100));
+      }
 
-          // Load products for the selected tab
-          loadProducts({}, target);
-        });
-      });
-
-      // Handle search and category filtering
-      document
-        .getElementById("productSearch")
-        .addEventListener("input", (e) => {
-          const searchTerm = e.target.value.trim();
-          const activeTab = document
-            .querySelector(".border-b-2.active")
-            .id.replace("-tab", "");
-          loadProducts({ search: searchTerm }, activeTab);
-        });
-
-      document.getElementById("Category").addEventListener("change", (e) => {
-        const category = e.target.value;
-        const activeTab = document
-          .querySelector(".border-b-2.active")
-          .id.replace("-tab", "");
-        loadProducts({ category: category }, activeTab);
-      });
-
-      // Edit Product Function (Global)
-      window.editProduct = async function (productId) {
-        try {
-          const productDoc = await getDoc(
-            doc(window.db, "products", productId)
-          );
-          if (productDoc.exists()) {
-            const product = productDoc.data();
-            sessionStorage.setItem(
-              "editingProduct",
-              JSON.stringify({ id: productId, ...product })
-            );
-            window.location.href = `admin-edit-product.html?id=${productId}`;
+      const unsubscribe = onSnapshot(q, (snapshot) => {
+          productsBody.innerHTML = "";
+          if (snapshot.empty) {
+              productsBody.innerHTML = '<tr><td colspan="8" class="error-message">No products found</td></tr>';
+              pagination.textContent = "Showing 0 of 0";
           } else {
-            alert("Product not found!");
+              snapshot.forEach((doc) => {
+                  const product = doc.data();
+                  const productId = doc.id;
+
+                  const name = product.title || "Untitled";
+                  const category = product.category || "Uncategorized";
+                  const status = product.status || "available";
+                  const price = product.price || 0;
+                  const size = product.size || "N/A";
+                  const imageUrl = product.imageUrl || "assets/images/products/pro-3.png";
+                  const createdAt = product.createdAt
+                      ? product.createdAt.toDate
+                          ? product.createdAt.toDate()
+                          : new Date(product.createdAt)
+                      : new Date();
+
+                  const stockStatus = status === "available"
+                      ? '<span class="stock-in-stock">In stock</span>'
+                      : '<span class="stock-soldout">Soldout</span>';
+
+                  const row = `
+                      <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                          <td class="w-4 p-4">
+                              <label class="custom-label">
+                                  <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4 inline-block text-center -mb-[3px]">
+                                      <input type="checkbox" class="hidden">
+                                      <i class="icofont-verification-check hidden text-ms dark:text-slate-200 leading-4"></i>
+                                  </div>
+                              </label>
+                          </td>
+                          <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                              <div class="flex items-center">
+                                  <img src="${imageUrl}" alt="${name}" class="me-2 h-8 inline-block">
+                                  <div class="self-center">
+                                      <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">${name}</h5>
+                                      <span class="block font-medium text-slate-500">${size}</span>
+                                  </div>
+                              </div>
+                          </td>
+                          <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                              <a href="#" class="category-link">${category}</a>
+                          </td>
+                          <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${stockStatus}</td>
+                          <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                              <div>Size: <span class="ms-2">${size}</span></div>
+                          </td>
+                          <td class="p-3 font-semibold text-lg text-gray-800 whitespace-nowrap dark:text-gray-400">
+                              RM${price.toFixed(2)}
+                          </td>
+                          <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                              ${createdAt.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+                          </td>
+                          <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 product-actions">
+                              <a href="#" onclick="editProduct('${productId}')"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                              <a href="#" onclick="deleteProduct('${productId}', '${imageUrl}')"><i class="icofont-trash text-lg text-red-500 dark:text-red-400"></i></a>
+                          </td>
+                      </tr>
+                  `;
+                  productsBody.insertAdjacentHTML("beforeend", row);
+              });
+              pagination.textContent = `Showing ${snapshot.size} of ${snapshot.size}`;
           }
-        } catch (error) {
+      }, (error) => {
+          console.error(`Error fetching ${tab} products:`, error);
+      });
+
+      return unsubscribe;
+  }
+
+  // Handle tab switching
+  document.querySelectorAll("[data-fc-target]").forEach((tab) => {
+      tab.addEventListener("click", () => {
+          const target = tab.getAttribute("data-fc-target").replace("#", "");
+          document.querySelectorAll("#myTabContent > div").forEach((panel) => panel.classList.add("hidden"));
+          document.getElementById(target).classList.remove("hidden");
+          document.querySelectorAll(".border-b-2").forEach((btn) => btn.classList.remove("border-b-2", "active"));
+          tab.classList.add("border-b-2", "active");
+          loadProducts({}, target);
+      });
+  });
+
+  // Handle search and category filtering
+  document.getElementById("productSearch").addEventListener("input", (e) => {
+      const searchTerm = e.target.value.trim();
+      const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
+      loadProducts({ search: searchTerm }, activeTab);
+  });
+
+  document.getElementById("Category").addEventListener("change", (e) => {
+      const category = e.target.value;
+      const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
+      loadProducts({ category: category }, activeTab);
+  });
+
+  // Edit Product Function (Global)
+  window.editProduct = async function (productId) {
+      try {
+          const productDoc = await getDoc(doc(window.db, "products", productId));
+          if (productDoc.exists()) {
+              const product = productDoc.data();
+              sessionStorage.setItem("editingProduct", JSON.stringify({ id: productId, ...product }));
+              window.location.href = `admin-edit-product.html?id=${productId}`;
+          } else {
+              alert("Product not found!");
+          }
+      } catch (error) {
           console.error("Error fetching product for editing:", error);
           alert("Error loading product for editing: " + error.message);
-        }
-      };
+      }
+  };
 
-      // Delete Product Function (Global)
-      window.deleteProduct = async function (productId, imageUrl) {
-        if (confirm("Are you sure you want to delete this product?")) {
+  // Delete Product Function (Global)
+  window.deleteProduct = async function (productId, imageUrl) {
+      if (confirm("Are you sure you want to delete this product?")) {
           try {
-            await deleteDoc(doc(window.db, "products", productId));
-            console.log("Product deleted from Firestore successfully");
+              await deleteDoc(doc(window.db, "products", productId));
+              console.log("Product deleted from Firestore successfully");
 
-            if (imageUrl) {
-              const storageRef = ref(window.storage, imageUrl);
-              await deleteObject(storageRef);
-              console.log("Product image deleted from Storage successfully");
-            }
+              if (imageUrl && !imageUrl.includes("assets/images/products/")) { // Don't delete default images
+                  const storageRef = ref(window.storage, imageUrl);
+                  await deleteObject(storageRef);
+                  console.log("Product image deleted from Storage successfully");
+              }
 
-            // Refresh the current tab's products
-            const activeTab = document
-              .querySelector(".border-b-2.active")
-              .id.replace("-tab", "");
-            loadProducts({}, activeTab);
+              const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
+              loadProducts({}, activeTab);
           } catch (error) {
-            console.error("Error deleting product:", error);
-            alert("Error deleting product: " + error.message);
+              console.error("Error deleting product:", error);
+              alert("Error deleting product: " + error.message);
           }
-        }
-      };
-
-     
-    </script>
+      }
+  };
+</script>
   </body>
 </html>
