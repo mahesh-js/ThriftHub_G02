@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <style>
+      .add-customer-button {background-color: #7d7d7d;}
       .customer-actions a { margin-right: 10px; cursor: pointer; }
       .customer-actions a:hover { color: #3b82f6; }
       .status-active { background-color: #d1fae5; color: #065f46; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: 500; }
@@ -94,13 +95,26 @@
           </div>
           <div class="me-2 dropdown relative">
             <button type="button" class="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0" id="user-profile" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
-              <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo" />
-              <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block"><span class="block font-medium text-slate-600 dark:text-gray-300">Maria Gibson</span><span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span></span>
+              <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo"/>
+              <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
+                <span class="block font-medium text-slate-600 dark:text-gray-300" id="userName">...</span>
+                <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span>
+              </span>
             </button>
+    
             <div class="left-auto right-0 z-50 my-1 hidden list-none divide-y divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40" id="navUserdata">
               <ul class="py-1" aria-labelledby="navUserdata">
-                <li><a href="pages-profile.html" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"><span data-lucide="user" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>Profile</a></li>
-                <li><a href="auth-lockscreen.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500"><span data-lucide="power" class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>Sign out</a></li>
+                <li>
+                  <a href="pages-profile.html" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white">
+                    <span data-lucide="user" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
+                    Profile</a>
+                </li>
+               
+                <li>
+                  <a href="/guest-cust/signin.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500">
+                    <span data-lucide="power" class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>
+                    Sign out</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -149,6 +163,11 @@
                         </div>
                       </form>
                     </div>
+                    <div>
+                      <a href="admin-add-customer.html">
+                          <button class="add-customer-button bg-gray-400 focus:outline-none mt-1 text-white hover:bg-gray-600 text-md font-medium py-2 px-4 rounded">Add Customer</button>
+                      </a>
+                  </div>
                   </div>
 
                   <div class="grid grid-cols-1 p-0 md:p-4">
@@ -210,142 +229,196 @@
 
     <!-- Firebase SDK and Main Logic -->
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-      import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-      import { getFirestore, collection, getDocs, doc, getDoc, deleteDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+     // Firebase imports
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getFirestore, collection, getDocs, doc, getDoc, deleteDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
-        authDomain: "thrifthub-demo.firebaseapp.com",
-        projectId: "thrifthub-demo",
-        storageBucket: "thrifthub-demo.firebasestorage.app",
-        messagingSenderId: "518014691134",
-        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
-      };
+// Firebase Configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+    authDomain: "thrifthub-demo.firebaseapp.com",
+    projectId: "thrifthub-demo",
+    storageBucket: "thrifthub-demo.firebasestorage.app",
+    messagingSenderId: "518014691134",
+    appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+};
 
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      const db = getFirestore(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
-      signInAnonymously(auth).catch((error) => {
-        console.error("Error signing in anonymously:", error);
-      });
+// Log page view
+logEvent(analytics, 'page_view', {
+    page_title: 'Customers Dashboard',
+    page_location: window.location.href,
+    page_path: '/admin-customers.html'
+});
 
-      window.db = db;
+// Expose db to global scope for editCustomer and deleteCustomer
+window.db = db;
 
-      // Function to load customers
-      function loadCustomers(filter = {}) {
-        const customersBody = document.getElementById("customersBody");
-        let q = query(collection(db, "customers"));
+// Function to load customers
+function loadCustomers(filter = {}) {
+    const customersBody = document.getElementById("customersBody");
+    if (!customersBody) {
+        console.error("Element #customersBody not found in DOM");
+        return;
+    }
 
-        if (filter.search) {
-          q = query(
+    let q = query(collection(db, "customers"));
+
+    if (filter.search) {
+        q = query(
             q,
             where("name", ">=", filter.search),
             where("name", "<=", filter.search + "\uf8ff")
-          );
-        }
+        );
+    }
 
-        const unsubscribe = onSnapshot(
-          q,
-          (snapshot) => {
+    const unsubscribe = onSnapshot(
+        q,
+        (snapshot) => {
             customersBody.innerHTML = "";
             if (snapshot.empty) {
-              customersBody.innerHTML = '<tr><td colspan="7" class="error-message">No customers found</td></tr>';
+                customersBody.innerHTML = '<tr><td colspan="7" class="error-message">No customers found</td></tr>';
             } else {
-              snapshot.forEach((doc) => {
-                const customer = doc.data();
-                const customerId = doc.id;
+                snapshot.forEach((doc) => {
+                    const customer = doc.data();
+                    const customerId = doc.id;
 
-                const name = customer.name || "Unnamed";
-                const email = customer.email || "N/A";
-                const phone = customer.phone || "N/A";
-                const status = customer.status || "active";
-                const joinDate = customer.joinDate ? new Date(customer.joinDate) : new Date();
+                    const name = customer.name || "Unnamed";
+                    const email = customer.email || "N/A";
+                    const phone = customer.phone || "N/A";
+                    const status = customer.status || "active";
+                    const joinDate = customer.joinDate
+                        ? new Date(customer.joinDate)
+                        : new Date();
 
-                const statusBadge = status === "active"
-                  ? '<span class="status-active">Active</span>'
-                  : '<span class="status-inactive">Inactive</span>';
+                    const statusBadge = status === "active"
+                        ? '<span class="status-active">Active</span>'
+                        : '<span class="status-inactive">Inactive</span>';
 
-                const row = `
-                  <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
-                    <td class="w-4 p-4">
-                      <label class="custom-label">
-                        <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4 inline-block text-center -mb-[3px]">
-                          <input type="checkbox" class="hidden">
-                          <i class="icofont-verification-check hidden text-ms dark:text-slate-200 leading-4"></i>
-                        </div>
-                      </label>
-                    </td>
-                    <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">${name}</td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${email}</td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${phone}</td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${statusBadge}</td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                      ${joinDate.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
-                    </td>
-                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 customer-actions">
-                      <a href="#" onclick="editCustomer('${customerId}')"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
-                      <a href="#" onclick="deleteCustomer('${customerId}')"><i class="icofont-trash text-lg text-red-500 dark:text-red-400"></i></a>
-                    </td>
-                  </tr>
-                `;
-                customersBody.insertAdjacentHTML("beforeend", row);
-              });
+                    const row = `
+                        <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+                            <td class="w-4 p-4">
+                                <label class="custom-label">
+                                    <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4 inline-block text-center -mb-[3px]">
+                                        <input type="checkbox" class="hidden">
+                                        <i class="icofont-verification-check hidden text-ms dark:text-slate-200 leading-4"></i>
+                                    </div>
+                                </label>
+                            </td>
+                            <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">${name}</td>
+                            <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${email}</td>
+                            <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${phone}</td>
+                            <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${statusBadge}</td>
+                            <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                ${joinDate.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+                            </td>
+                            <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 customer-actions">
+                                <a href="#" onclick="editCustomer('${customerId}')"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                <a href="#" onclick="deleteCustomer('${customerId}')"><i class="icofont-trash text-lg text-red-500 dark:text-red-400"></i></a>
+                            </td>
+                        </tr>
+                    `;
+                    customersBody.insertAdjacentHTML("beforeend", row);
+                });
             }
-          },
-          (error) => {
+        },
+        (error) => {
             console.error("Error fetching customers:", error);
             customersBody.innerHTML = '<tr><td colspan="7" class="error-message">Error loading customers</td></tr>';
-          }
-        );
+        }
+    );
 
-        return unsubscribe;
-      }
+    return unsubscribe;
+}
 
-      // Initial load
-      document.addEventListener("DOMContentLoaded", () => {
-        loadCustomers();
-      });
-
-      // Handle search
-      document.getElementById("customerSearch").addEventListener("input", (e) => {
+// Handle search
+const customerSearch = document.getElementById("customerSearch");
+if (customerSearch) {
+    customerSearch.addEventListener("input", (e) => {
         const searchTerm = e.target.value.trim();
         loadCustomers({ search: searchTerm });
-      });
+    });
+}
 
-      // Edit Customer Function (Adapted from Products)
-      window.editCustomer = async function (customerId) {
-        try {
-          const customerDoc = await getDoc(doc(window.db, "customers", customerId));
-          if (customerDoc.exists()) {
+// Edit Customer Function
+window.editCustomer = async function (customerId) {
+    try {
+        const customerDoc = await getDoc(doc(window.db, "customers", customerId));
+        if (customerDoc.exists()) {
             const customer = customerDoc.data();
             sessionStorage.setItem("editingCustomer", JSON.stringify({ id: customerId, ...customer }));
             window.location.href = `admin-edit-customer.html?id=${customerId}`;
-          } else {
+        } else {
             alert("Customer not found!");
-          }
-        } catch (error) {
-          console.error("Error fetching customer for editing:", error);
-          alert("Error loading customer for editing: " + error.message);
         }
-      };
+    } catch (error) {
+        console.error("Error fetching customer for editing:", error);
+        alert("Error loading customer for editing: " + error.message);
+    }
+};
 
-      // Delete Customer Function (Adapted from Products)
-      window.deleteCustomer = async function (customerId) {
-        if (confirm("Are you sure you want to delete this customer?")) {
-          try {
+// Delete Customer Function
+window.deleteCustomer = async function (customerId) {
+    if (confirm("Are you sure you want to delete this customer?")) {
+        try {
             await deleteDoc(doc(window.db, "customers", customerId));
             console.log("Customer deleted from Firestore successfully");
-
-            // Refresh the customer list
-            loadCustomers();
-          } catch (error) {
+            loadCustomers(); // Refresh the list
+        } catch (error) {
             console.error("Error deleting customer:", error);
             alert("Error deleting customer: " + error.message);
-          }
         }
-      };
+    }
+};
+
+// Authentication state handling
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
+        const userDocRef = doc(db, "users", user.uid);
+        const userDoc = await getDoc(userDocRef);
+
+        if (userDoc.exists()) {
+            const userData = userDoc.data();
+            const fullName = `${userData.firstName || ''} ${userData.lastName || ''}`.trim() || user.email;
+            const userNameElement = document.getElementById('userName');
+            if (userNameElement) userNameElement.textContent = fullName;
+
+            logEvent(analytics, 'login', {
+                method: 'email',
+                user_id: user.uid
+            });
+
+            // Load customers only after authentication
+            loadCustomers();
+        }
+    } else {
+        window.location.href = '/guest-cust/signin.html';
+    }
+});
+
+// Handle sign out
+const signOutLink = document.querySelector('#navUserdata a[href="/guest-cust/signin.html"]');
+if (signOutLink) {
+    signOutLink.addEventListener('click', async (e) => {
+        e.preventDefault();
+        try {
+            await signOut(auth);
+            logEvent(analytics, 'logout', {
+                user_id: auth.currentUser?.uid
+            });
+            window.location.href = '/guest-cust/signin.html';
+        } catch (error) {
+            console.error('Error signing out:', error);
+        }
+    });
+}
     </script>
   </body>
 </html>
