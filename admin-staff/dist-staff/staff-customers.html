@@ -886,7 +886,7 @@
                 if (customerDoc.exists()) {
                     const customer = customerDoc.data();
                     sessionStorage.setItem("editingCustomer", JSON.stringify({ id: customerId, ...customer }));
-                    window.location.href = `edit-customer.html?id=${customerId}`; // Assumes an edit-customer.html page exists
+                    window.location.href = `staff-edit-customer.html?id=${customerId}`; // Assumes an edit-customer.html page exists
                 } else {
                     alert("Customer not found!");
                 }

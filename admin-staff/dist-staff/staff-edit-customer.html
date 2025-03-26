@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth group" data-sidebar="brand" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ThriftHub Malaysia | Edit Customer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta content="Tailwind Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="Mannatthemes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css" />
+    <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+    <style>
+      .form-container { max-width: 800px; margin: 0 auto; padding: 20px; }
+      .form-input { width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; background-color: #f9fafb; }
+      .form-input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 1px #3b82f6; }
+      .form-label { font-weight: 500; margin-bottom: 5px; display: block; }
+      .message { text-align: center; margin-top: 10px; font-weight: 500; }
+      .submit-button { background-color: #3b82f6; color: white; padding: 10px 20px; border-radius: 4px; font-weight: 500; cursor: pointer; }
+      .submit-button:hover { background-color: #2563eb; }
+    </style>
+  </head>
+
+  <body data-layout-mode="light" data-sidebar-size="default" data-theme-layout="vertical" class="bg-[#EEF0FC] dark:bg-gray-900">
+    <!-- Sidebar and Topbar (Copied from admin-customers.html, omitted for brevity) -->
+    <div class="min-h-full z-[99] fixed inset-y-0 print:hidden bg-gradient-to-t from-[#111111] from-10% via-[#111111] via-40% to-[#111111] to-100% dark:bg-[#111111] main-sidebar duration-300 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111]">
+      <div class="text-center border-b bg-[#111111] border-r h-[64px] flex justify-center items-center brand-logo dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:bg-[#111111] group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:bg-brand group-[.dark]:group-data-[sidebar=brand]:bg-[#111111] group-data-[sidebar=brand]:border-slate-700/40">
+        <a href="index.html" class="logo">
+          <span>
+            <img src="assets/images/logo.png" alt="logo-large" class="logo-lg h-[52px] logo-light hidden dark:inline-block ms-1 group-data-[sidebar=dark]:inline-block group-data-[sidebar=brand]:inline-block" />
+            <img src="assets/images/logo.png" alt="logo-large" class="logo-lg h-[52px] logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden group-data-[sidebar=brand]:hidden" />
+          </span>
+        </a>
+      </div>
+      <div class="border-r pb-14 h-[100vh] dark:bg-[#111111] dark:border-slate-700/40 group-data-[sidebar=dark]:border-slate-700/40 group-data-[sidebar=brand]:border-slate-700/40" data-simplebar>
+        <div class="p-4 block">
+          <ul class="navbar-nav">
+            <li class="uppercase text-[11px] text-primary-500 dark:text-primary-400 mt-0 leading-4 mb-2 group-data-[sidebar=dark]:text-primary-400 group-data-[sidebar=brand]:text-primary-300">
+              <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">Dashboards</span>
+            </li>
+            <li>
+              <div id="parent-accordion" data-fc-type="accordion">
+                <a href="#" class="nav-link hover:bg-transparent hover:text-black rounded-md dark:hover:text-slate-200 flex items-center decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200" data-fc-type="collapse" data-fc-parent="parent-accordion">
+                  <span data-lucide="home" class="w-5 h-5 text-center text-slate-800 dark:text-slate-400 me-2 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
+                  <span>Staff</span>
+                  <i class="icofont-thin-down ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400 fc-collapse-open:rotate-180"></i>
+                </a>
+                <div id="Admin-flush" class="hidden overflow-hidden">
+                  <ul class="nav flex-col flex flex-wrap ps-0 mb-0 ms-2">
+                    <li class="nav-item relative block"><a href="index.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"><i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>Dashboard</a></li>
+                    <li class="nav-item relative block"><a href="staff-products.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"><i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>Products</a></li>
+                    <li class="nav-item relative block"><a href="staff-customers.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"><i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>Customers</a></li>
+                    <li class="nav-item relative block"><a href="staff-orders.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200"><i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>Orders</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topbar -->
+    <nav id="topbar" class="topbar border-b dark:border-slate-700/40 fixed inset-x-0 duration-300 block print:hidden z-50">
+      <div class="mx-0 flex max-w-full flex-wrap items-center lg:mx-auto relative top-[50%] start-[50%] transform -translate-x-1/2 -translate-y-1/2">
+        <div class="ltr:mx-2 rtl:mx-2">
+          <button id="toggle-menu-hide" class="button-menu-mobile flex rounded-full md:me-0 relative">
+            <i data-lucide="menu" class="top-icon w-5 h-5"></i>
+          </button>
+        </div>
+        <div class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2">
+          <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4">
+            <button id="toggle-theme" class="flex rounded-full md:me-0 relative">
+              <span data-lucide="moon" class="top-icon w-5 h-5 light"></span>
+              <span data-lucide="sun" class="top-icon w-5 h-5 dark hidden"></span>
+            </button>
+          </div>
+          <div class="me-2 dropdown relative">
+            <button type="button" class="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0" id="user-profile" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
+              <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo" />
+              <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block"><span class="block font-medium text-slate-600 dark:text-gray-300">Maria Gibson</span><span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Staff</span></span>
+            </button>
+            <div class="left-auto right-0 z-50 my-1 hidden list-none divide-y divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800 w-40" id="navUserdata">
+              <ul class="py-1" aria-labelledby="navUserdata">
+                <li><a href="pages-profile.html" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"><span data-lucide="user" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>Profile</a></li>
+                <li><a href="#" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white"><span data-lucide="settings" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>Settings</a></li>
+                <li><a href="auth-lockscreen.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500"><span data-lucide="power" class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+      <div class="page-wrapper relative ltr:ms-auto rtl:me-auto rtl:ms-0 w-[calc(100%-260px)] px-4 pt-[64px] duration-300">
+        <div class="xl:w-full">
+          <div class="flex flex-wrap">
+            <div class="flex items-center py-4 w-full">
+              <div class="w-full">
+                <div class="">
+                  <div class="flex flex-wrap justify-between">
+                    <div class="items-center">
+                      <h1 class="font-medium text-3xl block dark:text-slate-100">Edit Customer</h1>
+                      <ol class="list-reset flex text-sm">
+                        <li><a href="#" class="text-gray-500 dark:text-slate-400">ThriftHub Malaysia</a></li>
+                        <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                        <li class="text-gray-500 dark:text-slate-400">Staff</li>
+                        <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
+                        <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Edit Customer</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="xl:w-full min-h-[calc(100vh-138px)] relative pb-14">
+          <div class="form-container">
+            <form id="editCustomerForm">
+              <div class="mb-4">
+                <label for="name" class="form-label">Customer Name</label>
+                <input type="text" id="name" class="form-input" required />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" required />
+              </div>
+              <div class="mb-4">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" id="phone" class="form-input" />
+              </div>
+              <div class="mb-4">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="form-input" required>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+              <button type="submit" class="submit-button">Save Changes</button>
+              <div id="message" class="message"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer (Copied from admin-customers.html, omitted for brevity) -->
+      </div>
+    </div>
+
+    <!-- JAVASCRIPTS -->
+    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+
+    <!-- Firebase SDK and Main Logic -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+      import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+      import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+        authDomain: "thrifthub-demo.firebaseapp.com",
+        projectId: "thrifthub-demo",
+        storageBucket: "thrifthub-demo.firebasestorage.app",
+        messagingSenderId: "518014691134",
+        appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      signInAnonymously(auth).catch((error) => {
+        console.error("Error signing in anonymously:", error);
+      });
+
+      // Get customer ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const customerId = urlParams.get("id");
+
+      // Populate form with existing customer data
+      async function populateForm() {
+        if (!customerId) {
+          document.getElementById("message").textContent = "No customer ID provided.";
+          document.getElementById("message").style.color = "red";
+          return;
+        }
+
+        try {
+          const customerDoc = await getDoc(doc(db, "customers", customerId));
+          if (customerDoc.exists()) {
+            const customer = customerDoc.data();
+            document.getElementById("name").value = customer.name || "";
+            document.getElementById("email").value = customer.email || "";
+            document.getElementById("phone").value = customer.phone || "";
+            document.getElementById("status").value = customer.status || "active";
+          } else {
+            document.getElementById("message").textContent = "Customer not found.";
+            document.getElementById("message").style.color = "red";
+          }
+        } catch (error) {
+          console.error("Error loading customer:", error);
+          document.getElementById("message").textContent = "Error loading customer: " + error.message;
+          document.getElementById("message").style.color = "red";
+        }
+      }
+
+      // Handle form submission
+      document.getElementById("editCustomerForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const status = document.getElementById("status").value;
+        const messageElement = document.getElementById("message");
+
+        messageElement.textContent = "Saving changes...";
+        messageElement.style.color = "#3b82f6";
+
+        try {
+          await updateDoc(doc(db, "customers", customerId), {
+            name: name,
+            email: email,
+            phone: phone,
+            status: status,
+            updatedAt: new Date().toISOString(),
+          });
+
+          messageElement.textContent = "Customer updated successfully!";
+          messageElement.style.color = "green";
+
+          setTimeout(() => {
+            window.location.href = "staff-customers.html";
+          }, 1000);
+        } catch (error) {
+          console.error("Error updating customer:", error);
+          messageElement.textContent = "Error updating customer: " + error.message;
+          messageElement.style.color = "red";
+
+          setTimeout(() => {
+            window.location.href = "staff-customers.html";
+          }, 2000);
+        }
+      });
+
+      // Load customer data when the page loads
+      document.addEventListener("DOMContentLoaded", populateForm);
+    </script>
+  </body>
+</html>
