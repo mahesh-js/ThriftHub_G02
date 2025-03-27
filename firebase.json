@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "guest-cust/customer",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

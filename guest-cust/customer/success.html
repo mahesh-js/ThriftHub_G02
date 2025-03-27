@@ -45,6 +45,25 @@
     .receipt-details strong {
       color: #2c3e50;
     }
+    .items-list {
+      margin-top: 20px;
+    }
+    .items-list h3 {
+      color: #2c3e50;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .items-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .items-list li {
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      color: #34495e;
+    }
     .pdf-link {
       text-align: center;
       margin-top: 20px;
@@ -78,7 +97,7 @@
   </style>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+    import { getFirestore, doc, getDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
     const firebaseConfig = {
@@ -100,9 +119,25 @@
 
       onAuthStateChanged(auth, async (user) => {
         if (user && sessionId) {
+          const userId = user.uid;
+
+          // Fetch receipt details from orders
           const receiptRef = doc(db, "orders", sessionId);
           const receiptSnap = await getDoc(receiptRef);
 
+          // Fetch cart items from the user's cart subcollection
+          const cartSnapshot = await getDocs(collection(db, "users", userId, "carts"));
+          const cartItems = [];
+          cartSnapshot.forEach(doc => {
+            const item = doc.data();
+            cartItems.push({
+              name: item.name || "Unknown Product",
+              price: item.price || 0,
+              quantity: item.quantity || 1
+            });
+          });
+
+          // Display receipt details
           if (receiptSnap.exists()) {
             const data = receiptSnap.data();
             document.getElementById("amount").innerText = `RM${data.amount.toFixed(2)}`;
@@ -110,15 +145,32 @@
             document.getElementById("date").innerText = new Date().toLocaleString();
             document.getElementById("orderId").innerText = sessionId;
 
-            // Generate PDF content
+            // Display cart items
+            const itemsList = document.getElementById("cart-items");
+            if (cartItems.length === 0) {
+              itemsList.innerHTML = "<li>No items found in your cart.</li>";
+            } else {
+              cartItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - RM${item.price.toFixed(2)} (Qty: ${item.quantity})`;
+                itemsList.appendChild(li);
+              });
+            }
+
+            // Generate PDF content with cart items
+            let itemsText = "Purchased Items:\n";
+            cartItems.forEach(item => {
+              itemsText += `  - ${item.name}: RM${item.price.toFixed(2)} (Qty: ${item.quantity})\n`;
+            });
+
             const pdfContent = `
               ThriftHub Malaysia - Transaction Receipt
               Order ID: ${sessionId}
               Amount Paid: RM${data.amount.toFixed(2)}
               Payment Status: ${data.payment_status}
               Date: ${new Date().toLocaleString()}
+              ${itemsText}
             `;
-            // Create a Blob for the PDF (simplified for demo, use a library like jsPDF for real PDF generation)
             const blob = new Blob([pdfContent], { type: 'application/pdf' });
             const pdfUrl = URL.createObjectURL(blob);
             document.getElementById("pdfLink").href = pdfUrl;
@@ -128,7 +180,14 @@
             document.getElementById("amount").innerText = "";
             document.getElementById("date").innerText = "";
             document.getElementById("orderId").innerText = "";
+            document.getElementById("cart-items").innerHTML = "<li>Receipt not found.</li>";
           }
+        } else {
+          document.getElementById("status").innerText = "Please sign in to view your receipt.";
+          document.getElementById("amount").innerText = "";
+          document.getElementById("date").innerText = "";
+          document.getElementById("orderId").innerText = "";
+          document.getElementById("cart-items").innerHTML = "<li>Please sign in to view your purchased items.</li>";
         }
       });
     }
@@ -150,12 +209,15 @@
     <div class="receipt-details">
       <p><strong>Order ID:</strong> <span id="orderId"></span></p>
       <p><strong>Amount Paid:</strong> <span id="amount"></span></p>
-      <p><div id="status"></div>Payment Status: <span id="status"></span></p>
+      <p><strong>Payment Status:</strong> <span id="status"></span></p>
       <p><strong>Date:</strong> <span id="date"></span></p>
+      <div class="items-list">
+        <h3>Purchased Items:</h3>
+        <ul id="cart-items"></ul>
+      </div>
     </div>
     <div class="pdf-link">
       <a id="pdfLink" href="#" download>Download PDF Receipt</a>
-    </div>
     </div>
     <div class="footer">
       <p>Thank you for shopping with ThriftHub Malaysia!</p>

@@ -85,7 +85,9 @@
       <div class="p-4 block">
         <ul class="navbar-nav">
           <li class="uppercase text-[11px] text-primary-500 dark:text-primary-400 mt-0 leading-4 mb-2 group-data-[sidebar=dark]:text-primary-400 group-data-[sidebar=brand]:text-primary-300">
+
             <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">Dashboards</span>
+
           </li>
           <li>
             <div id="parent-accordion" data-fc-type="accordion">
@@ -114,12 +116,7 @@
                       Customers
                     </a>
                   </li>
-                  <li class="nav-item relative block">
-                    <a href="admin-orders.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
-                      <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                      Orders
-                    </a>
-                  </li>
+                 
                   <li class="nav-item relative block">
                     <a href="admin-staff.html" class="nav-link hover:text-primary-500 rounded-md dark:hover:text-primary-500 relative flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                       <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
@@ -142,88 +139,24 @@
           <i data-lucide="menu" class="top-icon w-5 h-5"></i>
         </button>
       </div>
+
+
       <div class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2">
-        <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
-          <button type="button" class="dropdown-toggle flex rounded-full md:me-0" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
-            <span data-lucide="search" class="top-icon w-5 h-5"></span>
-          </button>
-          <div class="left-auto right-0 z-50 my-1 hidden min-w-[300px] list-none divide-y divide-gray-100 rounded-md border-slate-700 md:border-white text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800" onclick="event.stopPropagation()">
-            <div class="relative">
-              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                <i class="ti ti-search text-gray-400 z-10"></i>
-              </div>
-              <input type="text" id="email-adress-icon" class="block w-full rounded-lg border border-slate-200 dark:border-slate-700/60 bg-slate-200/10 p-1.5 pl-10 text-slate-600 dark:text-slate-400 outline-none focus:border-slate-300 focus:ring-slate-300 dark:bg-slate-800/20 sm:text-sm" placeholder="Search..." />
-            </div>
-          </div>
-        </div>
+        
         <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4">
           <button id="toggle-theme" class="flex rounded-full md:me-0 relative">
             <span data-lucide="moon" class="top-icon w-5 h-5 light"></span>
             <span data-lucide="sun" class="top-icon w-5 h-5 dark hidden"></span>
           </button>
         </div>
-        <div class="ltr:me-2 ltr:lg:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4 dropdown relative">
-          <button type="button" class="dropdown-toggle flex rounded-full md:me-0" id="Notifications" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
-            <span data-lucide="bell" class="top-icon w-5 h-5"></span>
-          </button>
-          <div class="left-auto right-0 z-50 my-1 hidden w-64 list-none divide-y h-52 divide-gray-100 rounded border border-slate-700/10 text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800" id="navNotifications" data-simplebar>
-            <ul class="py-1" aria-labelledby="navNotifications">
-              <li class="py-2 px-4">
-                <a href="javascript:void(0);" class="dropdown-item">
-                  <div class="flex">
-                    <div class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3">
-                      <span data-lucide="shopping-cart" class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"></span>
-                    </div>
-                    <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                      <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300">Karen Robinson</p>
-                      <p class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400">Hey ! i'm available here</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="py-2 px-4">
-                <a href="javascript:void(0);" class="dropdown-item">
-                  <div class="flex">
-                    <img class="object-cover rounded-full h-8 w-8 shrink-0 me-3" src="assets/images/users/avatar-3.png" alt="logo" />
-                    <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                      <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300">Your order is placed</p>
-                      <p class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400">Dummy text of the printing and industry.</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="py-2 px-4">
-                <a href="javascript:void(0);" class="dropdown-item">
-                  <div class="flex">
-                    <div class="h-8 w-8 rounded-full bg-primary-500/20 inline-flex me-3">
-                      <span data-lucide="user" class="w-4 h-4 inline-block text-primary-500 dark:text-primary-400 self-center mx-auto"></span>
-                    </div>
-                    <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                      <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300">Robert McCray</p>
-                      <p class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400">Good Morning!</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="py-2 px-4">
-                <a href="javascript:void(0);" class="dropdown-item">
-                  <div class="flex">
-                    <img class="object-cover rounded-full h-8 w-8 shrink-0 me-3" src="assets/images/users/avatar-9.png" alt="logo" />
-                    <div class="flex-grow flex-1 ms-0.5 overflow-hidden">
-                      <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300">Meeting with designers</p>
-                      <p class="text-gray-500 mb-0 text-xs truncate dark:text-gray-400">It is a long established fact that a reader.</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        
         <div class="me-2 dropdown relative">
           <button type="button" class="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0" id="user-profile" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
-            <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo" />
+
+            <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo"/>
             <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
-              <span class="block font-medium text-slate-600 dark:text-gray-300">Maria Gibson</span>
+              <span class="block font-medium text-slate-600 dark:text-gray-300" id="userName">...</span>
+
               <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400">Admin</span>
             </span>
           </button>
@@ -236,19 +169,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white">
-                  <span data-lucide="settings" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
-                  Settings
-                </a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center py-2 px-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white">
-                  <span data-lucide="dollar-sign" class="w-4 h-4 inline-block text-slate-800 dark:text-slate-400 me-2"></span>
-                  Earnings
-                </a>
-              </li>
-              <li>
-                <a href="auth-lockscreen.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500">
+
+                <a href="/guest-cust/signin.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600 dark:text-red-500 dark:hover:bg-gray-900/20 dark:hover:text-red-500">
+
                   <span data-lucide="power" class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>
                   Sign out
                 </a>
@@ -318,13 +241,16 @@
                       <option value="Support" class="dark:text-slate-700">Support</option>
                     </select>
                   </div>
+
                   <div class="ms-auto">
                     <form>
                       <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                           <i data-lucide="search" class="z-[1] w-5 h-5 stroke-slate-400"></i>
                         </div>
+
                         <input type="search" id="staffSearch" class="search-input rounded-md border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500 dark:hover:border-slate-700 pl-10 p-2.5" placeholder="search" />
+
                       </div>
                     </form>
                   </div>
@@ -336,7 +262,9 @@
                 </div>
 
                 <div id="myTabContent">
+
                   <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-900" id="all" role="tabpanel" aria-labelledby="all-tab">
+
                     <div class="grid grid-cols-1 p-0 md:p-4">
                       <div class="sm:-mx-6 lg:-mx-8">
                         <div class="relative overflow-x-auto block w-full sm:px-6 lg:px-8">
@@ -351,12 +279,14 @@
                                     </div>
                                   </label>
                                 </th>
+
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Staff & Role</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Phone</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Email</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Status</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Country</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Date</th>
+
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Action</th>
                               </tr>
                             </thead>
@@ -369,7 +299,9 @@
                     </div>
                     <div class="flex justify-between mt-4">
                       <div class="self-center">
+
                         <p class="dark:text-slate-400">Showing 0 of 0</p>
+
                       </div>
                     </div>
                   </div>
@@ -388,12 +320,14 @@
                                     </div>
                                   </label>
                                 </th>
+
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Staff & Role</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Phone</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Email</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Status</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Country</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Date</th>
+
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Action</th>
                               </tr>
                             </thead>
@@ -406,7 +340,9 @@
                     </div>
                     <div class="flex justify-between mt-4">
                       <div class="self-center">
+
                         <p class="dark:text-slate-400">Showing 0 of 0</p>
+
                       </div>
                     </div>
                   </div>
@@ -425,12 +361,14 @@
                                     </div>
                                   </label>
                                 </th>
+
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Staff & Role</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Phone</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Email</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Status</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Country</th>
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Date</th>
+
                                 <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Action</th>
                               </tr>
                             </thead>
@@ -443,7 +381,9 @@
                     </div>
                     <div class="flex justify-between mt-4">
                       <div class="self-center">
+
                         <p class="dark:text-slate-400">Showing 0 of 0</p>
+
                       </div>
                     </div>
                   </div>
@@ -452,6 +392,7 @@
             </div>
           </div>
         </div>
+
         <div class="absolute bottom-0 -left-4 -right-4 block print:hidden border-t p-4 h-[52px] dark:border-slate-700/40">
           <div class="container">
             <footer class="footer bg-transparent text-center font-medium text-slate-600 dark:text-slate-400 md:text-left">
@@ -474,206 +415,232 @@
   <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
   <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js"></script>
 
-  <!-- Firebase SDK and Main Logic -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-    import { getFirestore, collection, getDocs, doc, deleteDoc, getDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
-    import { getStorage, ref, deleteObject } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
-      authDomain: "thrifthub-demo.firebaseapp.com",
-      projectId: "thrifthub-demo",
-      storageBucket: "thrifthub-demo.firebasestorage.app",
-      messagingSenderId: "518014691134",
-      appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
-    };
+ 
+    // Firebase SDK and Main Logic
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  import { getFirestore, collection, getDocs, doc, deleteDoc, getDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+  import { getStorage, ref, deleteObject } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    const storage = getStorage(app);
+  const firebaseConfig = {
+    apiKey: "AIzaSyBuks0O6_R_ltzxGJHM-G5LIBvoLvV_P6g",
+    authDomain: "thrifthub-demo.firebaseapp.com",
+    projectId: "thrifthub-demo",
+    storageBucket: "thrifthub-demo.firebasestorage.app",
+    messagingSenderId: "518014691134",
+    appId: "1:518014691134:web:7fa4a771e1c664c9f92e6f",
+  };
 
-    signInAnonymously(auth).catch((error) => {
-      console.error("Error signing in anonymously:", error);
-    });
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
 
-    window.db = db;
-    window.storage = storage;
+  window.db = db;
+  window.storage = storage;
 
-    async function updateTabCounts() {
-      try {
-        const allQuery = query(collection(db, "staff"));
-        const allSnapshot = await getDocs(allQuery);
-        document.getElementById("allCount").textContent = `(${allSnapshot.size})`;
-
-        const activeQuery = query(collection(db, "staff"), where("status", "==", "active"));
-        const activeSnapshot = await getDocs(activeQuery);
-        document.getElementById("activeCount").textContent = `(${activeSnapshot.size})`;
-
-        const inactiveQuery = query(collection(db, "staff"), where("status", "==", "inactive"));
-        const inactiveSnapshot = await getDocs(inactiveQuery);
-        document.getElementById("inactiveCount").textContent = `(${inactiveSnapshot.size})`;
-      } catch (error) {
-        console.error("Error updating tab counts:", error);
+  // Authentication state listener
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      const userDocRef = doc(db, "users", user.uid);
+      const userDoc = await getDoc(userDocRef);
+      
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        const fullName = `${userData.firstName || ''} ${userData.lastName || ''}`.trim() || user.email;
+        document.getElementById('userName').textContent = fullName;
       }
+    } else {
+      window.location.href = '/guest-cust/signin.html';
+    }
+  });
+
+  // Handle sign out
+  document.querySelector('#navUserdata a[href="/guest-cust/signin.html"]').addEventListener('click', async (e) => {
+    e.preventDefault();
+    try {
+      await signOut(auth);
+      window.location.href = '/guest-cust/signin.html';
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  });
+
+  async function updateTabCounts() {
+    try {
+      const allQuery = query(collection(db, "staff"));
+      const allSnapshot = await getDocs(allQuery);
+      document.getElementById("allCount").textContent = `(${allSnapshot.size})`;
+
+      const activeQuery = query(collection(db, "staff"), where("status", "==", "active"));
+      const activeSnapshot = await getDocs(activeQuery);
+      document.getElementById("activeCount").textContent = `(${activeSnapshot.size})`;
+
+      const inactiveQuery = query(collection(db, "staff"), where("status", "==", "inactive"));
+      const inactiveSnapshot = await getDocs(inactiveQuery);
+      document.getElementById("inactiveCount").textContent = `(${inactiveSnapshot.size})`;
+    } catch (error) {
+      console.error("Error updating tab counts:", error);
+    }
+  }
+
+  function loadStaff(filter = {}, tab = "all") {
+    const staffBody = document.getElementById(`staffBody${tab.charAt(0).toUpperCase() + tab.slice(1)}`);
+    if (!staffBody) {
+      console.error(`DOM element for tab ${tab} not found`);
+      return;
     }
 
-    function loadStaff(filter = {}, tab = "all") {
-      const staffBody = document.getElementById(`staffBody${tab.charAt(0).toUpperCase() + tab.slice(1)}`);
-      if (!staffBody) {
-        console.error(`DOM element for tab ${tab} not found`);
-        return;
-      }
+    let q = query(collection(db, "staff"));
 
-      let q = query(collection(db, "staff"));
+    if (filter.category) {
+      q = query(q, where("category", "==", filter.category));
+    }
+    if (filter.search) {
+      q = query(q, where("name", ">=", filter.search), where("name", "<=", filter.search + "\uf8ff"));
+    }
+    if (tab === "all") {
+      // No additional filter for "all" tab
+    } else if (tab === "active") {
+      q = query(q, where("status", "==", "active"));
+    } else if (tab === "inactive") {
+      q = query(q, where("status", "==", "inactive"));
+    }
 
-      if (filter.category) {
-        q = query(q, where("category", "==", filter.category));
-      }
-      if (filter.search) {
-        q = query(q, where("name", ">=", filter.search), where("name", "<=", filter.search + "\uf8ff"));
-      }
-      if (tab === "all") {
-        // No additional filter for "all" tab
-      } else if (tab === "active") {
-        q = query(q, where("status", "==", "active"));
-      } else if (tab === "inactive") {
-        q = query(q, where("status", "==", "inactive"));
-      }
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      staffBody.innerHTML = "";
+      if (snapshot.empty) {
+        staffBody.innerHTML = '<tr><td colspan="8" class="error-message">No staff found</td></tr>';
+      } else {
+        snapshot.forEach((doc) => {
+          const staff = doc.data();
+          const staffId = doc.id;
 
-      const unsubscribe = onSnapshot(q, (snapshot) => {
-        staffBody.innerHTML = "";
-        if (snapshot.empty) {
-          staffBody.innerHTML = '<tr><td colspan="8" class="error-message">No staff found</td></tr>';
-        } else {
-          snapshot.forEach((doc) => {
-            const staff = doc.data();
-            const staffId = doc.id;
+          const name = staff.name || "Untitled";
+          const role = staff.category || "Uncategorized";
+          const phone = staff.phone || "N/A";
+          const email = staff.email || "N/A";
+          const status = staff.status || "active";
+          const country = staff.country || "N/A";
+          const imageUrl = staff.imageUrl || "assets/images/users/avatar-1.png";
+          const createdAt = staff.createdAt ? new Date(staff.createdAt) : new Date();
 
-            const name = staff.name || "Untitled";
-            const role = staff.category || "Uncategorized";
-            const phone = staff.phone || "N/A";
-            const email = staff.email || "N/A";
-            const status = staff.status || "active";
-            const country = staff.country || "N/A";
-            const imageUrl = staff.imageUrl || "assets/images/users/avatar-1.png";
-            const createdAt = staff.createdAt ? new Date(staff.createdAt) : new Date();
+          const stockStatus = status === "active"
+            ? '<span class="stock-active">Active</span>'
+            : '<span class="stock-inactive">Inactive</span>';
 
-            const stockStatus = status === "active"
-              ? '<span class="stock-active">Active</span>'
-              : '<span class="stock-inactive">Inactive</span>';
-
-            const row = `
-              <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
-                <td class="w-4 p-4">
-                  <label class="custom-label">
-                    <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4 inline-block text-center -mb-[3px]">
-                      <input type="checkbox" class="hidden">
-                      <i class="icofont-verification-check hidden text-ms dark:text-slate-200 leading-4"></i>
-                    </div>
-                  </label>
-                </td>
-                <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
-                  <div class="flex items-center">
-                    <img src="${imageUrl}" alt="${name}" class="me-2 h-8 inline-block">
-                    <div class="self-center">
-                      <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">${name}</h5>
-                      <span class="block font-medium text-slate-500">${role}</span>
-                    </div>
+          const row = `
+            <tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
+              <td class="w-4 p-4">
+                <label class="custom-label">
+                  <div class="bg-white dark:bg-slate-600/40 border border-slate-200 dark:border-slate-600 rounded w-4 h-4 inline-block text-center -mb-[3px]">
+                    <input type="checkbox" class="hidden">
+                    <i class="icofont-verification-check hidden text-ms dark:text-slate-200 leading-4"></i>
                   </div>
-                </td>
-                <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${phone}</td>
-                <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400"><a href="mailto:${email}">${email}</a></td>
-                <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${stockStatus}</td>
-                <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${country}</td>
-                <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                  ${createdAt.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
-                </td>
-                <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 staff-actions">
-                  <a href="#" onclick="editStaff('${staffId}')"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
-                  <a href="#" onclick="deleteStaff('${staffId}', '${imageUrl}')"><i class="icofont-trash text-lg text-red-500 dark:text-red-400"></i></a>
-                </td>
-              </tr>
-            `;
-            staffBody.insertAdjacentHTML("beforeend", row);
-          });
-        }
-      }, (error) => {
-        console.error(`Error fetching ${tab} staff:`, error);
-        staffBody.innerHTML = '<tr><td colspan="8" class="error-message">Error loading staff</td></tr>';
-      });
+                </label>
+              </td>
+              <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
+                <div class="flex items-center">
+                  <img src="${imageUrl}" alt="${name}" class="me-2 h-8 inline-block">
+                  <div class="self-center">
+                    <h5 class="text-sm font-semibold text-slate-700 dark:text-gray-400">${name}</h5>
+                    <span class="block font-medium text-slate-500">${role}</span>
+                  </div>
+                </div>
+              </td>
+              <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${phone}</td>
+              <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400"><a href="mailto:${email}">${email}</a></td>
+              <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${stockStatus}</td>
+              <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">${country}</td>
+              <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                ${createdAt.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" })}
+              </td>
+              <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400 staff-actions">
+                <a href="#" onclick="editStaff('${staffId}')"><i class="icofont-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                <a href="#" onclick="deleteStaff('${staffId}', '${imageUrl}')"><i class="icofont-trash text-lg text-red-500 dark:text-red-400"></i></a>
+              </td>
+            </tr>
+          `;
+          staffBody.insertAdjacentHTML("beforeend", row);
+        });
+      }
+    }, (error) => {
+      console.error(`Error fetching ${tab} staff:`, error);
+      staffBody.innerHTML = '<tr><td colspan="8" class="error-message">Error loading staff</td></tr>';
+    });
 
-      return unsubscribe;
+    return unsubscribe;
+  }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    await updateTabCounts();
+    document.getElementById("all").classList.remove("hidden");
+    loadStaff({}, "all");
+  });
+
+  document.querySelectorAll("[data-fc-target]").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.getAttribute("data-fc-target").replace("#", "");
+      document.querySelectorAll("#myTabContent > div").forEach((panel) => panel.classList.add("hidden"));
+      document.getElementById(target).classList.remove("hidden");
+      document.querySelectorAll(".border-b-2").forEach((btn) => btn.classList.remove("border-b-2", "active"));
+      tab.classList.add("border-b-2", "active");
+      loadStaff({}, target);
+    });
+  });
+
+  document.getElementById("staffSearch").addEventListener("input", (e) => {
+    const searchTerm = e.target.value.trim();
+    const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
+    loadStaff({ search: searchTerm }, activeTab);
+  });
+
+  document.getElementById("Category").addEventListener("change", (e) => {
+    const category = e.target.value;
+    const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
+    loadStaff({ category: category }, activeTab);
+  });
+
+  window.editStaff = async function (staffId) {
+    try {
+      const staffDoc = await getDoc(doc(window.db, "staff", staffId));
+      if (staffDoc.exists()) {
+        const staff = staffDoc.data();
+        sessionStorage.setItem("editingStaff", JSON.stringify({ id: staffId, ...staff }));
+        window.location.href = `admin-edit-staff.html?id=${staffId}`;
+      } else {
+        alert("Staff not found!");
+      }
+    } catch (error) {
+      console.error("Error fetching staff for editing:", error);
+      alert("Error loading staff for editing: " + error.message);
     }
+  };
 
-    document.addEventListener("DOMContentLoaded", async () => {
-      await updateTabCounts();
-      document.getElementById("all").classList.remove("hidden");
-      loadStaff({}, "all");
-    });
-
-    document.querySelectorAll("[data-fc-target]").forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const target = tab.getAttribute("data-fc-target").replace("#", "");
-        document.querySelectorAll("#myTabContent > div").forEach((panel) => panel.classList.add("hidden"));
-        document.getElementById(target).classList.remove("hidden");
-        document.querySelectorAll(".border-b-2").forEach((btn) => btn.classList.remove("border-b-2", "active"));
-        tab.classList.add("border-b-2", "active");
-        loadStaff({}, target);
-      });
-    });
-
-    document.getElementById("staffSearch").addEventListener("input", (e) => {
-      const searchTerm = e.target.value.trim();
-      const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
-      loadStaff({ search: searchTerm }, activeTab);
-    });
-
-    document.getElementById("Category").addEventListener("change", (e) => {
-      const category = e.target.value;
-      const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
-      loadStaff({ category: category }, activeTab);
-    });
-
-    window.editStaff = async function (staffId) {
+  window.deleteStaff = async function (staffId, imageUrl) {
+    if (confirm("Are you sure you want to delete this staff?")) {
       try {
-        const staffDoc = await getDoc(doc(window.db, "staff", staffId));
-        if (staffDoc.exists()) {
-          const staff = staffDoc.data();
-          sessionStorage.setItem("editingStaff", JSON.stringify({ id: staffId, ...staff }));
-          window.location.href = `admin-edit-staff.html?id=${staffId}`;
-        } else {
-          alert("Staff not found!");
+        await deleteDoc(doc(window.db, "staff", staffId));
+        console.log("Staff deleted from Firestore successfully");
+
+        if (imageUrl) {
+          const storageRef = ref(window.storage, imageUrl);
+          await deleteObject(storageRef);
+          console.log("Staff image deleted from Storage successfully");
         }
+
+        const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
+        loadStaff({}, activeTab);
       } catch (error) {
-        console.error("Error fetching staff for editing:", error);
-        alert("Error loading staff for editing: " + error.message);
+        console.error("Error deleting staff:", error);
+        alert("Error deleting staff: " + error.message);
       }
-    };
+    }
+  };
+</script>
 
-    window.deleteStaff = async function (staffId, image,  imageUrl) {
-      if (confirm("Are you sure you want to delete this staff?")) {
-        try {
-          await deleteDoc(doc(window.db, "staff", staffId));
-          console.log("Staff deleted from Firestore successfully");
-
-          if (imageUrl) {
-            const storageRef = ref(window.storage, imageUrl);
-            await deleteObject(storageRef);
-            console.log("Staff image deleted from Storage successfully");
-          }
-
-          const activeTab = document.querySelector(".border-b-2.active").id.replace("-tab", "");
-          loadStaff({}, activeTab);
-        } catch (error) {
-          console.error("Error deleting staff:", error);
-          alert("Error deleting staff: " + error.message);
-        }
-      }
-    };
-  </script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
